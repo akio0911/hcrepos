@@ -37,17 +37,17 @@ class Mitter
       url = "http://mitter.jp/" + user
       page = agent.get(url)
       page.body = page.body.toutf8
-      videos=[]
+      logs = []
       page.search('div.log-details').each do |log|
         title = log.search('h3.title').search('a').first.inner_text
         url = log.search('span.service').search('a').first.get_attribute(:href)
         time_row = log.search('span.watched-at').first.get_attribute(:title)
         time = Time.parse(time_row)+(60*60*9)
         text = user + "がHacker'sCafeグループに投稿: " + title + url
-        videos.push({:text => text, :time => time})
+        logs.push({:text => text, :time => time})
       end
     end
-    return videos
+    return logs
   end
 
 end
