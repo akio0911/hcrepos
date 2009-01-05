@@ -1,6 +1,3 @@
-
-
-
 class Mitter
   USERS = [
     "yuiseki",
@@ -20,16 +17,17 @@ class Mitter
     agent.max_history = 1
     page = agent.get('http://mitter.jp/groups/25/posts')
     page.body = page.body.toutf8
-    videos=[]
+    logs = []
     page.search('div.video').each do |log|
       title = log.search('div.video-info').search('a').first.get_attribute(:title)
       url = log.search('span.service').search('a').first.get_attribute(:href)
       name = log.search('div.date').search('a').first.inner_text
       time_row = log.search('div.date').search('span').first.get_attribute(:title)
       time = Time.parse(time_row)+(60*60*9)
-      videos.push({:title => title.chomp, :url => url.chomp, :time => time, :user => name})
+      text = user "がまた動画Mitter: " + title + url
+      logs.push({:text => text, :time => time})
     end
-    return videos
+    return logs
   end
 
   def self.logs_of_users
@@ -45,7 +43,8 @@ class Mitter
         url = log.search('span.service').search('a').first.get_attribute(:href)
         time_row = log.search('span.watched-at').first.get_attribute(:title)
         time = Time.parse(time_row)+(60*60*9)
-        videos.push({:title => title.chomp, :url => url.chomp, :time => time})
+        text = user + "がHacker'sCafeグループに投稿: " + title + url
+        videos.push({:text => text, :time => time})
       end
     end
     return videos
