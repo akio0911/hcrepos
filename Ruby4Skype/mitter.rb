@@ -3,10 +3,11 @@ class Mitter
     "yuiseki",
     "jazzanova",
     "send",
-    "takano32"
+    "takano32",
     "retlet",
     "twitt",
-    "tacke",
+    "tacke"
+  ]
 =begin
     "skashu",
     "llcheesell",
@@ -18,7 +19,6 @@ class Mitter
     "kagawa",
     "youzaka",
 =end
-  ]
 
   def self.logs_of_groups
     agent = WWW::Mechanize.new

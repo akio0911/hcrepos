@@ -3,6 +3,7 @@
 $: << File.dirname(__FILE__)
 require "Mitter"
 require "Github"
+require "hc_blog"
 #ここにrequire "Sample"などとして追加
 require 'rubygems'
 gem 'mechanize', '= 0.7.8'
@@ -35,5 +36,7 @@ post_chat(test, Mitter.logs_of_users)
 post_chat(hack, Mitter.logs_of_groups)
 #p "github history"
 post_chat(hack, Github.commit_logs)
+#p "blog feeds"
+post_chat(hack, HackersCafeBlog.feeds_logs)
 #ここにpost_chat(test, Sample.sample_logs)などとして追加
 exit

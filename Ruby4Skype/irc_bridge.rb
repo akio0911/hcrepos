@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 # http://d.hatena.ne.jp/curi1119/20080506/1210062892
+# 
+# Copyright (c) 2009 TAKANO Mitsuhiro <tak at no32.tk>
+#
 
 require 'socket'
 require 'kconv'
@@ -8,9 +11,9 @@ $KCODE = 'UTF8'
 
 class IrcClient
 	def initialize
-		@irc = TCPSocket.new(@server, @port)
 		@server = "irc.freenode.net"
-		@port = 6666
+		@port = 6667
+		@irc = TCPSocket.new(@server, @port)
 		@eol = "\r\n"
 		@nick = "skype_bot"
 		@channel = "#hackerscafe"
@@ -19,6 +22,10 @@ class IrcClient
 	def send_cmd(cmd)
 		p "Sending command..... :#{cmd}"
 		@irc.write(cmd + @eol)
+	end
+
+	def send_privmsg(input)
+		send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
 	end
 
 	def login_and_join
@@ -47,14 +54,14 @@ class IrcClient
 	end
 
 	def start
-		read_thread.run
+		@read_thread = read_thread.run
 		login_and_join
-		write_thread.run
+		@write_thread = write_thread.run
 	end
 
 	def stop
-		read.join
-		write.join
+		@read_thread.join
+		@write_thread.join
 	end
 end
 
@@ -62,5 +69,6 @@ end
 if __FILE__ == $0 then
 	@client = IrcClient.new
 	@client.start
+	@client.stop
 end
 
