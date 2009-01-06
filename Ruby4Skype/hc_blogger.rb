@@ -40,6 +40,6 @@ end
 
 if __FILE__ == $0 then
 	blog = HackersBlog.new
-	blog.logs
+	p blog.logs
 end
 
