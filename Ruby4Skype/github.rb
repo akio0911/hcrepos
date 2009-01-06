@@ -5,7 +5,7 @@ class Github
     doc = REXML::Document.new xml
     doc.elements.each('/feed') do |feed|
       feed.elements.each('entry') do |entry|
-        text = "(bug) github commited:" entry.elements['author/name'].text + ':' + entry.elements['title'].text
+        text = "(bug) github commited:" + entry.elements['author/name'].text + ':' + entry.elements['title'].text
         time = Time.parse(entry.elements['updated'].text)
         logs.push({:text => text, :time => time})
       end

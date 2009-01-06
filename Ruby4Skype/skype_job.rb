@@ -4,7 +4,6 @@ $: << File.dirname(__FILE__)
 require "Mitter"
 require "Github"
 #ここにrequire "Sample"などとして追加
-
 require 'rubygems'
 gem 'mechanize', '= 0.7.8'
 require 'mechanize'
@@ -14,7 +13,6 @@ require 'time'
 require 'skypeapi'
 require 'open-uri'
 require 'rexml/document'
-
 
 SkypeAPI.init
 SkypeAPI.attachWait
@@ -31,10 +29,11 @@ def post_chat(chatid, logs)
   end
 end
 
+#p "mitter users"
 post_chat(test, Mitter.logs_of_users)
-
+#p "mitter groups"
 post_chat(hack, Mitter.logs_of_groups)
-
+#p "github history"
 post_chat(hack, Github.commit_logs)
-
 #ここにpost_chat(test, Sample.sample_logs)などとして追加
+exit

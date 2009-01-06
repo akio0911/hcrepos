@@ -1,15 +1,23 @@
 class Mitter
   USERS = [
     "yuiseki",
+    "jazzanova",
+    "send",
+    "takano32"
+    "retlet",
+    "twitt",
+    "tacke",
+=begin
     "skashu",
     "llcheesell",
-    "retlet",
     "vaac",
     "delphie",
     "urabi_sama",
     "yusukezzz",
-    "jazzanova", 
-    "otsune"
+    "otsune",
+    "kagawa",
+    "youzaka",
+=end
   ]
 
   def self.logs_of_groups
@@ -45,6 +53,7 @@ class Mitter
         time = Time.parse(time_row)+(60*60*9)
         text = user +  "が動画Mitter: " + title + "\n" + url
         logs.push({:text => text, :time => time})
+        #p user + " " + logs.length.to_s
       end
     end
     return logs
