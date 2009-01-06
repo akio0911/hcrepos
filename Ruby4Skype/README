@@ -4,11 +4,18 @@ http://rubyforge.org/docman/view.php/4599/3509/doc.html
 http://rubyforge.org/docman/view.php/4599/3510/ref.html
 
 
-
-
 ■skype_job.rbが五分おきに実行される
 
 ■クロール対象を増やしたいときは
 site_name.rbのようなファイルを作って、そこにclass Sitenameをつくり、({:text => text, :time => time})（textはチャットに投稿されるStringオブジェクト、timeは時間をチェックして新しいものだけ投稿するためのTimeオブジェクト）という構造となるようなハッシュの配列を返すメソッドをdef hoge_logsのように定義する。
 
 さらに、skype_job.rbの最初のほうでrequire "Sitename"として、下のほうでpost_chat(chatname, Sitename.hoge_logs)のように書けば、５分おきにチェックされて新しいものがチャットで発言される。
+
+↓もじばけてしまった＞＜
+
+* $B2a5n$N%m%0$r<hF@$9$k$?$a$K(BYAML$B$GF|;~$r5-21$7$F$*$/$N$O$I$&$+(B
+  * ruby -ryaml -e 'puts DateTime.now.to_yaml'
+  * ruby -ryaml -e 'puts YAML::load("--- 2009-01-06T16:05:29+09:00")'
+  * ruby -e 'open("hoge.txt", "w").write("hoge")'
+  * ruby -e "puts open('hoge.txt').read"
+

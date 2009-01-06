@@ -1,8 +1,9 @@
-#5分おきに実行
-#ロードパスの調整
+#5分おきに実行される本体
+#柔軟なロードパス(windowsのcronがクソなため)
 $: << File.dirname(__FILE__)
 require "Mitter"
 require "Github"
+#ここにrequire "Sample"などとして追加
 
 require 'rubygems'
 gem 'mechanize', '= 0.7.8'
@@ -35,3 +36,5 @@ post_chat(test, Mitter.logs_of_users)
 post_chat(hack, Mitter.logs_of_groups)
 
 post_chat(hack, Github.commit_logs)
+
+#ここにpost_chat(test, Sample.sample_logs)などとして追加
