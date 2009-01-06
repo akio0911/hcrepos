@@ -3,8 +3,6 @@
 # 
 # Copyright (c) 2009 TAKANO Mitsuhiro <tak at no32.tk>
 #
-# You can redistribute it and/or modify it under GPL2.
-#
 
 require 'socket'
 require 'kconv'
