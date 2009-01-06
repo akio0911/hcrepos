@@ -1,0 +1,6 @@
+* 過去のログを取得するためにYAMLで日時を記憶しておくのはどうか
+  * ruby -ryaml -e 'puts DateTime.now.to_yaml'
+  * ruby -ryaml -e 'puts YAML::load("--- 2009-01-06T16:05:29+09:00")'
+  * ruby -e 'open("hoge.txt", "w").write("hoge")'
+  * ruby -e "puts open('hoge.txt').read"
+
