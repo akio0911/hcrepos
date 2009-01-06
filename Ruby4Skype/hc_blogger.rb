@@ -23,12 +23,17 @@ class HackersBlog < BloggerBlog
 	end
 
 	def logs
+		logs = []
 		page = open(feeds_uri).read
 		doc = REXML::Document.new(page)
-		doc.elements.each('feed/entry/title') do |elem|
-			puts elem.text
+		doc.elements.each('feed/entry') do |entry|
+			title = entry.elements['title'].text
+			url = entry.elements['link'].attributes['href']
+			text = "#{title}: #{url}"
+			time = Time.parse(entry.elements['updated'].text)
+			logs << {:text => text, :time => time}
 		end
-		logs = []
+
 		return logs
 	end
 end
