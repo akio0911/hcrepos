@@ -17,7 +17,7 @@ SkypeAPI.attachWait
 test = "#voqn_skype/$6410ca0139e195d0"
 yuiseki = "#yuiseki/$97c57c5363208f6a"
 hack = "#akio0911/$yuiseki;1600dfa22ed008f5"
-observers = []
+
 def post_chat(chatid, logs)
   logs.each do |log|
     how_ago = (Time.now - log[:time])
@@ -37,13 +37,3 @@ logs = Github.commit_logs
 post_chat(hack, logs)
 
 
-=begin
-require 'irc_bridge'
-require 'hc_skype'
-
-logs = HackersCafeSkype.chat_logs
-post_chat(test, logs)
-
-observers << IrcClient
-IrcClient.notify_post()
-=end
