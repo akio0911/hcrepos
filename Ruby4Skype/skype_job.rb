@@ -3,7 +3,7 @@
 $: << File.dirname(__FILE__)
 require "Mitter"
 require "Github"
-require "hc_blogger"
+require "hc_blog"
 #ここにrequire "Sample"などとして追加
 
 require 'rubygems'
