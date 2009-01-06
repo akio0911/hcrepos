@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 # http://d.hatena.ne.jp/curi1119/20080506/1210062892
+# 
+# Copyright (c) 2009 TAKANO Mitsuhiro <tak at no32.tk>
+#
+# You can redistribute it and/or modify it under GPL2.
+#
 
 require 'socket'
 require 'kconv'
@@ -19,6 +24,10 @@ class IrcClient
 	def send_cmd(cmd)
 		p "Sending command..... :#{cmd}"
 		@irc.write(cmd + @eol)
+	end
+
+	def send_privmsg(input)
+		send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
 	end
 
 	def login_and_join
