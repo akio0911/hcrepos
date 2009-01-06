@@ -24,7 +24,7 @@ class Mitter
       user = log.search('div.date').search('a').first.inner_text
       time_row = log.search('div.date').search('span').first.get_attribute(:title)
       time = Time.parse(time_row)+(60*60*9)
-      text = user + "がHacker'sCafeグループに投稿: " + title + url
+      text = user + "が動画を共有:\n " + title + "\n" + url
       logs.push({:text => text, :time => time})
     end
     return logs
@@ -43,7 +43,7 @@ class Mitter
         url = log.search('span.service').search('a').first.get_attribute(:href)
         time_row = log.search('span.watched-at').first.get_attribute(:title)
         time = Time.parse(time_row)+(60*60*9)
-        text = user +  "がまた動画Mitter: " + title + url
+        text = user +  "が動画Mitter: " + title + "\n" + url
         logs.push({:text => text, :time => time})
       end
     end

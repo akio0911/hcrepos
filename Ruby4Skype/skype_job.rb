@@ -1,4 +1,9 @@
 #5分おきに実行
+#ロードパスの調整
+$: << File.dirname(__FILE__)
+require "Mitter"
+require "Github"
+
 require 'rubygems'
 gem 'mechanize', '= 0.7.8'
 require 'mechanize'
@@ -9,8 +14,6 @@ require 'skypeapi'
 require 'open-uri'
 require 'rexml/document'
 
-require 'mitter'
-require 'github'
 
 SkypeAPI.init
 SkypeAPI.attachWait
@@ -27,11 +30,8 @@ def post_chat(chatid, logs)
   end
 end
 
-logs = Mitter.logs_of_users
-post_chat(test, logs)
+post_chat(test, Mitter.logs_of_users)
 
-logs = Mitter.logs_of_groups
-post_chat(hack, logs)
+post_chat(hack, Mitter.logs_of_groups)
 
-logs = Github.commit_logs
-post_chat(hack, logs)
+post_chat(hack, Github.commit_logs)
