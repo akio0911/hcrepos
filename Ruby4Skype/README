@@ -11,9 +11,8 @@ site_name.rbのようなファイルを作って、そこにclass Sitenameをつ
 
 さらに、skype_job.rbの最初のほうでrequire "Sitename"として、下のほうでpost_chat(chatname, Sitename.hoge_logs)のように書けば、５分おきにチェックされて新しいものがチャットで発言される。
 
-↓もじばけてしまった＞＜
-
-* $B2a5n$N%m%0$r<hF@$9$k$?$a$K(BYAML$B$GF|;~$r5-21$7$F$*$/$N$O$I$&$+(B
+* SkypeIrcGateway ノート
+  * 作るときに発言の差分をとるため、日付を保存する必要がある？
   * ruby -ryaml -e 'puts DateTime.now.to_yaml'
   * ruby -ryaml -e 'puts YAML::load("--- 2009-01-06T16:05:29+09:00")'
   * ruby -e 'open("hoge.txt", "w").write("hoge")'
