@@ -3,19 +3,23 @@ class Mitter
     "yuiseki",
     "jazzanova",
     "send",
+    "vaac",
+    "otsune",
     "takano32",
     "retlet",
+    "tacke",
+    "yusukezzz",
     "twitt",
-    "tacke"
+    "skashu",
+    "moedra",
+    "fazz0611",
+    "aduma",
+    "TKWx"
   ]
 =begin
-    "skashu",
     "llcheesell",
-    "vaac",
     "delphie",
     "urabi_sama",
-    "yusukezzz",
-    "otsune",
     "kagawa",
     "youzaka",
 =end
