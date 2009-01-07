@@ -27,7 +27,7 @@ class HackersCafeBlog < BloggerBlog
 		doc.elements.each('feed/entry') do |entry|
 			title = entry.elements['title'].text
 			url = entry.elements['link'].attributes['href']
-			text = "#{title}: #{url}"
+			text = "(coffee) Hacker's Cafe Blog: #{title} - #{url}"
 			time = Time.parse(entry.elements['updated'].text)
 			logs << {:text => text, :time => time}
 		end
