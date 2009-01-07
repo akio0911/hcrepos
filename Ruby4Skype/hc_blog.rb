@@ -26,7 +26,7 @@ class HackersCafeBlog < BloggerBlog
 		doc = REXML::Document.new(page)
 		doc.elements.each('feed/entry') do |entry|
 			title = entry.elements['title'].text
-			url = entry.elements['link'].attributes['href']
+			url = entry.elements["link[@rel='alternate']"].attributes['href']
 			text = "(coffee) Hacker's Cafe Blog: #{title} - #{url}"
 			time = Time.parse(entry.elements['updated'].text)
 			logs << {:text => text, :time => time}
