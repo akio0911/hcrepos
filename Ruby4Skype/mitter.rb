@@ -31,13 +31,13 @@ class Mitter
   end
 
   def self.logs_of_users
+    logs = []
     agent = WWW::Mechanize.new
     agent.max_history = 1
     USERS.each do |user|
       url = "http://mitter.jp/" + user
       page = agent.get(url)
       page.body = page.body.toutf8
-      logs = []
       page.search('div.log-details').each do |log|
         title = log.search('h3.title').search('a').first.inner_text
         url = log.search('span.service').search('a').first.get_attribute(:href)
