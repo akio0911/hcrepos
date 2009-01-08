@@ -1,14 +1,13 @@
 class Github
-  def self.coommit_logs
+  def self.commit_logs
     logs = []
     xml = open("http://github.com/feeds/akio0911/commits/hcrepos/master").read
     doc = REXML::Document.new xml
     doc.elements.each('/feed') do |feed|
       feed.elements.each('entry') do |entry|
-        status_text = entry.elements['author/name'].text + ':' + entry.elements['title'].text
-        status_created_at = Time.parse(entry.elements['updated'].text)
-        status_created_at += 9.hour + 8.hour
-        logs.push({:text => status_text, :time => status_created_at})
+        text = "(bug) github commited:" + entry.elements['author/name'].text + ':' + entry.elements['title'].text
+        time = Time.parse(entry.elements['updated'].text)
+        logs.push({:text => text, :time => time})
       end
     end
     return logs

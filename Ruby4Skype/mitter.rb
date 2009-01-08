@@ -1,16 +1,28 @@
 class Mitter
   USERS = [
     "yuiseki",
-    "skashu",
-    "llcheesell",
-    "retlet",
+    "jazzanova",
+    "send",
     "vaac",
+    "otsune",
+    "takano32",
+    "retlet",
+    "tacke",
+    "yusukezzz",
+    "twitt",
+    "skashu",
+    "moedra",
+    "fazz0611",
+    "aduma",
+    "TKWx"
+  ]
+=begin
+    "llcheesell",
     "delphie",
     "urabi_sama",
-    "yusukezzz",
-    "jazzanova", 
-    "otsune"
-  ]
+    "kagawa",
+    "youzaka",
+=end
 
   def self.logs_of_groups
     agent = WWW::Mechanize.new
@@ -21,10 +33,10 @@ class Mitter
     page.search('div.video').each do |log|
       title = log.search('div.video-info').search('a').first.get_attribute(:title)
       url = log.search('span.service').search('a').first.get_attribute(:href)
-      name = log.search('div.date').search('a').first.inner_text
+      user = log.search('div.date').search('a').first.inner_text
       time_row = log.search('div.date').search('span').first.get_attribute(:title)
       time = Time.parse(time_row)+(60*60*9)
-      text = user "がまた動画Mitter: " + title + url
+      text = user + "が動画を共有:\n " + title + "\n" + url
       logs.push({:text => text, :time => time})
     end
     return logs
@@ -43,8 +55,9 @@ class Mitter
         url = log.search('span.service').search('a').first.get_attribute(:href)
         time_row = log.search('span.watched-at').first.get_attribute(:title)
         time = Time.parse(time_row)+(60*60*9)
-        text = user + "がHacker'sCafeグループに投稿: " + title + url
+        text = user +  "が動画Mitter: " + title + "\n" + url
         logs.push({:text => text, :time => time})
+        #p user + " " + logs.length.to_s
       end
     end
     return logs
