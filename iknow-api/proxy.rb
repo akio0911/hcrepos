@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-# iKnow API を利用するためのプロキシ
-# クロスサイトにリクエストを出すために利用
+# iKnow API 繧貞茜逕ｨ縺吶ｋ縺溘ａ縺ｮ繝励Ο繧ｭ繧ｷ
+# 繧ｯ繝ｭ繧ｹ繧ｵ繧､繝医↓繝ｪ繧ｯ繧ｨ繧ｹ繝医ｒ蜃ｺ縺吶◆繧√↓蛻ｩ逕ｨ
 # method: post, get, delete
 # query: query string
 # data: 
