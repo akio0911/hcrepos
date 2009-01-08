@@ -9,4 +9,12 @@ Developer Challenge
 API Key 取得
 :takano32:ykh9t4zq5ewkxydznybkd7ux
 
+よく使いそうなAPI
+* Do a dictionary lookup that includes iKnow! rich content.
+  http://developer.iknow.co.jp/docs/item_calls/search_items
+
+* ex. http://api.iknow.co.jp/items/matching/record
+      http://api.iknow.co.jp/items/matching/record.xml
+      http://api.iknow.co.jp/items/matching/record.json
+
 
