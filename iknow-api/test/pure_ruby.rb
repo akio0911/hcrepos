@@ -1,15 +1,26 @@
+# -*- coding: utf-8 -*-
 require 'rubygems'
+require 'pit'
 require 'iknow'
 require 'oauth/consumer'
 
+config = Pit.get("iknow", :require => {
+						  "api_key" => "your api_key",
+						  "username" => "your iknow username",
+						  "password" => "your iknow password",
+						  # "oauth_consumer_key" => "your oauth_consumer_key",
+						  # "oauth_consumer_secret" => "your oauth_consumer_secret",
+					  })
+
 Iknow::Config.init do |conf|
-  conf.api_host              = 'api.iknow.co.jp'
-  conf.api_key               = '' # 'SET_YOUR_API_KEY'
-  conf.oauth_consumer_key    = '' # 'SET_YOUR_OAUTH_CONSUMER_KEY'
-  conf.oauth_consumer_secret = '' # 'SET_YOUR_OAUTH_CONSUMER_SECRET'
-  conf.oauth_http_method     = :post
-  conf.oauth_scheme          = :header
-  conf.timeout               = 15
+	conf.api_host              = 'api.iknow.co.jp'
+	# conf.api_key               = '' # 'SET_YOUR_API_KEY'
+	conf.api_key               = config['api_key']
+	conf.oauth_consumer_key    = '' # 'SET_YOUR_OAUTH_CONSUMER_KEY'
+	conf.oauth_consumer_secret = '' # 'SET_YOUR_OAUTH_CONSUMER_SECRET'
+	conf.oauth_http_method     = :post
+	conf.oauth_scheme          = :header
+	conf.timeout               = 15
 end
 
 # Edit here
@@ -17,8 +28,8 @@ OAUTH_ACCESS_TOKEN = ''
 OAUTH_ACCESS_TOKEN_SECRET = ''
 
 # Edit here
-IKNOW_USERNAME = ''
-IKNOW_PASSWORD = ''
+IKNOW_USERNAME = config['username']
+IKNOW_PASSWORD = config['password']
 
 please_get_api_key =<<EOS
 This example needs your own iKnow! API key.
