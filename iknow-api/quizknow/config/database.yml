@@ -1,0 +1,13 @@
+development: &defaults
+  adapter: mysql
+  database: quizknow_development
+  username: root
+  encoding: utf8
+
+test:
+  <<: *defaults
+  database: quizknow_test
+
+dev:
+  <<: *defaults
+  database: quizknow_dev
