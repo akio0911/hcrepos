@@ -3870,3 +3870,157 @@ Completed in 9ms (DB: 0) | 302 Found [http://localhost/conversions]
 Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:20:04) [GET]
   Parameters: {"username"=>"nov"}
 Completed in 23ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=nov]
+
+
+Processing ConversionsController#index (for 127.0.0.1 at 2009-01-12 03:34:55) [GET]
+Rendering template within layouts/application
+Rendering conversions/index
+  [4;36;1mConversion Load (0.9ms)[0m   [0;1mSELECT * FROM "conversions" ORDER BY id DESC[0m
+Rendered conversions/_new (4.8ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-12 03:34:55) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/quizlet_bg.jpg" with {:method=>:get}):
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ConversionsController#create (for 127.0.0.1 at 2009-01-12 03:35:07) [POST]
+  Parameters: {"commit"=>"Make list!", "conversion"=>{"quizlet_url"=>"http://quizlet.com/set/415/", "response_language_code"=>"", "iknow_username"=>"takano32@hotmail.co.jp", "cue_language_code"=>""}}
+  [4;35;1mAuthtoken Load (0.2ms)[0m   [0mSELECT * FROM "authtokens" WHERE ("authtokens"."username" = 'takano32@hotmail.co.jp') LIMIT 1[0m
+Redirected to usernametakano32@hotmail.co.jpactionnew_requestcontrolleroauth
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/conversions]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:35:07) [GET]
+  Parameters: {"username"=>"takano32@hotmail.co.jp"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=takano32%40hotmail.co.jp]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:37:53) [GET]
+  Parameters: {"username"=>"takano32@hotmail.co.jp"}
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=takano32%40hotmail.co.jp]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:37:54) [GET]
+  Parameters: {"username"=>"takano32@hotmail.co.jp"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=takano32%40hotmail.co.jp]
+
+
+Processing ConversionsController#index (for 127.0.0.1 at 2009-01-12 03:38:06) [GET]
+Rendering template within layouts/application
+Rendering conversions/index
+  [4;36;1mConversion Load (0.9ms)[0m   [0;1mSELECT * FROM "conversions" ORDER BY id DESC[0m
+Rendered conversions/_new (5.5ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-12 03:38:06) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/quizlet_bg.jpg" with {:method=>:get}):
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ConversionsController#create (for 127.0.0.1 at 2009-01-12 03:38:27) [POST]
+  Parameters: {"commit"=>"Make list!", "conversion"=>{"quizlet_url"=>"http://quizlet.com/set/415/", "response_language_code"=>"", "iknow_username"=>"developer@iknow.co.jp", "cue_language_code"=>""}}
+  [4;35;1mAuthtoken Load (0.2ms)[0m   [0mSELECT * FROM "authtokens" WHERE ("authtokens"."username" = 'developer@iknow.co.jp') LIMIT 1[0m
+Redirected to usernamedeveloper@iknow.co.jpactionnew_requestcontrolleroauth
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/conversions]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:38:27) [GET]
+  Parameters: {"username"=>"developer@iknow.co.jp"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=developer%40iknow.co.jp]
+
+
+Processing ConversionsController#create (for 127.0.0.1 at 2009-01-12 03:38:34) [POST]
+  Parameters: {"commit"=>"Make list!", "conversion"=>{"quizlet_url"=>"http://quizlet.com/set/415/", "response_language_code"=>"", "iknow_username"=>"nov@iknow.co.jp", "cue_language_code"=>""}}
+  [4;36;1mAuthtoken Load (0.2ms)[0m   [0;1mSELECT * FROM "authtokens" WHERE ("authtokens"."username" = 'nov@iknow.co.jp') LIMIT 1[0m
+Redirected to usernamenov@iknow.co.jpactionnew_requestcontrolleroauth
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/conversions]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:38:34) [GET]
+  Parameters: {"username"=>"nov@iknow.co.jp"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=nov%40iknow.co.jp]
+
+
+Processing ConversionsController#create (for 127.0.0.1 at 2009-01-12 03:38:44) [POST]
+  Parameters: {"commit"=>"Make list!", "conversion"=>{"quizlet_url"=>"http://quizlet.com/set/415/", "response_language_code"=>"", "iknow_username"=>"nov@iknow.co.jp", "cue_language_code"=>""}}
+  [4;35;1mAuthtoken Load (0.2ms)[0m   [0mSELECT * FROM "authtokens" WHERE ("authtokens"."username" = 'nov@iknow.co.jp') LIMIT 1[0m
+Redirected to usernamenov@iknow.co.jpactionnew_requestcontrolleroauth
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/conversions]
+
+
+Processing OauthController#new_request (for 127.0.0.1 at 2009-01-12 03:38:44) [GET]
+  Parameters: {"username"=>"nov@iknow.co.jp"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/oauth/new_request?username=nov%40iknow.co.jp]
