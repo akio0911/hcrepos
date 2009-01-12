@@ -1,0 +1,150 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = E710A1AD0B529362007D2430 /* SkypeAPITest */;
+		activeTarget = 8D1107260486CEB800E47090 /* SkypeAPITest */;
+		codeSenseManager = E710A1BB0B52936C007D2430 /* Code sense */;
+		executables = (
+			E710A1AD0B529362007D2430 /* SkypeAPITest */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					743.2085,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					853,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					673,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 202127623;
+			PBXWorkspaceStateSaveDate = 202127623;
+		};
+		perUserProjectItems = {
+			E7307D3D0C0C38990022B349 /* PBXTextBookmark */ = E7307D3D0C0C38990022B349 /* PBXTextBookmark */;
+			E7307D510C0C391D0022B349 /* PBXTextBookmark */ = E7307D510C0C391D0022B349 /* PBXTextBookmark */;
+		};
+		sourceControlManager = E710A1BA0B52936C007D2430 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* SkypeAPITest */ = {
+		activeExec = 0;
+		executables = (
+			E710A1AD0B529362007D2430 /* SkypeAPITest */,
+		);
+	};
+	E710A1AD0B529362007D2430 /* SkypeAPITest */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = SkypeAPITest;
+		sourceDirectories = (
+		);
+	};
+	E710A1BA0B52936C007D2430 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	E710A1BB0B52936C007D2430 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	E7307D3D0C0C38990022B349 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7E5BCCF080EFBE700891402 /* SkypeController.m */;
+		name = "SkypeController.m: 61";
+		rLen = 0;
+		rLoc = 1542;
+		rType = 0;
+		vrLen = 1004;
+		vrLoc = 1051;
+	};
+	E7307D510C0C391D0022B349 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7E5BCCF080EFBE700891402 /* SkypeController.m */;
+		name = "SkypeController.m: 61";
+		rLen = 0;
+		rLoc = 1542;
+		rType = 0;
+		vrLen = 843;
+		vrLoc = 1719;
+	};
+	E7E5BCCF080EFBE700891402 /* SkypeController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1051, 1358}}";
+			sepNavSelRange = "{1542, 0}";
+			sepNavVisRect = "{{0, 909}, {1051, 449}}";
+		};
+	};
+}
