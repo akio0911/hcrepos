@@ -1,22 +1,23 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 # http://d.hatena.ne.jp/curi1119/20080506/1210062892
 # 
 # Copyright (c) 2009 TAKANO Mitsuhiro <tak at no32.tk>
 #
-
+# SkypeIrcGatewayのために作成したIRCクライアント
 require 'socket'
 require 'kconv'
 
 $KCODE = 'UTF8'
 
 class SimpleIrcClient
-	def initialize(channel, nick)
+	def initialize(channel, name)
 		@server = "irc.freenode.net"
 		@port = 6667
 		@irc = TCPSocket.new(@server, @port)
 		@eol = "\r\n"
 		@channel = channel
-		@nick = nick
+		@name = name
 	end
 	
 	def send_cmd(cmd)
@@ -35,7 +36,7 @@ class SimpleIrcClient
 
 	def login_and_join
 		send_cmd("USER skype_bot, #{@server}, ignore, Hacker's Cafe")
-		send_cmd("NICK #{@nick}")
+		send_cmd("NICK #{@name}")
 		send_cmd("JOIN #{@channel}")
 	end
 
@@ -48,9 +49,9 @@ class SimpleIrcClient
 					raise unless @block
 					channel = msg[2]
 					/^:([^!]*)!/ =~ msg[0]
-					nick = $1
+					name = $1
 					message = msg[3..-1].join(' ')[1..-1]
-					@block.call(channel, nick, message)
+					@block.call(channel, name, message)
 				end
 
 			end
@@ -66,10 +67,10 @@ end
 
 if __FILE__ == $0 then
 	channel = '#hackerscafe'
-	nick = 'skype_bot'
-	client = SimpleIrcClient.new(channel, nick)
-	client.receive_message do |channel, nickname, message|
-		puts("#{channel}, #{nickname}, #{message}") unless channel == nick
+	name = 'skype_bot'
+	client = SimpleIrcClient.new(channel, name)
+	client.receive_message do |channel, name, message|
+		puts("(swear) #{name}:  #{message}") unless channel == name
 	end
 	client.start
 	client.send_message('hello')

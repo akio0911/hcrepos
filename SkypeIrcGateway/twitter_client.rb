@@ -1,7 +1,14 @@
 #!/usr/bin/env ruby
-# IRC�ō�낤���Ǝv�������ǁA�Z�b�V�����̊Ǘ��Ȃǂ�����̂�
-# protected��Twitter�ō���������悳�������A�Ȃǂƍl�����B
+# -*- coding: utf-8 -*-
+# IRCで作ろうかと思ったけど、セッションの管理などが難しいので
+# protectedのTwitterで作った方がよさそうだ、などと考えた。
 
 
 
 require 'pit'
+
+class SimpleTwitterClient
+	def initialize
+	end
+end
+

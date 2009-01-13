@@ -29,10 +29,10 @@ class SimpleSkypeClient
 	def start
 		raise unless @block
 		SkypeAPI::ChatMessage.setNotify :Status, 'RECEIVED' do |msg|
-			#@block.call(msg.getBody)
-			puts msg.getChat
-			puts msg.getFrom
-			puts msg.getBody
+			channel = msg.getChat
+			name = msg.getFrom
+			message = msg.getBody
+			@block.call(channel, name, message)
 		end
 		@thread = Thread.start do
 			until (@stop)
@@ -52,13 +52,13 @@ end
 
 
 if __FILE__ == $0 then
-	chat = 'akio0911'
-	chat = '#voqn_skype/$6410ca0139e195d0'
-	chat = '#akio0911/$yuiseki;1600dfa22ed008f5"'
+	priv_chat = 'akio0911'
+	test_chat = '#voqn_skype/$6410ca0139e195d0'
+	chat = '#akio0911/$yuiseki;1600dfa22ed008f5'
 	client = SimpleSkypeClient.new(chat)
 	
-	client.receive_message do |msg|
-		puts msg
+	client.receive_message do |channel, name, message|
+		puts "#{name}: #{message}" if channel == chat
 	end
 	
 	Signal.trap('INT') do
@@ -70,7 +70,7 @@ if __FILE__ == $0 then
 
 	client.start
 
-	# client.send_message('テスト')
+	client.send_message('テスト')
 
 	loop do
 		puts "#{self.class.name}: loop" if $DEBUG
