@@ -1,0 +1,8 @@
+﻿== SkypeIrcGateway
+
+SkypeとIRCのゲートウェイです。
+
+* sig.rb: ゲートウェイ
+* skype_client.rb: Skypeのインターフェイス
+* irc_client.rb: IRCのインターフェイス
+
