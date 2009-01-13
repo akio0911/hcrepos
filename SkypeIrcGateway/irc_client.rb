@@ -6,9 +6,6 @@
 #
 # SkypeIrcGatewayのために作成したIRCクライアント
 require 'socket'
-require 'kconv'
-
-$KCODE = 'UTF8'
 
 class SimpleIrcClient
 	def initialize(channel, name)
@@ -26,7 +23,7 @@ class SimpleIrcClient
 	end
 
 	def send_message(input)
-		send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
+		send_cmd("PRIVMSG #{@channel} #{input}")
 	end
 
 	def receive_message(&block)
@@ -42,7 +39,7 @@ class SimpleIrcClient
 
 	def start
 		@read_thread = read_thread = Thread.start do
-			while msg = Kconv.toutf8(@irc.gets).split
+			while msg = @irc.gets.split
 				p msg.join(' ') if $DEBUG
 				send_cmd("PONG #{msg[1]}") if msg[0] == 'PING'
 				if msg[1] == 'PRIVMSG' then
