@@ -23,7 +23,7 @@ class SimpleIrcClient
 	end
 
 	def send_message(input)
-		send_cmd("PRIVMSG #{@channel} #{input}")
+		send_cmd("PRIVMSG #{@channel} :#{input}")
 	end
 
 	def receive_message(&block)
@@ -64,13 +64,13 @@ end
 
 if __FILE__ == $0 then
 	channel = '#hackerscafe'
-	name = 'skype_bot'
+	name = 'skype_bo'
 	client = SimpleIrcClient.new(channel, name)
 	client.receive_message do |channel, name, message|
 		puts("(swear) #{name}:  #{message}") unless channel == name
 	end
 	client.start
-	client.send_message('hello')
+	client.send_message('hoge"')
 	client.stop
 end
 
