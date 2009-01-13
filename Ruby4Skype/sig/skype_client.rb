@@ -52,7 +52,7 @@ if __FILE__ == $0 then
 		puts msg
 	end
 	client.start
-	trap('EXIT', 'DEFAULT') do
+	Signal.trap(:TERM, 'DEFAULT') do
 		client.stop
 	end
 end
