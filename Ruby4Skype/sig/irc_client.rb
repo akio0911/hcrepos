@@ -36,7 +36,6 @@ class SimpleIrcClient
 
 	def start
 		@read_thread = read_thread = Thread.start do
-			Thread.stop
 			while msg = Kconv.toutf8(@irc.gets).split
 				p msg.join(' ')
 				send_cmd("PONG #{msg[1]}") if msg[0] == 'PING'
