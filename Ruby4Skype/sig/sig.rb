@@ -7,7 +7,8 @@
 # 建設予定地
 #
 
-require 'irc_bridge'
-requrie 'skype_bridge'
+require 'irc_client'
+require 'skype_client'
 
 
+hackerscafe_chat = "#akio0911/$yuiseki;1600dfa22ed008f5"
