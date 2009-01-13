@@ -29,9 +29,9 @@ class SimpleSkypeClient
 	def start
 		raise unless @block
 		SkypeAPI::ChatMessage.setNotify :Status, 'RECEIVED' do |msg|
-			channel = msg.getChat
-			name = msg.getFrom
-			message = msg.getBody
+			channel = msg.getChat.dup
+			name = msg.getFrom.dup
+			message = msg.getBody.dup
 			@block.call(channel, name, message)
 		end
 		@thread = Thread.start do
