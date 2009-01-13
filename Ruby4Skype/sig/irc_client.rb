@@ -24,7 +24,7 @@ class SimpleIrcClient
 		@irc.write(cmd + @eol)
 	end
 
-	def send_privmsg(input)
+	def send_message(input)
 		send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
 	end
 
@@ -33,42 +33,28 @@ class SimpleIrcClient
 		send_cmd("NICK #{@nick}")
 		send_cmd("JOIN #{@channel}")
 	end
-	
-	def read_thread
-		read_thread = Thread.new do
+
+	def start
+		@read_thread = read_thread = Thread.start do
 			Thread.stop
 			while msg = Kconv.toutf8(@irc.gets).split
 				p msg.join(' ')
 				send_cmd("PONG #{msg[1]}") if msg[0] == 'PING'
 			end
 		end
-	end
-
-	def write_thread
-		write_thread = Thread.new do
-			Thread.stop
-			while input = gets.chop
-				send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
-			end
-		end
-	end
-
-	def start
-		@read_thread = read_thread.run
 		login_and_join
-		@write_thread = write_thread.run
 	end
 
 	def stop
 		@read_thread.join
-		@write_thread.join
 	end
 end
 
 
 if __FILE__ == $0 then
-	@client = IrcClient.new
-	@client.start
-	@client.stop
+	client = SimpleIrcClient.new
+	client.start
+	client.send_message('こんにちは')
+	client.stop
 end
 

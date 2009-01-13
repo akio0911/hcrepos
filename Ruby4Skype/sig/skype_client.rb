@@ -21,7 +21,7 @@ class SimpleSkypeClient
 		SkypeAPI::ChatMessage.create(@chat_id, msg)
 	end
 
-	def notify_message(&block)
+	def receive_message(&block)
 		raise unless block_given?
 		@block = block
 	end
@@ -54,7 +54,7 @@ if __FILE__ == $0 then
 	chat = '#akio0911/$yuiseki;1600dfa22ed008f5"'
 	client = SimpleSkypeClient.new(chat)
 	
-	client.notify_message do |msg|
+	client.receive_message do |msg|
 		puts msg
 	end
 	
