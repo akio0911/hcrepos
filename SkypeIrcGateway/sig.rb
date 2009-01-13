@@ -13,6 +13,7 @@ require 'skype_client'
 class SkypeIrcGateway
 	def initialize(config)
 		@skype_chat = config[:skype_chat]
+		@skype_name = config[:skype_name]
 		@irc_chat = config[:irc_chat]
 		@irc_name = config[:irc_name]
 		@skype_client = SimpleSkypeClient.new(@skype_chat)
@@ -23,6 +24,7 @@ class SkypeIrcGateway
 	
 	def skype_initialize
 		@skype_client.receive_message do |channel, name, message|
+			return if name == @skype_name
 			@irc_client.send_message("#{name}: #{message}") if channel == @skype_chat
 		end
 	end
@@ -48,6 +50,7 @@ end
 if __FILE__ == $0 then
 	config = {
 		:skype_chat => '#akio0911/$yuiseki;1600dfa22ed008f5',
+		:skype_name => 'takano32',
 		:irc_chat => '#hackerscafe',
 		:irc_name => 'skype_bot',
 	}
