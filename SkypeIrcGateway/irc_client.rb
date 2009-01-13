@@ -64,7 +64,7 @@ end
 
 if __FILE__ == $0 then
 	channel = '#hackerscafe'
-	name = 'skype_bo'
+	name = 'skype_bot'
 	client = SimpleIrcClient.new(channel, name)
 	client.receive_message do |channel, name, message|
 		puts("(swear) #{name}:  #{message}") unless channel == name

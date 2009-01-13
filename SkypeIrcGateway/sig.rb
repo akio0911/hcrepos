@@ -23,7 +23,7 @@ class SkypeIrcGateway
 	
 	def skype_initialize
 		@skype_client.receive_message do |channel, name, message|
-			@irc_client.send_message("#{name}: #{message}") unless channel == name
+			@irc_client.send_message("#{name}: #{message}") if channel == @skype_chat
 		end
 	end
 
