@@ -6,3 +6,6 @@ SkypeとIRCのゲートウェイです。
 * skype_client.rb: Skypeのインターフェイス
 * irc_client.rb: IRCのインターフェイス
 
+(swear)
+
+
