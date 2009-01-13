@@ -10,17 +10,17 @@ require 'kconv'
 $KCODE = 'UTF8'
 
 class SimpleIrcClient
-	def initialize
+	def initialize(channel, nick)
 		@server = "irc.freenode.net"
 		@port = 6667
 		@irc = TCPSocket.new(@server, @port)
 		@eol = "\r\n"
-		@nick = "skype_bot"
-		@channel = "#hackerscafe"
+		@channel = channel
+		@nick = nick
 	end
 	
 	def send_cmd(cmd)
-		p "Sending command..... :#{cmd}"
+		p "Sending command..... :#{cmd}" if $DEBUG
 		@irc.write(cmd + @eol)
 	end
 
@@ -46,10 +46,11 @@ class SimpleIrcClient
 				send_cmd("PONG #{msg[1]}") if msg[0] == 'PING'
 				if msg[1] == 'PRIVMSG' then
 					raise unless @block
-					#:takano32!n=takano32@x.ne.jp PRIVMSG #hackerscafe :testtest
-					p channel = msg[2]
-					p nickname = /^:([^!]*)!/
-					p message = msg[3][1..-1]
+					channel = msg[2]
+					/^:([^!]*)!/ =~ msg[0]
+					nick = $1
+					message = msg[3..-1].join(' ')[1..-1]
+					@block.call(channel, nick, message)
 				end
 
 			end
@@ -64,9 +65,14 @@ end
 
 
 if __FILE__ == $0 then
-	client = SimpleIrcClient.new
+	channel = '#hackerscafe'
+	nick = 'skype_bot'
+	client = SimpleIrcClient.new(channel, nick)
+	client.receive_message do |channel, nickname, message|
+		puts("#{channel}, #{nickname}, #{message}") unless channel == nick
+	end
 	client.start
-	client.send_message('こんにちは')
+	client.send_message('hello')
 	client.stop
 end
 
