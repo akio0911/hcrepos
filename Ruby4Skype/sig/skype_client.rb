@@ -13,46 +13,67 @@ class SimpleSkypeClient
 	def initialize(chat_id)
 		SkypeAPI.init
 		SkypeAPI.attachWait
-		@chat = SkypeAPI::Chat.create(chat_id)
+		@chat_id = chat_id
+		@stop = false
 	end
 
-	def create_message(msg)
-		SkypeAPI::ChatMessage.create(@chat, msg)
+	def send_message(msg)
+		SkypeAPI::ChatMessage.create(@chat_id, msg)
 	end
 
-	def notify_message
-		if block_given?
-			SkypeAPI::ChatMessage.setNotify :Status, 'RECEIVED' do |msg|
-				yield msg.getBody
-			end
-		end
+	def notify_message(&block)
+		raise unless block_given?
+		@block = block
 	end
 
 	def start
+		raise unless @block
+		SkypeAPI::ChatMessage.setNotify :Status, 'RECEIVED' do |msg|
+			@block.call(msg.getBody)
+		end
 		@thread = Thread.start do
-			until(@thread[:stop])
+			until (@stop)
+				puts "#{self.class.name}: polling" if $DEBUG
 				SkypeAPI.polling
-				sleep 0.123
+				Thread.pass
+				sleep 0.5
 			end
 		end
 	end
 
 	def stop
-		@thread[:stop] = true
+		@stop = true
 		@thread.join
 	end
 end
 
 
 if __FILE__ == $0 then
-	chat = "#akio0911/$yuiseki;1600dfa22ed008f5"
-	chat = "#voqn_skype/$6410ca0139e195d0"
+	chat = 'akio0911'
+	chat = '#voqn_skype/$6410ca0139e195d0'
+	chat = '#akio0911/$yuiseki;1600dfa22ed008f5"'
 	client = SimpleSkypeClient.new(chat)
+	
 	client.notify_message do |msg|
 		puts msg
 	end
-	client.start
-	Signal.trap(:TERM, 'DEFAULT') do
+	
+	Signal.trap('INT') do
+		puts "#{self.class.name}: INT" if $DEBUG
 		client.stop
+		exit
 	end
+
+
+	client.start
+
+	# client.send_message('テスト')
+
+	loop do
+		puts "#{self.class.name}: loop" if $DEBUG
+		Thread.pass
+		sleep 0.5
+	end
+	client.stop
+
 end

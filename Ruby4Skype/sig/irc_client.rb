@@ -9,7 +9,7 @@ require 'kconv'
 
 $KCODE = 'UTF8'
 
-class IrcClient
+class SimpleIrcClient
 	def initialize
 		@server = "irc.freenode.net"
 		@port = 6667
