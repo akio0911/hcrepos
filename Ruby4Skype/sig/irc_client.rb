@@ -28,6 +28,11 @@ class SimpleIrcClient
 		send_cmd("PRIVMSG #{@channel} #{Kconv.tojis(input)}")
 	end
 
+	def receive_message(&block)
+		raise unless block_given?
+		@block = block
+	end
+
 	def login_and_join
 		send_cmd("USER skype_bot, #{@server}, ignore, Hacker's Cafe")
 		send_cmd("NICK #{@nick}")
@@ -37,8 +42,16 @@ class SimpleIrcClient
 	def start
 		@read_thread = read_thread = Thread.start do
 			while msg = Kconv.toutf8(@irc.gets).split
-				p msg.join(' ')
+				p msg.join(' ') if $DEBUG
 				send_cmd("PONG #{msg[1]}") if msg[0] == 'PING'
+				if msg[1] == 'PRIVMSG' then
+					raise unless @block
+					#:takano32!n=takano32@x.ne.jp PRIVMSG #hackerscafe :testtest
+					p channel = msg[2]
+					p nickname = /^:([^!]*)!/
+					p message = msg[3][1..-1]
+				end
+
 			end
 		end
 		login_and_join
