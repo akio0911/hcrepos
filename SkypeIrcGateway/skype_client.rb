@@ -29,7 +29,10 @@ class SimpleSkypeClient
 	def start
 		raise unless @block
 		SkypeAPI::ChatMessage.setNotify :Status, 'RECEIVED' do |msg|
-			@block.call(msg.getBody)
+			#@block.call(msg.getBody)
+			puts msg.getChat
+			puts msg.getFrom
+			puts msg.getBody
 		end
 		@thread = Thread.start do
 			until (@stop)
