@@ -190,9 +190,8 @@
 		[scanner scanCharactersFromSet:chSet intoString:nil];
 	}
 	
-	if([array count] < 3) 
-		return NO;
-		
+	assert([array count] >= 3);
+
 	int i = 0;
 	
 	// for longitude_
