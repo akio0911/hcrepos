@@ -35,4 +35,5 @@
 	NSString *msg_;
 	NSString *t_;
 }
+- (void) initWithURL:(NSString*)urlString setDelegate:(id)delegate;
 @end
