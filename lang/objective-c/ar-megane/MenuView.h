@@ -10,10 +10,11 @@
 #import <Cocoa/Cocoa.h>
 #import	<QuartzCore/CoreAnimation.h>
 #import <QTKit/QTKit.h>
+#import "Downloader.h"
 
 // MenuViewクラスは、ウインドウに挿入されるビューの 
 // サブクラスであり、rootLayerをホストしイベントに応答する 
-@interface MenuView : NSView {
+@interface MenuView : NSView <SetTextProtocol> {
 
    // 選択されたメニュー項目インデックスを含む 
 	NSInteger	selectedIndex; 

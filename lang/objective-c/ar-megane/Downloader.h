@@ -37,3 +37,7 @@
 }
 - (void) initWithURL:(NSString*)urlString setDelegate:(id)delegate;
 @end
+
+@protocol SetTextProtocol
+- (void)setText:(NSString*)addr aLongitude:(NSString*)longitude aLatitude:(NSString*)latitude aMessage:(NSString*)msg;
+@end 
