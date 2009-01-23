@@ -1,0 +1,10 @@
+// Code Linsence: MIT by akio0911
+// http://d.hatena.ne.jp/akio0911/
+// akio0911@gmail.com
+//
+// Prefix header for all source files of the 'CocoaAnimeCamera' target in the 'CocoaAnimeCamera' project
+
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
