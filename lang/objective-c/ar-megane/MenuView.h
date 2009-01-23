@@ -5,9 +5,7 @@
 //  MenuView.h
 //  CocoaAnimeCamera
 //
-//  Created by ssatou on 08/04/19.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
-//
+//  Created by akio0911 on 08/04/19.
 
 #import <Cocoa/Cocoa.h>
 #import	<QuartzCore/CoreAnimation.h>

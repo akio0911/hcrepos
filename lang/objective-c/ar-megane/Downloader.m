@@ -87,9 +87,12 @@
 		[	scanner scanCharactersFromSet:chSet intoString:nil];
 		counter++;
 	}
-	
-	char *char_wifi = ( char * ) malloc( sizeof(char) * ( [wifiString length] ) );
-	[wifiString getCString:char_wifi];
+
+	const size_t CHAR_WIFI_SIZE = sizeof(char) * ( [wifiString length] );
+	char *char_wifi = ( char * ) malloc( CHAR_WIFI_SIZE );
+	strncpy(char_wifi, [wifiString cStringUsingEncoding:NSUTF8StringEncoding], CHAR_WIFI_SIZE);
+	char_wifi[CHAR_WIFI_SIZE-1] = '\0';
+
 	NSString*new_url = [NSString stringWithFormat:@"http://www.placeengine.com/api/loc?t=%d&rtag=%s&appk=%s&fmt=json",(int)[[NSDate date] timeIntervalSince1970],char_wifi,PLACEENGINE_KEY];
 	free( char_wifi );
 	[[PositionGetter alloc] initWithURL:new_url setDelegate:delegate_];
