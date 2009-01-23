@@ -43,6 +43,9 @@ IWEAR_End(); \
 return( r ); \
 }
 
+#define ERR_PRINT( r )	\
+fprintf( stderr, "%s\n", IWEAR_ErrorStr( r ));
+
 /* same thing, but for the device handle */
 #define ERRCHKHND( h ) \
 if( !(h) ) { \
@@ -126,8 +129,11 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 
 	/* start up the system */
 	ret = IWEAR_Start();
-	ERRCHK( ret );
-
+	if( (ret) < IWEAR_SUCCESS ) {
+		ERR_PRINT(ret);
+		IWEAR_End();
+	}
+	
 	/* count the number of available devices */
 	ret = IWEAR_Count();
 	ERRCHK( ret );
