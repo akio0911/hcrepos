@@ -1,7 +1,8 @@
 class Stream < Application
 
   def index
-    render
+    #render
+    "Hello World."
   end
   
 end
