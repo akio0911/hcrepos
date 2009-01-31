@@ -41,4 +41,5 @@ Merb::Router.prepare do
   
   # Change this for your home page to be available at /
   # match('/').to(:controller => 'whatever', :action =>'index')
+  match('/').to(:controller => 'stream', :action =>'index')
 end
