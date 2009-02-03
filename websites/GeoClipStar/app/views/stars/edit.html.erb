@@ -1,0 +1,12 @@
+<h1>Editing star</h1>
+
+<%= error_messages_for :star %>
+
+<% form_for(@star) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @star %> |
+<%= link_to 'Back', stars_path %>

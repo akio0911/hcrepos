@@ -1,0 +1,2093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stars type="array">
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2469</contents-id>
+    <create-date type="datetime">2008-08-30T00:19:51+09:00</create-date>
+    <created-at type="datetime">2008-08-30T00:20:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106605</id>
+    <image-url>http://m.geoclip.jp/upload/936/2469.jpg</image-url>
+    <latitude type="float">35.4471</latitude>
+    <longitude type="float">139.636</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#26716;&#26408;&#30010;&#12398;&#26143;</subject>
+    <tag>&#26716;&#26408;&#30010;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-30T00:20:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2464</contents-id>
+    <create-date type="datetime">2008-08-29T10:20:59+09:00</create-date>
+    <created-at type="datetime">2008-08-29T10:22:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106604</id>
+    <image-url>http://m.geoclip.jp/upload/962/2464.jpg</image-url>
+    <latitude type="float">35.6621</latitude>
+    <longitude type="float">139.735</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20845;&#26412;&#26408;&#12398;&#26143;</subject>
+    <tag>&#12486;&#12524;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-29T10:22:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2463</contents-id>
+    <create-date type="datetime">2008-08-29T10:19:00+09:00</create-date>
+    <created-at type="datetime">2008-08-29T10:20:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106603</id>
+    <image-url>http://m.geoclip.jp/upload/962/2463.jpg</image-url>
+    <latitude type="float">35.6653</latitude>
+    <longitude type="float">139.744</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12458;&#12540;&#12463;&#12521;&#12398;&#26143;</subject>
+    <tag>&#12458;&#12540;&#12463;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-29T10:20:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2459</contents-id>
+    <create-date type="datetime">2008-08-29T01:45:33+09:00</create-date>
+    <created-at type="datetime">2008-08-29T01:46:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106600</id>
+    <image-url>http://m.geoclip.jp/upload/936/2459.jpg</image-url>
+    <latitude type="float">35.5316</latitude>
+    <longitude type="float">139.686</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#22269;&#36947;&#65297;&#21495;&#32218;(3)&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-29T01:46:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2458</contents-id>
+    <create-date type="datetime">2008-08-29T01:45:21+09:00</create-date>
+    <created-at type="datetime">2008-08-29T01:46:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106601</id>
+    <image-url>http://m.geoclip.jp/upload/936/2458.jpg</image-url>
+    <latitude type="float">35.534</latitude>
+    <longitude type="float">139.687</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#22269;&#36947;&#65297;&#21495;&#32218;(2)&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-29T03:14:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2457</contents-id>
+    <create-date type="datetime">2008-08-29T01:45:03+09:00</create-date>
+    <created-at type="datetime">2008-08-29T01:46:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106602</id>
+    <image-url>http://m.geoclip.jp/upload/936/2457.jpg</image-url>
+    <latitude type="float">35.5357</latitude>
+    <longitude type="float">139.688</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#22269;&#36947;&#65297;&#21495;&#32218;(1)&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-29T03:12:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2456</contents-id>
+    <create-date type="datetime">2008-08-28T20:43:29+09:00</create-date>
+    <created-at type="datetime">2008-08-28T20:44:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106599</id>
+    <image-url>http://m.geoclip.jp/upload/962/2456.jpg</image-url>
+    <latitude type="float">35.6816</latitude>
+    <longitude type="float">139.753</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#38686;&#12534;&#38306;&#12398;&#26143;</subject>
+    <tag>&#38686;&#12534;&#38306;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T20:44:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2455</contents-id>
+    <create-date type="datetime">2008-08-28T20:41:11+09:00</create-date>
+    <created-at type="datetime">2008-08-28T20:42:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106598</id>
+    <image-url>http://m.geoclip.jp/upload/962/2455.jpg</image-url>
+    <latitude type="float">35.6634</latitude>
+    <longitude type="float">139.753</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#31070;&#35895;&#30010;&#12398;&#26143;</subject>
+    <tag>&#31070;&#35895;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T17:15:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2454</contents-id>
+    <create-date type="datetime">2008-08-28T20:38:35+09:00</create-date>
+    <created-at type="datetime">2008-08-28T20:39:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106597</id>
+    <image-url>http://m.geoclip.jp/upload/962/2454.jpg</image-url>
+    <latitude type="float">35.6621</latitude>
+    <longitude type="float">139.735</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20845;&#26412;&#26408;&#12398;&#26143;</subject>
+    <tag>&#20845;&#26412;&#26408;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T20:39:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2453</contents-id>
+    <create-date type="datetime">2008-08-28T20:32:20+09:00</create-date>
+    <created-at type="datetime">2008-08-28T20:33:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106596</id>
+    <image-url>http://m.geoclip.jp/upload/962/2453.jpg</image-url>
+    <latitude type="float">35.6452</latitude>
+    <longitude type="float">139.708</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#24693;&#27604;&#23551;&#12398;&#26143;</subject>
+    <tag>&#24693;&#27604;&#23551;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-30T20:09:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2449</contents-id>
+    <create-date type="datetime">2008-08-28T09:01:56+09:00</create-date>
+    <created-at type="datetime">2008-08-28T09:02:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106595</id>
+    <image-url>http://m.geoclip.jp/upload/962/2449.jpg</image-url>
+    <latitude type="float">35.6699</latitude>
+    <longitude type="float">139.766</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#39770;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T09:02:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2448</contents-id>
+    <create-date type="datetime">2008-08-28T08:54:30+09:00</create-date>
+    <created-at type="datetime">2008-08-28T08:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106594</id>
+    <image-url>http://m.geoclip.jp/upload/962/2448.jpg</image-url>
+    <latitude type="float">35.6829</latitude>
+    <longitude type="float">139.766</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20154;&#24418;&#30010;&#12398;&#26143;</subject>
+    <tag>&#20154;&#24418;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T08:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2447</contents-id>
+    <create-date type="datetime">2008-08-28T08:50:30+09:00</create-date>
+    <created-at type="datetime">2008-08-28T08:51:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106593</id>
+    <image-url>http://m.geoclip.jp/upload/962/2447.jpg</image-url>
+    <latitude type="float">35.6933</latitude>
+    <longitude type="float">139.768</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12450;&#12461;&#12496;&#12398;&#26143;</subject>
+    <tag>&#12450;&#12461;&#12496;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T08:51:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2446</contents-id>
+    <create-date type="datetime">2008-08-28T08:46:50+09:00</create-date>
+    <created-at type="datetime">2008-08-28T08:47:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106592</id>
+    <image-url>http://m.geoclip.jp/upload/962/2446.jpg</image-url>
+    <latitude type="float">35.7168</latitude>
+    <longitude type="float">139.784</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#19978;&#37326;&#12398;&#26143;</subject>
+    <tag>&#19978;&#37326;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-28T08:47:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2444</contents-id>
+    <create-date type="datetime">2008-08-27T20:38:32+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:39:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106591</id>
+    <image-url>http://m.geoclip.jp/upload/962/2444.jpg</image-url>
+    <latitude type="float">35.7494</latitude>
+    <longitude type="float">139.805</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#21271;&#21315;&#20303;&#12398;&#26143;</subject>
+    <tag>&#21271;&#21315;&#20303;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:39:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2443</contents-id>
+    <create-date type="datetime">2008-08-27T20:37:32+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:38:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106590</id>
+    <image-url>http://m.geoclip.jp/upload/962/2443.jpg</image-url>
+    <latitude type="float">35.7741</latitude>
+    <longitude type="float">139.796</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#21271;&#21315;&#20303;&#12398;&#26143;</subject>
+    <tag>&#21271;&#21315;&#20303;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:38:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2442</contents-id>
+    <create-date type="datetime">2008-08-27T20:35:27+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:36:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106589</id>
+    <image-url>http://m.geoclip.jp/upload/962/2442.jpg</image-url>
+    <latitude type="float">35.7325</latitude>
+    <longitude type="float">139.799</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#21335;&#21315;&#20303;&#12398;&#26143;</subject>
+    <tag>&#21335;&#21315;&#20303;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:36:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2441</contents-id>
+    <create-date type="datetime">2008-08-27T20:34:03+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:35:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106588</id>
+    <image-url>http://m.geoclip.jp/upload/962/2441.jpg</image-url>
+    <latitude type="float">35.7297</latitude>
+    <longitude type="float">139.791</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#19977;&#12494;&#36650;&#12398;&#26143;</subject>
+    <tag>&#19977;&#12494;&#36650;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:35:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2440</contents-id>
+    <create-date type="datetime">2008-08-27T20:31:33+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:32:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106587</id>
+    <image-url>http://m.geoclip.jp/upload/962/2440.jpg</image-url>
+    <latitude type="float">35.7206</latitude>
+    <longitude type="float">139.784</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20837;&#35895;&#12398;&#26143;</subject>
+    <tag>&#20837;&#35895;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:32:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2439</contents-id>
+    <create-date type="datetime">2008-08-27T20:29:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:30:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106586</id>
+    <image-url>http://m.geoclip.jp/upload/962/2439.jpg</image-url>
+    <latitude type="float">35.7119</latitude>
+    <longitude type="float">139.776</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#19978;&#37326;&#12398;&#26143;</subject>
+    <tag>&#19978;&#37326;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:30:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2438</contents-id>
+    <create-date type="datetime">2008-08-27T20:27:49+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:28:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106585</id>
+    <image-url>http://m.geoclip.jp/upload/962/2438.jpg</image-url>
+    <latitude type="float">35.7067</latitude>
+    <longitude type="float">139.776</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#24481;&#24466;&#30010;&#12398;&#26143;</subject>
+    <tag>&#24481;&#24466;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:28:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2437</contents-id>
+    <create-date type="datetime">2008-08-27T20:26:01+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:27:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106584</id>
+    <image-url>http://m.geoclip.jp/upload/962/2437.jpg</image-url>
+    <latitude type="float">35.6908</latitude>
+    <longitude type="float">139.779</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#31179;&#33865;&#21407;&#12398;&#26143;</subject>
+    <tag>&#31179;&#33865;&#21407;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:27:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2436</contents-id>
+    <create-date type="datetime">2008-08-27T20:24:06+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:25:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106583</id>
+    <image-url>http://m.geoclip.jp/upload/962/2436.jpg</image-url>
+    <latitude type="float">35.6908</latitude>
+    <longitude type="float">139.779</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#23567;&#20253;&#39340;&#30010;&#12398;&#26143;</subject>
+    <tag>&#23567;&#20253;&#39340;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:25:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2435</contents-id>
+    <create-date type="datetime">2008-08-27T20:22:34+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:23:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106582</id>
+    <image-url>http://m.geoclip.jp/upload/962/2435.jpg</image-url>
+    <latitude type="float">35.685</latitude>
+    <longitude type="float">139.773</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20154;&#24418;&#30010;&#12398;&#26143;</subject>
+    <tag>&#20154;&#24418;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T16:49:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2434</contents-id>
+    <create-date type="datetime">2008-08-27T20:20:17+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:21:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106581</id>
+    <image-url>http://m.geoclip.jp/upload/962/2434.jpg</image-url>
+    <latitude type="float">35.68</latitude>
+    <longitude type="float">139.78</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#33541;&#22580;&#30010;&#12398;&#26143;</subject>
+    <tag>&#33541;&#22580;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:21:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2433</contents-id>
+    <create-date type="datetime">2008-08-27T20:18:58+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:20:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106580</id>
+    <image-url>http://m.geoclip.jp/upload/962/2433.jpg</image-url>
+    <latitude type="float">35.6747</latitude>
+    <longitude type="float">139.778</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20843;&#19969;&#22528;&#12398;&#26143;</subject>
+    <tag>&#20843;&#19969;&#22528;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:20:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2432</contents-id>
+    <create-date type="datetime">2008-08-27T20:16:28+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:17:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106579</id>
+    <image-url>http://m.geoclip.jp/upload/962/2432.jpg</image-url>
+    <latitude type="float">35.668</latitude>
+    <longitude type="float">139.772</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#31689;&#22320;&#12398;&#26143;</subject>
+    <tag>&#31689;&#22320;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:17:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2431</contents-id>
+    <create-date type="datetime">2008-08-27T20:13:26+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:14:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106578</id>
+    <image-url>http://m.geoclip.jp/upload/962/2431.jpg</image-url>
+    <latitude type="float">35.673</latitude>
+    <longitude type="float">139.764</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#37504;&#24231;&#12398;&#26143;</subject>
+    <tag>&#37504;&#24231;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T16:58:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2430</contents-id>
+    <create-date type="datetime">2008-08-27T20:12:18+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:13:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106577</id>
+    <image-url>http://m.geoclip.jp/upload/962/2430.jpg</image-url>
+    <latitude type="float">35.6747</latitude>
+    <longitude type="float">139.76</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#26085;&#27604;&#35895;&#12398;&#26143;</subject>
+    <tag>&#26085;&#27604;&#35895;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T17:05:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2429</contents-id>
+    <create-date type="datetime">2008-08-27T20:09:44+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:10:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106576</id>
+    <image-url>http://m.geoclip.jp/upload/962/2429.jpg</image-url>
+    <latitude type="float">35.6742</latitude>
+    <longitude type="float">139.751</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#38686;&#12534;&#38306;&#12398;&#26143;</subject>
+    <tag>&#38686;&#12534;&#38306;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T14:57:02+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2428</contents-id>
+    <create-date type="datetime">2008-08-27T20:07:18+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:08:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106575</id>
+    <image-url>http://m.geoclip.jp/upload/962/2428.jpg</image-url>
+    <latitude type="float">35.6628</latitude>
+    <longitude type="float">139.745</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#31070;&#35895;&#30010;&#12398;&#26143;</subject>
+    <tag>&#31070;&#35895;&#30010;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:08:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2427</contents-id>
+    <create-date type="datetime">2008-08-27T20:01:19+09:00</create-date>
+    <created-at type="datetime">2008-08-27T20:02:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106574</id>
+    <image-url>http://m.geoclip.jp/upload/962/2427.jpg</image-url>
+    <latitude type="float">35.6519</latitude>
+    <longitude type="float">139.722</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#24195;&#23614;&#12398;&#26143;</subject>
+    <tag>&#24195;&#23614;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T20:02:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2426</contents-id>
+    <create-date type="datetime">2008-08-27T19:53:36+09:00</create-date>
+    <created-at type="datetime">2008-08-27T19:54:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106573</id>
+    <image-url>http://m.geoclip.jp/upload/962/2426.jpg</image-url>
+    <latitude type="float">35.6452</latitude>
+    <longitude type="float">139.708</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag>&#20013;&#30446;&#40658;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-30T20:09:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2425</contents-id>
+    <create-date type="datetime">2008-08-27T19:52:20+09:00</create-date>
+    <created-at type="datetime">2008-08-27T19:53:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106572</id>
+    <image-url>http://m.geoclip.jp/upload/962/2425.jpg</image-url>
+    <latitude type="float">35.6387</latitude>
+    <longitude type="float">139.69</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag>&#20013;&#30446;&#40658;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-30T20:44:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2424</contents-id>
+    <create-date type="datetime">2008-08-27T19:28:10+09:00</create-date>
+    <created-at type="datetime">2008-08-27T19:29:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106571</id>
+    <image-url>http://m.geoclip.jp/upload/962/2424.jpg</image-url>
+    <latitude type="float">35.6362</latitude>
+    <longitude type="float">139.694</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12469;&#12531;&#12527;&#12398;&#26143;</subject>
+    <tag>&#31056;&#22825;&#23546; &#12469;&#12531;</tag>
+    <title>&#31056;&#22825;&#23546;</title>
+    <updated-at type="datetime">2008-08-30T20:27:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2422</contents-id>
+    <create-date type="datetime">2008-08-27T18:32:01+09:00</create-date>
+    <created-at type="datetime">2008-08-27T18:33:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106570</id>
+    <image-url>http://m.geoclip.jp/upload/956/2422.jpg</image-url>
+    <latitude type="float">35.6555</latitude>
+    <longitude type="float">139.698</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12467;&#12531;&#12509;&#12472;&#12471;&#12519;&#12531;&#12398;&#26143;</subject>
+    <tag>&#12467;&#12531;&#12509;&#12472;&#12471;&#12519;&#12531;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T13:14:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2421</contents-id>
+    <create-date type="datetime">2008-08-27T17:54:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T17:55:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106569</id>
+    <image-url>http://m.geoclip.jp/upload/962/2421.jpg</image-url>
+    <latitude type="float">35.6387</latitude>
+    <longitude type="float">139.69</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#31056;&#22825;&#23546;&#12398;&#26143;</subject>
+    <tag>&#31056;&#22825;&#23546; </tag>
+    <title>&#31056;&#22825;&#23546;</title>
+    <updated-at type="datetime">2008-08-30T20:44:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2420</contents-id>
+    <create-date type="datetime">2008-08-27T16:08:07+09:00</create-date>
+    <created-at type="datetime">2008-08-27T16:09:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106568</id>
+    <image-url>http://m.geoclip.jp/upload/956/2420.jpg</image-url>
+    <latitude type="float">35.6694</latitude>
+    <longitude type="float">139.704</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12498;&#12488;&#12468;&#12511;&#12398;&#26143;</subject>
+    <tag>&#12498;&#12488; &#12468;&#12511;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T16:09:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2419</contents-id>
+    <create-date type="datetime">2008-08-27T16:03:21+09:00</create-date>
+    <created-at type="datetime">2008-08-27T16:04:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106567</id>
+    <image-url>http://m.geoclip.jp/upload/956/2419.jpg</image-url>
+    <latitude type="float">35.6336</latitude>
+    <longitude type="float">139.662</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12375;&#12405;&#12420;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T16:04:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2418</contents-id>
+    <create-date type="datetime">2008-08-27T14:59:12+09:00</create-date>
+    <created-at type="datetime">2008-08-27T15:00:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106566</id>
+    <image-url>http://m.geoclip.jp/upload/962/2418.jpg</image-url>
+    <latitude type="float">35.6445</latitude>
+    <longitude type="float">139.699</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag>&#20013;&#30446;&#40658;</tag>
+    <title>&#20013;&#30446;&#40658;</title>
+    <updated-at type="datetime">2008-08-30T20:17:02+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2417</contents-id>
+    <create-date type="datetime">2008-08-27T14:52:33+09:00</create-date>
+    <created-at type="datetime">2008-08-27T14:53:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106565</id>
+    <image-url>http://m.geoclip.jp/upload/962/2417.jpg</image-url>
+    <latitude type="float">35.6469</latitude>
+    <longitude type="float">139.709</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12454;&#12455;&#12531;&#12487;&#12451;&#12540;&#12474;&#12398;&#26143;</subject>
+    <tag>&#12454;&#12455;&#12531;&#12487;&#12451;&#12540;&#12474;</tag>
+    <title>&#24693;&#27604;&#23551;</title>
+    <updated-at type="datetime">2008-08-30T20:04:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2416</contents-id>
+    <create-date type="datetime">2008-08-27T14:28:50+09:00</create-date>
+    <created-at type="datetime">2008-08-27T14:29:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106564</id>
+    <image-url>http://m.geoclip.jp/upload/962/2416.jpg</image-url>
+    <latitude type="float">35.6461</latitude>
+    <longitude type="float">139.708</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#23500;&#22763;&#12381;&#12400;&#12398;&#26143;</subject>
+    <tag>&#23500;&#22763; &#12381;&#12400;</tag>
+    <title>&#24693;&#27604;&#23551;</title>
+    <updated-at type="datetime">2008-08-30T20:06:02+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2415</contents-id>
+    <create-date type="datetime">2008-08-27T13:52:08+09:00</create-date>
+    <created-at type="datetime">2008-08-27T13:53:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106563</id>
+    <image-url>http://m.geoclip.jp/upload/962/2415.jpg</image-url>
+    <latitude type="float">35.6949</latitude>
+    <longitude type="float">139.767</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12388;&#12369;&#40634;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>&#24481;&#33590;&#12494;&#27700;&#12398;&#26143;</title>
+    <updated-at type="datetime">2008-08-27T13:53:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2414</contents-id>
+    <create-date type="datetime">2008-08-27T12:47:55+09:00</create-date>
+    <created-at type="datetime">2008-08-27T12:48:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106562</id>
+    <image-url>http://m.geoclip.jp/upload/962/2414.jpg</image-url>
+    <latitude type="float">35.6956</latitude>
+    <longitude type="float">139.765</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12411;&#12387;&#12392;&#12418;&#12387;&#12392;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>&#24481;&#33590;&#12494;&#27700;&#12398;&#26143;</title>
+    <updated-at type="datetime">2008-08-27T12:48:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2413</contents-id>
+    <create-date type="datetime">2008-08-27T12:35:37+09:00</create-date>
+    <created-at type="datetime">2008-08-27T12:36:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106561</id>
+    <image-url>http://m.geoclip.jp/upload/955/2413.jpg</image-url>
+    <latitude type="float">35.6808</latitude>
+    <longitude type="float">139.777</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12411;&#12387;&#12392;&#12418;&#12387;&#12392;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T12:36:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2412</contents-id>
+    <create-date type="datetime">2008-08-27T12:06:23+09:00</create-date>
+    <created-at type="datetime">2008-08-27T12:07:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106560</id>
+    <image-url>http://m.geoclip.jp/upload/962/2412.jpg</image-url>
+    <latitude type="float">35.6367</latitude>
+    <longitude type="float">139.691</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#12354;&#12383;&#12383;&#26360;&#24215;&#12398;&#26143;</subject>
+    <tag>&#26360;&#24215;</tag>
+    <title>&#12354;&#12383;&#12383;</title>
+    <updated-at type="datetime">2008-08-30T20:35:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>&#12503;&#12521;&#12483;&#12488;</author-name>
+    <contents-id type="integer">2411</contents-id>
+    <create-date type="datetime">2008-08-27T11:38:08+09:00</create-date>
+    <created-at type="datetime">2008-08-27T11:39:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106559</id>
+    <image-url>http://m.geoclip.jp/upload/962/2411.jpg</image-url>
+    <latitude type="float">35.6387</latitude>
+    <longitude type="float">139.69</longitude>
+    <member-id type="integer">962</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag>&#20013;&#30446;&#40658;</tag>
+    <title>&#26143;</title>
+    <updated-at type="datetime">2008-08-30T20:44:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">0</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2410</contents-id>
+    <create-date type="datetime">2008-08-26T23:03:28+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106490</id>
+    <image-url>http://m.geoclip.jp/upload/955/2410.jpg</image-url>
+    <latitude type="float">35.6605</latitude>
+    <longitude type="float">139.703</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#21271;&#28023;&#36947;&#12398;&#26143;</subject>
+    <tag>&#21271;&#28023;&#36947;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-30T19:39:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">1</access-count>
+    <author-name>&#12415;&#12392;&#12424;&#12375;</author-name>
+    <contents-id type="integer">2408</contents-id>
+    <create-date type="datetime">2008-08-26T13:11:32+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106491</id>
+    <image-url>http://m.geoclip.jp/upload/34/2408.jpg</image-url>
+    <latitude type="float">35.6844</latitude>
+    <longitude type="float">139.763</longitude>
+    <member-id type="integer">34</member-id>
+    <subject>&#22823;&#25163;&#30010;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>mitomatic@gmail.com</title>
+    <updated-at type="datetime">2008-08-31T15:16:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2407</contents-id>
+    <create-date type="datetime">2008-08-25T22:01:04+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106492</id>
+    <image-url>http://m.geoclip.jp/upload/955/2407.jpg</image-url>
+    <latitude type="float">35.6995</latitude>
+    <longitude type="float">139.774</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12450;&#12461;&#12495;&#12496;&#12521;&#12398;&#26143;</subject>
+    <tag>&#12450;&#12461;&#12495;&#12496;&#12521;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T16:20:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2406</contents-id>
+    <create-date type="datetime">2008-08-25T21:35:51+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106493</id>
+    <image-url>http://m.geoclip.jp/upload/955/2406.jpg</image-url>
+    <latitude type="float">35.6993</latitude>
+    <longitude type="float">139.774</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12450;&#12461;&#12495;&#12496;&#12521;&#12398;&#26143;</subject>
+    <tag>&#12450;&#12461;&#12495;&#12496;&#12521;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T16:20:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2405</contents-id>
+    <create-date type="datetime">2008-08-24T21:08:44+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106494</id>
+    <image-url>http://m.geoclip.jp/upload/936/2405.jpg</image-url>
+    <latitude type="float">35.6613</latitude>
+    <longitude type="float">139.668</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#19979;&#21271;&#27810;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2404</contents-id>
+    <create-date type="datetime">2008-08-24T21:05:47+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106495</id>
+    <image-url>http://m.geoclip.jp/upload/936/2404.jpg</image-url>
+    <latitude type="float">35.6591</latitude>
+    <longitude type="float">139.701</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12495;&#12481;&#20844;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-30T19:32:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2403</contents-id>
+    <create-date type="datetime">2008-08-24T21:04:46+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106496</id>
+    <image-url>http://m.geoclip.jp/upload/936/2403.jpg</image-url>
+    <latitude type="float">35.6353</latitude>
+    <longitude type="float">139.768</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12524;&#12452;&#12531;&#12508;&#12540;&#12502;&#12522;&#12483;&#12472;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2402</contents-id>
+    <create-date type="datetime">2008-08-24T21:03:55+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106497</id>
+    <image-url>http://m.geoclip.jp/upload/936/2402.jpg</image-url>
+    <latitude type="float">35.6323</latitude>
+    <longitude type="float">139.795</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12499;&#12483;&#12464;&#12469;&#12452;&#12488;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2401</contents-id>
+    <create-date type="datetime">2008-08-24T21:00:26+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106498</id>
+    <image-url>http://m.geoclip.jp/upload/936/2401.jpg</image-url>
+    <latitude type="float">35.6779</latitude>
+    <longitude type="float">139.753</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#26716;&#30000;&#38272;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T15:00:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2400</contents-id>
+    <create-date type="datetime">2008-08-24T19:59:54+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106499</id>
+    <image-url>http://m.geoclip.jp/upload/936/2400.jpg</image-url>
+    <latitude type="float">35.639</latitude>
+    <longitude type="float">139.706</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag>&#20013;&#30446;&#40658;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2399</contents-id>
+    <create-date type="datetime">2008-08-24T19:06:15+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106500</id>
+    <image-url>http://m.geoclip.jp/upload/955/2399.jpg</image-url>
+    <latitude type="float">35.6637</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12362;&#12399;&#12385;&#12398;&#26143;</subject>
+    <tag>&#12385;&#12398;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T14:29:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">2</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2397</contents-id>
+    <create-date type="datetime">2008-08-24T18:36:38+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106501</id>
+    <image-url>http://m.geoclip.jp/upload/936/2397.jpg</image-url>
+    <latitude type="float">35.6639</latitude>
+    <longitude type="float">139.733</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12450;&#12452;&#12521;&#12508;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T14:29:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2396</contents-id>
+    <create-date type="datetime">2008-08-24T18:34:52+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:04+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106502</id>
+    <image-url>http://m.geoclip.jp/upload/936/2396.jpg</image-url>
+    <latitude type="float">35.656</latitude>
+    <longitude type="float">139.706</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12493;&#12483;&#12488;&#23478;&#38651;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-30T19:47:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2395</contents-id>
+    <create-date type="datetime">2008-08-24T18:28:49+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106503</id>
+    <image-url>http://m.geoclip.jp/upload/936/2395.jpg</image-url>
+    <latitude type="float">35.6441</latitude>
+    <longitude type="float">139.712</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#20301;&#32622;&#24773;&#22577;&#36899;&#21205;&#24195;&#21578;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-29T19:24:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2394</contents-id>
+    <create-date type="datetime">2008-08-24T18:20:59+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106504</id>
+    <image-url>http://m.geoclip.jp/upload/936/2394.jpg</image-url>
+    <latitude type="float">35.6819</latitude>
+    <longitude type="float">139.775</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>Ruby on Rails&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T15:47:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2393</contents-id>
+    <create-date type="datetime">2008-08-24T18:18:14+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106505</id>
+    <image-url>http://m.geoclip.jp/upload/936/2393.jpg</image-url>
+    <latitude type="float">35.7005</latitude>
+    <longitude type="float">139.771</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12522;&#12490;&#12459;&#12501;&#12455;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T16:06:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2392</contents-id>
+    <create-date type="datetime">2008-08-24T18:03:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106506</id>
+    <image-url>http://m.geoclip.jp/upload/936/2392.jpg</image-url>
+    <latitude type="float">35.6994</latitude>
+    <longitude type="float">139.77</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#31179;&#26376;&#38651;&#23376;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T16:09:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">2</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2387</contents-id>
+    <create-date type="datetime">2008-08-24T11:49:56+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106507</id>
+    <image-url>http://m.geoclip.jp/upload/936/2387.jpg</image-url>
+    <latitude type="float">35.6081</latitude>
+    <longitude type="float">139.666</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#33258;&#30001;&#12364;&#19992;&#12398;&#26143;</subject>
+    <tag>&#33258;&#30001;&#12364;&#19992;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2385</contents-id>
+    <create-date type="datetime">2008-08-23T20:37:48+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106508</id>
+    <image-url>http://m.geoclip.jp/upload/936/2385.jpg</image-url>
+    <latitude type="float">35.6237</latitude>
+    <longitude type="float">139.738</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#21697;&#24029;&#12398;&#26143;</subject>
+    <tag>&#21697;&#24029;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2383</contents-id>
+    <create-date type="datetime">2008-08-23T17:05:34+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106509</id>
+    <image-url>http://m.geoclip.jp/upload/956/2383.jpg</image-url>
+    <latitude type="float">35.6991</latitude>
+    <longitude type="float">139.771</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#38651;&#27671;&#34903;&#12398;&#26143;</subject>
+    <tag>&#38651;&#27671;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T16:03:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2382</contents-id>
+    <create-date type="datetime">2008-08-23T17:01:15+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106510</id>
+    <image-url>http://m.geoclip.jp/upload/956/2382.jpg</image-url>
+    <latitude type="float">35.6994</latitude>
+    <longitude type="float">139.774</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12450;&#12461;&#12496;&#12450;&#12461;&#12496;&#12398;&#26143;</subject>
+    <tag>&#12450;&#12461;&#12496;&#12450;&#12461;&#12496;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T16:20:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2381</contents-id>
+    <create-date type="datetime">2008-08-23T17:00:50+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106511</id>
+    <image-url>http://m.geoclip.jp/upload/956/2381.jpg</image-url>
+    <latitude type="float">35.6991</latitude>
+    <longitude type="float">139.771</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12450;&#12461;&#12496;&#12398;&#26143;</subject>
+    <tag>&#12450;&#12461;&#12496;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T16:03:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2380</contents-id>
+    <create-date type="datetime">2008-08-23T16:56:24+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106512</id>
+    <image-url>http://m.geoclip.jp/upload/956/2380.jpg</image-url>
+    <latitude type="float">35.7002</latitude>
+    <longitude type="float">139.763</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12397;&#12416;&#12356;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2379</contents-id>
+    <create-date type="datetime">2008-08-23T16:55:15+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106513</id>
+    <image-url>http://m.geoclip.jp/upload/956/2379.jpg</image-url>
+    <latitude type="float">35.7019</latitude>
+    <longitude type="float">139.75</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#24481;&#33590;&#12494;&#27700;&#12398;&#26143;</subject>
+    <tag>&#24481;&#33590;&#12494;&#27700;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2378</contents-id>
+    <create-date type="datetime">2008-08-23T16:54:11+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:05+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106514</id>
+    <image-url>http://m.geoclip.jp/upload/956/2378.jpg</image-url>
+    <latitude type="float">35.7008</latitude>
+    <longitude type="float">139.743</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#20013;&#22830;&#32218;&#12398;&#26143;</subject>
+    <tag>&#20013;&#22830;&#32218;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2377</contents-id>
+    <create-date type="datetime">2008-08-23T16:52:10+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106515</id>
+    <image-url>http://m.geoclip.jp/upload/956/2377.jpg</image-url>
+    <latitude type="float">35.6874</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#22235;&#12484;&#35895;&#12398;&#26143;</subject>
+    <tag>&#22235;&#12484;&#35895;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2376</contents-id>
+    <create-date type="datetime">2008-08-23T16:49:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106516</id>
+    <image-url>http://m.geoclip.jp/upload/956/2376.jpg</image-url>
+    <latitude type="float">35.6838</latitude>
+    <longitude type="float">139.704</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#23665;&#25163;&#32218;&#20869;&#20596;&#12398;&#26143;</subject>
+    <tag>&#23665;&#25163;&#32218; &#20869;&#20596;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2375</contents-id>
+    <create-date type="datetime">2008-08-23T16:48:59+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106517</id>
+    <image-url>http://m.geoclip.jp/upload/936/2375.jpg</image-url>
+    <latitude type="float">35.6441</latitude>
+    <longitude type="float">139.743</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#30000;&#30010;&#12398;&#26143;</subject>
+    <tag>&#30000;&#30010;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2374</contents-id>
+    <create-date type="datetime">2008-08-23T16:40:16+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106518</id>
+    <image-url>http://m.geoclip.jp/upload/956/2374.jpg</image-url>
+    <latitude type="float">35.6898</latitude>
+    <longitude type="float">139.701</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#26032;&#23487;&#12398;&#26143;</subject>
+    <tag>&#26032;&#23487;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2373</contents-id>
+    <create-date type="datetime">2008-08-23T16:38:27+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106519</id>
+    <image-url>http://m.geoclip.jp/upload/956/2373.jpg</image-url>
+    <latitude type="float">35.6821</latitude>
+    <longitude type="float">139.705</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#20195;&#12293;&#26408;&#12398;&#26143;</subject>
+    <tag>&#20195;&#12293;&#26408;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">20</access-count>
+    <author-name>&#12372;&#12358;&#12383;&#12429;DoCoMo</author-name>
+    <contents-id type="integer">2369</contents-id>
+    <create-date type="datetime">2008-08-23T03:25:34+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106520</id>
+    <image-url>http://m.geoclip.jp/upload/1/2369.jpg</image-url>
+    <latitude type="float">35.6475</latitude>
+    <longitude type="float">139.711</longitude>
+    <member-id type="integer">1</member-id>
+    <subject>&#12471;&#12540;&#12512;&#12474;&#12398;&#26143;</subject>
+    <tag>&#12471;&#12540;&#12512;&#12474;</tag>
+    <title>gaziro2000</title>
+    <updated-at type="datetime">2008-08-30T19:59:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">4</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2362</contents-id>
+    <create-date type="datetime">2008-08-22T07:43:41+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106521</id>
+    <image-url>http://m.geoclip.jp/upload/936/2362.jpg</image-url>
+    <latitude type="float">35.4561</latitude>
+    <longitude type="float">139.637</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#28201;&#27849;&#12398;&#26143;</subject>
+    <tag>&#28201;&#27849;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">10</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2359</contents-id>
+    <create-date type="datetime">2008-08-19T22:43:07+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106522</id>
+    <image-url>http://m.geoclip.jp/upload/936/2359.jpg</image-url>
+    <latitude type="float">35.5336</latitude>
+    <longitude type="float">139.691</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12467;&#12467;&#12452;&#12481;&#12398;&#26143;</subject>
+    <tag>&#12467;&#12467;&#12452;&#12481;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">15</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2355</contents-id>
+    <create-date type="datetime">2008-08-19T12:25:31+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106523</id>
+    <image-url>http://m.geoclip.jp/upload/936/2355.jpg</image-url>
+    <latitude type="float">35.4551</latitude>
+    <longitude type="float">139.627</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12415;&#12394;&#12392;&#12415;&#12425;&#12356;&#12398;&#26143;</subject>
+    <tag>&#12415;&#12394;&#12392;&#12415;&#12425;&#12356;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">16</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2353</contents-id>
+    <create-date type="datetime">2008-08-17T19:49:53+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106524</id>
+    <image-url>http://m.geoclip.jp/upload/955/2353.jpg</image-url>
+    <latitude type="float">35.6987</latitude>
+    <longitude type="float">139.772</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#31179;&#33865;&#12398;&#26143;</subject>
+    <tag>&#31179;&#33865;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T16:04:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">15</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2352</contents-id>
+    <create-date type="datetime">2008-08-17T19:46:21+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106525</id>
+    <image-url>http://m.geoclip.jp/upload/936/2352.jpg</image-url>
+    <latitude type="float">35.6991</latitude>
+    <longitude type="float">139.771</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#31179;&#33865;&#21407;&#12398;&#26143;</subject>
+    <tag>&#31179;&#33865;&#21407;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T16:03:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">16</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2351</contents-id>
+    <create-date type="datetime">2008-08-17T17:16:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106526</id>
+    <image-url>http://m.geoclip.jp/upload/936/2351.jpg</image-url>
+    <latitude type="float">35.6744</latitude>
+    <longitude type="float">139.763</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#26377;&#27005;&#30010;&#12398;&#26143;</subject>
+    <tag>&#26377;&#27005;&#30010;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T17:02:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">14</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2350</contents-id>
+    <create-date type="datetime">2008-08-17T17:06:23+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106527</id>
+    <image-url>http://m.geoclip.jp/upload/936/2350.jpg</image-url>
+    <latitude type="float">35.6308</latitude>
+    <longitude type="float">139.74</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#21697;&#24029;&#12398;&#26143;</subject>
+    <tag>&#21697;&#24029;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">17</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2349</contents-id>
+    <create-date type="datetime">2008-08-17T16:56:51+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106528</id>
+    <image-url>http://m.geoclip.jp/upload/936/2349.jpg</image-url>
+    <latitude type="float">35.563</latitude>
+    <longitude type="float">139.717</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#33970;&#30000;&#12398;&#26143;</subject>
+    <tag>&#33970;&#30000;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">12</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2345</contents-id>
+    <create-date type="datetime">2008-08-17T11:35:23+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:06+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106529</id>
+    <image-url>http://m.geoclip.jp/upload/956/2345.jpg</image-url>
+    <latitude type="float">34.9908</latitude>
+    <longitude type="float">139.08</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#28201;&#27849;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">14</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2344</contents-id>
+    <create-date type="datetime">2008-08-17T11:12:14+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106530</id>
+    <image-url>http://m.geoclip.jp/upload/955/2344.jpg</image-url>
+    <latitude type="float">35.6835</latitude>
+    <longitude type="float">139.774</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12467;&#12524;&#12489;&#12398;&#26143;</subject>
+    <tag>&#12467;&#12524;&#12489;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T15:29:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">66</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2343</contents-id>
+    <create-date type="datetime">2008-08-17T09:35:56+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">1</good-count>
+    <id type="integer">106531</id>
+    <image-url>http://m.geoclip.jp/upload/956/2343.jpg</image-url>
+    <latitude type="float">35.3971</latitude>
+    <longitude type="float">139.466</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#28248;&#21335;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">13</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2340</contents-id>
+    <create-date type="datetime">2008-08-16T21:49:35+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106532</id>
+    <image-url>http://m.geoclip.jp/upload/955/2340.jpg</image-url>
+    <latitude type="float">35.6872</latitude>
+    <longitude type="float">139.701</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12463;&#12522;&#12473;&#12500;&#12540;&#12463;&#12522;&#12540;&#12512;&#12489;&#12540;&#12490;&#12484;&#12398;&#26143;</subject>
+    <tag>&#12463;&#12522;&#12473;&#12500;&#12540;&#12463;&#12522;&#12540;&#12512;&#12489;&#12540;&#12490;&#12484;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-27T01:55:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">11</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2339</contents-id>
+    <create-date type="datetime">2008-08-16T19:44:39+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106533</id>
+    <image-url>http://m.geoclip.jp/upload/956/2339.jpg</image-url>
+    <latitude type="float">35.6118</latitude>
+    <longitude type="float">139.627</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12491;&#12467;&#12479;&#12510;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">10</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2337</contents-id>
+    <create-date type="datetime">2008-08-16T19:24:44+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106534</id>
+    <image-url>http://m.geoclip.jp/upload/956/2337.jpg</image-url>
+    <latitude type="float">35.6413</latitude>
+    <longitude type="float">139.689</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#20013;&#30446;&#40658;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-30T20:54:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">9</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2336</contents-id>
+    <create-date type="datetime">2008-08-16T19:24:31+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106535</id>
+    <image-url>http://m.geoclip.jp/upload/936/2336.jpg</image-url>
+    <latitude type="float">35.6413</latitude>
+    <longitude type="float">139.689</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#27494;&#34101;&#23567;&#26441;&#12398;&#26143;</subject>
+    <tag>&#27494;&#34101; &#23567;&#26441;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-30T20:54:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">9</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2333</contents-id>
+    <create-date type="datetime">2008-08-16T17:56:09+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106536</id>
+    <image-url>http://m.geoclip.jp/upload/955/2333.jpg</image-url>
+    <latitude type="float">35.6617</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12469;&#12452;&#12476;&#12398;&#26143;</subject>
+    <tag>&#12469;&#12452;&#12476;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T14:06:23+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">8</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2332</contents-id>
+    <create-date type="datetime">2008-08-16T17:54:19+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106537</id>
+    <image-url>http://m.geoclip.jp/upload/956/2332.jpg</image-url>
+    <latitude type="float">35.6612</latitude>
+    <longitude type="float">139.727</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12469;&#12452;&#12476;&#12398;&#26143;</subject>
+    <tag>&#12469;&#12452;&#12476;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2331</contents-id>
+    <create-date type="datetime">2008-08-16T17:43:55+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106538</id>
+    <image-url>http://m.geoclip.jp/upload/955/2331.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.731</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12507;&#12522;&#12456;&#12514;&#12531;&#12398;&#26143;</subject>
+    <tag>&#12522;&#12456; &#12514;&#12531;</tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T14:06:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2330</contents-id>
+    <create-date type="datetime">2008-08-16T17:43:54+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106539</id>
+    <image-url>http://m.geoclip.jp/upload/936/2330.jpg</image-url>
+    <latitude type="float">35.6619</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12498;&#12523;&#12474;&#12398;&#26143;</subject>
+    <tag>&#12498;&#12523;&#12474;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T14:06:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">8</access-count>
+    <author-name>xiha22jp</author-name>
+    <contents-id type="integer">2329</contents-id>
+    <create-date type="datetime">2008-08-16T17:43:20+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106540</id>
+    <image-url>http://m.geoclip.jp/upload/835/2329.jpg</image-url>
+    <latitude type="float">35.6619</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">835</member-id>
+    <subject>&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>tada345</title>
+    <updated-at type="datetime">2008-08-31T14:06:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2328</contents-id>
+    <create-date type="datetime">2008-08-16T17:42:32+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106541</id>
+    <image-url>http://m.geoclip.jp/upload/956/2328.jpg</image-url>
+    <latitude type="float">35.6612</latitude>
+    <longitude type="float">139.727</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12513;&#12488;&#12525;&#12495;&#12483;&#12488;&#12398;&#26143;</subject>
+    <tag>&#12513;&#12488;&#12525; &#12495;&#12483;&#12488;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-27T01:55:07+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2327</contents-id>
+    <create-date type="datetime">2008-08-16T17:39:52+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106542</id>
+    <image-url>http://m.geoclip.jp/upload/956/2327.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12497;&#12481;&#12531;&#12467;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:18+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2326</contents-id>
+    <create-date type="datetime">2008-08-16T17:37:22+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106543</id>
+    <image-url>http://m.geoclip.jp/upload/956/2326.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#20511;&#37329;&#12398;&#26143;</subject>
+    <tag>&#20511;&#37329;</tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:18+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2324</contents-id>
+    <create-date type="datetime">2008-08-16T17:31:34+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106544</id>
+    <image-url>http://m.geoclip.jp/upload/956/2324.jpg</image-url>
+    <latitude type="float">35.6657</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>?&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T13:59:02+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2323</contents-id>
+    <create-date type="datetime">2008-08-16T17:29:42+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:07+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106545</id>
+    <image-url>http://m.geoclip.jp/upload/936/2323.jpg</image-url>
+    <latitude type="float">35.6656</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#12511;&#12483;&#12489;&#12479;&#12454;&#12531;&#12398;&#26143;</subject>
+    <tag>&#12511;&#12483;&#12489;&#12479;&#12454;&#12531;</tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T13:56:02+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>xiha22jp</author-name>
+    <contents-id type="integer">2322</contents-id>
+    <create-date type="datetime">2008-08-16T17:28:42+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106546</id>
+    <image-url>http://m.geoclip.jp/upload/835/2322.jpg</image-url>
+    <latitude type="float">35.6637</latitude>
+    <longitude type="float">139.731</longitude>
+    <member-id type="integer">835</member-id>
+    <subject>&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>tada345</title>
+    <updated-at type="datetime">2008-08-31T14:29:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2321</contents-id>
+    <create-date type="datetime">2008-08-16T17:27:42+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106547</id>
+    <image-url>http://m.geoclip.jp/upload/956/2321.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>Yahoo!&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:19+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2320</contents-id>
+    <create-date type="datetime">2008-08-16T17:27:41+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106548</id>
+    <image-url>http://m.geoclip.jp/upload/955/2320.jpg</image-url>
+    <latitude type="float">35.6651</latitude>
+    <longitude type="float">139.731</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12516;&#12501;&#12540;&#12398;&#26143;</subject>
+    <tag>&#12516;&#12501;&#12540;</tag>
+    <title>akio0911</title>
+    <updated-at type="datetime">2008-08-31T13:59:03+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">7</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2319</contents-id>
+    <create-date type="datetime">2008-08-16T17:25:25+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106549</id>
+    <image-url>http://m.geoclip.jp/upload/956/2319.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12527;&#12531;&#12467;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:20+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2318</contents-id>
+    <create-date type="datetime">2008-08-16T17:22:58+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106550</id>
+    <image-url>http://m.geoclip.jp/upload/955/2318.jpg</image-url>
+    <latitude type="float">35.6632</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>akio0911&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>akio0911</title>
+    <updated-at type="datetime">2008-08-31T14:29:04+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2317</contents-id>
+    <create-date type="datetime">2008-08-16T17:22:39+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106551</id>
+    <image-url>http://m.geoclip.jp/upload/956/2317.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#12462;&#12525;&#12483;&#12509;&#12531;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:20+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">6</access-count>
+    <author-name>ksasao</author-name>
+    <contents-id type="integer">2316</contents-id>
+    <create-date type="datetime">2008-08-16T17:22:19+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106552</id>
+    <image-url>http://m.geoclip.jp/upload/936/2316.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">936</member-id>
+    <subject>&#20845;&#26412;&#26408;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>ksasao</title>
+    <updated-at type="datetime">2008-08-31T14:06:21+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">8</access-count>
+    <author-name>xiha22jp</author-name>
+    <contents-id type="integer">2315</contents-id>
+    <create-date type="datetime">2008-08-16T17:22:03+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">1</good-count>
+    <id type="integer">106553</id>
+    <image-url>http://m.geoclip.jp/upload/835/2315.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">835</member-id>
+    <subject>&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>tada345</title>
+    <updated-at type="datetime">2008-08-31T14:29:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2314</contents-id>
+    <create-date type="datetime">2008-08-16T17:21:09+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106554</id>
+    <image-url>http://m.geoclip.jp/upload/956/2314.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#9733;&#12398;&#26143;&#65311;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:21+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">5</access-count>
+    <author-name>akio0911</author-name>
+    <contents-id type="integer">2313</contents-id>
+    <create-date type="datetime">2008-08-16T17:20:08+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106555</id>
+    <image-url>http://m.geoclip.jp/upload/955/2313.jpg</image-url>
+    <latitude type="float">35.6639</latitude>
+    <longitude type="float">139.732</longitude>
+    <member-id type="integer">955</member-id>
+    <subject>&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>(&#12479;&#12452;&#12488;&#12523;&#12394;&#12375;)</title>
+    <updated-at type="datetime">2008-08-31T14:29:05+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">3</access-count>
+    <author-name>yuiseki</author-name>
+    <contents-id type="integer">2312</contents-id>
+    <create-date type="datetime">2008-08-16T17:19:15+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106556</id>
+    <image-url>http://m.geoclip.jp/upload/956/2312.jpg</image-url>
+    <latitude type="float">35.663</latitude>
+    <longitude type="float">139.73</longitude>
+    <member-id type="integer">956</member-id>
+    <subject>&#20845;&#26412;&#26408;&#12398;&#26143;</subject>
+    <tag nil="true"></tag>
+    <title>yuiseki</title>
+    <updated-at type="datetime">2008-08-31T14:06:22+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">37</access-count>
+    <author-name>&#12372;&#12358;&#12383;&#12429;DoCoMo</author-name>
+    <contents-id type="integer">2307</contents-id>
+    <create-date type="datetime">2008-08-16T17:02:46+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:08+09:00</created-at>
+    <end-flg type="boolean">true</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106557</id>
+    <image-url>http://m.geoclip.jp/upload/1/2307.jpg</image-url>
+    <latitude type="float">35.6637</latitude>
+    <longitude type="float">139.733</longitude>
+    <member-id type="integer">1</member-id>
+    <subject>&#20845;&#26412;&#26408;&#12398;&#26143;</subject>
+    <tag>&#20845;&#26412;&#26408;</tag>
+    <title>gaziro2000</title>
+    <updated-at type="datetime">2008-08-31T14:29:06+09:00</updated-at>
+  </star>
+  <star>
+    <access-count type="integer">118</access-count>
+    <author-name>&#12365;&#12421;&#12358;</author-name>
+    <contents-id type="integer">1243</contents-id>
+    <create-date type="datetime">2007-08-13T22:01:36+09:00</create-date>
+    <created-at type="datetime">2008-08-27T01:55:09+09:00</created-at>
+    <end-flg type="boolean">false</end-flg>
+    <good-count type="integer">0</good-count>
+    <id type="integer">106558</id>
+    <image-url>http://m.geoclip.jp/upload/460/1243.jpg</image-url>
+    <latitude type="float">35.2204</latitude>
+    <longitude type="float">137.654</longitude>
+    <member-id type="integer">460</member-id>
+    <subject>&#28288;&#22825;&#12398;&#26143;&#12398;&#28023;&#12289;&#38477;&#12426;&#27880;&#12368;&#20809;&#12426;&#12398;&#12471;&#12515;&#12527;&#12540;&#65281;</subject>
+    <tag nil="true"></tag>
+    <title>&#12506;&#12523;&#12475;&#12454;&#12473;</title>
+    <updated-at type="datetime">2008-08-27T01:55:09+09:00</updated-at>
+  </star>
+</stars>
+
+

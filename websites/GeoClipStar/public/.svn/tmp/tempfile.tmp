@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>電脳★スターラリー</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<script src="http://maps.google.co.jp/maps?file=api&amp;v=2&amp;key=ABQIAAAANmKytc5ypjH_KbDCAjAbphT7fUKXf8Z2EQDBAwKo7cqaz_1bIBQTee5Ys0p-dOtvcUsNcMMumFXEaQ" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//<![CDATA[
+var map;
+function load(){
+  if(location.host == 'localhost:3000'){
+    end_point = 'http://localhost:3000/geo_clip/';
+  }else{
+    end_point = 'http://star.yuiseki.net/geo_clip/';
+  }
+  var center = new GLatLng(35.6984, 139.7732);
+  map = new GMap2(document.getElementById("mymap"));
+  map.setCenter(center, 16);
+  var street = new GStreetviewOverlay();
+  map.addOverlay(street);
+
+  var option = { latlng:center };
+  var scontainer = document.getElementById("street");
+  var panorama = new GStreetviewPanorama(scontainer, option);
+
+  map.addControl(new GLargeMapControl());
+  map.addControl(new GScaleControl());
+  map.addControl(new GMapTypeControl());
+  map.addControl(new GOverviewMapControl());
+  GEvent.addListener(map, "mousemove", move);
+//  GEvent.addListener(map, "dblclick", addHistory);
+
+//  GDownloadUrl("proxy.php?url=http://api.geoclip.jp/api/feed.php?keyid=g7eyoccKlyrGu9n3xTv4&hit_per_page=10", showMessage);
+
+  var go_history_url = end_point + 'feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=';
+
+  function updateGoPosition(){
+    GDownloadUrl(go_history_url, setGoPosition);
+    function setGoPosition(data){
+      var obj = GXml.parse(data);
+      var lat = Number(obj.getElementsByTagName("latitude")[0].firstChild.nodeValue);
+      var lng = Number(obj.getElementsByTagName("longitude")[0].firstChild.nodeValue);
+      map.setCenter(new GLatLng(lat, lng));
+
+      var icon = new GIcon(G_DEFAULT_ICON);
+      icon.image = "./images/gaziro2000.jpg";
+      icon.iconSize = new GSize(48, 48);
+      icon.iconAhchor = new GPoint(48, 48);
+      var mk = new GMarker(new GLatLng(lat, lng), icon);
+      map.addOverlay(mk);
+
+      // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
+      var latlng = new GLatLng(lat, lng);
+      var option = { latlng:latlng};
+      var scontainer = document.getElementById("street");
+      var panorama = new GStreetviewPanorama(scontainer, option);
+    }
+    setTimeout(updateGoPosition, 60 * 1000);
+  }
+  setTimeout(updateGoPosition, 0);
+
+  addHistory(null, new GLatLng(35.704, 139.79));
+  addHistory(null, new GLatLng(35.683,139.782));
+  addHistory(null, new GLatLng(35.699,139.758));
+  addHistory(null, new GLatLng(35.688,139.761));
+  addHistory(null, new GLatLng(35.718,139.761));
+  addHistory(null, new GLatLng(35.691,139.743));
+
+  //localhostから実サーバへ変更しました
+  GDownloadUrl(go_history_url, drawTrace);
+  function drawTrace(data){
+    var obj = GXml.parse(data);
+    var points = [];
+    for(i=0; i<10; i++){
+      var lat0 = Number(obj.getElementsByTagName("latitude")[i].firstChild.nodeValue);
+      var lng0 = Number(obj.getElementsByTagName("longitude")[i].firstChild.nodeValue);
+      var lat1 = Number(obj.getElementsByTagName("latitude")[i+1].firstChild.nodeValue);
+      var lng1 = Number(obj.getElementsByTagName("longitude")[i+1].firstChild.nodeValue);
+      points.push(new GLatLng(lat0, lng0));
+      points.push(new GLatLng(lat1, lng1));
+    }
+    var line = new GPolyline(points, "#ff0000", 10);
+    map.addOverlay(line);
+  }
+}
+
+function showMessage(msg, status){
+  alert(msg);
+}
+function move(latlng){
+  var p = document.getElementById("postext");
+  p.innerHTML = "(" + shortForm(latlng.lat()) + "," + shortForm(latlng.lng()) + ")";
+}
+var prevPos;
+function shortForm(x){
+  return Math.floor(x*1000)/1000;
+}
+function addHistory(ov, latlng){
+  var distance;
+  if(prevPos == undefined)
+    distance = "?";
+  else
+    distance = shortForm(latlng.distanceFrom(prevPos)) + "m";
+
+  prevPos = latlng;
+
+  var posLink = document.createElement("a");
+  posLink.innerHTML = "(" + shortForm(latlng.lat()) + "," + shortForm(latlng.lng()) + ")";
+  posLink.href = "#";
+  posLink.onclick = function(){
+    map.panTo(latlng);
+
+    // たまにクリック反応しない。
+    // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
+    var option = { latlng:latlng};
+    var scontainer = document.getElementById("street");
+    var panorama = new GStreetviewPanorama(scontainer, option);
+  }
+
+  var newLi = document.createElement("li");
+  var distText = document.createTextNode(" - " + distance);
+  newLi.appendChild(posLink);
+  newLi.appendChild(distText);
+
+  var historyList = document.getElementById("history");
+  historyList.appendChild(newLi);
+
+  addMarker();
+  function addMarker(){
+    var icon = new GIcon(G_DEFAULT_ICON);
+    icon.image = "./images/star48.png";
+    icon.iconSize = new GSize(48, 48);
+    icon.shadow = "./images/starshadow48.png";
+    icon.shadowSize = new GSize(96, 48);
+    icon.iconAhchor = new GPoint(24, 24);
+    var mk = new GMarker(latlng, icon);
+    map.addOverlay(mk);
+    GEvent.addListener(mk, "click", function(){
+//      alert(latlng);
+//      alert("xxx");
+      var option = { latlng:latlng};
+      var scontainer = document.getElementById("street");
+      var panorama = new GStreetviewPanorama(scontainer, option);
+
+	  //メッセージをAPIから取得したコンテンツに変更する?
+      mk.openInfoWindowHtml("ここは秋葉原駅です");
+    });
+  }
+}
+
+onload = load;
+onunload = GUnload;
+//]]>
+</script>
+<style type="text/css">
+  v\:* { behavior:url(#default#VML);}
+</style>
+</head>
+<body>
+  <h1>電脳★スターラリー</h1>
+  <div><img src="./images/star48.png"/>
+    <span>電脳スター</span>
+    <span>全 1234個 </span>
+    <span>回収済み 1234個 </span>
+    <span>残り 1234個 </span>
+  </div>
+<p>
+マウスカーソルの位置:<span id="postext">不明</span></p>
+<div id="mymap" style="width: 500px; height: 400px; float:left"></div>
+<div id="street" style="width: 400px; height: 300px; float:left"></div>
+<ol id="history"></ol>
+<div>
+<embed flashvars="viewcount=false&amp;autoplay=true&amp;brand=embed" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv305138" src="http://www.ustream.tv/flash/live/251360" type="application/x-shockwave-flash" />
+</div>
+
+<hr />
+
+  <div>企画・制作</div>
+  <div>
+    <a href="http://wiki.livedoor.jp/hackerscafe/d/FrontPage"><img src="./images/hackers_cafe.png" border="0" alt="Hacker's Cafe" /></a>
+  </div>
+  <div>開発・実行メンバー</div>
+  <div>
+    <a href="http://twitter.com/akio0911/"><img src="./images/akio0911.jpg" border="0" alt="akio0911" /></a>
+    <a href="http://twitter.com/gaziro2000/"><img src="./images/gaziro2000.jpg" border="0" alt="gaziro2000" /></a>
+    <a href="http://twitter.com/ksasao/"><img src="./images/ksasao.jpg" border="0" alt="ksasao" /></a>
+    <a href="http://twitter.com/yuiseki/"><img src="./images/yuiseki.jpg" border="0" alt="yuiseki" /></a>
+  </div>
+    <div>thanks to</div>
+  <div>
+    <div>忍頂寺さま</div>
+    <div>野秋さま</div>
+  </div>
+  <div>後援</div>
+  <div>
+    <a href="http://www.i-labo.info/top.html"><img src="./images/i_labo.gif" border="0" alt="アイラボ"/></a>
+    <a href="http://www.geoclip.jp/"><img src="./images/geoclip.jpg" border="0" alt="ジオクリ"/></a>
+    <a href="http://www.kbmj.com/"><img src="./images/kbmj.gif" border="0" alt="WEBシステム開発｜KBMJ/株式会社ケイビーエムジェイ｜WEB、モバイルサービスのトータルプロデュース"/></a>
+    <a href="http://doruby.kbmj.com/"><img src="./images/doruby.gif" border="0" alt="Do  Ruby!(Ruby on Railsのシステム開発)"/></a>
+  </div>
+</body>
+</html>
+

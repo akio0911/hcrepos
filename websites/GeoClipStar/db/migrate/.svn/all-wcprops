@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/GeoClipStar/!svn/ver/81/db/migrate
+END
+003_add_column_star_end_flg.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/GeoClipStar/!svn/ver/41/db/migrate/003_add_column_star_end_flg.rb
+END
+001_create_stars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/GeoClipStar/!svn/ver/1/db/migrate/001_create_stars.rb
+END
+005_create_flickrs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/GeoClipStar/!svn/ver/81/db/migrate/005_create_flickrs.rb
+END
+002_create_traces.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/GeoClipStar/!svn/ver/1/db/migrate/002_create_traces.rb
+END
+004_create_twitters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/GeoClipStar/!svn/ver/36/db/migrate/004_create_twitters.rb
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/GeoClipStar/!svn/ver/1/script/performance
+END
+benchmarker
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/GeoClipStar/!svn/ver/1/script/performance/benchmarker
+END
+profiler
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/GeoClipStar/!svn/ver/1/script/performance/profiler
+END
+request
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/GeoClipStar/!svn/ver/1/script/performance/request
+END

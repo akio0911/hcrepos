@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Cyber Star Rally</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<script src="http://maps.google.co.jp/maps?file=api&amp;v=2&amp;key=ABQIAAAANmKytc5ypjH_KbDCAjAbphT7fUKXf8Z2EQDBAwKo7cqaz_1bIBQTee5Ys0p-dOtvcUsNcMMumFXEaQ" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//<![CDATA[
+//]]>
+</script>
+	<style type="text/css">
+    v\:* { behavior:url(#default#VML);}
+    body{color:white;background-color:black}
+	</style>
+</head>
+<body>
+  <div>
+    Presented by
+    <a href="http://wiki.livedoor.jp/hackerscafe/d/"><%= image_tag('hackers_cafe.png', :border => 0) %></a>
+  </div>
+  <h1><%= image_tag('logos.png') %></h1>
+  <div>From 18:00 on August 30 to 18:00 on August 31</div>
+  <div>
+    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/QwDNUFkkYOA&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/QwDNUFkkYOA&hl=en&fs=1&autoplay=1&loop=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/rE1aaTnUR3Y&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/rE1aaTnUR3Y&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+  </div>
+</body>
+</html>
+

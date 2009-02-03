@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/GeoClipStar/!svn/ver/81/test/fixtures
+END
+traces.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/GeoClipStar/!svn/ver/1/test/fixtures/traces.yml
+END
+twitters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/GeoClipStar/!svn/ver/81/test/fixtures/twitters.yml
+END
+stars.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/GeoClipStar/!svn/ver/1/test/fixtures/stars.yml
+END
+flickrs.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/GeoClipStar/!svn/ver/81/test/fixtures/flickrs.yml
+END
