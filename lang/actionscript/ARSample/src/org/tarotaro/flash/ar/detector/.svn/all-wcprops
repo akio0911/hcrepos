@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1789/as3/FLARToolKit/trunk/samples/org/tarotaro/flash/ar/detector
+END
+CubeMarkerMatchResultTemporaryHolder.as
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/1787/as3/FLARToolKit/trunk/samples/org/tarotaro/flash/ar/detector/CubeMarkerMatchResultTemporaryHolder.as
+END
+FLARCubeMarkerDetector.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1787/as3/FLARToolKit/trunk/samples/org/tarotaro/flash/ar/detector/FLARCubeMarkerDetector.as
+END
+CubeMarker.as
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1774/as3/FLARToolKit/trunk/samples/org/tarotaro/flash/ar/detector/CubeMarker.as
+END
+CubeMarkerDetectedResult.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1774/as3/FLARToolKit/trunk/samples/org/tarotaro/flash/ar/detector/CubeMarkerDetectedResult.as
+END
