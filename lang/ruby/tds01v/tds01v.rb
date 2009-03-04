@@ -14,7 +14,65 @@ def dev_open(path)
   dev
 end
 
+def dump_termios(tio, banner)
+  puts banner
+  puts "  ispeed = #{BAUDS[tio.ispeed]}, ospeed = #{BAUDS[tio.ospeed]}"
+  ["iflag", "oflag", "cflag", "lflag"].each do |x|
+    flag = tio.send(x)
+    flags = []
+    eval("#{x.upcase}S").each do |f, sym|
+      flags << sym.to_s if flag & f != 0
+    end
+    puts "   #{x} = #{flags.sort.join(' | ')}"
+  end
+  print "      cc ="
+  cc = tio.cc
+  cc.each_with_index do |x, idx|
+    print " #{CCINDEX[idx]}=#{x}" if CCINDEX.include?(idx)
+  end
+  puts
+end
+
 dev = dev_open(DEVICE)
+
+oldtio = getattr(dev)
+dump_termios(oldtio, "current tio:")
+
+newtio = new_termios()
+newtio.iflag = IGNPAR
+newtio.oflag = 0
+newtio.cflag = (CRTSCTS | CS8 | CREAD)
+newtio.lflag = 0
+newtio.cc[VTIME] = 0
+newtio.cc[VMIN] = 1
+newtio.ispeed = BAUDRATE
+newtio.ospeed = BAUDRATE
+dump_termios(newtio, "new tio:")
+
+flush(dev, TCIOFLUSH)
+setattr(dev, TCSANOW, newtio)
+dump_termios(getattr(dev), "current tio:")
+
+# NL*	10	012	0x0a
+# CR	13	015	0x0d
+# http://gps.way-nifty.com/around_gps/2008/06/d_9549.html
+# ３Ｄセンサーは改行コードがCR+LFになっています。
+# * NL ： "New Line" (改行)の略。「LF」(Line Feed)と呼ばれることもある
+
+"050027950000\x0d\x0a".each_byte {|c|
+  c = c.chr
+  p [:write_char, c]
+  dev.putc c
+#  d = dev.getc
+#  p [:echo_back, d && d.chr || nil]
+}
+
+p 1111111111
+d = dev.getc
+p 22222222
+p [:echo_back, d && d.chr || nil]
+d = dev.getc
+p [:echo_back, d && d.chr || nil]
 
 # % cu -s 9600 -l /dev/tty.usbserial-0000103D
 # Connected.
