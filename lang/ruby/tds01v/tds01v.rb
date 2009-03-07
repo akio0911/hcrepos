@@ -4,7 +4,7 @@ require 'fcntl'
 require 'termios'
 include Termios
 
-DEVICE = '/dev/tty.usbserial-00001004'
+DEVICE = '/dev/tty.usbserial-00002006'
 BAUDRATE = B9600
 
 def dev_open(path)
@@ -39,7 +39,7 @@ def get_direction(dev)
 
 "21\x0d\x0a".each_byte {|c|
   c = c.chr
-  p [:write_char, c]
+#  p [:write_char, c]
   dev.putc c
 }
 
@@ -49,22 +49,22 @@ def get_direction(dev)
 #p :echo_back
 (2).times do |i|
   d = dev.getc
-  putc d && d.chr || nil
+#  putc d && d.chr || nil
 #  p d && d.chr || nil
 end
 (2).times do |i|
   d = dev.getc
-  putc d && d.chr || nil
+#  putc d && d.chr || nil
 #  p d && d.chr || nil
 end
-puts ''
+#puts ''
 
 # センサ情報要求
 # 29<ENTER><ENTER> 
 
 "29\x0d\x0a".each_byte {|c|
   c = c.chr
-  p [:write_char, c]
+#  p [:write_char, c]
   dev.putc c
 }
 
@@ -80,7 +80,7 @@ vector_x = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   vector_x += c
 end
 =begin
@@ -90,15 +90,15 @@ end
   putc c
 end
 =end
-puts ''
-p vector_x
+#puts ''
+#p vector_x
 
 #puts '# 地磁気センサ ベクトルデータ Y'
 vector_y = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   vector_y += c
 end
 =begin
@@ -108,15 +108,15 @@ end
   putc c
 end
 =end
-puts ''
-p vector_y
+#puts ''
+#p vector_y
 
 #puts '# 地磁気センサ ベクトルデータ Z'
 vector_z = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   vector_z += c
 end
 =begin
@@ -126,15 +126,15 @@ end
   putc c
 end
 =end
-puts ''
-p vector_z
+#puts ''
+#p vector_z
 
 #puts '# 方位角'
 direction = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   direction += c
 end
 =begin
@@ -144,17 +144,29 @@ end
   putc c
 end
 =end
-puts ''
-p direction
+#puts ''
+#p direction
 
 puts "direction : #{direction} #{direction.hex}"
+if direction.hex < 45*10 then
+  puts "北"
+elsif direction.hex < (90+45)*10
+  puts "東"
+elsif direction.hex < (90*2+45)*10
+  puts "南"
+elsif direction.hex < (90*3+45)*10
+  puts "西"
+else
+  puts "北"
+end
+
 
 #puts '# 加速度センサ ベクトルデータ X'
 acc_x = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   acc_x += c
 end
 =begin
@@ -164,15 +176,15 @@ end
   putc c
 end
 =end
-puts ''
-p acc_x
+#puts ''
+#p acc_x
 
 #puts '# 加速度センサ ベクトルデータ Y'
 acc_y = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   acc_y += c
 end
 =begin
@@ -182,15 +194,15 @@ end
   putc c
 end
 =end
-puts ''
-p acc_y
+#puts ''
+#p acc_y
 
 #puts '# 加速度センサ ベクトルデータ Z'
 acc_z = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   acc_z += c
 end
 =begin
@@ -200,15 +212,15 @@ end
   putc c
 end
 =end
-puts ''
-p acc_z
+#puts ''
+#p acc_z
 
 #puts '# 傾斜角情報 Roll'
 roll = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   roll += c
 end
 =begin
@@ -218,15 +230,15 @@ end
   putc c
 end
 =end
-puts ''
-p roll
+#puts ''
+#p roll
 
 #puts '# 傾斜角情報 Pitch'
 pitch = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   pitch += c
 end
 =begin
@@ -236,15 +248,15 @@ end
   putc c
 end
 =end
-puts ''
-p pitch
+#puts ''
+#p pitch
 
 #puts '# 気圧情報'
 pressure = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   pressure += c
 end
 =begin
@@ -254,45 +266,45 @@ end
   putc c
 end
 =end
-puts ''
-p pressure
+#puts ''
+#p pressure
 
 #puts '# 高度情報'
 altitude = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   altitude += c
 end
-puts ''
-p altitude
+#puts ''
+#p altitude
 
 #puts '# 温度情報'
 temp = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   temp += c
 end
-puts ''
-p temp
+#puts ''
+#p temp
 
 #puts '# 電圧情報'
 voltage = ''
 4.times do |i|
   d = dev.getc
   c = d && d.chr || nil
-  putc c
+#  putc c
   voltage += c
 end
-puts ''
-p voltage
+#puts ''
+#p voltage
 
 (2).times do |i|
   d = dev.getc
-  putc d && d.chr || nil
+#  putc d && d.chr || nil
 #  p d && d.chr || nil
 end
 
