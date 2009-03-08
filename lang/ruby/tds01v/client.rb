@@ -6,9 +6,11 @@ require 'socket'
 #  s.send("AAA", 0)
   99999.times do |i|
     p 111
-    s.send("Z", 0)
+#    s.send("Z", 0)
     p 222
-    p s.recv(1)
+#    p s.recv(1)
+    s.puts "HEY!!"
+    p s.gets
     p 333
   end
   s.close
