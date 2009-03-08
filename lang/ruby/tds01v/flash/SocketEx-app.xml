@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/1.5">
+  <id>SocketEx</id>
+  <version>0.1</version>
+  <filename>SocketEx</filename>
+  <description>This is HelloWorld.</description>
+  <copyright>akio0911</copyright>
+
+  <initialWindow>
+    <title>SocketEx</title>
+    <content>SocketEx.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+  </initialWindow>
+</application>
+
