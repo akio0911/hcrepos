@@ -4,11 +4,15 @@ require 'fcntl'
 require 'termios'
 include Termios
 
-DEVICE = '/dev/tty.usbserial-00002006'
+require 'socket'
+require 'thread'
+
+
+#DEVICE = '/dev/tty.usbserial-00001004'
 BAUDRATE = B9600
 
 def dev_open(path)
-  dev = open(DEVICE, File::RDWR | File::NONBLOCK)
+  dev = open(path, File::RDWR | File::NONBLOCK)
   mode = dev.fcntl(Fcntl::F_GETFL, 0)
   dev.fcntl(Fcntl::F_SETFL, mode & ~File::NONBLOCK)
   dev
@@ -34,292 +38,315 @@ def dump_termios(tio, banner)
 end
 
 def get_direction(dev)
-# 計測開始
-# 21<ENTER><ENTER> 
+  # 計測開始
+  # 21<ENTER><ENTER> 
 
-"21\x0d\x0a".each_byte {|c|
-  c = c.chr
-#  p [:write_char, c]
-  dev.putc c
-}
+  "21\x0d\x0a".each_byte {|c|
+    c = c.chr
+    #  p [:write_char, c]
+    dev.putc c
+  }
 
-# ACK 計測開始応答
-# DE 
+  # ACK 計測開始応答
+  # DE 
 
-#p :echo_back
-(2).times do |i|
-  d = dev.getc
-#  putc d && d.chr || nil
-#  p d && d.chr || nil
-end
-(2).times do |i|
-  d = dev.getc
-#  putc d && d.chr || nil
-#  p d && d.chr || nil
-end
-#puts ''
+  #p :echo_back
+  (2).times do |i|
+    d = dev.getc
+    #  putc d && d.chr || nil
+    #  p d && d.chr || nil
+  end
+  (2).times do |i|
+    d = dev.getc
+    #  putc d && d.chr || nil
+    #  p d && d.chr || nil
+  end
+  #puts ''
 
-# センサ情報要求
-# 29<ENTER><ENTER> 
+  # センサ情報要求
+  # 29<ENTER><ENTER> 
 
-"29\x0d\x0a".each_byte {|c|
-  c = c.chr
-#  p [:write_char, c]
-  dev.putc c
-}
+  "29\x0d\x0a".each_byte {|c|
+    c = c.chr
+    #  p [:write_char, c]
+    dev.putc c
+  }
 
-# センサ情報 全センサ全データ(ベクトルデータ+計測データ)
-# FE85 00A0 00A4 07B9 
-# 0005 0006 FFB8 0024 
-# FFE5 27AE FFEB 00D5 0B1B 
+  # センサ情報 全センサ全データ(ベクトルデータ+計測データ)
+  # FE85 00A0 00A4 07B9 
+  # 0005 0006 FFB8 0024 
+  # FFE5 27AE FFEB 00D5 0B1B 
 
-#p :echo_back
+  #p :echo_back
 
-#puts '# 地磁気センサ ベクトルデータ X'
-vector_x = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  vector_x += c
-end
+  #puts '# 地磁気センサ ベクトルデータ X'
+  vector_x = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    vector_x += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p vector_x
+  #puts ''
+  #p vector_x
 
-#puts '# 地磁気センサ ベクトルデータ Y'
-vector_y = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  vector_y += c
-end
+  #puts '# 地磁気センサ ベクトルデータ Y'
+  vector_y = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    vector_y += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p vector_y
+  #puts ''
+  #p vector_y
 
-#puts '# 地磁気センサ ベクトルデータ Z'
-vector_z = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  vector_z += c
-end
+  #puts '# 地磁気センサ ベクトルデータ Z'
+  vector_z = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    vector_z += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p vector_z
+  #puts ''
+  #p vector_z
 
-#puts '# 方位角'
-direction = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  direction += c
-end
+  #puts '# 方位角'
+  direction = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    direction += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p direction
+  #puts ''
+  #p direction
 
-puts "direction : #{direction} #{direction.hex}"
-if direction.hex < 45*10 then
-  puts "北"
-elsif direction.hex < (90+45)*10
-  puts "東"
-elsif direction.hex < (90*2+45)*10
-  puts "南"
-elsif direction.hex < (90*3+45)*10
-  puts "西"
-else
-  puts "北"
-end
+  puts "direction : #{direction} #{direction.hex}"
+  if direction.hex < 45*10 then
+    puts "北"
+  elsif direction.hex < (90+45)*10
+    puts "東"
+  elsif direction.hex < (90*2+45)*10
+    puts "南"
+  elsif direction.hex < (90*3+45)*10
+    puts "西"
+  else
+    puts "北"
+  end
 
 
-#puts '# 加速度センサ ベクトルデータ X'
-acc_x = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  acc_x += c
-end
+  #puts '# 加速度センサ ベクトルデータ X'
+  acc_x = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    acc_x += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p acc_x
+  #puts ''
+  #p acc_x
 
-#puts '# 加速度センサ ベクトルデータ Y'
-acc_y = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  acc_y += c
-end
+  #puts '# 加速度センサ ベクトルデータ Y'
+  acc_y = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    acc_y += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p acc_y
+  #puts ''
+  #p acc_y
 
-#puts '# 加速度センサ ベクトルデータ Z'
-acc_z = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  acc_z += c
-end
+  #puts '# 加速度センサ ベクトルデータ Z'
+  acc_z = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    acc_z += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p acc_z
+  #puts ''
+  #p acc_z
 
-#puts '# 傾斜角情報 Roll'
-roll = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  roll += c
-end
+  #puts '# 傾斜角情報 Roll'
+  roll = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    roll += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p roll
+  #puts ''
+  #p roll
 
-#puts '# 傾斜角情報 Pitch'
-pitch = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  pitch += c
-end
+  #puts '# 傾斜角情報 Pitch'
+  pitch = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    pitch += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p pitch
+  #puts ''
+  #p pitch
 
-#puts '# 気圧情報'
-pressure = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  pressure += c
-end
+  #puts '# 気圧情報'
+  pressure = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    pressure += c
+  end
 =begin
-(2).times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-  putc c
-end
+     (2).times do |i|
+      d = dev.getc
+      c = d && d.chr || nil
+      putc c
+    end
 =end
-#puts ''
-#p pressure
+  #puts ''
+  #p pressure
 
-#puts '# 高度情報'
-altitude = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  altitude += c
-end
-#puts ''
-#p altitude
+  #puts '# 高度情報'
+  altitude = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    altitude += c
+  end
+  #puts ''
+  #p altitude
 
-#puts '# 温度情報'
-temp = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  temp += c
-end
-#puts ''
-#p temp
+  #puts '# 温度情報'
+  temp = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    temp += c
+  end
+  #puts ''
+  #p temp
 
-#puts '# 電圧情報'
-voltage = ''
-4.times do |i|
-  d = dev.getc
-  c = d && d.chr || nil
-#  putc c
-  voltage += c
-end
-#puts ''
-#p voltage
+  #puts '# 電圧情報'
+  voltage = ''
+  4.times do |i|
+    d = dev.getc
+    c = d && d.chr || nil
+    #  putc c
+    voltage += c
+  end
+  #puts ''
+  #p voltage
 
-(2).times do |i|
-  d = dev.getc
-#  putc d && d.chr || nil
-#  p d && d.chr || nil
-end
+  (2).times do |i|
+    d = dev.getc
+    #  putc d && d.chr || nil
+    #  p d && d.chr || nil
+  end
 
 =begin
-d = dev.getc
-#putc d && d.chr || nil
-#puts ''
+     d = dev.getc
+     #putc d && d.chr || nil
+     #puts ''
 =end
 
-######################################
-#exit
+  ######################################
+  #exit
 
+  return direction.hex
 end
 
-dev = dev_open(DEVICE)
+if ARGV.size != 1
+  puts "デバイスのパスを指定して下さい。"
+  return
+end
+
+device = ARGV[0]
+
+gs = TCPServer.open(12345)
+addr = gs.addr # ["AF_INET6", 12345, "0.0.0.0", "0.0.0.0"]
+addr.shift
+p addr # [12345, "0.0.0.0", "0.0.0.0"]
+printf("server is on %s\n", addr.join(":"))
+
+while true
+  # gs.accept は接続要求を待ち受ける
+  # 接続要求がくると新しいソケットが作成され、
+  # そのままスレッドの引数として渡される
+  Thread.start(gs.accept) do |s| 
+    print(s, "is accepted\n")
+#    puts(s.gets)
+    
+    #########################
+dev = dev_open(device)
 
 oldtio = getattr(dev)
 dump_termios(oldtio, "current tio:")
@@ -411,16 +438,26 @@ end
   putc d && d.chr || nil
 end
 puts ''
+    #########################
 
-99999.times do |i|
-  get_direction(dev)
+    99999.times do |i|
+      p 111111111111
+      data = get_direction(dev)
+      p 222222222222
+      
+      p s.recv(1)
+      s.send "X"
+
+      p 333333333333
+    end
+
+    #########################
+    #########################
+
+    print(s, " is gone\n")
+    s.close
+  end
 end
-
-exit
-
-
-
-
 
 # % cu -s 9600 -l /dev/tty.usbserial-0000103D
 # Connected.
