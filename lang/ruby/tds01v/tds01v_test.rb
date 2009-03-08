@@ -24,4 +24,3 @@ while true
     puts "北"
   end
 end
-

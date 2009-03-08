@@ -1,17 +1,21 @@
+# -*- coding: utf-8 -*-
 require 'socket'
 
-#if ARGV.size == 1
-  s = TCPSocket.open("localhost", 12345)
-  #s.puts("test")
-#  s.send("AAA", 0)
-  99999.times do |i|
-    p 111
-#    s.send("Z", 0)
-    p 222
-#    p s.recv(1)
-    s.puts "HEY!!"
-    p s.gets
-    p 333
+s = TCPSocket.open("localhost", 12345)
+while true
+  s.send("ZZZZ", 0)
+  d = s.recv(4).to_i
+  p d
+  if d < 45*10 then
+    puts "北"
+  elsif d < (90+45)*10
+    puts "東"
+  elsif d < (90*2+45)*10
+    puts "南"
+  elsif d < (90*3+45)*10
+    puts "西"
+  else
+    puts "北"
   end
-  s.close
-#end
+end
+s.close
