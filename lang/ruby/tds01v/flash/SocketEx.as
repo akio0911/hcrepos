@@ -5,6 +5,7 @@ package {
     import flash.ui.*;
     import flash.utils.*;
     import flash.text.*
+    import flash.media.*;
 
     //ソケットを使用する
     public class SocketEx extends Sprite {
@@ -12,12 +13,34 @@ package {
         private var tfView:TextField;//表示テキストフィールド
         private var tfSend:TextField;//送信テキストフィールド
 	private var myTimer:Timer;
+	private var video:Video;
+	private var camera:Camera;
+	private var msg:String;
         
         //コンストラクタ
         public function SocketEx() {
+	    stage.scaleMode = StageScaleMode.NO_SCALE;
+	    stage.align = StageAlign.TOP_LEFT;
+	    camera = Camera.getCamera();
+	    if(camera != null){
+		camera.addEventListener(StatusEvent.STATUS, statusHandler);
+		camera.setMode(200, 160, 15);
+		camera.setMotionLevel(10);
+		camera.setQuality(0, 50);
+		//		video = new Video(camera.width, camera.height);
+		video = new Video(640, 480);
+		video.attachCamera(camera);
+		this.addChild(video);
+		video.x = (stage.width / 2) - (video.width / 2);
+		video.y = 20;
+	    }else{
+		msg = "使用可能なカメラがありません。";
+		//		txtArea.text = msg;
+	    }
+
             //テキストフィールドの生成
-            tfView=addTextField(10,10,220,160);
-            tfSend=addTextField(10,180,220,20);
+            tfView=addTextField(0,0,640,320);
+            tfSend=addTextField(0,320,640,40);
             
             //ソケットの生成
             socket=new Socket("localhost",12345);
@@ -30,15 +53,34 @@ package {
             socket.addEventListener(IOErrorEvent.IO_ERROR,ioErrorHandler);
             tfSend.addEventListener(KeyboardEvent.KEY_DOWN,keyDownHandler);
 
-	    myTimer = new Timer(100);
-	    myTimer.addEventListener("timer", timerHandler);
-	    myTimer.start();
+	    //	    myTimer = new Timer(100);
+	    //	    myTimer.addEventListener("timer", timerHandler);
+	    //	    myTimer.start();
+
+	    socket.writeByte(1);
+	    socket.writeByte(2);
+	    socket.writeByte(3);
+	    socket.writeByte(4);
+	    socket.flush();
         }
 
+	private function statusHandler(evt:StatusEvent) : void {
+	    if(camera.muted){
+		msg = "カメラへのアクセスが拒否されました。";
+		msg += "カメラの映像を表示するにはアクセスを許可してください。";
+		//		txtArea.text = msg;
+		//		Security.showSettings(SecurityPanel.PRIVACY);
+	    }else{
+		msg = "使用中のカメラ : " + camera.name + "\n";
+		msg += "幅x高さ : " + camera.width + "x" + camera.height;
+		//		txtArea.text = msg;
+	    }
+	}
+	/*
 	private function timerHandler(evenr:TimerEvent):void{
 	    updateDirection();
 	}
-
+	*/
         //キーダウンイベントの処理
         private function keyDownHandler(evt:KeyboardEvent):void {
             if (!socket.connected) return;
@@ -64,11 +106,11 @@ package {
         }
 
 	private function updateDirection():void{
-	    socket.writeByte(1);
-	    socket.writeByte(2);
-	    socket.writeByte(3);
-	    socket.writeByte(4);
-	    socket.flush();
+	    //	    socket.writeByte(1);
+	    //	    socket.writeByte(2);
+	    //	    socket.writeByte(3);
+	    //	    socket.writeByte(4);
+	    //	    socket.flush();
 
 	    //            var text:String=socket.readUTFBytes(socket.bytesAvailable);
 	    var d1:int = socket.readByte();
@@ -102,6 +144,18 @@ package {
         //読み込み中イベントの処理?f?
         private function socketDataHandler(evt:ProgressEvent):void {
 	    //	    updateDirection();
+            tfView.text="socketDataHandler"+"\n"+tfView.text;
+            var s:String = "socketDataHandler: bytesLoaded=" + evt.bytesLoaded + " bytesTotal=" + evt.bytesTotal;
+            tfView.text=s+"\n"+tfView.text;
+	    if(evt.bytesLoaded >= 4){
+		updateDirection();
+
+		socket.writeByte(1);
+		socket.writeByte(2);
+		socket.writeByte(3);
+		socket.writeByte(4);
+		socket.flush();
+	    }
         }
     
         //セキュリティエラーイベントの処理?Z?L?????e?B?G???
@@ -126,6 +180,7 @@ package {
             textField.selectable=true;
             textField.border=true;
             textField.type=TextFieldType.INPUT;
+	    textField.textColor = 0xffffff;
             return textField;
         }
     }

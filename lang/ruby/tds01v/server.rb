@@ -3,8 +3,12 @@ require 'socket'
 require 'thread'
 require 'tds01v'
 
-if ARGV.size != 1
-  puts "デバイスのパスを指定して下さい。"
+if ARGV.size == 0
+  dummy = true
+elsif ARGV.size == 1
+  dummy = false
+else
+  puts "引数の指定方法が間違っています。"
   exit
 end
 
@@ -14,8 +18,11 @@ addr.shift
 p addr # [12345, "0.0.0.0", "0.0.0.0"]
 printf("server is on %s\n", addr.join(":"))
 
-device = ARGV[0]
-t = Tds01v.new(device)
+if dummy
+else
+  device = ARGV[0]
+  t = Tds01v.new(device)
+end
 
 while true
   # gs.accept は接続要求を待ち受ける
@@ -27,10 +34,16 @@ while true
 #    p s.recv(3)
 #    s.puts "BYE"
 
+    dummy_direction = 0
+    DIRECTION_MAX = 3600
     while true
       p s.recv(4)
 
-      direction = t.get_direction
+      if dummy
+        direction = dummy_direction
+      else
+        direction = t.get_direction
+      end
 
       puts "direction : #{direction}"
       #    p direction.to_s
@@ -49,6 +62,9 @@ while true
       else
         puts "北"
       end
+
+      dummy_direction += 1
+      dummy_direction = 0 if dummy_direction >= DIRECTION_MAX
     end
     print(s, " is gone\n")
     s.close
