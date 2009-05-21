@@ -1,0 +1,1014 @@
+#ifndef __GL_METASEQ_H__
+#define __GL_METASEQ_H__
+
+/*=========================================================================================
+ 
+ GLMetaseq.h (Ver2.01d)
+ 
+ メタセコイアで作成したモデル(*.mqo)をOpenGL上に読み込む関数をまとめたC/C++用ヘッダです．
+ このヘッダを使う上で以下の点に注意してください．
+ 
+ 　	　・扱えるテクスチャは24bitビットマップ画像
+ 　・テクスチャ画像のサイズは「一辺が2のn乗サイズ(64,128,256…)の正方形」に限る
+ 
+ 　（最低限必要な機能しか実装していないので，メタセコイアと同じ表示能力は期待しないでください）
+ 
+ 
+ ■前バージョンからの主な変更・改良点
+ 
+ ・マテリアル設定の諸設定に対応しました（つやつやしたオブジェクトなどが表示できます）
+ ・パーツの可視・不可視に対応しました
+ ・連番MQOの読み込みに対応しました
+ ・型定義が大幅変更になりました
+ ・法線ベクトルの計算が間違っていたのを修正しました
+ ・Windows依存の構造体（BITMAPFILEHEADERなど）をコード中で使うのをやめました
+ 
+ (Ver2.01dでの修正)
+ ・マテリアル情報のないオブジェクトで読み込みエラーになるバグを修正
+ ・テクスチャファイルの絶対パス指定に対応
+ 
+ 
+ ■使い方
+ 
+ ・モデルの作成（ARToolKitの場合は，argInit()の後で使ってください）
+ 
+ MQO_MODEL model;
+ model = mqoCreateModel("mario.mqo",1.0);
+ 
+ ・モデルの呼び出し
+ 
+ mqoCallModel(model);
+ 
+ 
+ ■使い方（連番ファイル）
+ 
+ ・連番シーケンスの作成（ARToolKitの場合は，argInit()の後で使ってください）
+ 
+ 　例：mario0.mqo 〜 mario9.mqo を読み込む
+ 
+ MQO_SEQUENCE seq;
+ seq = mqoCreateSequence("mario",10,1.0);
+ 
+ ・連番シーケンスの指定フレームの呼び出し（iはフレーム番号）
+ 
+ mqoCallSequence(seq,i);
+ 
+ 
+ ■ARToolKitで扱う場合の注意点
+ 
+ 　OpenGLの初期状態ではY軸は上方向，Z軸は手前に向いています．
+ 　メタセコイアの作成画面でも同様です．これに対して，
+ 　ARToolKitのマーカ座標系ではZ軸が上を向いています．
+ 
+ 　メタセコアで見ている時と同じようにマーカ上に表示させるためには
+ 　以下のいずれかの方法で対処してください．
+ 　　・モデルを呼び出す前にX軸周りに90度回転させておく，
+ 　　・mqoMakeObjects()の中で，あらかじめX軸周りに90度回転しておく，
+ 後者については，コメントアウトしてますので適宜いじってください．
+ 
+ 
+ 再配布・改変は自由です．
+ Copyright (c) 工学ナビ, 2008-. (Release 08/02/21)
+ website: http://www1.bbiq.jp/kougaku/
+ 
+ =========================================================================================*/
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// ヘッダ
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+#else
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#endif
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// マクロ定義
+
+#define SIZE_STR	256		// 文字列バッファのサイズ
+#define N_OBJ		30		// 1個のファイル内にあるオブジェクト（パーツ）の最大数
+
+// 最大値マクロ
+#ifndef MAX
+#define MAX(a, b)  (((a) > (b)) ? (a) : (b))
+#endif
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// 型定義
+
+
+/*=========================================================================
+ 【型定義】　MQOモデル
+ =========================================================================*/
+
+#ifndef DEFINE_MQO_MODEL
+#define DEFINE_MQO_MODEL
+typedef GLuint MQO_MODEL;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　MQOシーケンス
+ =========================================================================*/
+
+#ifndef DEFINE_MQO_SEQUENCE
+#define DEFINE_MQO_SEQUENCE
+typedef struct tagMQO_SEQUENCE {
+	MQO_MODEL	model;		// モデル
+	int			n_frame;	// フレーム数
+} MQO_SEQUENCE;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　OpenGL用色構造体 (4色float)
+ =========================================================================*/
+
+#ifndef DEFINE_glCOLOR4f
+#define DEFINE_glCOLOR4f
+typedef struct tag_glCOLOR4f{
+	GLfloat r;
+	GLfloat g;
+	GLfloat b;
+	GLfloat a;
+} glCOLOR4f;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　OpenGL用２次元座標構造体 (float)
+ =========================================================================*/
+
+#ifndef DEFINE_glPOINT2f
+#define DEFINE_glPOINT2f
+typedef struct tag_glPOINT2f {
+	GLfloat x;
+	GLfloat y;
+} glPOINT2f;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　OpenGL用３次元座標構造体 (float)
+ =========================================================================*/
+#ifndef DEFINE_glPOINT3f
+#define DEFINE_glPOINT3f
+typedef struct tag_glPOINT3f{
+	GLfloat x;
+	GLfloat y;
+	GLfloat z;
+} glPOINT3f;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　面情報構造体
+ =========================================================================*/
+#ifndef DEFINE_MQO_FACE
+#define DEFINE_MQO_FACE
+typedef struct tagMQO_FACE{
+	int			n;		// 1つの面を構成する頂点の数（3〜4）
+	int			m;		// 面の材質番号
+	int			v[4];	// 頂点番号を格納した配列
+	glPOINT2f	uv[4];	// UVマップ
+} MQO_FACE;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　材質情報構造体
+ =========================================================================*/
+
+#ifndef DEFINE_MQO_MATERIAL
+#define DEFINE_MQO_MATERIAL
+typedef struct tagMQO_MATERIAL{
+	glCOLOR4f	col;				// 色
+	GLfloat		dif[4];				// 拡散光
+	GLfloat		amb[4];				// 周囲光
+	GLfloat		emi[4];				// 自己照明
+	GLfloat		spc[4];				// 反射光
+	GLfloat		power;				// 反射光の強さ
+	int			useTex;				// テクスチャの有無
+	char		texFile[SIZE_STR];	// テクスチャファイル
+	GLuint		texName;			// テクスチャ名
+	GLubyte		*texImage;			// テクスチャ画像
+} MQO_MATERIAL;
+#endif
+
+
+/*=========================================================================
+ 【型定義】　オブジェクト構造体（パーツ１個のデータ）
+ =========================================================================*/
+
+typedef struct tagMQO_OBJECT {
+	int			visible;	// 可視
+	int			n_face;		// 面数
+	int			n_vertex;	// 頂点数
+	MQO_FACE		*F;			// 面配列
+	glPOINT3f	*V;			// 頂点配列
+} MQO_OBJECT;
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// プロトタイプ宣言
+
+void mqoGetDirectory(const char *path_file, char *path_dir);
+GLubyte* mqoLoadTexture(char *filename,int *tex_size);
+void mqoRegistTexture(GLuint* tex_name,GLubyte* tex_img,int tex_size);
+void mqoReleaseTexture(void *pImage);
+void mqoSnormal(glPOINT3f A, glPOINT3f B, glPOINT3f C, glPOINT3f *normal);
+void mqoReadMaterial(FILE *fp, MQO_MATERIAL M[]);
+void mqoReadVertex(FILE *fp, glPOINT3f V[]);
+void mqoReadFace(FILE *fp, MQO_FACE F[]);
+void mqoReadObject(FILE *fp, MQO_OBJECT *obj);
+void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[]);
+void mqoMakeObjects(MQO_OBJECT obj[], int n_obj, MQO_MATERIAL M[]);
+MQO_MODEL	 mqoCreateModel(char *filename, double scale);
+MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale);
+void mqoCallModel(MQO_MODEL model);
+void mqoCallSequence(MQO_SEQUENCE seq, int i);
+void mqoDeleteModel(MQO_MODEL model);
+void mqoDeleteSequence(MQO_SEQUENCE seq);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// 関数本体
+
+
+/*=========================================================================
+ 【関数】mqoGetDirectory
+ 【用途】ファイル名を含むパス文字列からディレクトリのパスのみを抽出する
+ 【引数】
+ *path_file	ファイル名を含むパス文字列（入力）
+ *path_dir	ファイル名を除いたパス文字列（出力）
+ 
+ 【戻値】なし
+ 【仕様】例：
+ "C:/data/file.bmp" → "C:/data/"
+ "data/file.mqo"    → "data/"
+ =========================================================================*/
+
+void mqoGetDirectory(const char *path_file, char *path_dir)
+{
+	char *pStr;
+	int len;
+	
+	pStr = MAX( strrchr(path_file,'¥¥'), strrchr(path_file,'/') );
+	len = MAX((int)(pStr-path_file)+1,0);
+	strncpy(path_dir,path_file,len);
+	path_dir[len] = '¥0';
+}
+
+
+/*=========================================================================
+ 【関数】mqoLoadTexture
+ 【用途】ビットマップファイルからテクスチャ画像を作成する
+ 【引数】
+ *filename	ファイル名
+ *tex_size	テクスチャのサイズ（一辺の長さ）を返す
+ 
+ 【戻値】テクスチャ画像へのポインタ（失敗時はNULL）
+ 【仕様】24bitビットマップ限定
+ サイズは「一辺が2のn乗の正方形」に限定
+ =========================================================================*/
+
+GLubyte* mqoLoadTexture(char *filename,int *tex_size)
+{
+	FILE *fp;
+	int	y,x,size;
+	GLubyte	*pImage, *pRead;
+	
+	if ( (fp=fopen(filename,"rb"))==NULL ) return NULL;
+	
+	fseek(fp,14+4,SEEK_SET);		// 画像幅が格納されている位置までシーク
+	fread(&size,sizeof(int),1,fp);	// BiWidthの情報だけ取得
+	fseek(fp,14+40,SEEK_SET);		// 画素データが格納されている位置までシーク
+	
+	// メモリの確保
+	pImage = (GLubyte*)malloc(sizeof(unsigned char)*size*size*4);
+	if (pImage==NULL) return NULL;
+	
+	for (y=0; y<size; y++){
+		pRead = pImage + (size-1-y)*4*size;
+		for (x=0; x<size; x++) {
+			fread( &pRead[2], sizeof(GLubyte), 1, fp);	// B
+			fread( &pRead[1], sizeof(GLubyte), 1, fp);	// G	
+			fread( &pRead[0], sizeof(GLubyte), 1, fp);	// R
+			pRead[3] = 255;								// A
+			pRead += 4;
+		}
+	}
+	fclose(fp);
+	*tex_size = size;
+	
+	return pImage;
+}
+
+
+/*=========================================================================
+ 【関数】mqoRegistTexture
+ 【用途】テクスチャの登録
+ 【引数】
+ *tex_name	テクスチャ名
+ *tex_img	テクスチャ画像へのポインタ
+ tex_size	テクスチャのサイズ（一辺の長さ）
+ 
+ 【戻値】なし
+ =========================================================================*/
+
+void mqoRegistTexture(GLuint* tex_name,GLubyte* tex_img,int tex_size)
+{
+	glPixelStorei(GL_UNPACK_ALIGNMENT,1);
+	glGenTextures(1,tex_name);				// テクスチャを生成
+	glBindTexture(GL_TEXTURE_2D,*tex_name);	// テクスチャの割り当て
+	
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, tex_size, tex_size,
+				 0, GL_RGBA, GL_UNSIGNED_BYTE, tex_img);
+}
+
+
+
+/*=========================================================================
+ 【関数】mqoReleaseTexture
+ 【用途】テクスチャ画像の開放
+ 【引数】
+ *pImage　テクスチャ画像へのポインタ
+ 
+ 【戻値】なし
+ 【仕様】free()してるだけ
+ =========================================================================*/
+
+void mqoReleaseTexture(void *pImage)
+{
+	free(pImage);
+}
+
+
+
+/*=========================================================================
+ 【関数】mqoSnormal
+ 【用途】法線ベクトルを求める
+ 【引数】
+ A		3次元座標上の点A
+ B		3次元座標上の点B
+ C		3次元座標上の点C
+ *normal	ベクトルBAとベクトルBCの法線ベクトル（右ねじ方向）
+ 
+ 【戻値】なし
+ 【仕様】メタセコイアにおいて面を構成する頂点の番号は，表示面から見て
+ 時計回りに記述してある．つまり，頂点A,B,C があったとき，
+ 求めるべき法線はBAとBCの外積によって求められる
+ =========================================================================*/
+
+void mqoSnormal(glPOINT3f A, glPOINT3f B, glPOINT3f C, glPOINT3f *normal)
+{
+	double norm;
+	glPOINT3f vec0,vec1;
+	
+	// ベクトルBA
+	vec0.x = A.x - B.x; 
+	vec0.y = A.y - B.y;
+	vec0.z = A.z - B.z;
+	
+	// ベクトルBC
+	vec1.x = C.x - B.x;
+	vec1.y = C.y - B.y;
+	vec1.z = C.z - B.z;
+	
+	// 法線ベクトル
+	normal->x = vec0.y * vec1.z - vec0.z * vec1.y;
+	normal->y = vec0.z * vec1.x - vec0.x * vec1.z;
+	normal->z = vec0.x * vec1.y - vec0.y * vec1.x;
+	
+	// 正規化
+	norm = normal->x * normal->x + normal->y * normal->y + normal->z * normal->z;
+	norm = sqrt ( norm );
+	
+	normal->x /= norm;
+	normal->y /= norm;
+	normal->z /= norm;
+}
+
+
+
+/*=========================================================================
+ 【関数】mqoReadMaterial
+ 【用途】マテリアル情報の読み込み
+ 【引数】
+ fp		ファイルポインタ
+ M		マテリアル配列
+ 
+ 【戻値】なし
+ 【仕様】mqoCreateModel(), mqoCreateSequence()のサブ関数．
+ =========================================================================*/
+
+void mqoReadMaterial(FILE *fp, MQO_MATERIAL M[])
+{
+	GLfloat		dif, amb, emi, spc;
+	glCOLOR4f	c;
+	char		buf[SIZE_STR];
+	char		*pStrEnd, *pStr;
+	int			len;
+	int			i = 0;
+	
+	while (1) {
+		fgets(buf,SIZE_STR,fp);	// 行読み込み
+		if (strstr(buf,"}")) break;
+		
+		pStr = strstr(buf,"col(");	// 材質名読み飛ばし
+		sscanf( pStr,
+			   "col(%f %f %f %f) dif(%f) amb(%f) emi(%f) spc(%f) power(%f)",
+			   &c.r, &c.g, &c.b, &c.a, &dif, &amb, &emi, &spc, &M[i].power );
+		
+		// 頂点カラー
+		M[i].col = c;
+		
+		// 拡散光
+		M[i].dif[0] = dif * c.r;
+		M[i].dif[1] = dif * c.g;
+		M[i].dif[2] = dif * c.b;
+		M[i].dif[3] = dif * c.a;
+		
+		// 周囲光
+		M[i].amb[0] = amb * c.r;
+		M[i].amb[1] = amb * c.g;
+		M[i].amb[2] = amb * c.b;
+		M[i].amb[3] = amb * c.a;
+		
+		// 自己照明
+		M[i].emi[0] = emi * c.r;
+		M[i].emi[1] = emi * c.g;
+		M[i].emi[2] = emi * c.b;
+		M[i].emi[3] = emi * c.a;
+		
+		// 反射光
+		M[i].spc[0] = spc * c.r;
+		M[i].spc[1] = spc * c.g;
+		M[i].spc[2] = spc * c.b;
+		M[i].spc[3] = spc * c.a;
+		
+		
+		// tex：模様マッピング名
+		if ( (pStr = strstr(buf,"tex(")) != NULL ) {
+			M[i].useTex = TRUE;
+			
+			pStrEnd = strstr(pStr,"¥")");
+			len = pStrEnd - (pStr+5);
+			strncpy(M[i].texFile,pStr+5,len);
+			M[i].texFile[len] = '¥0';
+			
+			} else {
+			M[i].useTex = FALSE;
+			M[i].texFile[0] = '¥0';
+			M[i].texImage = NULL;
+			}
+			
+			i++;
+			}
+			
+			}
+			
+			
+			
+			/*=========================================================================
+			【関数】mqoReadVertex
+			【用途】頂点情報の読み込み
+			【引数】
+			fp		ファイルポインタ
+			V		頂点配列
+			
+			【戻値】なし
+			【仕様】mqoReadObject()のサブ関数．
+			=========================================================================*/
+			
+			void mqoReadVertex(FILE *fp, glPOINT3f V[])
+			{
+			char buf[SIZE_STR];
+			int  i=0;
+			
+			while (1) {
+			fgets(buf,SIZE_STR,fp);
+		if (strstr(buf,"}")) break;
+		sscanf(buf,"%f %f %f",&V[i].x,&V[i].y,&V[i].z);
+		i++;
+		}
+		}
+		
+		
+		
+		/*=========================================================================
+		【関数】mqoReadFace
+		【用途】面情報の読み込み
+		【引数】
+		fp		ファイルポインタ
+		F		面配列
+		
+		【戻値】なし
+		【仕様】mqoReadObject()のサブ関数．
+		=========================================================================*/
+		
+		void mqoReadFace(FILE *fp, MQO_FACE F[])
+		{
+		char buf[SIZE_STR];
+		char *pStr;
+		int  i=0;
+		
+		while (1) {
+		fgets(buf,SIZE_STR,fp);
+	if (strstr(buf,"}")) break;
+	
+	// 面を構成する頂点数
+	sscanf(buf,"%d",&F[i].n);
+	
+	// 頂点(V)の読み込み
+	if ( (pStr = strstr(buf,"V(")) != NULL ) {
+							   switch (F[i].n) {
+							   case 3:
+							   sscanf(pStr,"V(%d %d %d)",&F[i].v[0],&F[i].v[1],&F[i].v[2]);
+							   break;
+							   case 4:
+							   sscanf(pStr,"V(%d %d %d %d)",&F[i].v[0],&F[i].v[1],&F[i].v[2],&F[i].v[3]);
+							   break;
+							   default:
+							   break;
+							   }		
+							   }
+							   
+							   // マテリアル(M)の読み込み
+							   F[i].m = 0;
+							   if ( (pStr = strstr(buf,"M(")) != NULL ) {
+														  sscanf(pStr,"M(%d)",&F[i].m);
+														  }
+														  
+														  // UVマップ(UV)の読み込み
+														  if ( (pStr = strstr(buf,"UV(")) != NULL ) {
+																					  switch (F[i].n) {
+																					  case 3:	// 頂点数3
+																					  sscanf(pStr,"UV(%f %f %f %f %f %f)",
+																					  &F[i].uv[0].x, &F[i].uv[0].y,
+																					  &F[i].uv[1].x, &F[i].uv[1].y,
+																					  &F[i].uv[2].x, &F[i].uv[2].y
+																					  );
+																					  break;
+																					  
+																					  case 4:	// 頂点数4
+																					  sscanf(pStr,"UV(%f %f %f %f %f %f %f %f)",
+																					  &F[i].uv[0].x, &F[i].uv[0].y,
+																					  &F[i].uv[1].x, &F[i].uv[1].y,
+																					  &F[i].uv[2].x, &F[i].uv[2].y,
+																					  &F[i].uv[3].x, &F[i].uv[3].y
+																					  );
+																					  break;
+																					  default:
+																					  break;
+																					  }		
+																					  }
+																					  
+																					  i++;
+																					  }
+																					  
+																					  }
+																					  
+																					  
+																					  
+																					  /*=========================================================================
+																					  【関数】mqoReadObject
+																					  【用途】オブジェクト情報の読み込み
+																					  【引数】
+																					  fp		ファイルポインタ
+																					  obj		オブジェクト情報
+																					  
+																					  【戻値】なし
+																					  【仕様】mqoCreateModel(), mqoCreateSequence()のサブ関数．
+																					  この関数で１個のオブジェクト情報が読み込まれる．
+																					  =========================================================================*/
+																					  
+																					  void mqoReadObject(FILE *fp, MQO_OBJECT *obj)
+																					  {
+																					  char buf[SIZE_STR];
+																					  
+																					  while (1) {
+																					  fgets(buf,SIZE_STR,fp);
+																					  if (strstr(buf,"}")) break;
+																					  
+																					  // visible
+																					  if (strstr(buf,"visible ")) {
+																					  sscanf(buf," visible %d", &obj->visible);
+																					  }
+																					  
+																					  // vertex
+																					  if (strstr(buf,"vertex ")) {
+																					  sscanf(buf," vertex %d", &obj->n_vertex);
+																					  obj->V = (glPOINT3f*) calloc( obj->n_vertex, sizeof(glPOINT3f) );
+																					  mqoReadVertex(fp, obj->V);
+																					  }
+																					  
+																					  // face
+																					  if (strstr(buf,"face ")) {
+																					  sscanf(buf," face %d", &obj->n_face);
+																					  obj->F = (MQO_FACE*) calloc( obj->n_face, sizeof(MQO_FACE) );
+																					  mqoReadFace(fp, obj->F);
+																					  }
+																					  
+																					  }
+																					  
+																					  }
+																					  
+																					  
+																					  
+																					  /*=========================================================================
+																					  【関数】mqoMakePolygon
+																					  【用途】ポリゴンの作成
+																					  【引数】
+																					  *F		面情報
+																					  V[]		頂点配列
+																					  M[]		マテリアル配列
+																					  【戻値】なし
+																					  【仕様】mqoMakeObjects()のサブ関数．
+																					  この関数で１枚のポリゴンが作られる．
+																					  =========================================================================*/
+																					  
+																					  void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
+																					  {
+																					  glPOINT3f	normal;			// 法線ベクトル
+																					  int			mid = F->m;		// 材質番号
+																					  int			i;
+																					  int			useTex;
+																					  
+																					  // 法線ベクトルを計算
+																					  mqoSnormal(V[F->v[0]],V[F->v[1]],V[F->v[2]],&normal);
+																					  
+																					  // 材質設定
+																					  if ( M != NULL ) {
+																					  // 材質情報がある場合
+																					  glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, M[mid].dif);
+																					  glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, M[mid].amb);
+																					  glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, M[mid].spc);
+																					  glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, M[mid].emi);;
+																					  glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, M[mid].power);
+																					  glColor4f(M[mid].col.r, M[mid].col.g, M[mid].col.b, M[mid].col.a);
+																					  useTex = M[F->m].useTex;
+																					  
+																					  } else {
+																					  // 材質情報がない場合
+																					  glColor4f( 1.0, 1.0, 1.0, 1.0 );
+																					  useTex = FALSE;
+																					  }
+																					  
+																					  // ポリゴン生成
+																					  if ( useTex ) {
+																					  
+																					  // テクスチャがあるとき
+																					  glEnable(GL_TEXTURE_2D);
+																					  // glEnable(GL_BLEND);
+																					  // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+																					  glBindTexture(GL_TEXTURE_2D,M[F->m].texName);
+																					  glEnable( GL_NORMALIZE );
+																					  if (F->n==3) glBegin(GL_TRIANGLES);
+																					  if (F->n==4) glBegin(GL_QUADS);
+																					  glNormal3f(normal.x, normal.y, normal.z);	// 面法線
+																					  for (i=0; i<F->n; i++) {
+																					  glTexCoord2f( F->uv[i].x, F->uv[i].y);
+																					  glVertex3f(V[F->v[i]].x, V[F->v[i]].y, V[F->v[i]].z);
+																					  }
+																					  glEnd();
+																					  glDisable(GL_NORMALIZE);
+																					  // glDisable(GL_BLEND);
+																					  glDisable(GL_TEXTURE_2D);
+																					  
+																					  } else {
+																					  
+																					  // テクスチャがないとき
+																					  glEnable(GL_NORMALIZE);
+																					  if (F->n==3) glBegin(GL_TRIANGLES);
+																					  if (F->n==4) glBegin(GL_QUADS);
+																					  glNormal3f(normal.x, normal.y, normal.z);	// 面法線
+																					  for (i=0; i<F->n; i++) {
+																					  glVertex3f(V[F->v[i]].x, V[F->v[i]].y, V[F->v[i]].z);
+																					  }
+																					  glEnd();
+																					  glDisable(GL_NORMALIZE);
+																					  
+																					  }
+																					  
+																					  }
+																					  
+																					  
+																					  /*=========================================================================
+																					  【関数】mqoMakeObjects
+																					  【用途】オブジェクトのデータからポリゴンモデルを作成する
+																					  【引数】
+																					  obj		オブジェクト配列
+																					  n_obj	オブジェクトの個数
+																					  M		マテリアル配列
+																					  
+																					  【戻値】なし
+																					  【仕様】mqoCreateModel(), mqoCreateSequence()のサブ関数．
+																					  オブジェクト情報，マテリアル情報を元にポリゴンモデルを作成する．
+																					  =========================================================================*/
+																					  
+																					  void mqoMakeObjects(MQO_OBJECT obj[], int n_obj, MQO_MATERIAL M[])
+																					  {
+																					  int i,j;
+																					  
+																					  glPushMatrix();
+																					  //glRotatef(90.0f, 1.f, 0.f, 0.f); // 【ARToolKit用】
+																					  
+																					  for (i=0; i<n_obj; i++) {
+																					  for (j=0; j<obj[i].n_face; j++) {
+																					  if (obj[i].visible) {
+																					  mqoMakePolygon( &obj[i].F[j], obj[i].V, M);
+																					  }
+																					  }
+																					  }
+																					  
+																					  glPopMatrix();
+																					  
+																					  }
+																					  
+																					  
+																					  
+																					  /*=========================================================================
+																					  【関数】mqoCreateModel
+																					  【用途】MQOファイルからMQOモデルを作成する
+																					  【引数】
+																					  filename	MQOファイル
+																					  scale		拡大率（1.0でそのまま）
+																					  
+																					  【戻値】MQO_MODEL（MQOモデル）
+																					  =========================================================================*/
+																					  
+																					  MQO_MODEL mqoCreateModel(char *filename, double scale)
+																					  {
+																					  FILE			*fp;
+																					  MQO_OBJECT		obj[N_OBJ];
+																					  MQO_MATERIAL	*M = NULL;
+																					  MQO_MODEL		displist;
+																					  
+																					  char	buf[SIZE_STR];
+																					  char	path_dir[SIZE_STR];	// ディレクトリのパス
+																					  char	path_tex[SIZE_STR];	// テクスチャファイルのパス
+																					  int		n_mat = 0;			// マテリアル数
+																					  int		n_obj = 0;			// オブジェクト数
+																					  int		tex_size;			// テクスチャサイズ
+																					  int		i;
+																					  
+																					  // MaterialとObjectの読み込み
+																					  fp = fopen(filename,"r");
+																					  if (fp==NULL) return -1;
+																					  
+																					  i = 0;
+																					  while ( !feof(fp) ) {
+																					  fgets(buf,SIZE_STR,fp);
+																					  
+																					  // Material
+																					  if (strstr(buf,"Material")) {
+																					  sscanf(buf,"Material %d", &n_mat);
+																					  M = (MQO_MATERIAL*) calloc( n_mat, sizeof(MQO_MATERIAL) );
+																					  mqoReadMaterial(fp,M);
+																					  }
+																					  
+																					  // Object
+																					  if (strstr(buf,"Object")) {
+																					  mqoReadObject(fp, &obj[i]);
+																					  i++;
+																					  }
+																					  }
+																					  n_obj = i;
+																					  fclose(fp);
+																					  
+																					  // パスの取得
+																					  mqoGetDirectory(filename, path_dir);
+																					  
+																					  // テクスチャの登録
+																					  for (i=0; i<n_mat; i++) {
+																					  if (M[i].useTex) {
+																					  if (strstr(M[i].texFile,":")) {
+																					  strcpy(path_tex, M[i].texFile);	// 絶対パスの場合
+																					  } else {
+																					  sprintf(path_tex,"%s%s",path_dir,M[i].texFile);	// 相対パスの場合
+																					  }
+																					  M[i].texImage = mqoLoadTexture(path_tex,&tex_size);
+																					  mqoRegistTexture(&(M[i].texName), M[i].texImage, tex_size);
+																					  mqoReleaseTexture(M[i].texImage);
+																					  }
+																					  }
+																					  
+																					  // ポリゴンの生成（ディスプレイリストの作成）
+																					  displist = glGenLists(1);
+																					  glNewList(displist, GL_COMPILE);
+																					  glScaled(scale, scale, scale);	// スケール変換
+																					  mqoMakeObjects(obj,n_obj,M);	// オブジェクトの描画
+																					  glEndList();
+																					  
+																					  // オブジェクトのデータの開放
+																					  for (i=0; i<n_obj; i++) {
+																					  free(obj[i].V);
+																					  free(obj[i].F);
+																					  }
+																					  
+																					  // マテリアルの開放
+																					  free(M);
+																					  
+																					  return displist;
+																					  }
+																					  
+																					  
+																					  
+																					  /*=========================================================================
+																					  【関数】mqoCreateSequence
+																					  【用途】連番のMQOファイルからMQOシーケンスを作成する
+																					  【引数】
+																					  basename	ファイル名から連番数字と".mqo"を除いたベースファイル名
+																					  n_file		ファイル数
+																					  scale		拡大率（1.0でそのまま）
+																					  
+																					  【戻値】MQO_SEQUENCE（MQOシーケンス）
+																					  【仕様】data0.mqo, data1.mqo, ... という感じの連番のMQOファイルを読み込んで
+																					  MQOシーケンスを作成する．マテリアル情報は1番目のファイルからのみ
+																					  読み込む．
+																					  =========================================================================*/
+																					  
+																					  MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
+																					  {
+																					  FILE			*fp;
+																					  MQO_OBJECT		obj[N_OBJ];
+																					  MQO_MATERIAL	*M = NULL;
+																					  MQO_SEQUENCE	seq;
+																					  
+																					  int		i,k;
+																					  char	buf[SIZE_STR];
+																					  int		n_mat = 0;			// マテリアル数
+																					  int		n_obj;				// オブジェクト数
+																					  char	path_dir[SIZE_STR];	// ディレクトリのパス
+																					  char	path_tex[SIZE_STR];	// テクスチャファイルのパス
+																					  int		tex_size;
+																					  char	filename[SIZE_STR];
+																					  
+																					  // ディスプレイリストの作成
+																					  seq.model = glGenLists(n_file);
+																					  seq.n_frame = n_file;
+																					  
+																					  for (k=0; k<n_file; k++) {
+																					  sprintf(filename,"%s%d.mqo",basename,k);
+																					  
+																					  //-------------------------------------------------------------------------
+																					  // MaterialとObjectの読み込み
+																					  fp = fopen(filename,"r");
+																					  if (fp==NULL) {
+																					  seq.n_frame = 0;
+																					  return seq;
+																					  }
+																					  
+																					  i = 0;
+																					  while ( !feof(fp) ) {
+																					  fgets(buf,SIZE_STR,fp);
+																					  
+																					  // Material
+																					  if ( strstr(buf,"Material") != NULL ) {
+																					  sscanf(buf,"Material %d", &n_mat);
+																					  M = (MQO_MATERIAL*) calloc( n_mat, sizeof(MQO_MATERIAL) );
+																					  mqoReadMaterial(fp,M);
+																					  }
+																					  
+																					  // Object
+																					  if ( strstr(buf,"Object") != NULL ) {
+																					  mqoReadObject(fp, &obj[i]);
+																					  i++;
+																					  }
+																					  }
+																					  n_obj = i;
+																					  fclose(fp);
+																					  
+																					  //-------------------------------------------------------------------------
+																					  // 初回だけテクスチャを登録
+																					  if (k==0) {
+																					  
+																					  //-------------------------------------------------------------------------
+																					  // パスの取得
+																					  mqoGetDirectory(filename, path_dir);
+																					  
+																					  //-------------------------------------------------------------------------
+																					  // テクスチャの登録
+																					  for (i=0; i<n_mat; i++) {
+																					  if (M[i].useTex) {
+																					  if ( strstr(M[i].texFile,":") ) {
+																					  strcpy(path_tex, M[i].texFile);	// 絶対パスの場合
+																					  } else {
+																					  sprintf(path_tex,"%s%s",path_dir,M[i].texFile);	// 相対パスの場合
+														  }
+														  M[i].texImage = mqoLoadTexture(path_tex,&tex_size);
+														  mqoRegistTexture(&(M[i].texName),M[i].texImage,tex_size);
+														  mqoReleaseTexture(M[i].texImage);
+														  }
+														  }
+														  }
+														  
+														  //-------------------------------------------------------------------------
+														  // ポリゴンの生成（ディスプレイリストの作成）
+														  glNewList(seq.model + k, GL_COMPILE);
+														  glScaled(scale, scale, scale);	// スケール変換
+														  mqoMakeObjects(obj,n_obj,M);	// オブジェクトの描画
+														  glEndList();
+														  
+														  //-------------------------------------------------------------------------
+														  // オブジェクトのデータの開放
+														  for (i=0; i<n_obj; i++) {
+														  free(obj[i].V);
+														  free(obj[i].F);
+														  }
+														  
+														  }
+														  
+														  // マテリアルの開放
+														  free(M);
+														  
+														  return seq;
+														  }
+														  
+														  
+														  
+														  /*=========================================================================
+														  【関数】mqoCallModel
+														  【用途】MQOモデルをOpenGLの画面上に呼び出す
+														  【引数】
+														  model		MQOモデル
+														  
+														  【戻値】なし
+														  =========================================================================*/
+														  
+														  void mqoCallModel(MQO_MODEL model)
+														  {
+														  glCallList(model);
+														  }
+														  
+														  
+														  
+														  /*=========================================================================
+														  【関数】mqoCallSequence
+														  【用途】MQOシーケンスをOpenGLの画面に呼び出す
+														  【引数】
+														  seq		MQOシーケンス
+														  i		フレーム番号
+														  
+														  【戻値】なし
+														  【仕様】MQOシーケンスの中から指定したフレーム番号のモデルを呼び出す．
+														  =========================================================================*/
+														  
+														  void mqoCallSequence(MQO_SEQUENCE seq, int i)
+														  {
+														  if ( i>=0 && i<seq.n_frame ) {
+														  glCallList(seq.model+i);
+														  }
+														  }
+														  
+														  
+														  
+														  /*=========================================================================
+														  【関数】mqoDeleteModel
+														  【用途】MQOモデルを削除する
+														  【引数】
+														  model	MQOモデル
+														  
+														  【戻値】なし
+														  【仕様】扱いとしてはディスプレイリストの削除と同義．
+														  =========================================================================*/
+														  void mqoDeleteModel(MQO_MODEL model)
+														  {
+														  glDeleteLists(model,1);
+														  }
+														  
+														  
+														  
+														  /*=========================================================================
+														  【関数】mqoDeleteSequence
+														  【用途】MQOシーケンスを削除する
+														  【引数】
+														  seq		MQOシーケンス
+														  
+														  【戻値】なし
+														  【仕様】扱いとしてはディスプレイリストの削除と同義．
+														  =========================================================================*/
+														  
+														  void mqoDeleteSequence(MQO_SEQUENCE seq)
+														  {
+														  glDeleteLists(seq.model, seq.n_frame);
+														  }
+														  
+														  
+														  #endif
