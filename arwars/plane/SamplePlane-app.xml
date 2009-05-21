@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/1.1">
+  <id>SamplePlane</id>
+  <version>0.1</version>
+  <filename>SamplePlane</filename>
+  <initialWindow>
+    <content>SamplePlane.swf</content>
+    <visible>true</visible>
+    <systemChrome>none</systemChrome>
+    <transparent>true</transparent>
+  </initialWindow>
+</application>
