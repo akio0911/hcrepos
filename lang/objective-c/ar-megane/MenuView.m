@@ -160,7 +160,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 							 toTarget:self withObject:self];
 } 
 
--(void)setupLayers; 
+-(void)setupLayers
 { 
 	CGFloat	fontSize=32.0;
 

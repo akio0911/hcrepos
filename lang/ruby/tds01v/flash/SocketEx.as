@@ -6,6 +6,7 @@ package {
     import flash.utils.*;
     import flash.text.*
     import flash.media.*;
+    //    import PlaceEngineAPI.PlaceEngineAPI;
 
     //ソケットを使用する
     public class SocketEx extends Sprite {
@@ -16,6 +17,7 @@ package {
 	private var video:Video;
 	private var camera:Camera;
 	private var msg:String;
+	private var pe:PlaceEngineAPI;
         
         //コンストラクタ
         public function SocketEx() {
@@ -62,7 +64,14 @@ package {
 	    socket.writeByte(3);
 	    socket.writeByte(4);
 	    socket.flush();
+
+	    pe = new PlaceEngineAPI(statusLabel, appk, onFindClient, onGetLocation, onMessage, false);
+	    pe.getLocation();
         }
+
+	private function onGetLocation(x:Number, y:Number, r:int, info:Object):void{
+            tfView.text=s + " : " + d.toString()+"\n"+tfView.text;
+	}
 
 	private function statusHandler(evt:StatusEvent) : void {
 	    if(camera.muted){
@@ -181,6 +190,13 @@ package {
             textField.border=true;
             textField.type=TextFieldType.INPUT;
 	    textField.textColor = 0xffffff;
+
+	    var format:TextFormat = new TextFormat();
+	    format.size = 20;
+	    format.color = 0xFFFFFF;
+	    
+	    textField.defaultTextFormat = format;
+
             return textField;
         }
     }
