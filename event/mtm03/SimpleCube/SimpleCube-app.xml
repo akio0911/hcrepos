@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/1.5">
+  <id>SimpleCube</id>
+  <version>0.1</version>
+  <filename>SimpleCube</filename>
+  <initialWindow>
+    <content>SimpleCube.swf</content>
+    <visible>true</visible>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+  </initialWindow>
+</application>
