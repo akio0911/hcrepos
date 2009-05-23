@@ -24,6 +24,7 @@ package {
  
 	private var valx    : Number = 0;
 	private var valy    : Number = 0;
+	private var valz    : Number = 0;
  
 	private var bitmapdata:BitmapData;
  
@@ -48,36 +49,13 @@ package {
 	    camera.zoom = 1;
 	    rootNode = new DisplayObject3D();
 	    scene.addChild(rootNode);
-	    obj.push(createBitmapPlane());
 	    obj.push(createTextPlane());
-	    obj.push(createTextCube());
 	    for(var i:int; i<obj.length; i++){
 		rootNode.addChild(obj[i]);
 	    }
 	    viewport = new Viewport3D( stage.stageWidth, stage.stageHeight );
 	    renderer = new BasicRenderEngine();
 	}
-	private function createBitmapPlane():DisplayObject3D {
- 
-	    var bd:BitmapData = new BitmapData(100, 100, false);
-	    this.bitmapdata = bd;
-	    var material:BitmapMaterial = new BitmapMaterial(bd);
- 
-	    material.oneSide = false;
-	    material.lineColor = 0x00FF00;
-	    material.lineAlpha = 1;
- 
-	    var planeSize:int = 200;
-	    var segment:int = 2;
- 
-	    var plane:Plane = new Plane(
-					material, planeSize, planeSize, segment, segment);
-	    plane.x =  -180;
-	    plane.y =  0;
-	    plane.z =  0;
-	    return plane;
-	}
-
 	private function createTextPlane():DisplayObject3D {
  
 	    var asset:MovieClip = createMovieClip();
@@ -85,6 +63,7 @@ package {
 	    var initObject:Object = {animated:true, doubleSided:true};
  
 	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
+	    material.doubleSided = true;
 	    this.material = material;
  
 	    var planeSize:int = 200;
@@ -97,36 +76,6 @@ package {
 	    plane.z =  0;
 	    return plane;
 	}
-
-	private function createTextCube():DisplayObject3D {
- 
-	    var planeSize:int = 200;
-	    var segment:int = 2;
- 
-	    var bam1:ColorMaterial = new ColorMaterial(0xF00000);
-	    var bam2:ColorMaterial = new ColorMaterial(0x0F0000);
-	    var bam3:ColorMaterial = new ColorMaterial(0x00F000);
-	    var bam4:ColorMaterial = new ColorMaterial(0x000F00);
-	    var bam5:ColorMaterial = new ColorMaterial(0x0000F0);
-	    var bam6:ColorMaterial = new ColorMaterial(0x00000F);
-	    var materialsList:MaterialsList = new MaterialsList();
-	    bam1.smooth = bam2.smooth = bam3.smooth =bam4.smooth =bam5.smooth =bam6.smooth = true;
-	    materialsList.addMaterial(bam1 ,"front");
-	    materialsList.addMaterial(bam2 ,"back");
-	    materialsList.addMaterial(bam3 ,"left");
-	    materialsList.addMaterial(bam4 ,"right");
-	    materialsList.addMaterial(bam5 ,"top");
-	    materialsList.addMaterial(bam6 ,"bottom");
-
-	    var cube:Cube = new Cube(
-				     materialsList, planeSize, planeSize, planeSize, segment, segment, segment);
-	    cube.x =  0;
-	    cube.y =  0;
-	    cube.z =  0;
-	    return cube;
-	}
-
-
 	private function createMovieClip():MovieClip {
 	    var mc:MovieClip = new MovieClip();
 	    var text:TextField = createTextField();
@@ -184,11 +133,13 @@ package {
 	private function myLoopEvent(event:Event):void {
  
 	    valx += container.mouseX / 50;
-	    valy += container.mouseY / 50;
+	    //	    valy += container.mouseY / 50;
+	    //	    valz += container.mouseX / 50;
  
 	    for(var i:int; i<obj.length; i++){
 		obj[i].rotationY = valx;
-		obj[i].rotationX = valy;
+		//		obj[i].rotationX = valy;
+		//		obj[i].rotationZ = valz;
 	    }
 	    renderer.renderScene( scene, camera, viewport );
 	}
