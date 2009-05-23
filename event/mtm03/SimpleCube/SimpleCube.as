@@ -50,6 +50,7 @@ package {
 	    rootNode = new DisplayObject3D();
 	    scene.addChild(rootNode);
 	    obj.push(createTextPlane());
+	    obj.push(createTextPlane2());
 	    for(var i:int; i<obj.length; i++){
 		rootNode.addChild(obj[i]);
 	    }
@@ -74,6 +75,31 @@ package {
 	    var plane:Plane = new Plane(
 					material, planeSize, planeSize, segment, segment);
 	    plane.x =  0;
+	    plane.y =  0;
+	    plane.z =  0;
+	    plane.rotationX = 0;
+	    plane.rotationY = 180;
+	    plane.rotationZ = -90;
+	    return plane;
+	}
+	private function createTextPlane2():DisplayObject3D {
+ 
+	    var asset:MovieClip = createMovieClip();
+	    var transparent:Boolean = true;
+	    var initObject:Object = {animated:true, doubleSided:true};
+ 
+	    //	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
+	    //	    var material:ColorMaterial = new ColorMaterial(0xff0000);
+	    var material:BitmapFileMaterial = new BitmapFileMaterial("yuiseki2.png");
+	    material.doubleSided = true;
+	    //	    this.material = material;
+ 
+	    var planeSize:int = 100;
+	    var segment:int = 2;
+ 
+	    var plane:Plane = new Plane(
+					material, planeSize, planeSize, segment, segment);
+	    plane.x =  100;
 	    plane.y =  0;
 	    plane.z =  0;
 	    plane.rotationX = 0;
