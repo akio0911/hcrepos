@@ -62,24 +62,31 @@ package {
 	    var transparent:Boolean = true;
 	    var initObject:Object = {animated:true, doubleSided:true};
  
-	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
+	    //	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
+	    //	    var material:ColorMaterial = new ColorMaterial(0xff0000);
+	    var material:BitmapFileMaterial = new BitmapFileMaterial("yuiseki.jpg");
 	    material.doubleSided = true;
-	    this.material = material;
+	    //	    this.material = material;
  
-	    var planeSize:int = 200;
+	    var planeSize:int = 100;
 	    var segment:int = 2;
  
 	    var plane:Plane = new Plane(
 					material, planeSize, planeSize, segment, segment);
-	    plane.x =  180;
+	    plane.x =  0;
 	    plane.y =  0;
 	    plane.z =  0;
+	    plane.rotationX = 0;
+	    plane.rotationY = 180;
+	    plane.rotationZ = -90;
 	    return plane;
 	}
 	private function createMovieClip():MovieClip {
 	    var mc:MovieClip = new MovieClip();
+	    mc.width = 400*10;
+	    mc.height = 400*10;
 	    var text:TextField = createTextField();
-	    text.text = getPropertiesString(mc);
+	    text.text = "破滅の価値！";
 	    mc.addChild(text);
 	    this.text = text;
 	    return mc;
@@ -94,6 +101,8 @@ package {
 	    format.font = "_等幅";
  
 	    var text:TextField = new TextField();
+	    text.width = 100*10;
+	    text.height = 100*10;
 	    text.autoSize = TextFieldAutoSize.LEFT;
 	    text.selectable = false;
 	    text.setTextFormat(format);
@@ -105,7 +114,7 @@ package {
  
 	    return text;
 	}
- 
+	/*
 	private static function getPropertiesString(mc:MovieClip):String {
 	    var str:String = ""
 		+ "currentFrame: " + mc.currentFrame + "\n"
@@ -114,9 +123,9 @@ package {
 		+ "framesLoaded: " + mc.framesLoaded + "\n"
 		+ "totalFrames: " + mc.totalFrames + "\n"
 		+ "trackAsMenu: " + mc.trackAsMenu + "\n";
-	    return str;
+	    return "破滅の価値！";
 	}
-
+	*/
 	private function myClick(event:MouseEvent):void {
 	    var x:int = (int)(Math.random() * 100);
 	    var y:int = (int)(Math.random() * 100);
@@ -131,16 +140,17 @@ package {
 	}
 
 	private function myLoopEvent(event:Event):void {
- 
-	    valx += container.mouseX / 50;
-	    //	    valy += container.mouseY / 50;
+	    /* 
+	    //	    valx += container.mouseX / 50;
+	    	    valy += container.mouseY / 50;
 	    //	    valz += container.mouseX / 50;
  
 	    for(var i:int; i<obj.length; i++){
-		obj[i].rotationY = valx;
-		//		obj[i].rotationX = valy;
+		//		obj[i].rotationY = valx;
+				obj[i].rotationX = valy;
 		//		obj[i].rotationZ = valz;
 	    }
+	    */
 	    renderer.renderScene( scene, camera, viewport );
 	}
 
