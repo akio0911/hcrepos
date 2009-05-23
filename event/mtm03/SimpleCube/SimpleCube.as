@@ -67,13 +67,14 @@ package {
 	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
 	    material.doubleSided = true;
  
-	    var planeSize:int = 100;
+	    var planeWidth:int = 100;
+	    var planeHeight:int = 50;
 	    var segment:int = 2;
  
 	    var plane:Plane = new Plane(
-					material, planeSize, planeSize, segment, segment);
-	    plane.x =  100;
-	    plane.y =  0;
+					material, planeWidth, planeHeight, segment, segment);
+	    plane.x =  0;
+	    plane.y =  100;
 	    plane.z =  0;
 	    plane.rotationX = 0;
 	    plane.rotationY = 180;
@@ -89,7 +90,7 @@ package {
 	    var material:BitmapFileMaterial = new BitmapFileMaterial("yuiseki.jpg");
 	    material.doubleSided = true;
  
-	    var planeSize:int = 100;
+	    var planeSize:int = 50;
 	    var segment:int = 2;
  
 	    var plane:Plane = new Plane(
@@ -126,8 +127,8 @@ package {
 	}
 	private function createMovieClip():MovieClip {
 	    var mc:MovieClip = new MovieClip();
-	    mc.width = 400*10;
-	    mc.height = 400*10;
+	    //	    mc.width = 400*10;
+	    //	    mc.height = 400*10;
 	    var text:TextField = createTextField();
 	    text.text = "インターネットに没頭していたが辛うじて調布で橋本行き乗り換えに成功した";
 	    mc.addChild(text);
@@ -137,10 +138,10 @@ package {
 
 	private static function createTextField():TextField{
 	    var format:TextFormat = new TextFormat();
-	    format.bold = false;
+	    format.bold = true;
 	    format.italic = false;
-	    format.size = 10;
-	    format.underline = false;
+	    format.size = 40;
+	    format.underline = true;
 	    format.font = "_等幅";
  
 	    var text:TextField = new TextField();
