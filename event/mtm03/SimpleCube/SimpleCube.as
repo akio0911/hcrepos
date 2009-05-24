@@ -34,7 +34,7 @@ package {
 	private var renderer  :BasicRenderEngine;
 
 	public function SimpleCube() {
-	    this.init('Data/camera_para.dat', 'Data/flarlogo8x8a.pat');
+	    this.init('http://ar-life.net/Data/camera_para.dat', 'http://ar-life.net/Data/flarlogo8x8a.pat');
 	    //	    this.init('Data/camera_para.dat', 'Data/flarlogo8x8b.pat');
 	    stage.addEventListener(Event.RESIZE, onStageResize);
 	    addEventListener(Event.ENTER_FRAME, myLoopEvent);
