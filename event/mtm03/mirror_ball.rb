@@ -28,11 +28,11 @@ loop {
 	# puts data.class
 	puts "\n"
 	puts data.power # 勝手にメソッドができてる
-	puts data.blue
-	puts data.green
-	puts data.yellow
-	puts data.red
-	puts sprintf('%08b', data.portd)
+	# puts data.blue
+	# puts data.green
+	# puts data.yellow
+	# puts data.red
+	puts sprintf('portd: %08b', data.portd)
 	#data2 = Shop.find(:first) # 一番最初に投入された古いデータ
 	sleep 5
 }
