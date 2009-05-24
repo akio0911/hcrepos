@@ -45,7 +45,7 @@ loop {
 	break if serial.closed?
 	serial.putc data.portd
 	#data2 = Shop.find(:first) # 一番最初に投入された古いデータ
-	sleep 5
+	sleep 3
 }
 
 
