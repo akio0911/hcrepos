@@ -3,6 +3,8 @@
 void setup();
 void loop();
 int i, j;
+int inByte = 0;
+
 
 void setup() {
   DDRD = DDRD | B11111100;
@@ -12,15 +14,16 @@ void setup() {
 
 
 void loop() {
-  for (i=0; i < 64; i++) {
-    PORTD = PORTD & B00000011;
-    j = (i << 2);
-    
-    PORTD = PORTD | j;
-    
-    Serial.println(PORTD, BIN);
-    delay(500);
+  if (Serial.available() > 0) {
+    inByte = Serial.read();
+    Serial.println(inByte, BIN);
   }
+  
+  // clear direction bit from 2 to 7
+  PORTD = PORTD & B00000011;
+  PORTD = PORTD | inByte;
+  Serial.println(PORTD, BIN);
+  delay(500);
 }
 int main(void)
 {
