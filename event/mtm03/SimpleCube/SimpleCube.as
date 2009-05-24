@@ -149,7 +149,8 @@ package {
 	    text.height = 200;
 	    //	    text.autoSize = TextFieldAutoSize.LEFT;
 	    text.selectable = false;
-	    text.setTextFormat(format);
+	    //	    text.setTextFormat(format);
+	    text.defaultTextFormat(format);
 	    text.background = true;
 	    text.backgroundColor = 0xFFFFFF;
 	    text.border = false;
