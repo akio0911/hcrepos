@@ -3,23 +3,21 @@
 int main() {
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    [dictionary setObject:[NSNumber numberWithInt:1] forKey:@"red"];
-    [dictionary setObject:[NSNumber numberWithInt:2] forKey:@"green"];
-    [dictionary setObject:[NSNumber numberWithInt:3] forKey:@"blue"];
+    NSMutableDictionary *dictionary =
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:1], @"red",
+                                                          [NSNumber numberWithInt:2], @"green",
+                                                          [NSNumber numberWithInt:3], @"blue", nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"red", @"green", @"blue", nil];
+    NSArray *values = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],
+                                                [NSNumber numberWithInt:2],
+                                                [NSNumber numberWithInt:3], nil];
     NSLog(@"%@", dictionary);
 
-    int count = [[dictionary objectForKey:@"red"] intValue];
-    [dictionary setObject:[NSNumber numberWithInt:count+10]
-                   forKey:@"red"];
-
-    count = [[dictionary objectForKey:@"green"] intValue];
-    [dictionary setObject:[NSNumber numberWithInt:count+10]
-                   forKey:@"green"];
-
-    count = [[dictionary objectForKey:@"blue"] intValue];
-    [dictionary setObject:[NSNumber numberWithInt:count+10]
-                   forKey:@"blue"];
+    for(NSString *key in keys){
+        int count = [[dictionary objectForKey:key] intValue];
+        [dictionary setObject:[NSNumber numberWithInt:count+10]
+                    forKey:key];
+    }
 
     NSLog(@"%@", dictionary);
 
