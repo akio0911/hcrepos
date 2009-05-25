@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/GeoClipStar/!svn/ver/1/script
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/GeoClipStar/!svn/ver/1/script/console
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/GeoClipStar/!svn/ver/1/script/server
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/GeoClipStar/!svn/ver/1/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/GeoClipStar/!svn/ver/1/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/GeoClipStar/!svn/ver/1/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/GeoClipStar/!svn/ver/1/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/GeoClipStar/!svn/ver/1/script/plugin
+END

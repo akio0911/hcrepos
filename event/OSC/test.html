@@ -1,0 +1,35 @@
+<html>
+ <head>
+    <title>Hacker's Cafe @ OSC 2009</title>
+ </head>
+ <body onload="load()">
+  <script>
+function load() {
+  var canvas = document.getElementById("canvas");
+  if (!canvas.getContext)
+    return; // Unsupported
+
+  ctx = canvas.getContext("2d");
+
+  // 矩形
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (30, 30, 50, 50);
+
+  // パスを使って三角形を描く
+  ctx.beginPath();
+  ctx.moveTo(70, 70);
+  ctx.lineTo(105,120);
+  ctx.lineTo(25,125);
+  ctx.lineTo(70, 70);
+  ctx.stroke();
+
+  // 円弧(円)
+  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+  ctx.beginPath();
+  ctx.arc(100, 100, 50, 0, 2*Math.PI, true);
+  ctx.fill();
+}
+    </script>
+   <canvas id="canvas" width="300" height="200" style="border:1px solid black;"></canvas>
+ </body>
+</html>

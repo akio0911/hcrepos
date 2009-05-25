@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/GeoClipStar/!svn/ver/105/app/views/geo_clip
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/GeoClipStar/!svn/ver/105/app/views/geo_clip/index.html.erb
+END
+about.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/GeoClipStar/!svn/ver/99/app/views/geo_clip/about.html.erb
+END
+map.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/GeoClipStar/!svn/ver/102/app/views/geo_clip/map.html.erb
+END
+feed_trace.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/GeoClipStar/!svn/ver/1/app/views/geo_clip/feed_trace.html.erb
+END
+star_count.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/GeoClipStar/!svn/ver/70/app/views/geo_clip/star_count.html.erb
+END
+twitter.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/GeoClipStar/!svn/ver/89/app/views/geo_clip/twitter.html.erb
+END
+feed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/GeoClipStar/!svn/ver/9/app/views/geo_clip/feed.html.erb
+END

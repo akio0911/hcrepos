@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/1.5">
+  <id>ARTwitter</id>
+  <version>0.1</version>
+  <filename>ARTwitter</filename>
+  <description>This is HelloWorld.</description>
+  <copyright>akio0911</copyright>
+
+  <initialWindow>
+    <title>HelloWorld</title>
+    <content>ARTwitter.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+  </initialWindow>
+</application>
+

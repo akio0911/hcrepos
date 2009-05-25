@@ -1,0 +1,9 @@
+.DS_Store
+.svn
+OSCARDemo.xcodeproj/.svn
+OSCARDemo.xcodeproj/akio0911.mode1v3
+OSCARDemo.xcodeproj/akio0911.pbxuser
+OSCARDemo.xcodeproj/ssato.mode1v3
+OSCARDemo.xcodeproj/ssato.pbxuser
+bin
+build

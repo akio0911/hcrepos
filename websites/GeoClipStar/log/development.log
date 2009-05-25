@@ -1,0 +1,37 @@
+# Logfile created on Wed Aug 27 01:55:22 +0900 2008  [4;36;1mSQL (0.000702)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.130068)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.088929)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateStars (1)
+  [4;35;1mSQL (0.115028)[0m   [0mCREATE TABLE stars ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "contents_id" integer DEFAULT NULL, "title" varchar(255) DEFAULT NULL, "subject" varchar(255) DEFAULT NULL, "tag" varchar(255) DEFAULT NULL, "member_id" integer DEFAULT NULL, "author_name" varchar(255) DEFAULT NULL, "image_url" varchar(255) DEFAULT NULL, "latitude" float DEFAULT NULL, "longitude" float DEFAULT NULL, "create_date" datetime DEFAULT NULL, "good_count" integer DEFAULT NULL, "access_count" integer DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.125193)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTraces (2)
+  [4;36;1mSQL (0.131829)[0m   [0;1mCREATE TABLE traces ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location_id" integer DEFAULT NULL, "latitude" float DEFAULT NULL, "longitude" float DEFAULT NULL, "altitude" float DEFAULT NULL, "log_date" datetime DEFAULT NULL, "create_date" datetime DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.086275)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddColumnStarEndFlg (3)
+  [4;35;1mSQL (0.082331)[0m   [0mALTER TABLE stars ADD "end_flg" boolean[0m
+  [4;36;1mSQL (0.108216)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.074270)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTwitters (4)
+  [4;35;1mSQL (0.107633)[0m   [0mCREATE TABLE twitters ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" varchar(255) DEFAULT NULL, "link" varchar(255) DEFAULT NULL, "pub_date" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.116609)[0m   [0;1mCREATE INDEX "index_twitters_on_link" ON twitters ("link")[0m
+  [4;35;1mSQL (0.116706)[0m   [0mCREATE INDEX "index_twitters_on_pub_date" ON twitters ("pub_date")[0m
+  [4;36;1mSQL (0.150265)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000427)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000131)[0m   [0mPRAGMA index_list(stars)[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mPRAGMA index_list(traces)[0m
+  [4;35;1mSQL (0.000365)[0m   [0mPRAGMA index_list(twitters)[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mPRAGMA index_info('index_twitters_on_pub_date')[0m
+  [4;35;1mSQL (0.000221)[0m   [0mPRAGMA index_info('index_twitters_on_link')[0m
+  [4;36;1mTrace Load (0.001357)[0m   [0;1mSELECT * FROM traces [0m
+  [4;35;1mTrace Load (0.000279)[0m   [0mSELECT * FROM traces [0m
+  [4;36;1mTrace Load (0.000275)[0m   [0;1mSELECT * FROM traces [0m
+  [4;35;1mTrace Load (0.000315)[0m   [0mSELECT * FROM traces [0m

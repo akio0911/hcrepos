@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/GeoClipStar/!svn/ver/1/app/views/stars
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/GeoClipStar/!svn/ver/1/app/views/stars/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/GeoClipStar/!svn/ver/1/app/views/stars/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/GeoClipStar/!svn/ver/1/app/views/stars/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/GeoClipStar/!svn/ver/1/app/views/stars/show.html.erb
+END

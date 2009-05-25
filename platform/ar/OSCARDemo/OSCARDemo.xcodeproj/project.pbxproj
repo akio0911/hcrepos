@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5BC63E60EBC270300E24C7F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC63E50EBC270300E24C7F /* Carbon.framework */; };
+		E5BC63E80EBC274D00E24C7F /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC63E70EBC274D00E24C7F /* QuickTime.framework */; };
+		E5BC63EA0EBC275B00E24C7F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC63E90EBC275B00E24C7F /* OpenGL.framework */; };
+		E5BC63EC0EBC278400E24C7F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC63EB0EBC278400E24C7F /* GLUT.framework */; };
+		E5BC63EE0EBC279500E24C7F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC63ED0EBC279500E24C7F /* Cocoa.framework */; };
+		E5BC64F40EBC27F800E24C7F /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC64F10EBC27F800E24C7F /* libAR.a */; };
+		E5BC64F50EBC27F800E24C7F /* libARgsub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC64F20EBC27F800E24C7F /* libARgsub.a */; };
+		E5BC64F60EBC27F800E24C7F /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC64F30EBC27F800E24C7F /* libARvideo.a */; };
+		E5BC65140EBC285700E24C7F /* Data in Resources */ = {isa = PBXBuildFile; fileRef = E5BC64FB0EBC285700E24C7F /* Data */; };
+		E5BC65180EBC286E00E24C7F /* hoge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5BC65170EBC286E00E24C7F /* hoge.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5BC63DE0EBC265800E24C7F /* Hoge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BC63E10EBC265800E24C7F /* Hoge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hoge-Info.plist"; sourceTree = "<group>"; };
+		E5BC63E50EBC270300E24C7F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		E5BC63E70EBC274D00E24C7F /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		E5BC63E90EBC275B00E24C7F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E5BC63EB0EBC278400E24C7F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		E5BC63ED0EBC279500E24C7F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E5BC64F10EBC27F800E24C7F /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = lib/libAR.a; sourceTree = "<group>"; };
+		E5BC64F20EBC27F800E24C7F /* libARgsub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARgsub.a; path = lib/libARgsub.a; sourceTree = "<group>"; };
+		E5BC64F30EBC27F800E24C7F /* libARvideo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARvideo.a; path = lib/libARvideo.a; sourceTree = "<group>"; };
+		E5BC64FB0EBC285700E24C7F /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = bin/Data; sourceTree = "<group>"; };
+		E5BC65170EBC286E00E24C7F /* hoge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hoge.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5BC63DC0EBC265800E24C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BC63E60EBC270300E24C7F /* Carbon.framework in Frameworks */,
+				E5BC63E80EBC274D00E24C7F /* QuickTime.framework in Frameworks */,
+				E5BC63EA0EBC275B00E24C7F /* OpenGL.framework in Frameworks */,
+				E5BC63EC0EBC278400E24C7F /* GLUT.framework in Frameworks */,
+				E5BC63EE0EBC279500E24C7F /* Cocoa.framework in Frameworks */,
+				E5BC64F40EBC27F800E24C7F /* libAR.a in Frameworks */,
+				E5BC64F50EBC27F800E24C7F /* libARgsub.a in Frameworks */,
+				E5BC64F60EBC27F800E24C7F /* libARvideo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5BC63CA0EBC25A900E24C7F = {
+			isa = PBXGroup;
+			children = (
+				E5BC63D80EBC25DE00E24C7F /* Library */,
+				E5BC63D70EBC25D400E24C7F /* Framework */,
+				E5BC63D60EBC25C400E24C7F /* Resource */,
+				E5BC63D50EBC25BA00E24C7F /* Source */,
+				E5BC63DF0EBC265800E24C7F /* Products */,
+				E5BC63E10EBC265800E24C7F /* Hoge-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		E5BC63D50EBC25BA00E24C7F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC65170EBC286E00E24C7F /* hoge.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		E5BC63D60EBC25C400E24C7F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC64FB0EBC285700E24C7F /* Data */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		E5BC63D70EBC25D400E24C7F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC63ED0EBC279500E24C7F /* Cocoa.framework */,
+				E5BC63EB0EBC278400E24C7F /* GLUT.framework */,
+				E5BC63E90EBC275B00E24C7F /* OpenGL.framework */,
+				E5BC63E70EBC274D00E24C7F /* QuickTime.framework */,
+				E5BC63E50EBC270300E24C7F /* Carbon.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		E5BC63D80EBC25DE00E24C7F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC64F10EBC27F800E24C7F /* libAR.a */,
+				E5BC64F20EBC27F800E24C7F /* libARgsub.a */,
+				E5BC64F30EBC27F800E24C7F /* libARvideo.a */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		E5BC63DF0EBC265800E24C7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC63DE0EBC265800E24C7F /* Hoge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5BC63DD0EBC265800E24C7F /* Hoge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BC63E40EBC265800E24C7F /* Build configuration list for PBXNativeTarget "Hoge" */;
+			buildPhases = (
+				E5BC63DA0EBC265800E24C7F /* Resources */,
+				E5BC63DB0EBC265800E24C7F /* Sources */,
+				E5BC63DC0EBC265800E24C7F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hoge;
+			productName = Hoge;
+			productReference = E5BC63DE0EBC265800E24C7F /* Hoge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5BC63CC0EBC25A900E24C7F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E5BC63CF0EBC25A900E24C7F /* Build configuration list for PBXProject "OSCARDemo" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = E5BC63CA0EBC25A900E24C7F;
+			productRefGroup = E5BC63DF0EBC265800E24C7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5BC63DD0EBC265800E24C7F /* Hoge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5BC63DA0EBC265800E24C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BC65140EBC285700E24C7F /* Data in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5BC63DB0EBC265800E24C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BC65180EBC286E00E24C7F /* hoge.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E5BC63CD0EBC25A900E24C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		E5BC63CE0EBC25A900E24C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		E5BC63E20EBC265800E24C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				HEADER_SEARCH_PATHS = include;
+				INFOPLIST_FILE = "Hoge-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					lib,
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/lib\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Hoge;
+			};
+			name = Debug;
+		};
+		E5BC63E30EBC265800E24C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "Hoge-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/lib\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Hoge;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5BC63CF0EBC25A900E24C7F /* Build configuration list for PBXProject "OSCARDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BC63CD0EBC25A900E24C7F /* Debug */,
+				E5BC63CE0EBC25A900E24C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BC63E40EBC265800E24C7F /* Build configuration list for PBXNativeTarget "Hoge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BC63E20EBC265800E24C7F /* Debug */,
+				E5BC63E30EBC265800E24C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5BC63CC0EBC25A900E24C7F /* Project object */;
+}

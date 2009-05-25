@@ -1,0 +1,304 @@
+<<<<<<< .mine
+# Logfile created on Sat Aug 23 22:46:04 +0900 2008
+
+Processing GeoClipController#feed (for 60.254.229.1 at 2008-08-24 17:27:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"action"=>"feed", "controller"=>"geo_clip"}
+Rendering geo_clip/feed
+Completed in 0.16496 (6 reqs/sec) | Rendering: 0.15901 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:27:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06409 (15 reqs/sec) | Rendering: 0.06214 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:28:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06109 (16 reqs/sec) | Rendering: 0.05950 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:28:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06037 (16 reqs/sec) | Rendering: 0.05922 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:29:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12373 (8 reqs/sec) | Rendering: 0.12216 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:30:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06247 (16 reqs/sec) | Rendering: 0.06083 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:31:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06080 (16 reqs/sec) | Rendering: 0.05926 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:32:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06086 (16 reqs/sec) | Rendering: 0.05929 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:33:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.15041 (6 reqs/sec) | Rendering: 0.14882 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:33:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05963 (16 reqs/sec) | Rendering: 0.05841 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:33:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05863 (17 reqs/sec) | Rendering: 0.05746 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:33:36) [GET]
+  Session ID: 8d27eda9d912f059bbd2b64828a9c5da
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05861 (17 reqs/sec) | Rendering: 0.05744 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:34:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06076 (16 reqs/sec) | Rendering: 0.05917 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:34:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12396 (8 reqs/sec) | Rendering: 0.12278 (99%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:34:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05874 (17 reqs/sec) | Rendering: 0.05755 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:35:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05849 (17 reqs/sec) | Rendering: 0.05692 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:35:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05863 (17 reqs/sec) | Rendering: 0.05748 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:35:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12189 (8 reqs/sec) | Rendering: 0.12071 (99%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:36:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05992 (16 reqs/sec) | Rendering: 0.05832 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:36:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05825 (17 reqs/sec) | Rendering: 0.05711 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:36:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06242 (16 reqs/sec) | Rendering: 0.06129 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:37:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12366 (8 reqs/sec) | Rendering: 0.12209 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:37:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06004 (16 reqs/sec) | Rendering: 0.05881 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:37:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05872 (17 reqs/sec) | Rendering: 0.05715 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:37:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05821 (17 reqs/sec) | Rendering: 0.05707 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:37:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12417 (8 reqs/sec) | Rendering: 0.12297 (99%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:37:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"action"=>"feed_trace", "controller"=>"geo_clip"}
+Rendering geo_clip/feed_trace
+Completed in 0.05958 (16 reqs/sec) | Rendering: 0.05836 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:38:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05985 (16 reqs/sec) | Rendering: 0.05825 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:38:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05833 (17 reqs/sec) | Rendering: 0.05720 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:39:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05891 (16 reqs/sec) | Rendering: 0.05735 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:39:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06107 (16 reqs/sec) | Rendering: 0.05929 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:39:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"action"=>"feed_trace", "controller"=>"geo_clip"}
+Rendering geo_clip/feed_trace
+Completed in 0.05856 (17 reqs/sec) | Rendering: 0.05740 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:40:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.05954 (16 reqs/sec) | Rendering: 0.05799 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.229.1 at 2008-08-24 17:41:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"action"=>"feed_trace", "controller"=>"geo_clip"}
+Rendering geo_clip/feed_trace
+Completed in 0.14839 (6 reqs/sec) | Rendering: 0.14175 (95%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:42:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06450 (15 reqs/sec) | Rendering: 0.06215 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:43:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06241 (16 reqs/sec) | Rendering: 0.06016 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:43:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06078 (16 reqs/sec) | Rendering: 0.05904 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:44:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12537 (7 reqs/sec) | Rendering: 0.12258 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:44:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06304 (15 reqs/sec) | Rendering: 0.06116 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:45:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06336 (15 reqs/sec) | Rendering: 0.06111 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:45:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06021 (16 reqs/sec) | Rendering: 0.05848 (97%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 60.254.243.163 at 2008-08-24 17:46:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.06201 (16 reqs/sec) | Rendering: 0.05978 (96%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+
+
+Processing GeoClipController#feed_trace (for 221.242.210.242 at 2008-08-24 17:46:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--0251c56e6a2ab95ef24ae20e194917ee378b6306
+  Parameters: {"hit_per_page"=>"", "log_date_from"=>"", "action"=>"feed_trace", "log_date_to"=>"", "controller"=>"geo_clip", "keyid"=>"gXeLoucblRrhtplcxVoX"}
+Rendering geo_clip/feed_trace
+Completed in 0.12491 (8 reqs/sec) | Rendering: 0.12318 (98%) | DB: 0.00000 (0%) | 200 OK [http://star.yuiseki.net/geo_clip/feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=]
+=======
+# Logfile created on Sat Aug 23 22:46:04 +0900 2008>>>>>>> .r10

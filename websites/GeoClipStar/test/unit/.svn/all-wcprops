@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/GeoClipStar/!svn/ver/81/test/unit
+END
+trace_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/GeoClipStar/!svn/ver/1/test/unit/trace_test.rb
+END
+twitter_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/GeoClipStar/!svn/ver/81/test/unit/twitter_test.rb
+END
+star_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/GeoClipStar/!svn/ver/1/test/unit/star_test.rb
+END
+flickr_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/GeoClipStar/!svn/ver/81/test/unit/flickr_test.rb
+END

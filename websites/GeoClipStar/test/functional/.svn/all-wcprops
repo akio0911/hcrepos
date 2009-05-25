@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/GeoClipStar/!svn/ver/1/test/functional
+END
+stars_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/GeoClipStar/!svn/ver/1/test/functional/stars_controller_test.rb
+END
+geo_clip_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/GeoClipStar/!svn/ver/1/test/functional/geo_clip_controller_test.rb
+END

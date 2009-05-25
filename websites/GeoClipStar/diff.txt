@@ -1,0 +1,90 @@
+Index: app/controllers/geo_clip_controller.rb
+===================================================================
+--- app/controllers/geo_clip_controller.rb	(revision 353)
++++ app/controllers/geo_clip_controller.rb	(working copy)
+@@ -1,6 +1,6 @@
+ class GeoClipController < ApplicationController
+   #caches_pages :feed, :feed_trace
+-  
++
+   # コンテンツ検索API [GET]
+   # ksasaoさんが使用する、ジオクリ互換のAPI
+   # http://localhost:3000/geo_clip/feed?xxx=yyy&...
+@@ -31,6 +31,7 @@
+ =end
+   # 位置情報履歴取得API [GET]
+   def feed_trace
++    @traces = Trace.find(:all)
+   end
+ =begin
+   # 位置情報書き込みAPI [POST]
+Index: public/map.html
+===================================================================
+--- public/map.html	(revision 353)
++++ public/map.html	(working copy)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml111/DTD/xhtml111.dtd">
+-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" xmlns:v="urn:schemas-microsoft-com:vml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+ <script src="http://maps.google.co.jp/maps?file=api&amp;v=2&amp;key=ABQIAAAANmKytc5ypjH_KbDCAjAbphT7fUKXf8Z2EQDBAwKo7cqaz_1bIBQTee5Ys0p-dOtvcUsNcMMumFXEaQ" type="text/javascript" charset="utf-8" /></script>
+@@ -41,7 +41,7 @@
+       icon.iconAhchor = new GPoint(48, 48);
+       var mk = new GMarker(new GLatLng(lat, lng), icon);
+       map.addOverlay(mk);
+-      
++
+       // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
+       var latlng = new GLatLng(lat, lng);
+       var option = { latlng:latlng};
+@@ -51,13 +51,29 @@
+     setTimeout(updateGoPosition, 60 * 1000);
+   }
+   setTimeout(updateGoPosition, 0);
+-  
++
+   addHistory(null, new GLatLng(35.704, 139.79));
+   addHistory(null, new GLatLng(35.683,139.782));
+   addHistory(null, new GLatLng(35.699,139.758));
+   addHistory(null, new GLatLng(35.688,139.761));
+   addHistory(null, new GLatLng(35.718,139.761));
+   addHistory(null, new GLatLng(35.691,139.743));
++
++  GDownloadUrl("http://localhost:3000/geo_clip/feed_trace", drawTrace);
++  function drawTrace(data){
++    var obj = GXml.parse(data);
++    var points = [];
++    for(i=0; i<10; i++){
++      var lat0 = Number(obj.getElementsByTagName("latitude")[i].firstChild.nodeValue);
++      var lng0 = Number(obj.getElementsByTagName("longitude")[i].firstChild.nodeValue);
++      var lat1 = Number(obj.getElementsByTagName("latitude")[i+1].firstChild.nodeValue);
++      var lng1 = Number(obj.getElementsByTagName("longitude")[i+1].firstChild.nodeValue);
++      points.push(new GLatLng(lat0, lng0));
++      points.push(new GLatLng(lat1, lng1));
++    }
++    var line = new GPolyline(points, "#ff0000", 10);
++    map.addOverlay(line);
++  }
+ }
+ function showMessage(msg, status){
+   alert(msg);
+@@ -116,7 +132,7 @@
+       var option = { latlng:latlng};
+       var scontainer = document.getElementById("street");
+       var panorama = new GStreetviewPanorama(scontainer, option);
+-      
++
+       mk.openInfoWindowHtml("ここは秋葉原駅です");
+     });
+   }
+@@ -125,6 +141,9 @@
+ onunload = GUnload;
+ //]]>
+ </script>
++<style type="text/css">
++  v\:* { behavior:url(#default#VML);}
++</style>
+ </head>
+ <body>
+   <h1>電脳★スターラリー</h1>

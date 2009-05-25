@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>電脳★スターラリー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<script src="http://maps.google.co.jp/maps?file=api&amp;v=2&amp;key=ABQIAAAANmKytc5ypjH_KbDCAjAbphT7fUKXf8Z2EQDBAwKo7cqaz_1bIBQTee5Ys0p-dOtvcUsNcMMumFXEaQ" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//<![CDATA[
+var map;
+
+// 緯度経度を表示するコントロール;
+function PositionBox(){}
+PositionBox.prototype = new GControl();
+PositionBox.prototype.initialize = function(map){
+  var container = document.createElement("div");
+
+  var box = document.createElement("div");
+  box.style.background = "white";
+  box.style.color = "black";
+  box.style.fontSize = "smaller";
+  box.style.border = "1px solid black";
+  box.style.padding = "1px 6px";
+  container.appendChild(box);
+
+  function showCenter(){
+    function shortForm(x){return Math.floor(x*1000)/1000;}
+    var p = map.getCenter();
+    box.innerHTML = "(" + shortForm(p.lat()) + ", " + shortForm(p.lng()) + ")";
+  }
+  showCenter();
+  GEvent.addListener(map, "moveend", showCenter);
+
+  map.getContainer().appendChild(container);
+  return container;
+}
+PositionBox.prototype.getDefaultPosition = function(){
+  return new GControlPosition(G_ANCHOR_TOP_RIGHT, new GSize(7, 28));
+}
+
+// タイトルを表示するコントロール
+function TitleBox(){}
+TitleBox.prototype = new GControl();
+TitleBox.prototype.initialize = function(map){
+  var container = document.createElement("div");
+
+  var box = document.createElement("div");
+  box.style.background = "white";
+  box.style.color = "black";
+  box.style.fontSize = "smaller";
+  box.style.border = "1px solid black";
+  box.style.padding = "1px 6px";
+  container.appendChild(box);
+
+  function showCenter(){
+    box.innerHTML = ""; //"<img src=\"./images/star48.png\"/>電脳★スターラリー";
+  }
+  showCenter();
+//  GEvent.addListener(map, "moveend", showCenter);
+
+  map.getContainer().appendChild(container);
+  return container;
+}
+TitleBox.prototype.getDefaultPosition = function(){
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(0, 0));
+}
+
+// streetを表示するコントロール
+function StreetBox(){}
+StreetBox.prototype = new GControl();
+StreetBox.prototype.initialize = function(map){
+  var container = document.createElement("div");
+
+  var box = document.createElement("div");
+  box.style.background = "white";
+  box.style.color = "black";
+  box.style.fontSize = "smaller";
+  box.style.border = "1px solid black";
+  box.style.padding = "1px 6px";
+  container.appendChild(box);
+
+  function showCenter(){
+    box.innerHTML = "<div id=\"street\" style=\"width: 200px; height: 200px\"></div>";
+  }
+  showCenter();
+//  GEvent.addListener(map, "moveend", showCenter);
+
+  map.getContainer().appendChild(container);
+  return container;
+}
+StreetBox.prototype.getDefaultPosition = function(){
+  return new GControlPosition(G_ANCHOR_TOP_RIGHT, new GSize(0, 0));
+}
+
+function load(){
+  if(location.host == 'localhost:3000'){
+    end_point = 'http://localhost:3000/geo_clip/';
+  }else{
+    end_point = 'http://star.yuiseki.net/geo_clip/';
+  }
+  var center = new GLatLng(35.6984, 139.7732);
+  map = new GMap2(document.getElementById("mymap"));
+  map.setCenter(center, 16);
+
+  map.addControl(new GLargeMapControl());
+  map.addControl(new GScaleControl());
+  map.addControl(new GMapTypeControl());
+  map.addControl(new GOverviewMapControl());
+  map.addControl(new TitleBox());
+  map.addControl(new PositionBox());
+  map.addControl(new StreetBox());
+  GEvent.addListener(map, "mousemove", move);
+//  GEvent.addListener(map, "dblclick", addHistory);
+
+  var street = new GStreetviewOverlay();
+  map.addOverlay(street);
+
+  var option = { latlng:center };
+  var scontainer = document.getElementById("street");
+  var panorama = new GStreetviewPanorama(scontainer, option);
+
+//  GDownloadUrl("proxy.php?url=http://api.geoclip.jp/api/feed.php?keyid=g7eyoccKlyrGu9n3xTv4&hit_per_page=10", showMessage);
+
+  var go_history_url = end_point + 'feed_trace?keyid=gXeLoucblRrhtplcxVoX&log_date_from=&log_date_to=&hit_per_page=';
+
+  function updateGoPosition(){
+    GDownloadUrl(go_history_url, setGoPosition);
+    function setGoPosition(data){
+      var obj = GXml.parse(data);
+      var lat = Number(obj.getElementsByTagName("latitude")[0].firstChild.nodeValue);
+      var lng = Number(obj.getElementsByTagName("longitude")[0].firstChild.nodeValue);
+      document.getElementById("latitude_goito").value = lat;
+      document.getElementById("longitude_goito").value = lng;
+
+      map.setCenter(new GLatLng(lat, lng));
+
+      var icon = new GIcon(G_DEFAULT_ICON);
+      icon.image = "./images/gaziro2000.jpg";
+      icon.iconSize = new GSize(48, 48);
+      icon.iconAhchor = new GPoint(48, 48);
+      icon.imageMap = [0,0, 48,0, 48,48, 0,48]; 
+      var mk = new GMarker(new GLatLng(lat, lng), icon);
+      map.addOverlay(mk);
+      
+
+      // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
+      var latlng = new GLatLng(lat, lng);
+      var option = { latlng:latlng};
+      var scontainer = document.getElementById("street");
+      var panorama = new GStreetviewPanorama(scontainer, option);
+    }
+  }
+  setTimeout(updateGoPosition, 0);
+
+  var feed_trace_url = end_point + 'feed';
+  GDownloadUrl(feed_trace_url, drawStar);
+  function drawStar(data){
+    var obj = GXml.parse(data);
+    for(i=0; i<obj.getElementsByTagName("star").length; i++){
+      var lat0 = Number(obj.getElementsByTagName("latitude")[i].firstChild.nodeValue);
+      var lng0 = Number(obj.getElementsByTagName("longitude")[i].firstChild.nodeValue);
+      var subject =obj.getElementsByTagName("subject")[i].firstChild.nodeValue;
+      var end_flg =obj.getElementsByTagName("end-flg")[i].firstChild.nodeValue;
+      addHistory(null, new GLatLng(lat0, lng0),subject, end_flg);
+    }
+  }
+/*
+  addHistory(null, new GLatLng(35.704, 139.79));
+  addHistory(null, new GLatLng(35.683,139.782));
+  addHistory(null, new GLatLng(35.699,139.758));
+  addHistory(null, new GLatLng(35.688,139.761));
+  addHistory(null, new GLatLng(35.718,139.761));
+  addHistory(null, new GLatLng(35.691,139.743));
+*/
+  GDownloadUrl(go_history_url, drawTrace);
+  function drawTrace(data){
+    var obj = GXml.parse(data);
+    var points = [];
+    for(i=0; i<10; i++){
+      var lat0 = Number(obj.getElementsByTagName("latitude")[i].firstChild.nodeValue);
+      var lng0 = Number(obj.getElementsByTagName("longitude")[i].firstChild.nodeValue);
+      var lat1 = Number(obj.getElementsByTagName("latitude")[i+1].firstChild.nodeValue);
+      var lng1 = Number(obj.getElementsByTagName("longitude")[i+1].firstChild.nodeValue);
+      points.push(new GLatLng(lat0, lng0));
+      points.push(new GLatLng(lat1, lng1));
+    }
+    var line = new GPolyline(points, "#ff0000", 10);
+    map.addOverlay(line);
+  }
+
+
+  loadStarCount();
+  loadTwitter();
+}
+
+function showMessage(msg, status){
+  alert(msg);
+}
+function move(latlng){
+  //var p = document.getElementById("postext");
+  //p.innerHTML = "(" + shortForm(latlng.lat()) + "," + shortForm(latlng.lng()) + ")";
+}
+var prevPos;
+function shortForm(x){
+  return Math.floor(x*1000)/1000;
+}
+function addHistory(ov, latlng, subject, end_flg){
+  var distance;
+  if(prevPos == undefined)
+    distance = "?";
+  else
+    distance = shortForm(latlng.distanceFrom(prevPos)) + "m";
+
+  prevPos = latlng;
+
+  var posLink = document.createElement("a");
+  //posLink.innerHTML = "(" + shortForm(latlng.lat()) + "," + shortForm(latlng.lng()) + ")";
+  posLink.innerHTML = subject;
+  posLink.href = "#";
+  posLink.onclick = function(){
+    map.panTo(latlng);
+
+    // たまにクリック反応しない。
+    // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
+    var option = { latlng:latlng};
+    var scontainer = document.getElementById("street");
+    var panorama = new GStreetviewPanorama(scontainer, option);
+  }
+
+  var newLi = document.createElement("li");
+  var distText = document.createTextNode(" - " + distance);
+  newLi.appendChild(posLink);
+  newLi.appendChild(distText);
+
+  var historyList = document.getElementById("history");
+  historyList.appendChild(newLi);
+
+  addMarker();
+  function addMarker(){
+    var icon = new GIcon(G_DEFAULT_ICON);
+    if(end_flg == "true" ){ 
+      icon.image = "./images/stargray48.png";
+    }else{
+      icon.image = "./images/star48.png";
+    }
+    icon.iconSize = new GSize(48, 48);
+    icon.shadow = "./images/starshadow48.png";
+    icon.shadowSize = new GSize(96, 48);
+    icon.iconAhchor = new GPoint(24, 24);
+    icon.imageMap = [12,12, 36,12, 36,36, 12,36]; 
+    var mk = new GMarker(latlng, icon);
+    map.addOverlay(mk);
+    GEvent.addListener(mk, "click", function(){
+//      alert(latlng);
+//      alert("xxx");
+      var option = { latlng:latlng};
+      var scontainer = document.getElementById("street");
+      var panorama = new GStreetviewPanorama(scontainer, option);
+
+	  //メッセージをAPIから取得したコンテンツに変更する?
+      mk.openInfoWindowHtml(subject);
+    });
+  }
+}
+
+function getXMLHttpRequest() {
+    return this.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+function loadTwitter(){
+  var twitter_url = end_point + 'twitter';
+
+  var request = getXMLHttpRequest();
+  request.open("GET", twitter_url, false);
+  request.send(null);
+
+  if(request.status == 200){
+      var twitter_count_dom = document.getElementById("twitter");
+     twitter_count_dom.innerHTML = request.responseText;
+  }
+}
+function loadStarCount(){
+  var star_count_url = end_point + 'star_count';
+
+  var request = getXMLHttpRequest();
+  request.open("GET", star_count_url, false);
+  request.send(null);
+
+  if(request.status == 200){
+      var star_count_dom = document.getElementById("star_count");
+     star_count_dom.innerHTML = request.responseText;
+  }
+}
+
+function panGoito(){
+    var lat = Number(document.getElementById("latitude_goito").value);
+    var lng = Number(document.getElementById("longitude_goito").value);
+    map.panTo(new GLatLng(lat, lng));
+}
+
+onload = load;
+onunload = GUnload;
+
+//]]>
+</script>
+	<style type="text/css">
+		v\:* { behavior:url(#default#VML);}
+	</style>
+</head>
+<body style="width:1000px;padding:0;margin:0 auto;font-size:12px;">
+  <h1 class="top_title" style="padding:0;margin:0;float:left;">
+    <img src="./images/logo.gif" alt="電脳スターラリー" />
+  </h1>
+  <div style="float:left;width:700px;height:140px;background:url(./images/head_bg.gif);">
+    <div style="padding:45px 10px 10px 150px;text-align:right;color:#FFFFFF;">
+      <span style="font-size:14px;font-weight:700;">電脳スターラリーとは・・・・</span><br />
+      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+    </div>
+  </div>
+  <br style="clear:both;" />
+  <div style="float:left;width:190px;height:740px;background:url(./images/left_bg.gif);">
+    <div style="padding:8px 0 0 70px;" id="star_count"></div>
+    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;"> 
+      <ol id="history" style="float:right;"></ol>
+    </div>
+  </div>
+  <div id="mymap" style="width: 630px; height: 730px; margin:0px;float:left;padding:10px 0 0 5px;">
+  </div>
+  <div style="float:right;padding:10px 0 0 10px;">
+    <div>
+
+<table><tr><td><embed src="http://player.stickam.jp/stickamPlayer/174232508-1604258-ja" type="application/x-shockwave-flash" width="158" height="158" scale="noscale" allowScriptAccess="always"></embed></td></tr><tr
+align="center"><td><a href="http://www.stickam.jp" target="_blank" ><font
+size="-1">
+ブログパーツならStickam!</font></a></td></tr></table>
+    </div>
+    <div style="padding:10px 0 0 0;"><img src="images/twitter.gif" alt="twitter" /></div>
+    <div style="width:160px;height:485px; padding:10px 0 0 0;background:url(./images/twitter_bg.gif);">
+      <div id="twitter" style="width:115px;height:430px;margin:0;padding:15px 15px 15px 20px;font-size:10px;overflow:auto;">
+      </div>
+    </div>
+  <input type="submit" value="GOさんの現在位置へ移動" onClick="panGoito();">
+  </div>
+
+  <input id="latitude_goito" type="hidden" value="">
+  <input id="longitude_goito" type="hidden" value="">
+
+	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>
+  <ul>
+    
+      <li style="float:left;">
+      2008082920030000.jpg<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2807672171/" title="2008082920030000.jpg"><img src="http://farm4.static.flickr.com/3093/2807672171_249d4666b2_m.jpg" width="135" height="240" alt="2008082920030000.jpg" /></a></p>
+
+<p>200808292003000</p>
+      </li>
+    
+      <li style="float:left;">
+      many curious parts<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2807669349/" title="many curious parts"><img src="http://farm4.static.flickr.com/3004/2807669349_a24f8acdeb_m.jpg" width="135" height="240" alt="many curious parts" /></a></p>
+
+<p>200808292000000</p>
+      </li>
+    
+      <li style="float:left;">
+      買うものリスト。<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2808292010/" title="買うものリスト。"><img src="http://farm4.static.flickr.com/3123/2808292010_bfc9fb16f2_m.jpg" width="135" height="240" alt="買うものリスト。" /></a></p>
+
+<p>200808291703000</p>
+      </li>
+    
+      <li style="float:left;">
+      こうなる予定<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2807400565/" title="こうなる予定"><img src="http://farm4.static.flickr.com/3235/2807400565_6b1fdb75a3_m.jpg" width="135" height="240" alt="こうなる予定" /></a></p>
+
+<p>200808291615000</p>
+      </li>
+    
+      <li style="float:left;">
+      こうなる予定<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2808246508/" title="こうなる予定"><img src="http://farm4.static.flickr.com/3210/2808246508_bcc67ce350_m.jpg" width="135" height="240" alt="こうなる予定" /></a></p>
+
+<p>200808291615000</p>
+      </li>
+    
+      <li style="float:left;">
+      鉛蓄電池充電風景<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2807259209/" title="鉛蓄電池充電風景"><img src="http://farm4.static.flickr.com/3027/2807259209_0b7d70071c_m.jpg" width="135" height="240" alt="鉛蓄電池充電風景" /></a></p>
+
+<p>充電されているかは、だいぶ不安・・・</p>
+      </li>
+    
+      <li style="float:left;">
+      デモ<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2806636113/" title="デモ"><img src="http://farm4.static.flickr.com/3172/2806636113_95493ce8e3_m.jpg" width="135" height="240" alt="デモ" /></a></p>
+
+<p>200808290920000</p>
+      </li>
+    
+      <li style="float:left;">
+      MEMO<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2806566145/" title="MEMO"><img src="http://farm4.static.flickr.com/3210/2806566145_27be39d1d0_m.jpg" width="135" height="240" alt="MEMO" /></a></p>
+
+<p>200808290842000</p>
+      </li>
+    
+      <li style="float:left;">
+      IMG_0059<BR>
+      
+<p><a href="http://www.flickr.com/photos/gotoi/2805754637/" title="IMG_0059"><img src="http://farm4.static.flickr.com/3045/2805754637_96c288bf32_m.jpg" width="240" height="180" alt="IMG_0059" /></a></p>
+
+
+      </li>
+    
+  </ul>
+
+	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>
+	<div>企画・制作</div>
+	<div>
+		<a href="http://wiki.livedoor.jp/hackerscafe/d/FrontPage"><img src="./images/hackers_cafe.png" border="0" alt="Hacker's Cafe" /></a>
+	</div>
+	<div style="padding:10px 0 0 0;">開発・実行メンバー</div>
+	<div>
+		<a href="http://twitter.com/akio0911/"><img src="./images/akio0911.jpg" border="0" alt="akio0911" /></a>
+		<a href="http://twitter.com/gaziro2000/"><img src="./images/gaziro2000.jpg" border="0" alt="gaziro2000" /></a>
+		<a href="http://twitter.com/ksasao/"><img src="./images/ksasao.jpg" border="0" alt="ksasao" /></a>
+		<a href="http://twitter.com/yuiseki/"><img src="./images/yuiseki.jpg" border="0" alt="yuiseki" /></a>
+		<a href="http://twitter.com/zenpou/"><img src="./images/zenpou.jpg" border="0" alt="zenpou" /></a>
+	</div>
+	<div style="padding:10px 0 0 0;">thanks to</div>
+	<div>忍頂寺さま / 野秋さま</div>
+	<div style="padding:10px 0 0 0;">後援</div>
+	<div style="padding:0 0 50px 0;">
+		<a href="http://www.i-labo.info/top.html"><img src="./images/i_labo.gif" border="0" alt="アイラボ"/></a>
+		<a href="http://www.geoclip.jp/"><img src="./images/geoclip.gif" border="0" alt="ジオクリ"/></a>
+		<a href="http://www.kbmj.com/"><img src="./images/kbmj.gif" border="0" alt="WEBシステム開発｜KBMJ/株式会社ケイビーエムジェイ｜WEB、モバイルサービスのトータルプロデュース"/></a>
+		<a href="http://doruby.kbmj.com/"><img src="./images/doruby.gif" border="0" alt="Do  Ruby!(Ruby on Railsのシステム開発)"/></a>
+		<a href="http://www.acoustic-inc.co.jp/"><img src="./images/acoustic.gif" border="0" alt="acoustic"/></a>
+	</div>
+</body>
+</html>

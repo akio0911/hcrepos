@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traces type="array">
+  <trace>
+    <altitude type="float">1000.0</altitude>
+    <create-date type="datetime">2008-08-31T17:51:34+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:52:02+09:00</created-at>
+    <id type="integer">343636</id>
+    <latitude type="float">35.6621</latitude>
+    <location-id type="integer">7768</location-id>
+    <log-date type="datetime">2008-08-31T17:51:42+09:00</log-date>
+    <longitude type="float">139.697</longitude>
+    <updated-at type="datetime">2008-08-31T17:52:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">1000.0</altitude>
+    <create-date type="datetime">2008-08-31T17:50:55+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:52:03+09:00</created-at>
+    <id type="integer">343637</id>
+    <latitude type="float">35.6607</latitude>
+    <location-id type="integer">7767</location-id>
+    <log-date type="datetime">2008-08-31T17:50:29+09:00</log-date>
+    <longitude type="float">139.695</longitude>
+    <updated-at type="datetime">2008-08-31T17:52:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">104.0</altitude>
+    <create-date type="datetime">2008-08-31T17:49:42+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:50:06+09:00</created-at>
+    <id type="integer">343635</id>
+    <latitude type="float">35.6612</latitude>
+    <location-id type="integer">7766</location-id>
+    <log-date type="datetime">2008-08-31T17:49:49+09:00</log-date>
+    <longitude type="float">139.697</longitude>
+    <updated-at type="datetime">2008-08-31T17:50:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">63.0</altitude>
+    <create-date type="datetime">2008-08-31T17:48:39+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:49:03+09:00</created-at>
+    <id type="integer">343634</id>
+    <latitude type="float">35.6603</latitude>
+    <location-id type="integer">7765</location-id>
+    <log-date type="datetime">2008-08-31T17:48:17+09:00</log-date>
+    <longitude type="float">139.698</longitude>
+    <updated-at type="datetime">2008-08-31T17:49:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">59.0</altitude>
+    <create-date type="datetime">2008-08-31T17:47:28+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:48:03+09:00</created-at>
+    <id type="integer">343632</id>
+    <latitude type="float">35.6596</latitude>
+    <location-id type="integer">7764</location-id>
+    <log-date type="datetime">2008-08-31T17:47:38+09:00</log-date>
+    <longitude type="float">139.7</longitude>
+    <updated-at type="datetime">2008-08-31T17:48:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">28.0</altitude>
+    <create-date type="datetime">2008-08-31T17:46:59+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:48:03+09:00</created-at>
+    <id type="integer">343633</id>
+    <latitude type="float">35.6586</latitude>
+    <location-id type="integer">7763</location-id>
+    <log-date type="datetime">2008-08-31T17:47:09+09:00</log-date>
+    <longitude type="float">139.7</longitude>
+    <updated-at type="datetime">2008-08-31T17:48:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">110.0</altitude>
+    <create-date type="datetime">2008-08-31T17:46:15+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:47:02+09:00</created-at>
+    <id type="integer">343631</id>
+    <latitude type="float">35.6583</latitude>
+    <location-id type="integer">7762</location-id>
+    <log-date type="datetime">2008-08-31T17:46:22+09:00</log-date>
+    <longitude type="float">139.7</longitude>
+    <updated-at type="datetime">2008-08-31T17:47:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">1000.0</altitude>
+    <create-date type="datetime">2008-08-31T17:45:42+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:46:03+09:00</created-at>
+    <id type="integer">343629</id>
+    <latitude type="float">35.658</latitude>
+    <location-id type="integer">7761</location-id>
+    <log-date type="datetime">2008-08-31T17:45:50+09:00</log-date>
+    <longitude type="float">139.702</longitude>
+    <updated-at type="datetime">2008-08-31T17:46:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">59.0</altitude>
+    <create-date type="datetime">2008-08-31T17:45:03+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:46:03+09:00</created-at>
+    <id type="integer">343630</id>
+    <latitude type="float">35.6578</latitude>
+    <location-id type="integer">7760</location-id>
+    <log-date type="datetime">2008-08-31T17:45:10+09:00</log-date>
+    <longitude type="float">139.703</longitude>
+    <updated-at type="datetime">2008-08-31T17:46:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">76.0</altitude>
+    <create-date type="datetime">2008-08-31T17:44:30+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:45:05+09:00</created-at>
+    <id type="integer">343628</id>
+    <latitude type="float">35.6574</latitude>
+    <location-id type="integer">7759</location-id>
+    <log-date type="datetime">2008-08-31T17:44:37+09:00</log-date>
+    <longitude type="float">139.704</longitude>
+    <updated-at type="datetime">2008-08-31T17:45:05+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">1000.0</altitude>
+    <create-date type="datetime">2008-08-31T17:43:44+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:44:02+09:00</created-at>
+    <id type="integer">343626</id>
+    <latitude type="float">35.6554</latitude>
+    <location-id type="integer">7758</location-id>
+    <log-date type="datetime">2008-08-31T17:43:54+09:00</log-date>
+    <longitude type="float">139.704</longitude>
+    <updated-at type="datetime">2008-08-31T17:44:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">60.0</altitude>
+    <create-date type="datetime">2008-08-31T17:43:11+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:44:03+09:00</created-at>
+    <id type="integer">343627</id>
+    <latitude type="float">35.6555</latitude>
+    <location-id type="integer">7757</location-id>
+    <log-date type="datetime">2008-08-31T17:43:18+09:00</log-date>
+    <longitude type="float">139.706</longitude>
+    <updated-at type="datetime">2008-08-31T17:44:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">69.0</altitude>
+    <create-date type="datetime">2008-08-31T17:42:29+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:43:03+09:00</created-at>
+    <id type="integer">343624</id>
+    <latitude type="float">35.655</latitude>
+    <location-id type="integer">7756</location-id>
+    <log-date type="datetime">2008-08-31T17:42:40+09:00</log-date>
+    <longitude type="float">139.707</longitude>
+    <updated-at type="datetime">2008-08-31T17:43:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">54.0</altitude>
+    <create-date type="datetime">2008-08-31T17:42:00+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:43:03+09:00</created-at>
+    <id type="integer">343625</id>
+    <latitude type="float">35.6538</latitude>
+    <location-id type="integer">7755</location-id>
+    <log-date type="datetime">2008-08-31T17:42:11+09:00</log-date>
+    <longitude type="float">139.708</longitude>
+    <updated-at type="datetime">2008-08-31T17:43:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">47.0</altitude>
+    <create-date type="datetime">2008-08-31T17:41:25+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:42:06+09:00</created-at>
+    <id type="integer">343622</id>
+    <latitude type="float">35.651</latitude>
+    <location-id type="integer">7754</location-id>
+    <log-date type="datetime">2008-08-31T17:41:35+09:00</log-date>
+    <longitude type="float">139.709</longitude>
+    <updated-at type="datetime">2008-08-31T17:42:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">73.0</altitude>
+    <create-date type="datetime">2008-08-31T17:40:49+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:42:06+09:00</created-at>
+    <id type="integer">343623</id>
+    <latitude type="float">35.6492</latitude>
+    <location-id type="integer">7753</location-id>
+    <log-date type="datetime">2008-08-31T17:40:57+09:00</log-date>
+    <longitude type="float">139.711</longitude>
+    <updated-at type="datetime">2008-08-31T17:42:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">103.0</altitude>
+    <create-date type="datetime">2008-08-31T17:40:12+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:41:03+09:00</created-at>
+    <id type="integer">343621</id>
+    <latitude type="float">35.6488</latitude>
+    <location-id type="integer">7752</location-id>
+    <log-date type="datetime">2008-08-31T17:40:19+09:00</log-date>
+    <longitude type="float">139.713</longitude>
+    <updated-at type="datetime">2008-08-31T17:41:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">-20.0</altitude>
+    <create-date type="datetime">2008-08-31T17:39:33+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:40:07+09:00</created-at>
+    <id type="integer">343619</id>
+    <latitude type="float">35.6483</latitude>
+    <location-id type="integer">7751</location-id>
+    <log-date type="datetime">2008-08-31T17:39:40+09:00</log-date>
+    <longitude type="float">139.716</longitude>
+    <updated-at type="datetime">2008-08-31T17:40:07+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">37.0</altitude>
+    <create-date type="datetime">2008-08-31T17:38:55+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:40:07+09:00</created-at>
+    <id type="integer">343620</id>
+    <latitude type="float">35.6487</latitude>
+    <location-id type="integer">7750</location-id>
+    <log-date type="datetime">2008-08-31T17:39:04+09:00</log-date>
+    <longitude type="float">139.717</longitude>
+    <updated-at type="datetime">2008-08-31T17:40:07+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">56.0</altitude>
+    <create-date type="datetime">2008-08-31T17:38:19+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:39:02+09:00</created-at>
+    <id type="integer">343618</id>
+    <latitude type="float">35.6491</latitude>
+    <location-id type="integer">7749</location-id>
+    <log-date type="datetime">2008-08-31T17:38:26+09:00</log-date>
+    <longitude type="float">139.718</longitude>
+    <updated-at type="datetime">2008-08-31T17:39:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">26.0</altitude>
+    <create-date type="datetime">2008-08-31T17:37:47+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:38:03+09:00</created-at>
+    <id type="integer">343616</id>
+    <latitude type="float">35.6479</latitude>
+    <location-id type="integer">7748</location-id>
+    <log-date type="datetime">2008-08-31T17:37:55+09:00</log-date>
+    <longitude type="float">139.722</longitude>
+    <updated-at type="datetime">2008-08-31T17:38:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">39.0</altitude>
+    <create-date type="datetime">2008-08-31T17:37:04+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:38:03+09:00</created-at>
+    <id type="integer">343617</id>
+    <latitude type="float">35.6468</latitude>
+    <location-id type="integer">7747</location-id>
+    <log-date type="datetime">2008-08-31T17:37:12+09:00</log-date>
+    <longitude type="float">139.725</longitude>
+    <updated-at type="datetime">2008-08-31T17:38:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">26.0</altitude>
+    <create-date type="datetime">2008-08-31T17:36:26+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:37:03+09:00</created-at>
+    <id type="integer">343615</id>
+    <latitude type="float">35.6468</latitude>
+    <location-id type="integer">7746</location-id>
+    <log-date type="datetime">2008-08-31T17:36:33+09:00</log-date>
+    <longitude type="float">139.726</longitude>
+    <updated-at type="datetime">2008-08-31T17:37:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">46.0</altitude>
+    <create-date type="datetime">2008-08-31T17:35:46+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:36:02+09:00</created-at>
+    <id type="integer">343613</id>
+    <latitude type="float">35.6472</latitude>
+    <location-id type="integer">7745</location-id>
+    <log-date type="datetime">2008-08-31T17:35:54+09:00</log-date>
+    <longitude type="float">139.729</longitude>
+    <updated-at type="datetime">2008-08-31T17:36:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">22.0</altitude>
+    <create-date type="datetime">2008-08-31T17:35:11+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:36:02+09:00</created-at>
+    <id type="integer">343614</id>
+    <latitude type="float">35.6474</latitude>
+    <location-id type="integer">7744</location-id>
+    <log-date type="datetime">2008-08-31T17:35:19+09:00</log-date>
+    <longitude type="float">139.732</longitude>
+    <updated-at type="datetime">2008-08-31T17:36:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">42.0</altitude>
+    <create-date type="datetime">2008-08-31T17:34:44+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:35:06+09:00</created-at>
+    <id type="integer">343611</id>
+    <latitude type="float">35.6471</latitude>
+    <location-id type="integer">7743</location-id>
+    <log-date type="datetime">2008-08-31T17:34:55+09:00</log-date>
+    <longitude type="float">139.734</longitude>
+    <updated-at type="datetime">2008-08-31T17:35:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">5.0</altitude>
+    <create-date type="datetime">2008-08-31T17:34:10+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:35:06+09:00</created-at>
+    <id type="integer">343612</id>
+    <latitude type="float">35.6458</latitude>
+    <location-id type="integer">7742</location-id>
+    <log-date type="datetime">2008-08-31T17:34:18+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:35:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">75.0</altitude>
+    <create-date type="datetime">2008-08-31T17:33:19+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:34:02+09:00</created-at>
+    <id type="integer">343610</id>
+    <latitude type="float">35.644</latitude>
+    <location-id type="integer">7741</location-id>
+    <log-date type="datetime">2008-08-31T17:33:27+09:00</log-date>
+    <longitude type="float">139.735</longitude>
+    <updated-at type="datetime">2008-08-31T17:34:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">46.0</altitude>
+    <create-date type="datetime">2008-08-31T17:32:41+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:33:02+09:00</created-at>
+    <id type="integer">343608</id>
+    <latitude type="float">35.6447</latitude>
+    <location-id type="integer">7740</location-id>
+    <log-date type="datetime">2008-08-31T17:32:49+09:00</log-date>
+    <longitude type="float">139.735</longitude>
+    <updated-at type="datetime">2008-08-31T17:33:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">13.0</altitude>
+    <create-date type="datetime">2008-08-31T17:32:04+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:33:03+09:00</created-at>
+    <id type="integer">343609</id>
+    <latitude type="float">35.6453</latitude>
+    <location-id type="integer">7739</location-id>
+    <log-date type="datetime">2008-08-31T17:32:12+09:00</log-date>
+    <longitude type="float">139.734</longitude>
+    <updated-at type="datetime">2008-08-31T17:33:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">59.0</altitude>
+    <create-date type="datetime">2008-08-31T17:31:11+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:32:03+09:00</created-at>
+    <id type="integer">343607</id>
+    <latitude type="float">35.6479</latitude>
+    <location-id type="integer">7738</location-id>
+    <log-date type="datetime">2008-08-31T17:31:19+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:32:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">19.0</altitude>
+    <create-date type="datetime">2008-08-31T17:30:39+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:31:02+09:00</created-at>
+    <id type="integer">343605</id>
+    <latitude type="float">35.6489</latitude>
+    <location-id type="integer">7737</location-id>
+    <log-date type="datetime">2008-08-31T17:30:47+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:31:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">1000.0</altitude>
+    <create-date type="datetime">2008-08-31T17:30:01+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:31:02+09:00</created-at>
+    <id type="integer">343606</id>
+    <latitude type="float">35.6491</latitude>
+    <location-id type="integer">7736</location-id>
+    <log-date type="datetime">2008-08-31T17:30:09+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:31:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">2.0</altitude>
+    <create-date type="datetime">2008-08-31T17:29:18+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:30:05+09:00</created-at>
+    <id type="integer">343604</id>
+    <latitude type="float">35.6505</latitude>
+    <location-id type="integer">7735</location-id>
+    <log-date type="datetime">2008-08-31T17:29:26+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:30:05+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">58.0</altitude>
+    <create-date type="datetime">2008-08-31T17:28:29+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:29:03+09:00</created-at>
+    <id type="integer">343602</id>
+    <latitude type="float">35.652</latitude>
+    <location-id type="integer">7734</location-id>
+    <log-date type="datetime">2008-08-31T17:28:40+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:29:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">35.0</altitude>
+    <create-date type="datetime">2008-08-31T17:28:05+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:29:03+09:00</created-at>
+    <id type="integer">343603</id>
+    <latitude type="float">35.652</latitude>
+    <location-id type="integer">7733</location-id>
+    <log-date type="datetime">2008-08-31T17:28:13+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:29:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">25.0</altitude>
+    <create-date type="datetime">2008-08-31T17:27:28+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:28:03+09:00</created-at>
+    <id type="integer">343600</id>
+    <latitude type="float">35.6521</latitude>
+    <location-id type="integer">7732</location-id>
+    <log-date type="datetime">2008-08-31T17:27:36+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:28:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">61.0</altitude>
+    <create-date type="datetime">2008-08-31T17:26:48+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:28:03+09:00</created-at>
+    <id type="integer">343601</id>
+    <latitude type="float">35.652</latitude>
+    <location-id type="integer">7731</location-id>
+    <log-date type="datetime">2008-08-31T17:27:00+09:00</log-date>
+    <longitude type="float">139.736</longitude>
+    <updated-at type="datetime">2008-08-31T17:28:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">100.0</altitude>
+    <create-date type="datetime">2008-08-31T17:26:19+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:27:02+09:00</created-at>
+    <id type="integer">343599</id>
+    <latitude type="float">35.6524</latitude>
+    <location-id type="integer">7730</location-id>
+    <log-date type="datetime">2008-08-31T17:26:26+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:27:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">56.0</altitude>
+    <create-date type="datetime">2008-08-31T17:25:48+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:26:03+09:00</created-at>
+    <id type="integer">343597</id>
+    <latitude type="float">35.6525</latitude>
+    <location-id type="integer">7729</location-id>
+    <log-date type="datetime">2008-08-31T17:25:55+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:26:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">40.0</altitude>
+    <create-date type="datetime">2008-08-31T17:25:14+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:26:03+09:00</created-at>
+    <id type="integer">343598</id>
+    <latitude type="float">35.6538</latitude>
+    <location-id type="integer">7728</location-id>
+    <log-date type="datetime">2008-08-31T17:25:22+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:26:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">-7.0</altitude>
+    <create-date type="datetime">2008-08-31T17:24:37+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:25:06+09:00</created-at>
+    <id type="integer">343595</id>
+    <latitude type="float">35.6558</latitude>
+    <location-id type="integer">7727</location-id>
+    <log-date type="datetime">2008-08-31T17:24:45+09:00</log-date>
+    <longitude type="float">139.737</longitude>
+    <updated-at type="datetime">2008-08-31T17:25:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">64.0</altitude>
+    <create-date type="datetime">2008-08-31T17:24:00+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:25:06+09:00</created-at>
+    <id type="integer">343596</id>
+    <latitude type="float">35.6563</latitude>
+    <location-id type="integer">7726</location-id>
+    <log-date type="datetime">2008-08-31T17:24:04+09:00</log-date>
+    <longitude type="float">139.739</longitude>
+    <updated-at type="datetime">2008-08-31T17:25:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">40.0</altitude>
+    <create-date type="datetime">2008-08-31T17:23:24+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:24:03+09:00</created-at>
+    <id type="integer">343593</id>
+    <latitude type="float">35.6557</latitude>
+    <location-id type="integer">7725</location-id>
+    <log-date type="datetime">2008-08-31T17:23:34+09:00</log-date>
+    <longitude type="float">139.741</longitude>
+    <updated-at type="datetime">2008-08-31T17:24:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">81.0</altitude>
+    <create-date type="datetime">2008-08-31T17:22:50+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:24:03+09:00</created-at>
+    <id type="integer">343594</id>
+    <latitude type="float">35.6553</latitude>
+    <location-id type="integer">7724</location-id>
+    <log-date type="datetime">2008-08-31T17:22:57+09:00</log-date>
+    <longitude type="float">139.743</longitude>
+    <updated-at type="datetime">2008-08-31T17:24:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">19.0</altitude>
+    <create-date type="datetime">2008-08-31T17:22:12+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:23:02+09:00</created-at>
+    <id type="integer">343592</id>
+    <latitude type="float">35.6549</latitude>
+    <location-id type="integer">7723</location-id>
+    <log-date type="datetime">2008-08-31T17:22:20+09:00</log-date>
+    <longitude type="float">139.746</longitude>
+    <updated-at type="datetime">2008-08-31T17:23:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">16.0</altitude>
+    <create-date type="datetime">2008-08-31T17:21:36+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:22:03+09:00</created-at>
+    <id type="integer">343590</id>
+    <latitude type="float">35.6542</latitude>
+    <location-id type="integer">7722</location-id>
+    <log-date type="datetime">2008-08-31T17:21:45+09:00</log-date>
+    <longitude type="float">139.748</longitude>
+    <updated-at type="datetime">2008-08-31T17:22:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">5.0</altitude>
+    <create-date type="datetime">2008-08-31T17:20:54+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:22:03+09:00</created-at>
+    <id type="integer">343591</id>
+    <latitude type="float">35.6541</latitude>
+    <location-id type="integer">7721</location-id>
+    <log-date type="datetime">2008-08-31T17:21:05+09:00</log-date>
+    <longitude type="float">139.749</longitude>
+    <updated-at type="datetime">2008-08-31T17:22:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">31.0</altitude>
+    <create-date type="datetime">2008-08-31T17:20:29+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:21:03+09:00</created-at>
+    <id type="integer">343588</id>
+    <latitude type="float">35.654</latitude>
+    <location-id type="integer">7720</location-id>
+    <log-date type="datetime">2008-08-31T17:20:40+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:21:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">102.0</altitude>
+    <create-date type="datetime">2008-08-31T17:20:10+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:21:03+09:00</created-at>
+    <id type="integer">343589</id>
+    <latitude type="float">35.6537</latitude>
+    <location-id type="integer">7719</location-id>
+    <log-date type="datetime">2008-08-31T17:20:17+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:21:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">4.0</altitude>
+    <create-date type="datetime">2008-08-31T17:19:31+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:20:06+09:00</created-at>
+    <id type="integer">343586</id>
+    <latitude type="float">35.6547</latitude>
+    <location-id type="integer">7718</location-id>
+    <log-date type="datetime">2008-08-31T17:19:38+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:20:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">0.0</altitude>
+    <create-date type="datetime">2008-08-31T17:18:53+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:20:07+09:00</created-at>
+    <id type="integer">343587</id>
+    <latitude type="float">35.6563</latitude>
+    <location-id type="integer">7717</location-id>
+    <log-date type="datetime">2008-08-31T17:19:01+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:20:07+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">36.0</altitude>
+    <create-date type="datetime">2008-08-31T17:18:16+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:19:02+09:00</created-at>
+    <id type="integer">343585</id>
+    <latitude type="float">35.6573</latitude>
+    <location-id type="integer">7716</location-id>
+    <log-date type="datetime">2008-08-31T17:18:28+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:19:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">9.0</altitude>
+    <create-date type="datetime">2008-08-31T17:17:46+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:18:03+09:00</created-at>
+    <id type="integer">343583</id>
+    <latitude type="float">35.658</latitude>
+    <location-id type="integer">7715</location-id>
+    <log-date type="datetime">2008-08-31T17:17:57+09:00</log-date>
+    <longitude type="float">139.75</longitude>
+    <updated-at type="datetime">2008-08-31T17:18:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">46.0</altitude>
+    <create-date type="datetime">2008-08-31T17:17:06+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:18:03+09:00</created-at>
+    <id type="integer">343584</id>
+    <latitude type="float">35.6598</latitude>
+    <location-id type="integer">7714</location-id>
+    <log-date type="datetime">2008-08-31T17:17:14+09:00</log-date>
+    <longitude type="float">139.751</longitude>
+    <updated-at type="datetime">2008-08-31T17:18:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">13.0</altitude>
+    <create-date type="datetime">2008-08-31T17:16:35+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:17:02+09:00</created-at>
+    <id type="integer">343581</id>
+    <latitude type="float">35.6609</latitude>
+    <location-id type="integer">7713</location-id>
+    <log-date type="datetime">2008-08-31T17:16:42+09:00</log-date>
+    <longitude type="float">139.751</longitude>
+    <updated-at type="datetime">2008-08-31T17:17:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">23.0</altitude>
+    <create-date type="datetime">2008-08-31T17:15:52+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:17:02+09:00</created-at>
+    <id type="integer">343582</id>
+    <latitude type="float">35.6611</latitude>
+    <location-id type="integer">7712</location-id>
+    <log-date type="datetime">2008-08-31T17:16:00+09:00</log-date>
+    <longitude type="float">139.751</longitude>
+    <updated-at type="datetime">2008-08-31T17:17:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">44.0</altitude>
+    <create-date type="datetime">2008-08-31T17:15:12+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:16:03+09:00</created-at>
+    <id type="integer">343580</id>
+    <latitude type="float">35.6624</latitude>
+    <location-id type="integer">7711</location-id>
+    <log-date type="datetime">2008-08-31T17:15:23+09:00</log-date>
+    <longitude type="float">139.752</longitude>
+    <updated-at type="datetime">2008-08-31T17:16:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">65.0</altitude>
+    <create-date type="datetime">2008-08-31T17:14:44+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:15:06+09:00</created-at>
+    <id type="integer">343578</id>
+    <latitude type="float">35.6639</latitude>
+    <location-id type="integer">7710</location-id>
+    <log-date type="datetime">2008-08-31T17:14:51+09:00</log-date>
+    <longitude type="float">139.753</longitude>
+    <updated-at type="datetime">2008-08-31T17:15:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">45.0</altitude>
+    <create-date type="datetime">2008-08-31T17:14:06+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:15:07+09:00</created-at>
+    <id type="integer">343579</id>
+    <latitude type="float">35.6651</latitude>
+    <location-id type="integer">7709</location-id>
+    <log-date type="datetime">2008-08-31T17:14:14+09:00</log-date>
+    <longitude type="float">139.753</longitude>
+    <updated-at type="datetime">2008-08-31T17:15:07+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">92.0</altitude>
+    <create-date type="datetime">2008-08-31T17:13:27+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:14:03+09:00</created-at>
+    <id type="integer">343576</id>
+    <latitude type="float">35.6667</latitude>
+    <location-id type="integer">7708</location-id>
+    <log-date type="datetime">2008-08-31T17:13:35+09:00</log-date>
+    <longitude type="float">139.754</longitude>
+    <updated-at type="datetime">2008-08-31T17:14:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">97.0</altitude>
+    <create-date type="datetime">2008-08-31T17:12:59+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:14:03+09:00</created-at>
+    <id type="integer">343577</id>
+    <latitude type="float">35.6678</latitude>
+    <location-id type="integer">7707</location-id>
+    <log-date type="datetime">2008-08-31T17:13:10+09:00</log-date>
+    <longitude type="float">139.755</longitude>
+    <updated-at type="datetime">2008-08-31T17:14:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">98.0</altitude>
+    <create-date type="datetime">2008-08-31T17:12:25+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:13:03+09:00</created-at>
+    <id type="integer">343574</id>
+    <latitude type="float">35.6695</latitude>
+    <location-id type="integer">7706</location-id>
+    <log-date type="datetime">2008-08-31T17:12:33+09:00</log-date>
+    <longitude type="float">139.755</longitude>
+    <updated-at type="datetime">2008-08-31T17:13:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">55.0</altitude>
+    <create-date type="datetime">2008-08-31T17:11:48+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:13:03+09:00</created-at>
+    <id type="integer">343575</id>
+    <latitude type="float">35.6706</latitude>
+    <location-id type="integer">7705</location-id>
+    <log-date type="datetime">2008-08-31T17:11:56+09:00</log-date>
+    <longitude type="float">139.756</longitude>
+    <updated-at type="datetime">2008-08-31T17:13:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">54.0</altitude>
+    <create-date type="datetime">2008-08-31T17:11:17+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:12:02+09:00</created-at>
+    <id type="integer">343573</id>
+    <latitude type="float">35.671</latitude>
+    <location-id type="integer">7704</location-id>
+    <log-date type="datetime">2008-08-31T17:11:25+09:00</log-date>
+    <longitude type="float">139.756</longitude>
+    <updated-at type="datetime">2008-08-31T17:12:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">14.0</altitude>
+    <create-date type="datetime">2008-08-31T17:10:42+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:11:03+09:00</created-at>
+    <id type="integer">343571</id>
+    <latitude type="float">35.6725</latitude>
+    <location-id type="integer">7703</location-id>
+    <log-date type="datetime">2008-08-31T17:10:50+09:00</log-date>
+    <longitude type="float">139.757</longitude>
+    <updated-at type="datetime">2008-08-31T17:11:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">83.0</altitude>
+    <create-date type="datetime">2008-08-31T17:10:01+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:11:03+09:00</created-at>
+    <id type="integer">343572</id>
+    <latitude type="float">35.6727</latitude>
+    <location-id type="integer">7702</location-id>
+    <log-date type="datetime">2008-08-31T17:10:12+09:00</log-date>
+    <longitude type="float">139.757</longitude>
+    <updated-at type="datetime">2008-08-31T17:11:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">72.0</altitude>
+    <create-date type="datetime">2008-08-31T17:07:17+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:08:02+09:00</created-at>
+    <id type="integer">343569</id>
+    <latitude type="float">35.6728</latitude>
+    <location-id type="integer">7700</location-id>
+    <log-date type="datetime">2008-08-31T17:07:28+09:00</log-date>
+    <longitude type="float">139.757</longitude>
+    <updated-at type="datetime">2008-08-31T17:08:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">90.0</altitude>
+    <create-date type="datetime">2008-08-31T17:06:49+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:08:02+09:00</created-at>
+    <id type="integer">343570</id>
+    <latitude type="float">35.6725</latitude>
+    <location-id type="integer">7699</location-id>
+    <log-date type="datetime">2008-08-31T17:07:00+09:00</log-date>
+    <longitude type="float">139.757</longitude>
+    <updated-at type="datetime">2008-08-31T17:08:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">74.0</altitude>
+    <create-date type="datetime">2008-08-31T17:06:36+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:07:03+09:00</created-at>
+    <id type="integer">343567</id>
+    <latitude type="float">35.6731</latitude>
+    <location-id type="integer">7698</location-id>
+    <log-date type="datetime">2008-08-31T17:06:47+09:00</log-date>
+    <longitude type="float">139.757</longitude>
+    <updated-at type="datetime">2008-08-31T17:07:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">30.0</altitude>
+    <create-date type="datetime">2008-08-31T17:06:09+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:07:03+09:00</created-at>
+    <id type="integer">343568</id>
+    <latitude type="float">35.6741</latitude>
+    <location-id type="integer">7697</location-id>
+    <log-date type="datetime">2008-08-31T17:06:20+09:00</log-date>
+    <longitude type="float">139.759</longitude>
+    <updated-at type="datetime">2008-08-31T17:07:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">25.0</altitude>
+    <create-date type="datetime">2008-08-31T17:05:44+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:06:03+09:00</created-at>
+    <id type="integer">343564</id>
+    <latitude type="float">35.6748</latitude>
+    <location-id type="integer">7696</location-id>
+    <log-date type="datetime">2008-08-31T17:05:55+09:00</log-date>
+    <longitude type="float">139.76</longitude>
+    <updated-at type="datetime">2008-08-31T17:06:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">42.0</altitude>
+    <create-date type="datetime">2008-08-31T17:05:18+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:06:03+09:00</created-at>
+    <id type="integer">343565</id>
+    <latitude type="float">35.6748</latitude>
+    <location-id type="integer">7695</location-id>
+    <log-date type="datetime">2008-08-31T17:05:29+09:00</log-date>
+    <longitude type="float">139.761</longitude>
+    <updated-at type="datetime">2008-08-31T17:06:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">63.0</altitude>
+    <create-date type="datetime">2008-08-31T17:04:52+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:06:03+09:00</created-at>
+    <id type="integer">343566</id>
+    <latitude type="float">35.6748</latitude>
+    <location-id type="integer">7694</location-id>
+    <log-date type="datetime">2008-08-31T17:05:03+09:00</log-date>
+    <longitude type="float">139.761</longitude>
+    <updated-at type="datetime">2008-08-31T17:06:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">48.0</altitude>
+    <create-date type="datetime">2008-08-31T17:04:08+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:05:06+09:00</created-at>
+    <id type="integer">343563</id>
+    <latitude type="float">35.6743</latitude>
+    <location-id type="integer">7693</location-id>
+    <log-date type="datetime">2008-08-31T17:04:19+09:00</log-date>
+    <longitude type="float">139.761</longitude>
+    <updated-at type="datetime">2008-08-31T17:05:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">153.0</altitude>
+    <create-date type="datetime">2008-08-31T17:02:35+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:03:03+09:00</created-at>
+    <id type="integer">343562</id>
+    <latitude type="float">35.6738</latitude>
+    <location-id type="integer">7692</location-id>
+    <log-date type="datetime">2008-08-31T17:02:46+09:00</log-date>
+    <longitude type="float">139.763</longitude>
+    <updated-at type="datetime">2008-08-31T17:03:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">65.0</altitude>
+    <create-date type="datetime">2008-08-31T17:01:46+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:02:03+09:00</created-at>
+    <id type="integer">343559</id>
+    <latitude type="float">35.6756</latitude>
+    <location-id type="integer">7691</location-id>
+    <log-date type="datetime">2008-08-31T17:01:57+09:00</log-date>
+    <longitude type="float">139.765</longitude>
+    <updated-at type="datetime">2008-08-31T17:02:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">93.0</altitude>
+    <create-date type="datetime">2008-08-31T17:01:14+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:02:03+09:00</created-at>
+    <id type="integer">343561</id>
+    <latitude type="float">35.6751</latitude>
+    <location-id type="integer">7690</location-id>
+    <log-date type="datetime">2008-08-31T17:01:06+09:00</log-date>
+    <longitude type="float">139.763</longitude>
+    <updated-at type="datetime">2008-08-31T17:02:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">93.0</altitude>
+    <create-date type="datetime">2008-08-31T17:00:55+09:00</create-date>
+    <created-at type="datetime">2008-08-31T17:02:03+09:00</created-at>
+    <id type="integer">343560</id>
+    <latitude type="float">35.6751</latitude>
+    <location-id type="integer">7689</location-id>
+    <log-date type="datetime">2008-08-31T17:01:06+09:00</log-date>
+    <longitude type="float">139.763</longitude>
+    <updated-at type="datetime">2008-08-31T17:02:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">45.0</altitude>
+    <create-date type="datetime">2008-08-31T16:58:27+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:59:03+09:00</created-at>
+    <id type="integer">343557</id>
+    <latitude type="float">35.6726</latitude>
+    <location-id type="integer">7688</location-id>
+    <log-date type="datetime">2008-08-31T16:58:38+09:00</log-date>
+    <longitude type="float">139.764</longitude>
+    <updated-at type="datetime">2008-08-31T16:59:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">90.0</altitude>
+    <create-date type="datetime">2008-08-31T16:57:59+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:59:03+09:00</created-at>
+    <id type="integer">343558</id>
+    <latitude type="float">35.6728</latitude>
+    <location-id type="integer">7687</location-id>
+    <log-date type="datetime">2008-08-31T16:58:10+09:00</log-date>
+    <longitude type="float">139.764</longitude>
+    <updated-at type="datetime">2008-08-31T16:59:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">122.0</altitude>
+    <create-date type="datetime">2008-08-31T16:57:42+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:58:03+09:00</created-at>
+    <id type="integer">343555</id>
+    <latitude type="float">35.6729</latitude>
+    <location-id type="integer">7686</location-id>
+    <log-date type="datetime">2008-08-31T16:57:53+09:00</log-date>
+    <longitude type="float">139.764</longitude>
+    <updated-at type="datetime">2008-08-31T16:58:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">85.0</altitude>
+    <create-date type="datetime">2008-08-31T16:57:17+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:58:03+09:00</created-at>
+    <id type="integer">343556</id>
+    <latitude type="float">35.6729</latitude>
+    <location-id type="integer">7685</location-id>
+    <log-date type="datetime">2008-08-31T16:57:28+09:00</log-date>
+    <longitude type="float">139.764</longitude>
+    <updated-at type="datetime">2008-08-31T16:58:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">12.0</altitude>
+    <create-date type="datetime">2008-08-31T16:56:49+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:57:03+09:00</created-at>
+    <id type="integer">343552</id>
+    <latitude type="float">35.6722</latitude>
+    <location-id type="integer">7684</location-id>
+    <log-date type="datetime">2008-08-31T16:57:00+09:00</log-date>
+    <longitude type="float">139.766</longitude>
+    <updated-at type="datetime">2008-08-31T16:57:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">63.0</altitude>
+    <create-date type="datetime">2008-08-31T16:56:23+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:57:03+09:00</created-at>
+    <id type="integer">343553</id>
+    <latitude type="float">35.6724</latitude>
+    <location-id type="integer">7683</location-id>
+    <log-date type="datetime">2008-08-31T16:56:34+09:00</log-date>
+    <longitude type="float">139.766</longitude>
+    <updated-at type="datetime">2008-08-31T16:57:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">-4.0</altitude>
+    <create-date type="datetime">2008-08-31T16:55:59+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:57:03+09:00</created-at>
+    <id type="integer">343554</id>
+    <latitude type="float">35.6741</latitude>
+    <location-id type="integer">7682</location-id>
+    <log-date type="datetime">2008-08-31T16:56:10+09:00</log-date>
+    <longitude type="float">139.768</longitude>
+    <updated-at type="datetime">2008-08-31T16:57:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">100.0</altitude>
+    <create-date type="datetime">2008-08-31T16:54:58+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:56:02+09:00</created-at>
+    <id type="integer">343551</id>
+    <latitude type="float">35.6746</latitude>
+    <location-id type="integer">7681</location-id>
+    <log-date type="datetime">2008-08-31T16:55:09+09:00</log-date>
+    <longitude type="float">139.769</longitude>
+    <updated-at type="datetime">2008-08-31T16:56:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">50.0</altitude>
+    <create-date type="datetime">2008-08-31T16:54:32+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:55:06+09:00</created-at>
+    <id type="integer">343550</id>
+    <latitude type="float">35.6759</latitude>
+    <location-id type="integer">7680</location-id>
+    <log-date type="datetime">2008-08-31T16:54:42+09:00</log-date>
+    <longitude type="float">139.77</longitude>
+    <updated-at type="datetime">2008-08-31T16:55:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">-25.0</altitude>
+    <create-date type="datetime">2008-08-31T16:53:36+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:54:02+09:00</created-at>
+    <id type="integer">343548</id>
+    <latitude type="float">35.6767</latitude>
+    <location-id type="integer">7679</location-id>
+    <log-date type="datetime">2008-08-31T16:53:47+09:00</log-date>
+    <longitude type="float">139.77</longitude>
+    <updated-at type="datetime">2008-08-31T16:54:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">159.0</altitude>
+    <create-date type="datetime">2008-08-31T16:53:13+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:54:02+09:00</created-at>
+    <id type="integer">343549</id>
+    <latitude type="float">35.6776</latitude>
+    <location-id type="integer">7678</location-id>
+    <log-date type="datetime">2008-08-31T16:53:23+09:00</log-date>
+    <longitude type="float">139.77</longitude>
+    <updated-at type="datetime">2008-08-31T16:54:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">52.0</altitude>
+    <create-date type="datetime">2008-08-31T16:52:46+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:53:02+09:00</created-at>
+    <id type="integer">343545</id>
+    <latitude type="float">35.6791</latitude>
+    <location-id type="integer">7677</location-id>
+    <log-date type="datetime">2008-08-31T16:52:57+09:00</log-date>
+    <longitude type="float">139.771</longitude>
+    <updated-at type="datetime">2008-08-31T16:53:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">34.0</altitude>
+    <create-date type="datetime">2008-08-31T16:52:21+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:53:03+09:00</created-at>
+    <id type="integer">343546</id>
+    <latitude type="float">35.6803</latitude>
+    <location-id type="integer">7676</location-id>
+    <log-date type="datetime">2008-08-31T16:52:32+09:00</log-date>
+    <longitude type="float">139.772</longitude>
+    <updated-at type="datetime">2008-08-31T16:53:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">32.0</altitude>
+    <create-date type="datetime">2008-08-31T16:51:55+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:53:03+09:00</created-at>
+    <id type="integer">343547</id>
+    <latitude type="float">35.6808</latitude>
+    <location-id type="integer">7675</location-id>
+    <log-date type="datetime">2008-08-31T16:52:06+09:00</log-date>
+    <longitude type="float">139.773</longitude>
+    <updated-at type="datetime">2008-08-31T16:53:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">9.0</altitude>
+    <create-date type="datetime">2008-08-31T16:51:27+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:52:03+09:00</created-at>
+    <id type="integer">343543</id>
+    <latitude type="float">35.6814</latitude>
+    <location-id type="integer">7674</location-id>
+    <log-date type="datetime">2008-08-31T16:51:38+09:00</log-date>
+    <longitude type="float">139.773</longitude>
+    <updated-at type="datetime">2008-08-31T16:52:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">16.0</altitude>
+    <create-date type="datetime">2008-08-31T16:51:00+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:52:03+09:00</created-at>
+    <id type="integer">343544</id>
+    <latitude type="float">35.6823</latitude>
+    <location-id type="integer">7673</location-id>
+    <log-date type="datetime">2008-08-31T16:51:11+09:00</log-date>
+    <longitude type="float">139.773</longitude>
+    <updated-at type="datetime">2008-08-31T16:52:03+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">3.0</altitude>
+    <create-date type="datetime">2008-08-31T16:50:34+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:51:02+09:00</created-at>
+    <id type="integer">343541</id>
+    <latitude type="float">35.6838</latitude>
+    <location-id type="integer">7672</location-id>
+    <log-date type="datetime">2008-08-31T16:50:45+09:00</log-date>
+    <longitude type="float">139.774</longitude>
+    <updated-at type="datetime">2008-08-31T16:51:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">29.0</altitude>
+    <create-date type="datetime">2008-08-31T16:50:09+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:51:02+09:00</created-at>
+    <id type="integer">343542</id>
+    <latitude type="float">35.6847</latitude>
+    <location-id type="integer">7671</location-id>
+    <log-date type="datetime">2008-08-31T16:50:20+09:00</log-date>
+    <longitude type="float">139.775</longitude>
+    <updated-at type="datetime">2008-08-31T16:51:02+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">46.0</altitude>
+    <create-date type="datetime">2008-08-31T16:49:18+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:50:06+09:00</created-at>
+    <id type="integer">343539</id>
+    <latitude type="float">35.6849</latitude>
+    <location-id type="integer">7670</location-id>
+    <log-date type="datetime">2008-08-31T16:49:29+09:00</log-date>
+    <longitude type="float">139.774</longitude>
+    <updated-at type="datetime">2008-08-31T16:50:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">22.0</altitude>
+    <create-date type="datetime">2008-08-31T16:48:52+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:50:06+09:00</created-at>
+    <id type="integer">343540</id>
+    <latitude type="float">35.6852</latitude>
+    <location-id type="integer">7669</location-id>
+    <log-date type="datetime">2008-08-31T16:49:03+09:00</log-date>
+    <longitude type="float">139.773</longitude>
+    <updated-at type="datetime">2008-08-31T16:50:06+09:00</updated-at>
+  </trace>
+  <trace>
+    <altitude type="float">37.0</altitude>
+    <create-date type="datetime">2008-08-31T16:48:23+09:00</create-date>
+    <created-at type="datetime">2008-08-31T16:49:03+09:00</created-at>
+    <id type="integer">343537</id>
+    <latitude type="float">35.6852</latitude>
+    <location-id type="integer">7668</location-id>
+    <log-date type="datetime">2008-08-31T16:48:34+09:00</log-date>
+    <longitude type="float">139.773</longitude>
+    <updated-at type="datetime">2008-08-31T16:49:03+09:00</updated-at>
+  </trace>
+</traces>
+
+

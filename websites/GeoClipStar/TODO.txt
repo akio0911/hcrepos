@@ -1,0 +1,41 @@
+TODOの管理に関して
+GOさんに記述してもらった方式に変更します!!
+
+■１．AddStarApplication
+	目的：みんなのお気に入りの場所に☆をつける！
+	開発：gaziro2000
+	概要：ジオクリサービスの機能を改造し、
+	　　　緯度経度／twitter id／☆の名前を入力する専用アプリ
+	TODO：
+		●http://star.geoclip.jp/を作成	完了
+
+■２．GetStarApplication
+	目的：gaziro2000が自転車で☆を獲得する。
+	開発：yuiseki TO:GOさん ここの開発ってyuisekiがやるんですか? from akio0911
+	概要：ジオクリAPIから現在位置を取得し、星取得判定を行う。
+	　　　星を取得したらTwitterへ発言
+	☆星インポート処理
+	☆軌跡インポート
+
+	☆位置情報書き込みAPI
+	☆コンテンツ検索API
+	☆スター改修API
+
+■３．AR ビュワー
+	目的：電脳メガネ的世界をリアルタイムに見せる。
+	開発：ksasao
+	概要：WINDOWSパソコンと、HMDをくみあわせたARビュワー。
+	　　　表示と同時に緯度経度方角、傾きをサーバーへ送信
+		☆ARビュワーの作成
+			☆PlaceEngine位置情報取得インターフェイス
+			☆GeoClipAPIへの位置情報書き出し
+			☆yuiseki 位置情報書き込みAPIへ
+			☆コンテンツ検索APIへの
+			☆スター改修API
+
+■４．WEBビュワー
+	目的：WEB閲覧者にリッチなユーザー体験をさせる。
+	開発：akio0911
+	概要：現在位置情報、方角をGoogleMAPへプロット
+	　　方角、傾きをGoogleStreetViewへ、ARビューも中継。
+		☆http://star.yuiseki.net/map.html
