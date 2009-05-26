@@ -3,15 +3,14 @@
 int main() {
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
-    NSArray *keys = [NSArray arrayWithObjects:@"red", @"green", @"blue", nil];
-    NSArray *values = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],
-                                                [NSNumber numberWithInt:2],
-                                                [NSNumber numberWithInt:3], nil];
     NSMutableDictionary *dictionary =
-        [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:1], @"red",
+                                                          [NSNumber numberWithInt:2], @"green",
+                                                          [NSNumber numberWithInt:3], @"blue",
+                                                          nil];
     NSLog(@"%@", dictionary);
 
-    for(NSString *key in keys){
+    for(NSString *key in [dictionary allKeys]){
         int count = [[dictionary objectForKey:key] intValue];
         [dictionary setObject:[NSNumber numberWithInt:count+10]
                     forKey:key];
