@@ -34,7 +34,8 @@ package {
 	private var renderer  :BasicRenderEngine;
 
 	public function SimpleCube() {
-	    this.init('Data/camera_para.dat', 'Data/flarlogo.pat');
+	    this.init('http://ar-life.net/Data/camera_para.dat', 'http://ar-life.net/Data/flarlogo8x8a.pat');
+	    //	    this.init('Data/camera_para.dat', 'Data/flarlogo8x8b.pat');
 	    stage.addEventListener(Event.RESIZE, onStageResize);
 	    addEventListener(Event.ENTER_FRAME, myLoopEvent);
 	    stage.addEventListener(MouseEvent.CLICK, myClick);
@@ -58,6 +59,8 @@ package {
 	    viewport = new Viewport3D( stage.stageWidth, stage.stageHeight );
 	    renderer = new BasicRenderEngine();
 	}
+	private static const TEXT_WIDTH:int = 400;
+	private static const TEXT_HEIGHT:int = TEXT_WIDTH/2;
 	private function createTextPlane():DisplayObject3D {
  
 	    var asset:MovieClip = createMovieClip();
@@ -67,14 +70,14 @@ package {
 	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
 	    material.doubleSided = true;
  
-	    var planeWidth:int = 100;
-	    var planeHeight:int = 50;
+	    var planeWidth:int = TEXT_WIDTH;
+	    var planeHeight:int = TEXT_HEIGHT;
 	    var segment:int = 2;
  
 	    var plane:Plane = new Plane(
 					material, planeWidth, planeHeight, segment, segment);
 	    plane.x =  0;
-	    plane.y =  100;
+	    plane.y =  100 + TEXT_WIDTH / 2;
 	    plane.z =  0;
 	    plane.rotationX = 0;
 	    plane.rotationY = 180;
@@ -141,15 +144,16 @@ package {
 	    format.bold = true;
 	    format.italic = false;
 	    format.size = 40;
-	    format.underline = true;
+	    format.underline = false;
 	    format.font = "_等幅";
  
 	    var text:TextField = new TextField();
-	    text.width = 200;
-	    text.height = 200;
+	    text.width = TEXT_WIDTH;
+	    text.height = TEXT_HEIGHT;
 	    //	    text.autoSize = TextFieldAutoSize.LEFT;
 	    text.selectable = false;
-	    text.setTextFormat(format);
+	    //	    text.setTextFormat(format);
+	    text.defaultTextFormat = format;
 	    text.background = true;
 	    text.backgroundColor = 0xFFFFFF;
 	    text.border = false;
