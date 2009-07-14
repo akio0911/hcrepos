@@ -3,6 +3,7 @@
 \usepackage{ascmac}
 \usepackage{latexsym}
 \usepackage[dvips]{graphicx}
+\usepackage{url}
 
 \newlength\imagelen
 \setlength{\imagelen}{4mm}
@@ -16,6 +17,12 @@
 \title{32nd Comic Marcket}
 \author{takano32}
 \date{\today}
+
+\newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}%
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.5\Cvs \@plus.3\Cdp}%
+  {\reset@font\normalsize}
+}
 
 \maketitle
 
@@ -33,7 +40,9 @@
 
 
 \input{unix}
-
+\input{windows}
+\input{books}
+\input{books2}
 
 
 \end{document}
