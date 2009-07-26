@@ -53,7 +53,7 @@ void display(void)
   }
   glEnd();
 
-  glFlush();
+  glutSwapBuffers();
 
   if(++r >=360) r = 0;
 }
@@ -110,7 +110,7 @@ void init(void)
 int main(int argc, char *argv[])
 {
   glutInit(&argc, argv);
-  glutInitDisplayMode(GLUT_RGBA);
+  glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
   glutCreateWindow(argv[0]);
   glutDisplayFunc(display);
   glutReshapeFunc(resize);
