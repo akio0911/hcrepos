@@ -1,0 +1,13 @@
+*.dvi
+*.pbm
+*.bmc
+*.aux
+*.log
+*.toc
+*.bbl
+*.blg
+*~
+.#*
+#*#
+.DS_Store
+
