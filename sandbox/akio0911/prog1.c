@@ -1,19 +1,26 @@
 #include <stdio.h>
 #include <GLUT/glut.h>
 
+#define MAXPOINTS 100
+GLint point[MAXPOINTS][2];
+int pointnum = 0;
+int rubberband = 0;
+
 void display(void)
 {
+  int i;
+
   glClear(GL_COLOR_BUFFER_BIT);
-  glBegin(GL_POLYGON);
-  glColor3d(1.0, 0.0, 0.0);
-  glVertex2d(-0.9, -0.9);
-  glColor3d(0.0, 1.0, 0.0);
-  glVertex2d(0.9, -0.9);
-  glColor3d(0.0, 0.0, 1.0);
-  glVertex2d(0.9, 0.9);
-  glColor3d(1.0, 1.0, 0.0);
-  glVertex2d(-0.9, 0.9);
-  glEnd();
+
+  if(pointnum > 1){
+    glColor3d(0.0, 0.0, 0.0);
+    glBegin(GL_LINES);
+    for(i = 0; i < pointnum; i++){
+      glVertex2iv(point[i]);
+    }
+    glEnd();
+  }
+
   glFlush();
 }
 
@@ -28,21 +35,22 @@ void resize(int w, int h)
 
 void mouse(int button, int state, int x, int y)
 {
-  static int x0, y0;
-
   switch(button){
   case GLUT_LEFT_BUTTON:
+    point[pointnum][0] = x;
+    point[pointnum][1] = y;
     if(state == GLUT_UP){
       glColor3d(0.0, 0.0, 0.0);
       glBegin(GL_LINES);
-      glVertex2i(x0, y0);
-      glVertex2i(x, y);
+      glVertex2iv(point[pointnum - 1]);
+      glVertex2iv(point[pointnum]);
       glEnd();
       glFlush();
+
+      rubberband = 0;
     }else{
-      x0 = x;
-      y0 = y;
     }
+    if(pointnum < MAXPOINTS - 1) ++pointnum;
     break;
   case GLUT_MIDDLE_BUTTON:
     printf("middle");
@@ -70,6 +78,33 @@ void mouse(int button, int state, int x, int y)
   printf(" at (%d,%d)\n", x, y);
 }
 
+void motion(int x, int y)
+{
+  static GLint savepoint[2];
+
+  glEnable(GL_COLOR_LOGIC_OP);
+  glLogicOp(GL_INVERT);
+
+  glBegin(GL_LINES);
+  if(rubberband){
+    glVertex2iv(point[pointnum - 1]);
+    glVertex2iv(savepoint);
+  }
+  glVertex2iv(point[pointnum - 1]);
+  glVertex2i(x, y);
+  glEnd();
+
+  glFlush();
+
+  glLogicOp(GL_COPY);
+  glDisable(GL_COLOR_LOGIC_OP);
+
+  savepoint[0] = x;
+  savepoint[1] = y;
+
+  rubberband = 1;
+}
+
 void init(void)
 {
   glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -85,6 +120,7 @@ int main(int argc, char *argv[])
   glutDisplayFunc(display);
   glutReshapeFunc(resize);
   glutMouseFunc(mouse);
+  glutMotionFunc(motion);
   init();
   glutMainLoop();
   return 0;
