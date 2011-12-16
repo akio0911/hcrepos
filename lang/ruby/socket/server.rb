@@ -12,7 +12,7 @@ while true
   # gs.accept は接続要求を待ち受ける
   # 接続要求がくると新しいソケットが作成され、
   # そのままスレッドの引数として渡される
-  Thread.start(gs.accept) do |s| 
+  Thread.start(gs.accept) do |s|
     print(s, "is accepted\n")
     puts(s.gets)
 #    p s.recv(3)

@@ -4,14 +4,14 @@ package org.papervision3d.core.animation
 	{
 		/**
 		 * Plays the animation.
-		 * 
+		 *
 		 * @param 	clip	Optional clip name.
-		 */ 
+		 */
 		function play(clip:String=null):void;
-		
+
 		/**
 		 * Stops the animation.
-		 */ 
+		 */
 		function stop():void;
 	}
 }

@@ -1,4 +1,4 @@
-/* 
+/*
  * PROJECT: FLARToolKit
  * --------------------------------------------------------------------------------
  * This work is based on the NyARToolKit developed by
@@ -12,36 +12,36 @@
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 2
  * of the License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this framework; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- * 
+ *
  * For further information please contact.
  *	http://www.libspark.org/wiki/saqoosha/FLARToolKit
  *	<saq(at)saqoosha.net>
- * 
+ *
  */
 
 package org.libspark.flartoolkit.core.rasterfilter.rgb2bin {
-	
+
 	import flash.display.BitmapData;
 	import flash.filters.ColorMatrixFilter;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
-	
+
 	import org.libspark.flartoolkit.core.raster.FLARRaster_BitmapData;
 	import org.libspark.flartoolkit.core.raster.IFLARRaster;
 	import org.libspark.flartoolkit.core.raster.rgb.FLARRgbRaster_BitmapData;
 	import org.libspark.flartoolkit.core.raster.rgb.IFLARRgbRaster;
 
 	public class FLARRasterFilter_BitmapDataThreshold implements IFLARRasterFilter_RgbToBin {
-		
+
 		private static const ZERO_POINT:Point = new Point();
 		private static const ONE_POINT:Point = new Point(1, 1);
 		private static const MONO_FILTER:ColorMatrixFilter = new ColorMatrixFilter([
@@ -50,10 +50,10 @@ package org.libspark.flartoolkit.core.rasterfilter.rgb2bin {
 			0.2989, 0.5866, 0.1145, 0, 0,
 			0, 0, 0, 1, 0
 		]);
-		
+
 		private var _threshold:int;
 		private var _tmp:BitmapData;
-		
+
 		public function FLARRasterFilter_BitmapDataThreshold(i_threshold:int) {
 			this._threshold = i_threshold;
 		}

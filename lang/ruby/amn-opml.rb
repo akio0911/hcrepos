@@ -55,8 +55,8 @@ agent = WWW::Mechanize.new
 page = Hpricot(open("http://agilemedia.jp/"))
 opml = SimpleOPML.new("AMN")
 page.search("//p[@class='blogTitle']").each do |elem|
-  elem.search("a").each do |elem| 
-    url = elem.attributes['href'] 
+  elem.search("a").each do |elem|
+    url = elem.attributes['href']
     opml.add(url, url, url)
   end
 end

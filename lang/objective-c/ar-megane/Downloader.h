@@ -40,4 +40,4 @@
 
 @protocol SetTextProtocol
 - (void)setText:(NSString*)addr aLongitude:(NSString*)longitude aLatitude:(NSString*)latitude aMessage:(NSString*)msg;
-@end 
+@end

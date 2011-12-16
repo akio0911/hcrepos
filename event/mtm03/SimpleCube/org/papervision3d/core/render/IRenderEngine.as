@@ -1,6 +1,6 @@
 package org.papervision3d.core.render
 {
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
@@ -9,7 +9,7 @@ package org.papervision3d.core.render
 	import org.papervision3d.core.render.command.IRenderListItem;
 	import org.papervision3d.core.render.command.RenderableListItem;
 	import org.papervision3d.core.render.data.RenderStatistics;
-	import org.papervision3d.view.Viewport3D;	 
+	import org.papervision3d.view.Viewport3D;
 
 	public interface IRenderEngine
 	{

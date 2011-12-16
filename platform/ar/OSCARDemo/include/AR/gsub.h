@@ -1,6 +1,6 @@
 /*  --------------------------------------------------------------------------
 *   Copyright (C) 2004 Hitlab NZ.
-*   The distribution policy is describe on the Copyright.txt furnish 
+*   The distribution policy is describe on the Copyright.txt furnish
 *    with this library.
 *   -------------------------------------------------------------------------*/
 /**
@@ -16,11 +16,11 @@
 *  History :
 *
 *  \author Hirokazu Kato kato@sys.im.hiroshima-cu.ac.jp
-*  \version 
-*  \date 
+*  \version
+*  \date
 **/
 /*  --------------------------------------------------------------------------
-*   History : 
+*   History :
 *   Rev		Date		Who		Changes
 *
 *----------------------------------------------------------------------------*/
@@ -77,7 +77,7 @@ extern int  argTexmapMode;
 // ============================================================================
 
 /** \fn argInit( ARParam *cparam, double zoom, int fullFlag, int xwin, int ywin, int hmd_flag )
-* \brief Initialise the gsub library 
+* \brief Initialise the gsub library
 *
 *  This function performs required initialisation of the gsub library.
 *  It must be called before any other argl*() functions are called.
@@ -92,10 +92,10 @@ void argInit( ARParam *cparam, double zoom, int fullFlag, int xwin, int ywin, in
 
 /** \fn void argLoadHMDparam( ARParam *lparam, ARParam *rparam )
 * \brief initialize camera for HMD.
-* 
+*
 * Load in the display module the intrinsic parameters of the two view,
 * i.e camera (identify to the eyes).
-* 
+*
 * \param lparam parameter of left camera
 * \param rparam parameter of right camera
 */
@@ -139,7 +139,7 @@ void argMainLoop( void (*mouseFunc)(int button, int state, int x, int y),
 /** \fn void argDrawMode2D( void )
 * \brief switch the rendering context for 2D rendering mode.
 *
-* Update curent camera parameters (internal and external) 
+* Update curent camera parameters (internal and external)
 * for rendering 2D or 3D objects in the view plane (like text or 2D shape).
 * This function define an orthographic projection in the image
 * plane. It not define opengl state for rendering in image space (like
@@ -172,7 +172,7 @@ void argDrawMode3D( void );
 /** \fn void argDraw3dLeft( void )
 * \brief switch the rendering view to left eye (in 3D space)
 *
-* Update curent internal camera parameters for rendering in 3D space 
+* Update curent internal camera parameters for rendering in 3D space
 * for left eye.
 * this function complements argDrawMode3D.
 */
@@ -181,7 +181,7 @@ void argDraw3dLeft( void );
 /** \fn void argDraw3dRight( void )
 * \brief switch the rendering view to right eye (in 3D space)
 *
-* Update curent internal camera parameters for rendering in 3D space 
+* Update curent internal camera parameters for rendering in 3D space
 * for left eye.
 * this function complements argDrawMode3D.
 */
@@ -228,7 +228,7 @@ void argConvGLcpara( ARParam *param, double gnear, double gfar, double m[16] );
 * \brief display the video image.
 *
 * Display in the back-buffer the video image in argument.
-* For doing AR video background, this function must be called before 
+* For doing AR video background, this function must be called before
 * any rendering of 3D object.
 * \remark According to your argDrawMode, argTexmapMode and the internal
 * image format the openGL function called is different and less
@@ -244,7 +244,7 @@ void argConvGLcpara( ARParam *param, double gnear, double gfar, double m[16] );
 void argDispImage( ARUint8 *image, int xwin, int ywin );
 
 /** \fn void argDispHalfImage( ARUint8 *image, int xwin, int ywin )
-* \brief display half of the video image. 
+* \brief display half of the video image.
 *
 * Idem of argDispImage except than a quarter of the image is display
 * (first left top quadrant, so size/2 in x and y).
@@ -260,7 +260,7 @@ void argDispHalfImage( ARUint8 *image, int xwin, int ywin );
 * Draw a square. The position of the square is affected by openGL
 * model view matrix and call to argDrawMode2D argDrawMode3D.
 * Generally call in a 2D mode (so after a argDrawMode2D).
-* 
+*
 * \param vertex corner of square.
 * \param xwin XXXBK
 * \param ywin XXXBK
@@ -293,7 +293,7 @@ void argLineSeg( double x1, double y1, double x2, double y2, int xwin, int ywin 
 */
 void argLineSegHMD( double x1, double y1, double x2, double y2 );
 
-/** \fn argInqSetting( int *hmdMode, 
+/** \fn argInqSetting( int *hmdMode,
                     int *gMiniXnum2, int *gMiniYnum2,
                     void (**mouseFunc)(int button, int state, int x, int y),
                     void (**keyFunc)(unsigned char key, int x, int y),
@@ -308,7 +308,7 @@ void argLineSegHMD( double x1, double y1, double x2, double y2 );
 * \param keyFunc the current key function callback
 * \param mainFunc the current main function callback
 */
-void argInqSetting( int *hmdMode, 
+void argInqSetting( int *hmdMode,
                     int *gMiniXnum2, int *gMiniYnum2,
                     void (**mouseFunc)(int button, int state, int x, int y),
                     void (**keyFunc)(unsigned char key, int x, int y),

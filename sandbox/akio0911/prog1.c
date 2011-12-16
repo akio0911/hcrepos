@@ -28,8 +28,8 @@ void resize(int w, int h)
 {
   glViewport(0, 0, w, h);
   glLoadIdentity();
-  glOrtho(-0.5, (GLdouble)w - 0.5, 
-	  (GLdouble)h - 0.5, -0.5, 
+  glOrtho(-0.5, (GLdouble)w - 0.5,
+	  (GLdouble)h - 0.5, -0.5,
 	  -1.0, 1.0);
 }
 

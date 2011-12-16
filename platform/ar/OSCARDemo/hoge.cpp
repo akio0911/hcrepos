@@ -49,9 +49,9 @@ char           *patt_name_sample2      = "Data/patt.sample2";
 #define PATT_ID_COUNT 1//4
 /*
 char           *patt_name[PATT_ID_COUNT]      = {
-	"Data/patt.hiro", 
-	"Data/patt.kanji", 
-	"Data/patt.sample1", 
+	"Data/patt.hiro",
+	"Data/patt.kanji",
+	"Data/patt.sample1",
 	"Data/patt.sample2"
 };
  */
@@ -86,12 +86,12 @@ static void mySetLight(void);
 
 void mySetLight(void)
 {
-	
+
 	GLfloat light_diffuse[] = {0.9, 0.9, 0.9, 1.0};
 	GLfloat light_specular[] = {1.0, 1.0, 1.0, 1.0};
 	GLfloat light_ambient[] = {0.3, 0.3, 0.3, 0.1};
 	GLfloat light_position[] = {100.0, -200.0, 200.0, 0.0};
-	
+
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
@@ -115,7 +115,7 @@ void mySetMaterial(void)
 	GLfloat mat_specular[] = {0.0, 0.0, 1.0, 1.0};
 	GLfloat mat_ambient[] = {0.0, 0.0, 1.0, 1.0};
 	GLfloat shininess[] = {50.0};
-	
+
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
 	glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
@@ -155,7 +155,7 @@ int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	init();
-	
+
     arVideoCapStart();
 	glutKeyboardUpFunc(KeyUp);
 	glutSpecialFunc(SpecialKeyDown);
@@ -187,7 +187,7 @@ static void mainLoop(void)
     int             j, k;
 	int l;
 	static int isFirst = 1;
-	
+
     /* grab a vide frame */
     if( (dataPtr = (ARUint8 *)arVideoGetImage()) == NULL ) {
         arUtilSleep(2);
@@ -195,15 +195,15 @@ static void mainLoop(void)
     }
     if( count == 0 ) arUtilTimerReset();
     count++;
-	
+
     argDrawMode2D();
-	
+
     /* detect the markers in the video frame */
     if( arDetectMarker(dataPtr, thresh, &marker_info, &marker_num) < 0 ) {
         cleanup();
         exit(0);
     }
-	
+
 	argDispImage(dataPtr, 0, 0);
 	argDispImage(dataPtr, 1, 1);
 
@@ -213,9 +213,9 @@ static void mainLoop(void)
 		argDispImage(dataPtr, 2, 1);
 	}
 	printf("arDebug = %d, arImage = %p\n", arDebug, arImage);
-	
+
     arVideoCapNext();
-	
+
     /* check for object visibility */
 	for(l=0; l<PATT_ID_COUNT; l++){
 		k = -1;
@@ -227,7 +227,7 @@ static void mainLoop(void)
 		}
 		if( k != -1 ) {
 			/* get the transformation between the marker and the real camera */
-			
+
 			if(isFirst){
 				arGetTransMat(&marker_info[k], patt_center, patt_width, patt_trans);
 			}else{
@@ -240,7 +240,7 @@ static void mainLoop(void)
 	}
 
     argSwapBuffers();
-	
+
 	angle += 0.5;
 }
 
@@ -248,13 +248,13 @@ static void init( void )
 {
     ARParam  wparam;
 	int i;
-	
+
     /* open the video path */
     if( arVideoOpen( vconf ) < 0 ) exit(0);
     /* find the size of the window */
     if( arVideoInqSize(&xsize, &ysize) < 0 ) exit(0);
     printf("Image size (x,y) = (%d,%d)¥n", xsize, ysize);
-	
+
     /* set the initial camera parameters */
     if( arParamLoad(cparam_name, 1, &wparam) < 0 ) {
         printf("Camera parameter load error !!¥n");
@@ -275,7 +275,7 @@ static void init( void )
     /* open the graphics window */
     argInit( &cparam, 1.0, 0, 0, 0, 0 );
 //    argInit( &cparam, 1.0, 0, 2, 1, 0 );
-	
+
 //	mqoInit();
 
 	if((model = mqoCreateModel(mqo_name, 1.0)) == NULL){
@@ -314,40 +314,40 @@ static void draw( int i )
     GLfloat   light_position[]  = {100.0,-200.0,200.0,0.0};
     GLfloat   ambi[]            = {0.1, 0.1, 0.1, 0.1};
     GLfloat   lightZeroColor[]  = {0.9, 0.9, 0.9, 0.1};
-    
+
     argDrawMode3D();
     argDraw3dCamera( 0, 0 );
     glClearDepth( 1.0 );
     glClear(GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
-    
+
     /* load the camera transformation matrix */
     argConvGlpara(patt_trans, gl_para);
     glMatrixMode(GL_MODELVIEW);
     glLoadMatrixd( gl_para );
-	
+
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
     glLightfv(GL_LIGHT0, GL_AMBIENT, ambi);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, lightZeroColor);
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_flash);
-    glMaterialfv(GL_FRONT, GL_SHININESS, mat_flash_shiny);	
+    glMaterialfv(GL_FRONT, GL_SHININESS, mat_flash_shiny);
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
     glMatrixMode(GL_MODELVIEW);
     glTranslatef( 0.0, 0.0, 25.0 );
     glutSolidCube(50.0);
     glDisable( GL_LIGHTING );
-	
+
     glDisable( GL_DEPTH_TEST );
 #endif
 	static int k = 0;
     double    gl_para[16];
-	
+
     argDrawMode3D();
     argDraw3dCamera( 0, 0 );
-	
+
     argConvGlpara(patt_trans, gl_para);
     glMatrixMode(GL_MODELVIEW);
     glLoadMatrixd( gl_para );
@@ -405,7 +405,7 @@ static void draw( int i )
 	/*
 	glLineWidth(2.0);
 	glColor3f(1.0, 0.0, 0.0);
-	
+
 	glPushMatrix();
 	glTranslatef(-40.0, 40.0, 10.0);
 	glutWireCube(20.0);
@@ -429,13 +429,13 @@ static void draw( int i )
 	/*
 	glClear(GL_DEPTH_BUFFER_BIT);
 //	glEnable(GL_DEPTH_TEST);
-	
+
 	glPushMatrix();
 	glTranslatef(40.0, 0.0, 20.0);
 	glColor3f(0.0, 1.0, 0.0);
 	glutSolidSphere(20.0, 20, 20);
 	glPopMatrix();
-	
+
 	glPushMatrix();
 	glTranslatef(0.0, 0.0, 10.0);
 	glColor3f(1.0, 0.0, 0.0);
@@ -454,7 +454,7 @@ static void draw( int i )
 	/*
 	glClear(GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
-	
+
 	mySetLight();
 	glEnable(GL_LIGHTING);
 
@@ -464,7 +464,7 @@ static void draw( int i )
 	mySetMaterial();
 	glutSolidTeapot(40.0);
 	glPopMatrix();
-	
+
 	glDisable(GL_LIGHTING);
 	glDisable(GL_DEPTH_TEST);
 	 */
@@ -475,11 +475,11 @@ static void draw( int i )
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 	 */
-	
+
 //	const GLfloat SCALE = 6.0;
 	const GLfloat SCALE = 64.0;
 	const GLfloat TRANSLATE_X = 120.0f;
-/*	
+/*
 	glPushMatrix();
 	glRotatef(90.0, 1.0, 0.0, 0.0);
 	glScalef(SCALE, SCALE, SCALE);
@@ -514,7 +514,7 @@ static void draw( int i )
 	mySetLight();
 	mqoCallSequence(mqo_seq, k);
 	glPopMatrix();
-*/	
+*/
 	for(GLfloat translate_y = -40.0f; translate_y <= 40.0f; translate_y += 10.0f) {
 		for(GLfloat translate_x = -40.0f; translate_x <= 40.0f; translate_x += 10.0f) {
 			glPushMatrix();
@@ -526,10 +526,10 @@ static void draw( int i )
 			glPopMatrix();
 		}
 	}
-	
+
 	k++;
 	if(k >= n_frame) k = 0;
-	
+
 	glDisable(GL_LIGHTING);
 	glDisable(GL_DEPTH_TEST);
 }

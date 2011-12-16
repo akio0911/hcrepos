@@ -29,7 +29,7 @@
   * ========================================================================*/
 /*
  *	Copyright (c) 2004-2007 Philip Lamb (PRL) phil@eden.net.nz. All rights reserved.
- *	
+ *
  *	Rev		Date		Who		Changes
  *	2.6.8	2004-07-20	PRL		Rewrite for ARToolKit 2.68.2
  *
@@ -49,7 +49,7 @@
 #ifdef  __cplusplus
 extern "C" {
 #endif
-	
+
 typedef struct _AR2VideoBufferT AR2VideoBufferT;
 typedef struct _AR2VideoParamT AR2VideoParamT;
 

@@ -1,5 +1,5 @@
-@implementation Person : CPObject 
-{ 
-    CPString name; 
-} 
-@end 
+@implementation Person : CPObject
+{
+    CPString name;
+}
+@end

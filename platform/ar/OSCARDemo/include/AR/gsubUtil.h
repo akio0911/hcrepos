@@ -1,6 +1,6 @@
 /*  --------------------------------------------------------------------------
 *   Copyright (C) 2004 Hitlab NZ.
-*   The distribution policy is describe on the Copyright.txt furnish 
+*   The distribution policy is describe on the Copyright.txt furnish
 *    with this library.
 *   -------------------------------------------------------------------------*/
 /**
@@ -8,16 +8,16 @@
 *  \brief ARToolkit OpenGL utilities subroutines.
 *
 *  Complement routines of gsub module.
-*   \remark 
+*   \remark
 *
 *   History :
 *
 *  \author Hirokazu Kato kato@sys.im.hiroshima-cu.ac.jp
-*  \version 
-*  \date 
+*  \version
+*  \date
 **/
 /*  --------------------------------------------------------------------------
-*   History : 
+*   History :
 *   Rev		Date		Who		Changes
 *
 *----------------------------------------------------------------------------*/
@@ -51,10 +51,10 @@ extern "C" {
 *
 * This function offers a full calibration run-time routines for an optical HMD (mono
 * or stereo).
-* It is useful for estimate transformation between user eye position and 
+* It is useful for estimate transformation between user eye position and
 * camera position. You will find more informations on the calibration routine
 * on opticalcalibration.html .This function modify gsub state of left and right camera
-* intrinsic parameters. 
+* intrinsic parameters.
 * \param targetId the target used for the calibration step.
 * \param thresh2 lighting threshold value to use
 * \param postFunc a callback function used to analysis computed internal camera

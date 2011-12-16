@@ -1,7 +1,7 @@
 package org.papervision3d.core.utils
 {
 	import flash.utils.Dictionary;
-	
+
 	import org.papervision3d.core.geom.TriangleMesh3D;
 	import org.papervision3d.core.geom.renderables.Triangle3D;
 	import org.papervision3d.core.geom.renderables.Vertex3D;
@@ -9,14 +9,14 @@ package org.papervision3d.core.utils
 	import org.papervision3d.core.math.util.ClassificationUtil;
 	import org.papervision3d.core.math.util.TriangleUtil;
 	import org.papervision3d.core.proto.GeometryObject3D;
-	
+
 	public class MeshUtil
 	{
 		public function MeshUtil()
 		{
-			
+
 		}
-		
+
 		public static function cutTriangleMesh(mesh:TriangleMesh3D, cuttingPlane:Plane3D):Array
 		{
 			var geom:GeometryObject3D = mesh.geometry;
@@ -46,7 +46,7 @@ package org.papervision3d.core.utils
 						nTris.push(triangle);
 					}
 				}
-				
+
 				for each(triangle in nTris){
 					triClass = ClassificationUtil.classifyTriangle(triangle, cuttingPlane);
 					if(triClass == ClassificationUtil.FRONT){
@@ -55,7 +55,7 @@ package org.papervision3d.core.utils
 						triangleBucketB.push(triangle);
 					}
 				}
-				
+
 				if(triangleBucketA.length > 0){
 					for each(triangle in triangleBucketA){
 						for(i=0; i<triangle.vertices.length; i++){
@@ -64,7 +64,7 @@ package org.papervision3d.core.utils
 								nVert = vert.clone();
 								vertCacheA[vert] = nVert;
 							}
-							
+
 							vertBucketA.push(nVert);
 							triangle.vertices[i] = nVert;
 						}
@@ -75,7 +75,7 @@ package org.papervision3d.core.utils
 					meshA.geometry.ready = true;
 					array.push(meshA);
 				}
-				 
+
 				if(triangleBucketB.length > 0){
 					for each(triangle in triangleBucketB){
 						for(i=0; i<triangle.vertices.length; i++){
@@ -95,7 +95,7 @@ package org.papervision3d.core.utils
 					meshB.geometry.ready = true;
 					array.push(meshB);
 				}
-				
+
 				return array;
 			}else{
 				throw new Error("source geometry empty");

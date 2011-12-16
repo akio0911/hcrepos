@@ -11,7 +11,7 @@ package org.papervision3d.core.log
 		public static const WARNING:int = 3;
 		public static const ERROR:int = 4;
 		public static const FATAL:int = 5;
-		
+
 		public function LogLevel()
 		{
 		}

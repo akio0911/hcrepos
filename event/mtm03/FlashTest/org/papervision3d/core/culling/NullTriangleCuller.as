@@ -13,6 +13,6 @@ package org.papervision3d.core.culling
 		{
 			return true;
 		}
-		
+
 	}
 }

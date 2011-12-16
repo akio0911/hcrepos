@@ -1,5 +1,5 @@
 package net.saqoosha.utils {
-	
+
 	import flash.display.Sprite;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
@@ -9,7 +9,7 @@ package net.saqoosha.utils {
 	import flash.events.TimerEvent;
 
 	public class FPSMeter extends Sprite {
-		
+
 		private var _fpsText:TextField;
 		private var _lastFrameTime:int;
 		private var _lastUpdateTime:int;
@@ -17,7 +17,7 @@ package net.saqoosha.utils {
 		private var _fps:Number;
 		private var _performance:Number;
 		private var _checkTimer:Timer;
-		
+
 		public function FPSMeter() {
 			this._fpsText = new TextField();
 			this._fpsText.defaultTextFormat = new TextFormat('Lucida Grande', 10, 0xffffff, true);
@@ -26,10 +26,10 @@ package net.saqoosha.utils {
 			this._fpsText.height = 16;
 			this._fpsText.width = 200;
 			this.addChild(this._fpsText);
-			
+
 			this.addEventListener(Event.ADDED_TO_STAGE, this.setup);
 		}
-		
+
 		private function setup(e:Event):void {
 			this.removeEventListener(Event.ADDED_TO_STAGE, this.setup);
 			this.stage.addEventListener(Event.ENTER_FRAME, this.countFrame);
@@ -39,7 +39,7 @@ package net.saqoosha.utils {
 			this._lastFrameTime = this._lastUpdateTime = getTimer();
 			this._frameCount = 0;
 		}
-		
+
 		public function countFrame(e:Event):void {
 			var now:int = getTimer();
 			var performance:Number = now - this._lastFrameTime;
@@ -48,7 +48,7 @@ package net.saqoosha.utils {
 			this._lastFrameTime = now;
 			this._frameCount++;
 		}
-		
+
 		public function update(e:Event = null):void {
 			var now:int = getTimer();
 			var performance:Number = now - this._lastUpdateTime;
@@ -56,7 +56,7 @@ package net.saqoosha.utils {
 			this._lastUpdateTime = now;
 			this._frameCount = 0;
 		}
-		
+
 	}
-	
+
 }

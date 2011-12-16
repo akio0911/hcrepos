@@ -37,18 +37,18 @@ ActionController::Routing::Routes.draw do |map|
 
   #本公開で使用する観戦ページ
   #http://star.yuiseki.net/map.html
-  map.connect '/map.html', :controller => "geo_clip", :action => "map" 
+  map.connect '/map.html', :controller => "geo_clip", :action => "map"
   #本公開で使用する解説ページ
   #http://star.yuiseki.net/about.html
-  map.connect '/about.html', :controller => "geo_clip", :action => "about" 
-  
-  #本公開になったらコメントアウト
-  #map.connect '/index.html', :controller => "geo_clip", :action => "index" 
-  map.connect '/top', :controller => "geo_clip", :action => "index" 
-  #map.connect '', :controller => "geo_clip", :action => "index" 
+  map.connect '/about.html', :controller => "geo_clip", :action => "about"
 
-  map.connect '/index.html', :controller => "geo_clip", :action => "index2" 
-  map.connect '/', :controller => "geo_clip", :action => "index2" 
-  map.connect '', :controller => "geo_clip", :action => "index2" 
+  #本公開になったらコメントアウト
+  #map.connect '/index.html', :controller => "geo_clip", :action => "index"
+  map.connect '/top', :controller => "geo_clip", :action => "index"
+  #map.connect '', :controller => "geo_clip", :action => "index"
+
+  map.connect '/index.html', :controller => "geo_clip", :action => "index2"
+  map.connect '/', :controller => "geo_clip", :action => "index2"
+  map.connect '', :controller => "geo_clip", :action => "index2"
 
 end

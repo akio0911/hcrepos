@@ -99,7 +99,7 @@ void motion(int x, int y)
 
   savepoint[0] = x;
   savepoint[1] = y;
-  
+
   rubberband = 1;
 }
 

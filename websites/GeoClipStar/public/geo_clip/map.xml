@@ -138,10 +138,10 @@ function load(){
       icon.image = "./images/gaziro2000.jpg";
       icon.iconSize = new GSize(48, 48);
       icon.iconAhchor = new GPoint(48, 48);
-      icon.imageMap = [0,0, 48,0, 48,48, 0,48]; 
+      icon.imageMap = [0,0, 48,0, 48,48, 0,48];
       var mk = new GMarker(new GLatLng(lat, lng), icon);
       map.addOverlay(mk);
-      
+
 
       // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
       var latlng = new GLatLng(lat, lng);
@@ -238,7 +238,7 @@ function addHistory(ov, latlng, subject, end_flg){
   addMarker();
   function addMarker(){
     var icon = new GIcon(G_DEFAULT_ICON);
-    if(end_flg == "true" ){ 
+    if(end_flg == "true" ){
       icon.image = "./images/stargray48.png";
     }else{
       icon.image = "./images/star48.png";
@@ -247,7 +247,7 @@ function addHistory(ov, latlng, subject, end_flg){
     icon.shadow = "./images/starshadow48.png";
     icon.shadowSize = new GSize(96, 48);
     icon.iconAhchor = new GPoint(24, 24);
-    icon.imageMap = [12,12, 36,12, 36,36, 12,36]; 
+    icon.imageMap = [12,12, 36,12, 36,36, 12,36];
     var mk = new GMarker(latlng, icon);
     map.addOverlay(mk);
     GEvent.addListener(mk, "click", function(){
@@ -321,7 +321,7 @@ onunload = GUnload;
   <br style="clear:both;" />
   <div style="float:left;width:190px;height:740px;background:url(./images/left_bg.gif);">
     <div style="padding:8px 0 0 70px;" id="star_count"></div>
-    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;"> 
+    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;">
       <ol id="history" style="float:right;"></ol>
     </div>
   </div>
@@ -348,79 +348,79 @@ size="-1">
 
 	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>
   <ul>
-    
+
       <li style="float:left;">
       2008082920030000.jpg<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2807672171/" title="2008082920030000.jpg"><img src="http://farm4.static.flickr.com/3093/2807672171_249d4666b2_m.jpg" width="135" height="240" alt="2008082920030000.jpg" /></a></p>
 
 <p>200808292003000</p>
       </li>
-    
+
       <li style="float:left;">
       many curious parts<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2807669349/" title="many curious parts"><img src="http://farm4.static.flickr.com/3004/2807669349_a24f8acdeb_m.jpg" width="135" height="240" alt="many curious parts" /></a></p>
 
 <p>200808292000000</p>
       </li>
-    
+
       <li style="float:left;">
       買うものリスト。<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2808292010/" title="買うものリスト。"><img src="http://farm4.static.flickr.com/3123/2808292010_bfc9fb16f2_m.jpg" width="135" height="240" alt="買うものリスト。" /></a></p>
 
 <p>200808291703000</p>
       </li>
-    
+
       <li style="float:left;">
       こうなる予定<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2807400565/" title="こうなる予定"><img src="http://farm4.static.flickr.com/3235/2807400565_6b1fdb75a3_m.jpg" width="135" height="240" alt="こうなる予定" /></a></p>
 
 <p>200808291615000</p>
       </li>
-    
+
       <li style="float:left;">
       こうなる予定<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2808246508/" title="こうなる予定"><img src="http://farm4.static.flickr.com/3210/2808246508_bcc67ce350_m.jpg" width="135" height="240" alt="こうなる予定" /></a></p>
 
 <p>200808291615000</p>
       </li>
-    
+
       <li style="float:left;">
       鉛蓄電池充電風景<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2807259209/" title="鉛蓄電池充電風景"><img src="http://farm4.static.flickr.com/3027/2807259209_0b7d70071c_m.jpg" width="135" height="240" alt="鉛蓄電池充電風景" /></a></p>
 
 <p>充電されているかは、だいぶ不安・・・</p>
       </li>
-    
+
       <li style="float:left;">
       デモ<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2806636113/" title="デモ"><img src="http://farm4.static.flickr.com/3172/2806636113_95493ce8e3_m.jpg" width="135" height="240" alt="デモ" /></a></p>
 
 <p>200808290920000</p>
       </li>
-    
+
       <li style="float:left;">
       MEMO<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2806566145/" title="MEMO"><img src="http://farm4.static.flickr.com/3210/2806566145_27be39d1d0_m.jpg" width="135" height="240" alt="MEMO" /></a></p>
 
 <p>200808290842000</p>
       </li>
-    
+
       <li style="float:left;">
       IMG_0059<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2805754637/" title="IMG_0059"><img src="http://farm4.static.flickr.com/3045/2805754637_96c288bf32_m.jpg" width="240" height="180" alt="IMG_0059" /></a></p>
 
 
       </li>
-    
+
   </ul>
 
 	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>

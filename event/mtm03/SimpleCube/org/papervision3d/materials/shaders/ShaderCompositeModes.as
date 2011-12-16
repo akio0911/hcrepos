@@ -1,6 +1,6 @@
 package org.papervision3d.materials.shaders
 {
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */

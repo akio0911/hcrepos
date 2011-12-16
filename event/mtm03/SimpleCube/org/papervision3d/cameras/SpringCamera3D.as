@@ -1,9 +1,9 @@
 package org.papervision3d.cameras
 {
 	import org.papervision3d.core.math.*;
-	import org.papervision3d.objects.DisplayObject3D;  
+	import org.papervision3d.objects.DisplayObject3D;
 
-	/** b at turbulent dot ca - http://agit8.turbulent.ca 
+	/** b at turbulent dot ca - http://agit8.turbulent.ca
 	 * v1 - 2009-01-21
 	 **/
 	public class SpringCamera3D extends Camera3D
@@ -65,13 +65,13 @@ package org.papervision3d.cameras
 
 		/**
 		 * Constructor.
-		 * 
+		 *
 		 * @param   fov     This value is the vertical Field Of View (FOV) in degrees.
 		 * @param   near    Distance to the near clipping plane.
 		 * @param   far     Distance to the far clipping plane.
 		 * @param   useCulling      Boolean indicating whether to use frustum culling. When true all objects outside the view will be culled.
 		 * @param   useProjection   Boolean indicating whether to use a projection matrix for perspective.
-		 */  
+		 */
 		public function SpringCamera3D(fov:Number = 60, near:Number = 10, far:Number = 5000, useCulling:Boolean = false, useProjection:Boolean = false)
 		{
 			super(fov, near, far, useCulling, useProjection);
@@ -98,73 +98,73 @@ package org.papervision3d.cameras
 				_targetTransform.n31 = _camTarget.transform.n31;
 				_targetTransform.n32 = _camTarget.transform.n32;
 				_targetTransform.n33 = _camTarget.transform.n33;
-            
+
 				_targetTransform.n21 = _camTarget.transform.n21;
 				_targetTransform.n22 = _camTarget.transform.n22;
 				_targetTransform.n23 = _camTarget.transform.n23;
-            
+
 				_targetTransform.n11 = _camTarget.transform.n11;
 				_targetTransform.n12 = _camTarget.transform.n12;
 				_targetTransform.n13 = _camTarget.transform.n13;
-            
+
 				_xPositionOffset.x = positionOffset.x;
 				_xPositionOffset.y = positionOffset.y;
 				_xPositionOffset.z = positionOffset.z;
-            
+
 				Matrix3D.multiplyVector(_targetTransform, _xPositionOffset);
-            
+
 				_xLookOffset.x = lookOffset.x;
 				_xLookOffset.y = lookOffset.y;
 				_xLookOffset.z = lookOffset.z;
-            
+
 				Matrix3D.multiplyVector(_targetTransform, _xLookOffset);
-            
+
 				_desiredPosition.x = _camTarget.x + _xPositionOffset.x;
 				_desiredPosition.y = _camTarget.y + _xPositionOffset.y;
 				_desiredPosition.z = _camTarget.z + _xPositionOffset.z;
-            
+
 				_lookAtPosition.x = _camTarget.x + _xLookOffset.x;
 				_lookAtPosition.y = _camTarget.y + _xLookOffset.y;
 				_lookAtPosition.z = _camTarget.z + _xLookOffset.z;
-            
-            
+
+
 				_stretch.x = (x - _desiredPosition.x) * -stiffness;
 				_stretch.y = (y - _desiredPosition.y) * -stiffness;
 				_stretch.z = (z - _desiredPosition.z) * -stiffness;
-            
+
 				_dv.x = _velocity.x * damping;
 				_dv.y = _velocity.y * damping;
 				_dv.z = _velocity.z * damping;
-            
+
 				_force.x = _stretch.x - _dv.x;
 				_force.y = _stretch.y - _dv.y;
 				_force.z = _stretch.z - _dv.z;
-            
+
 				_acceleration.x = _force.x * (1 / mass);
 				_acceleration.y = _force.y * (1 / mass);
 				_acceleration.z = _force.z * (1 / mass);
-            
+
 				_velocity.plusEq(_acceleration);
-            
-            
+
+
 				_xPosition.x = x + _velocity.x;
 				_xPosition.y = y + _velocity.y;
 				_xPosition.z = z + _velocity.z;
-            
+
 				x = _xPosition.x;
 				y = _xPosition.y;
 				z = _xPosition.z;
-            
+
 				_xLookAtObject.x = _lookAtPosition.x;
 				_xLookAtObject.y = _lookAtPosition.y;
 				_xLookAtObject.z = _lookAtPosition.z;
-            
+
 				lookAt(_xLookAtObject);
-            
-            
+
+
 				if(Math.abs(_zrot) > 0) this.rotationZ = _zrot;
-			}  
-        
+			}
+
 			super.transformView(transform);
 		}
 	}

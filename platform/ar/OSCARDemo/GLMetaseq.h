@@ -2,75 +2,75 @@
 #define __GL_METASEQ_H__
 
 /*=========================================================================================
- 
+
  GLMetaseq.h (Ver2.01d)
- 
+
  ÉÅÉ^ÉZÉRÉCÉAÇ≈çÏê¨ÇµÇΩÉÇÉfÉã(*.mqo)ÇOpenGLè„Ç…ì«Ç›çûÇﬁä÷êîÇÇ‹Ç∆ÇﬂÇΩC/C++ópÉwÉbÉ_Ç≈Ç∑ÅD
  Ç±ÇÃÉwÉbÉ_ÇégÇ§è„Ç≈à»â∫ÇÃì_Ç…íçà”ÇµÇƒÇ≠ÇæÇ≥Ç¢ÅD
- 
+
  Å@	Å@ÅEàµÇ¶ÇÈÉeÉNÉXÉ`ÉÉÇÕ24bitÉrÉbÉgÉ}ÉbÉvâÊëú
  Å@ÅEÉeÉNÉXÉ`ÉÉâÊëúÇÃÉTÉCÉYÇÕÅuàÍï”Ç™2ÇÃnèÊÉTÉCÉY(64,128,256Åc)ÇÃê≥ï˚å`ÅvÇ…å¿ÇÈ
- 
+
  Å@Åiç≈í·å¿ïKóvÇ»ã@î\ÇµÇ©é¿ëïÇµÇƒÇ¢Ç»Ç¢ÇÃÇ≈ÅCÉÅÉ^ÉZÉRÉCÉAÇ∆ìØÇ∂ï\é¶î\óÕÇÕä˙ë“ÇµÇ»Ç¢Ç≈Ç≠ÇæÇ≥Ç¢Åj
- 
- 
+
+
  Å°ëOÉoÅ[ÉWÉáÉìÇ©ÇÁÇÃéÂÇ»ïœçXÅEâ¸ó«ì_
- 
+
  ÅEÉ}ÉeÉäÉAÉãê›íËÇÃèîê›íËÇ…ëŒâûÇµÇ‹ÇµÇΩÅiÇ¬Ç‚Ç¬Ç‚ÇµÇΩÉIÉuÉWÉFÉNÉgÇ»Ç«Ç™ï\é¶Ç≈Ç´Ç‹Ç∑Åj
  ÅEÉpÅ[ÉcÇÃâ¬éãÅEïsâ¬éãÇ…ëŒâûÇµÇ‹ÇµÇΩ
  ÅEòAî‘MQOÇÃì«Ç›çûÇ›Ç…ëŒâûÇµÇ‹ÇµÇΩ
  ÅEå^íËã`Ç™ëÂïùïœçXÇ…Ç»ÇËÇ‹ÇµÇΩ
  ÅEñ@ê¸ÉxÉNÉgÉãÇÃåvéZÇ™ä‘à·Ç¡ÇƒÇ¢ÇΩÇÃÇèCê≥ÇµÇ‹ÇµÇΩ
  ÅEWindowsàÀë∂ÇÃç\ë¢ëÃÅiBITMAPFILEHEADERÇ»Ç«ÅjÇÉRÅ[ÉhíÜÇ≈égÇ§ÇÃÇÇ‚ÇﬂÇ‹ÇµÇΩ
- 
+
  (Ver2.01dÇ≈ÇÃèCê≥)
  ÅEÉ}ÉeÉäÉAÉãèÓïÒÇÃÇ»Ç¢ÉIÉuÉWÉFÉNÉgÇ≈ì«Ç›çûÇ›ÉGÉâÅ[Ç…Ç»ÇÈÉoÉOÇèCê≥
  ÅEÉeÉNÉXÉ`ÉÉÉtÉ@ÉCÉãÇÃê‚ëŒÉpÉXéwíËÇ…ëŒâû
- 
- 
+
+
  Å°égÇ¢ï˚
- 
+
  ÅEÉÇÉfÉãÇÃçÏê¨ÅiARToolKitÇÃèÍçáÇÕÅCargInit()ÇÃå„Ç≈égÇ¡ÇƒÇ≠ÇæÇ≥Ç¢Åj
- 
+
  MQO_MODEL model;
  model = mqoCreateModel("mario.mqo",1.0);
- 
+
  ÅEÉÇÉfÉãÇÃåƒÇ—èoÇµ
- 
+
  mqoCallModel(model);
- 
- 
+
+
  Å°égÇ¢ï˚ÅiòAî‘ÉtÉ@ÉCÉãÅj
- 
+
  ÅEòAî‘ÉVÅ[ÉPÉìÉXÇÃçÏê¨ÅiARToolKitÇÃèÍçáÇÕÅCargInit()ÇÃå„Ç≈égÇ¡ÇƒÇ≠ÇæÇ≥Ç¢Åj
- 
+
  Å@ó·ÅFmario0.mqo Å` mario9.mqo Çì«Ç›çûÇﬁ
- 
+
  MQO_SEQUENCE seq;
  seq = mqoCreateSequence("mario",10,1.0);
- 
+
  ÅEòAî‘ÉVÅ[ÉPÉìÉXÇÃéwíËÉtÉåÅ[ÉÄÇÃåƒÇ—èoÇµÅiiÇÕÉtÉåÅ[ÉÄî‘çÜÅj
- 
+
  mqoCallSequence(seq,i);
- 
- 
+
+
  Å°ARToolKitÇ≈àµÇ§èÍçáÇÃíçà”ì_
- 
+
  Å@OpenGLÇÃèâä˙èÛë‘Ç≈ÇÕYé≤ÇÕè„ï˚å¸ÅCZé≤ÇÕéËëOÇ…å¸Ç¢ÇƒÇ¢Ç‹Ç∑ÅD
  Å@ÉÅÉ^ÉZÉRÉCÉAÇÃçÏê¨âÊñ Ç≈Ç‡ìØólÇ≈Ç∑ÅDÇ±ÇÍÇ…ëŒÇµÇƒÅC
  Å@ARToolKitÇÃÉ}Å[ÉJç¿ïWånÇ≈ÇÕZé≤Ç™è„Çå¸Ç¢ÇƒÇ¢Ç‹Ç∑ÅD
- 
+
  Å@ÉÅÉ^ÉZÉRÉAÇ≈å©ÇƒÇ¢ÇÈéûÇ∆ìØÇ∂ÇÊÇ§Ç…É}Å[ÉJè„Ç…ï\é¶Ç≥ÇπÇÈÇΩÇﬂÇ…ÇÕ
  Å@à»â∫ÇÃÇ¢Ç∏ÇÍÇ©ÇÃï˚ñ@Ç≈ëŒèàÇµÇƒÇ≠ÇæÇ≥Ç¢ÅD
  Å@Å@ÅEÉÇÉfÉãÇåƒÇ—èoÇ∑ëOÇ…Xé≤é¸ÇËÇ…90ìxâÒì]Ç≥ÇπÇƒÇ®Ç≠ÅC
  Å@Å@ÅEmqoMakeObjects()ÇÃíÜÇ≈ÅCÇ†ÇÁÇ©Ç∂ÇﬂXé≤é¸ÇËÇ…90ìxâÒì]ÇµÇƒÇ®Ç≠ÅC
  å„é“Ç…Ç¬Ç¢ÇƒÇÕÅCÉRÉÅÉìÉgÉAÉEÉgÇµÇƒÇ‹Ç∑ÇÃÇ≈ìKãXÇ¢Ç∂Ç¡ÇƒÇ≠ÇæÇ≥Ç¢ÅD
- 
- 
+
+
  çƒîzïzÅEâ¸ïœÇÕé©óRÇ≈Ç∑ÅD
  Copyright (c) çHäwÉiÉr, 2008-. (Release 08/02/21)
  website: http://www1.bbiq.jp/kougaku/
- 
+
  =========================================================================================*/
 
 
@@ -254,7 +254,7 @@ void mqoDeleteSequence(MQO_SEQUENCE seq);
  Åyà¯êîÅz
  *path_file	ÉtÉ@ÉCÉãñºÇä‹ÇﬁÉpÉXï∂éöóÒÅiì¸óÕÅj
  *path_dir	ÉtÉ@ÉCÉãñºÇèúÇ¢ÇΩÉpÉXï∂éöóÒÅièoóÕÅj
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzó·ÅF
  "C:/data/file.bmp" Å® "C:/data/"
@@ -265,7 +265,7 @@ void mqoGetDirectory(const char *path_file, char *path_dir)
 {
 	char *pStr;
 	int len;
-	
+
 	pStr = MAX( strrchr(path_file,'\\'), strrchr(path_file,'/') );
 	len = MAX((int)(pStr-path_file)+1,0);
 	strncpy(path_dir,path_file,len);
@@ -279,7 +279,7 @@ void mqoGetDirectory(const char *path_file, char *path_dir)
  Åyà¯êîÅz
  *filename	ÉtÉ@ÉCÉãñº
  *tex_size	ÉeÉNÉXÉ`ÉÉÇÃÉTÉCÉYÅiàÍï”ÇÃí∑Ç≥ÅjÇï‘Ç∑
- 
+
  ÅyñﬂílÅzÉeÉNÉXÉ`ÉÉâÊëúÇ÷ÇÃÉ|ÉCÉìÉ^Åié∏îséûÇÕNULLÅj
  ÅyédólÅz24bitÉrÉbÉgÉ}ÉbÉvå¿íË
  ÉTÉCÉYÇÕÅuàÍï”Ç™2ÇÃnèÊÇÃê≥ï˚å`ÅvÇ…å¿íË
@@ -290,22 +290,22 @@ GLubyte* mqoLoadTexture(char *filename,int *tex_size)
 	FILE *fp;
 	int	y,x,size;
 	GLubyte	*pImage, *pRead;
-	
+
 	if ( (fp=fopen(filename,"rb"))==NULL ) return NULL;
-	
+
 	fseek(fp,14+4,SEEK_SET);		// âÊëúïùÇ™äiî[Ç≥ÇÍÇƒÇ¢ÇÈà íuÇ‹Ç≈ÉVÅ[ÉN
 	fread(&size,sizeof(int),1,fp);	// BiWidthÇÃèÓïÒÇæÇØéÊìæ
 	fseek(fp,14+40,SEEK_SET);		// âÊëfÉfÅ[É^Ç™äiî[Ç≥ÇÍÇƒÇ¢ÇÈà íuÇ‹Ç≈ÉVÅ[ÉN
-	
+
 	// ÉÅÉÇÉäÇÃämï€
 	pImage = (GLubyte*)malloc(sizeof(unsigned char)*size*size*4);
 	if (pImage==NULL) return NULL;
-	
+
 	for (y=0; y<size; y++){
 		pRead = pImage + (size-1-y)*4*size;
 		for (x=0; x<size; x++) {
 			fread( &pRead[2], sizeof(GLubyte), 1, fp);	// B
-			fread( &pRead[1], sizeof(GLubyte), 1, fp);	// G	
+			fread( &pRead[1], sizeof(GLubyte), 1, fp);	// G
 			fread( &pRead[0], sizeof(GLubyte), 1, fp);	// R
 			pRead[3] = 255;								// A
 			pRead += 4;
@@ -313,7 +313,7 @@ GLubyte* mqoLoadTexture(char *filename,int *tex_size)
 	}
 	fclose(fp);
 	*tex_size = size;
-	
+
 	return pImage;
 }
 
@@ -325,7 +325,7 @@ GLubyte* mqoLoadTexture(char *filename,int *tex_size)
  *tex_name	ÉeÉNÉXÉ`ÉÉñº
  *tex_img	ÉeÉNÉXÉ`ÉÉâÊëúÇ÷ÇÃÉ|ÉCÉìÉ^
  tex_size	ÉeÉNÉXÉ`ÉÉÇÃÉTÉCÉYÅiàÍï”ÇÃí∑Ç≥Åj
- 
+
  ÅyñﬂílÅzÇ»Çµ
  =========================================================================*/
 
@@ -334,7 +334,7 @@ void mqoRegistTexture(GLuint* tex_name,GLubyte* tex_img,int tex_size)
 	glPixelStorei(GL_UNPACK_ALIGNMENT,1);
 	glGenTextures(1,tex_name);				// ÉeÉNÉXÉ`ÉÉÇê∂ê¨
 	glBindTexture(GL_TEXTURE_2D,*tex_name);	// ÉeÉNÉXÉ`ÉÉÇÃäÑÇËìñÇƒ
-	
+
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, tex_size, tex_size,
@@ -348,7 +348,7 @@ void mqoRegistTexture(GLuint* tex_name,GLubyte* tex_img,int tex_size)
  ÅyópìrÅzÉeÉNÉXÉ`ÉÉâÊëúÇÃäJï˙
  Åyà¯êîÅz
  *pImageÅ@ÉeÉNÉXÉ`ÉÉâÊëúÇ÷ÇÃÉ|ÉCÉìÉ^
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzfree()ÇµÇƒÇÈÇæÇØ
  =========================================================================*/
@@ -368,7 +368,7 @@ void mqoReleaseTexture(void *pImage)
  B		3éüå≥ç¿ïWè„ÇÃì_B
  C		3éüå≥ç¿ïWè„ÇÃì_C
  *normal	ÉxÉNÉgÉãBAÇ∆ÉxÉNÉgÉãBCÇÃñ@ê¸ÉxÉNÉgÉãÅiâEÇÀÇ∂ï˚å¸Åj
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzÉÅÉ^ÉZÉRÉCÉAÇ…Ç®Ç¢Çƒñ Çç\ê¨Ç∑ÇÈí∏ì_ÇÃî‘çÜÇÕÅCï\é¶ñ Ç©ÇÁå©Çƒ
  éûåvâÒÇËÇ…ãLèqÇµÇƒÇ†ÇÈÅDÇ¬Ç‹ÇËÅCí∏ì_A,B,C Ç™Ç†Ç¡ÇΩÇ∆Ç´ÅC
@@ -379,26 +379,26 @@ void mqoSnormal(glPOINT3f A, glPOINT3f B, glPOINT3f C, glPOINT3f *normal)
 {
 	double norm;
 	glPOINT3f vec0,vec1;
-	
+
 	// ÉxÉNÉgÉãBA
-	vec0.x = A.x - B.x; 
+	vec0.x = A.x - B.x;
 	vec0.y = A.y - B.y;
 	vec0.z = A.z - B.z;
-	
+
 	// ÉxÉNÉgÉãBC
 	vec1.x = C.x - B.x;
 	vec1.y = C.y - B.y;
 	vec1.z = C.z - B.z;
-	
+
 	// ñ@ê¸ÉxÉNÉgÉã
 	normal->x = vec0.y * vec1.z - vec0.z * vec1.y;
 	normal->y = vec0.z * vec1.x - vec0.x * vec1.z;
 	normal->z = vec0.x * vec1.y - vec0.y * vec1.x;
-	
+
 	// ê≥ãKâª
 	norm = normal->x * normal->x + normal->y * normal->y + normal->z * normal->z;
 	norm = sqrt ( norm );
-	
+
 	normal->x /= norm;
 	normal->y /= norm;
 	normal->z /= norm;
@@ -412,7 +412,7 @@ void mqoSnormal(glPOINT3f A, glPOINT3f B, glPOINT3f C, glPOINT3f *normal)
  Åyà¯êîÅz
  fp		ÉtÉ@ÉCÉãÉ|ÉCÉìÉ^
  M		É}ÉeÉäÉAÉãîzóÒ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzmqoCreateModel(), mqoCreateSequence()ÇÃÉTÉuä÷êîÅD
  =========================================================================*/
@@ -425,62 +425,62 @@ void mqoReadMaterial(FILE *fp, MQO_MATERIAL M[])
 	char		*pStrEnd, *pStr;
 	int			len;
 	int			i = 0;
-	
+
 	while (1) {
 		fgets(buf,SIZE_STR,fp);	// çsì«Ç›çûÇ›
 		if (strstr(buf,"}")) break;
-		
+
 		pStr = strstr(buf,"col(");	// çﬁéøñºì«Ç›îÚÇŒÇµ
 		sscanf( pStr,
 			   "col(%f %f %f %f) dif(%f) amb(%f) emi(%f) spc(%f) power(%f)",
 			   &c.r, &c.g, &c.b, &c.a, &dif, &amb, &emi, &spc, &M[i].power );
-		
+
 		// í∏ì_ÉJÉâÅ[
 		M[i].col = c;
-		
+
 		// ägéUåı
 		M[i].dif[0] = dif * c.r;
 		M[i].dif[1] = dif * c.g;
 		M[i].dif[2] = dif * c.b;
 		M[i].dif[3] = dif * c.a;
-		
+
 		// é¸àÕåı
 		M[i].amb[0] = amb * c.r;
 		M[i].amb[1] = amb * c.g;
 		M[i].amb[2] = amb * c.b;
 		M[i].amb[3] = amb * c.a;
-		
+
 		// é©å»è∆ñæ
 		M[i].emi[0] = emi * c.r;
 		M[i].emi[1] = emi * c.g;
 		M[i].emi[2] = emi * c.b;
 		M[i].emi[3] = emi * c.a;
-		
+
 		// îΩéÀåı
 		M[i].spc[0] = spc * c.r;
 		M[i].spc[1] = spc * c.g;
 		M[i].spc[2] = spc * c.b;
 		M[i].spc[3] = spc * c.a;
-		
-		
+
+
 		// texÅFñÕólÉ}ÉbÉsÉìÉOñº
 		if ( (pStr = strstr(buf,"tex(")) != NULL ) {
 			M[i].useTex = TRUE;
-			
+
 			pStrEnd = strstr(pStr,"\")");
 			len = pStrEnd - (pStr+5);
 			strncpy(M[i].texFile,pStr+5,len);
 			M[i].texFile[len] = '\0';
-			
+
 		} else {
 			M[i].useTex = FALSE;
 			M[i].texFile[0] = '\0';
 			M[i].texImage = NULL;
 		}
-		
+
 		i++;
 	}
-	
+
 }
 
 
@@ -491,7 +491,7 @@ void mqoReadMaterial(FILE *fp, MQO_MATERIAL M[])
  Åyà¯êîÅz
  fp		ÉtÉ@ÉCÉãÉ|ÉCÉìÉ^
  V		í∏ì_îzóÒ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzmqoReadObject()ÇÃÉTÉuä÷êîÅD
  =========================================================================*/
@@ -500,7 +500,7 @@ void mqoReadVertex(FILE *fp, glPOINT3f V[])
 {
 	char buf[SIZE_STR];
 	int  i=0;
-	
+
 	while (1) {
 		fgets(buf,SIZE_STR,fp);
 		if (strstr(buf,"}")) break;
@@ -517,7 +517,7 @@ void mqoReadVertex(FILE *fp, glPOINT3f V[])
  Åyà¯êîÅz
  fp		ÉtÉ@ÉCÉãÉ|ÉCÉìÉ^
  F		ñ îzóÒ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzmqoReadObject()ÇÃÉTÉuä÷êîÅD
  =========================================================================*/
@@ -527,14 +527,14 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
 	char buf[SIZE_STR];
 	char *pStr;
 	int  i=0;
-	
+
 	while (1) {
 		fgets(buf,SIZE_STR,fp);
 		if (strstr(buf,"}")) break;
-		
+
 		// ñ Çç\ê¨Ç∑ÇÈí∏ì_êî
 		sscanf(buf,"%d",&F[i].n);
-		
+
 		// í∏ì_(V)ÇÃì«Ç›çûÇ›
 		if ( (pStr = strstr(buf,"V(")) != NULL ) {
 			switch (F[i].n) {
@@ -546,15 +546,15 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
 					break;
 				default:
 					break;
-			}		
+			}
 		}
-		
+
 		// É}ÉeÉäÉAÉã(M)ÇÃì«Ç›çûÇ›
 		F[i].m = 0;
 		if ( (pStr = strstr(buf,"M(")) != NULL ) {
 			sscanf(pStr,"M(%d)",&F[i].m);
 		}
-		
+
 		// UVÉ}ÉbÉv(UV)ÇÃì«Ç›çûÇ›
 		if ( (pStr = strstr(buf,"UV(")) != NULL ) {
 			switch (F[i].n) {
@@ -565,7 +565,7 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
 						   &F[i].uv[2].x, &F[i].uv[2].y
 						   );
 					break;
-					
+
 				case 4:	// í∏ì_êî4
 					sscanf(pStr,"UV(%f %f %f %f %f %f %f %f)",
 						   &F[i].uv[0].x, &F[i].uv[0].y,
@@ -576,12 +576,12 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
 					break;
 				default:
 					break;
-			}		
+			}
 		}
-		
+
 		i++;
 	}
-	
+
 }
 
 
@@ -592,7 +592,7 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
  Åyà¯êîÅz
  fp		ÉtÉ@ÉCÉãÉ|ÉCÉìÉ^
  obj		ÉIÉuÉWÉFÉNÉgèÓïÒ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzmqoCreateModel(), mqoCreateSequence()ÇÃÉTÉuä÷êîÅD
  Ç±ÇÃä÷êîÇ≈ÇPå¬ÇÃÉIÉuÉWÉFÉNÉgèÓïÒÇ™ì«Ç›çûÇ‹ÇÍÇÈÅD
@@ -601,32 +601,32 @@ void mqoReadFace(FILE *fp, MQO_FACE F[])
 void mqoReadObject(FILE *fp, MQO_OBJECT *obj)
 {
 	char buf[SIZE_STR];
-	
+
 	while (1) {
 		fgets(buf,SIZE_STR,fp);
 		if (strstr(buf,"}")) break;
-		
+
 		// visible
 		if (strstr(buf,"visible ")) {
 			sscanf(buf," visible %d", &obj->visible);
 		}
-		
+
 		// vertex
 		if (strstr(buf,"vertex ")) {
 			sscanf(buf," vertex %d", &obj->n_vertex);
 			obj->V = (glPOINT3f*) calloc( obj->n_vertex, sizeof(glPOINT3f) );
 			mqoReadVertex(fp, obj->V);
 		}
-		
+
 		// face
 		if (strstr(buf,"face ")) {
 			sscanf(buf," face %d", &obj->n_face);
 			obj->F = (MQO_FACE*) calloc( obj->n_face, sizeof(MQO_FACE) );
 			mqoReadFace(fp, obj->F);
 		}
-		
+
 	}
-	
+
 }
 
 
@@ -649,10 +649,10 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
 	int			mid = F->m;		// çﬁéøî‘çÜ
 	int			i;
 	int			useTex;
-	
+
 	// ñ@ê¸ÉxÉNÉgÉãÇåvéZ
 	mqoSnormal(V[F->v[0]],V[F->v[1]],V[F->v[2]],&normal);
-	
+
 	// çﬁéøê›íË
 	if ( M != NULL ) {
 		// çﬁéøèÓïÒÇ™Ç†ÇÈèÍçá
@@ -663,16 +663,16 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
 		glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, M[mid].power);
 		glColor4f(M[mid].col.r, M[mid].col.g, M[mid].col.b, M[mid].col.a);
 		useTex = M[F->m].useTex;
-		
+
 	} else {
 		// çﬁéøèÓïÒÇ™Ç»Ç¢èÍçá
 		glColor4f( 1.0, 1.0, 1.0, 1.0 );
 		useTex = FALSE;
 	}
-	
+
 	// É|ÉäÉSÉìê∂ê¨
 	if ( useTex ) {
-		
+
 		// ÉeÉNÉXÉ`ÉÉÇ™Ç†ÇÈÇ∆Ç´
 		glEnable(GL_TEXTURE_2D);
 		// glEnable(GL_BLEND);
@@ -690,9 +690,9 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
 		glDisable(GL_NORMALIZE);
 		// glDisable(GL_BLEND);
 		glDisable(GL_TEXTURE_2D);
-		
+
 	} else {
-		
+
 		// ÉeÉNÉXÉ`ÉÉÇ™Ç»Ç¢Ç∆Ç´
 		glEnable(GL_NORMALIZE);
 		if (F->n==3) glBegin(GL_TRIANGLES);
@@ -703,9 +703,9 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
 		}
 		glEnd();
 		glDisable(GL_NORMALIZE);
-		
+
 	}
-	
+
 }
 
 
@@ -716,7 +716,7 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
  obj		ÉIÉuÉWÉFÉNÉgîzóÒ
  n_obj	ÉIÉuÉWÉFÉNÉgÇÃå¬êî
  M		É}ÉeÉäÉAÉãîzóÒ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzmqoCreateModel(), mqoCreateSequence()ÇÃÉTÉuä÷êîÅD
  ÉIÉuÉWÉFÉNÉgèÓïÒÅCÉ}ÉeÉäÉAÉãèÓïÒÇå≥Ç…É|ÉäÉSÉìÉÇÉfÉãÇçÏê¨Ç∑ÇÈÅD
@@ -725,10 +725,10 @@ void mqoMakePolygon(MQO_FACE *F, glPOINT3f V[], MQO_MATERIAL M[])
 void mqoMakeObjects(MQO_OBJECT obj[], int n_obj, MQO_MATERIAL M[])
 {
 	int i,j;
-	
+
 	glPushMatrix();
 	//glRotatef(90.0f, 1.f, 0.f, 0.f); // ÅyARToolKitópÅz
-	
+
 	for (i=0; i<n_obj; i++) {
 		for (j=0; j<obj[i].n_face; j++) {
 			if (obj[i].visible) {
@@ -736,9 +736,9 @@ void mqoMakeObjects(MQO_OBJECT obj[], int n_obj, MQO_MATERIAL M[])
 			}
 		}
 	}
-	
+
 	glPopMatrix();
-	
+
 }
 
 
@@ -749,7 +749,7 @@ void mqoMakeObjects(MQO_OBJECT obj[], int n_obj, MQO_MATERIAL M[])
  Åyà¯êîÅz
  filename	MQOÉtÉ@ÉCÉã
  scale		ägëÂó¶Åi1.0Ç≈ÇªÇÃÇ‹Ç‹Åj
- 
+
  ÅyñﬂílÅzMQO_MODELÅiMQOÉÇÉfÉãÅj
  =========================================================================*/
 
@@ -759,7 +759,7 @@ MQO_MODEL mqoCreateModel(char *filename, double scale)
 	MQO_OBJECT		obj[N_OBJ];
 	MQO_MATERIAL	*M = NULL;
 	MQO_MODEL		displist;
-	
+
 	char	buf[SIZE_STR];
 	char	path_dir[SIZE_STR];	// ÉfÉBÉåÉNÉgÉäÇÃÉpÉX
 	char	path_tex[SIZE_STR];	// ÉeÉNÉXÉ`ÉÉÉtÉ@ÉCÉãÇÃÉpÉX
@@ -767,22 +767,22 @@ MQO_MODEL mqoCreateModel(char *filename, double scale)
 	int		n_obj = 0;			// ÉIÉuÉWÉFÉNÉgêî
 	int		tex_size;			// ÉeÉNÉXÉ`ÉÉÉTÉCÉY
 	int		i;
-	
+
 	// MaterialÇ∆ObjectÇÃì«Ç›çûÇ›
 	fp = fopen(filename,"r");
 	if (fp==NULL) return -1;
-	
+
 	i = 0;
 	while ( !feof(fp) ) {
 		fgets(buf,SIZE_STR,fp);
-		
+
 		// Material
 		if (strstr(buf,"Material")) {
 			sscanf(buf,"Material %d", &n_mat);
 			M = (MQO_MATERIAL*) calloc( n_mat, sizeof(MQO_MATERIAL) );
 			mqoReadMaterial(fp,M);
 		}
-		
+
 		// Object
 		if (strstr(buf,"Object")) {
 			mqoReadObject(fp, &obj[i]);
@@ -791,10 +791,10 @@ MQO_MODEL mqoCreateModel(char *filename, double scale)
 	}
 	n_obj = i;
 	fclose(fp);
-	
+
 	// ÉpÉXÇÃéÊìæ
 	mqoGetDirectory(filename, path_dir);
-	
+
 	// ÉeÉNÉXÉ`ÉÉÇÃìoò^
 	for (i=0; i<n_mat; i++) {
 		if (M[i].useTex) {
@@ -808,23 +808,23 @@ MQO_MODEL mqoCreateModel(char *filename, double scale)
 			mqoReleaseTexture(M[i].texImage);
 		}
 	}
-	
+
 	// É|ÉäÉSÉìÇÃê∂ê¨ÅiÉfÉBÉXÉvÉåÉCÉäÉXÉgÇÃçÏê¨Åj
 	displist = glGenLists(1);
 	glNewList(displist, GL_COMPILE);
 	glScaled(scale, scale, scale);	// ÉXÉPÅ[Éãïœä∑
 	mqoMakeObjects(obj,n_obj,M);	// ÉIÉuÉWÉFÉNÉgÇÃï`âÊ
 	glEndList();
-	
+
 	// ÉIÉuÉWÉFÉNÉgÇÃÉfÅ[É^ÇÃäJï˙
 	for (i=0; i<n_obj; i++) {
 		free(obj[i].V);
 		free(obj[i].F);
 	}
-	
+
 	// É}ÉeÉäÉAÉãÇÃäJï˙
 	free(M);
-	
+
 	return displist;
 }
 
@@ -837,7 +837,7 @@ MQO_MODEL mqoCreateModel(char *filename, double scale)
  basename	ÉtÉ@ÉCÉãñºÇ©ÇÁòAî‘êîéöÇ∆".mqo"ÇèúÇ¢ÇΩÉxÅ[ÉXÉtÉ@ÉCÉãñº
  n_file		ÉtÉ@ÉCÉãêî
  scale		ägëÂó¶Åi1.0Ç≈ÇªÇÃÇ‹Ç‹Åj
- 
+
  ÅyñﬂílÅzMQO_SEQUENCEÅiMQOÉVÅ[ÉPÉìÉXÅj
  ÅyédólÅzdata0.mqo, data1.mqo, ... Ç∆Ç¢Ç§ä¥Ç∂ÇÃòAî‘ÇÃMQOÉtÉ@ÉCÉãÇì«Ç›çûÇÒÇ≈
  MQOÉVÅ[ÉPÉìÉXÇçÏê¨Ç∑ÇÈÅDÉ}ÉeÉäÉAÉãèÓïÒÇÕ1î‘ñ⁄ÇÃÉtÉ@ÉCÉãÇ©ÇÁÇÃÇ›
@@ -850,7 +850,7 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
 	MQO_OBJECT		obj[N_OBJ];
 	MQO_MATERIAL	*M = NULL;
 	MQO_SEQUENCE	seq;
-	
+
 	int		i,k;
 	char	buf[SIZE_STR];
 	int		n_mat = 0;			// É}ÉeÉäÉAÉãêî
@@ -859,14 +859,14 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
 	char	path_tex[SIZE_STR];	// ÉeÉNÉXÉ`ÉÉÉtÉ@ÉCÉãÇÃÉpÉX
 	int		tex_size;
 	char	filename[SIZE_STR];
-	
+
 	// ÉfÉBÉXÉvÉåÉCÉäÉXÉgÇÃçÏê¨
 	seq.model = glGenLists(n_file);
 	seq.n_frame = n_file;
-	
+
 	for (k=0; k<n_file; k++) {
 		sprintf(filename,"%s%d.mqo",basename,k);
-		
+
 		//-------------------------------------------------------------------------
 		// MaterialÇ∆ObjectÇÃì«Ç›çûÇ›
 		fp = fopen(filename,"r");
@@ -874,18 +874,18 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
 			seq.n_frame = 0;
 			return seq;
 		}
-		
+
 		i = 0;
 		while ( !feof(fp) ) {
 			fgets(buf,SIZE_STR,fp);
-			
+
 			// Material
 			if ( strstr(buf,"Material") != NULL ) {
 				sscanf(buf,"Material %d", &n_mat);
 				M = (MQO_MATERIAL*) calloc( n_mat, sizeof(MQO_MATERIAL) );
 				mqoReadMaterial(fp,M);
 			}
-			
+
 			// Object
 			if ( strstr(buf,"Object") != NULL ) {
 				mqoReadObject(fp, &obj[i]);
@@ -894,16 +894,16 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
 		}
 		n_obj = i;
 		fclose(fp);
-		
+
 		//-------------------------------------------------------------------------
 		// èââÒÇæÇØÉeÉNÉXÉ`ÉÉÇìoò^
 		//		if (k==0) {
 		if (1) {
-			
+
 			//-------------------------------------------------------------------------
 			// ÉpÉXÇÃéÊìæ
 			mqoGetDirectory(filename, path_dir);
-			
+
 			//-------------------------------------------------------------------------
 			// ÉeÉNÉXÉ`ÉÉÇÃìoò^
 			for (i=0; i<n_mat; i++) {
@@ -919,26 +919,26 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
 				}
 			}
 		}
-		
+
 		//-------------------------------------------------------------------------
 		// É|ÉäÉSÉìÇÃê∂ê¨ÅiÉfÉBÉXÉvÉåÉCÉäÉXÉgÇÃçÏê¨Åj
 		glNewList(seq.model + k, GL_COMPILE);
 		glScaled(scale, scale, scale);	// ÉXÉPÅ[Éãïœä∑
 		mqoMakeObjects(obj,n_obj,M);	// ÉIÉuÉWÉFÉNÉgÇÃï`âÊ
 		glEndList();
-		
+
 		//-------------------------------------------------------------------------
 		// ÉIÉuÉWÉFÉNÉgÇÃÉfÅ[É^ÇÃäJï˙
 		for (i=0; i<n_obj; i++) {
 			free(obj[i].V);
 			free(obj[i].F);
 		}
-		
+
 	}
-	
+
 	// É}ÉeÉäÉAÉãÇÃäJï˙
 	free(M);
-	
+
 	return seq;
 }
 
@@ -949,7 +949,7 @@ MQO_SEQUENCE mqoCreateSequence(char *basename, int n_file, double scale)
  ÅyópìrÅzMQOÉÇÉfÉãÇOpenGLÇÃâÊñ è„Ç…åƒÇ—èoÇ∑
  Åyà¯êîÅz
  model		MQOÉÇÉfÉã
- 
+
  ÅyñﬂílÅzÇ»Çµ
  =========================================================================*/
 
@@ -966,7 +966,7 @@ void mqoCallModel(MQO_MODEL model)
  Åyà¯êîÅz
  seq		MQOÉVÅ[ÉPÉìÉX
  i		ÉtÉåÅ[ÉÄî‘çÜ
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzMQOÉVÅ[ÉPÉìÉXÇÃíÜÇ©ÇÁéwíËÇµÇΩÉtÉåÅ[ÉÄî‘çÜÇÃÉÇÉfÉãÇåƒÇ—èoÇ∑ÅD
  =========================================================================*/
@@ -985,7 +985,7 @@ void mqoCallSequence(MQO_SEQUENCE seq, int i)
  ÅyópìrÅzMQOÉÇÉfÉãÇçÌèúÇ∑ÇÈ
  Åyà¯êîÅz
  model	MQOÉÇÉfÉã
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzàµÇ¢Ç∆ÇµÇƒÇÕÉfÉBÉXÉvÉåÉCÉäÉXÉgÇÃçÌèúÇ∆ìØã`ÅD
  =========================================================================*/
@@ -1001,7 +1001,7 @@ void mqoDeleteModel(MQO_MODEL model)
  ÅyópìrÅzMQOÉVÅ[ÉPÉìÉXÇçÌèúÇ∑ÇÈ
  Åyà¯êîÅz
  seq		MQOÉVÅ[ÉPÉìÉX
- 
+
  ÅyñﬂílÅzÇ»Çµ
  ÅyédólÅzàµÇ¢Ç∆ÇµÇƒÇÕÉfÉBÉXÉvÉåÉCÉäÉXÉgÇÃçÌèúÇ∆ìØã`ÅD
  =========================================================================*/

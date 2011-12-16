@@ -6,14 +6,14 @@ package org.papervision3d.materials.utils
 	import flash.filters.BlurFilter;
 	import flash.geom.Matrix;
 	import flash.geom.Point;
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
 	public class LightMaps
 	{
 		private static var origin:Point = new Point();
-		
+
 		public static function getFlatMapArray(lightColor:uint, ambientColor:uint, specularLevel:uint):Array
 		{
 			var array:Array = new Array();
@@ -25,17 +25,17 @@ package org.papervision3d.materials.utils
 			s.graphics.drawRect(0,0,256,1);
 			s.graphics.endFill();
 			tempmap.draw(s);
-			
+
 			var i:int = 256;
 			while(i--){
 				array.push(tempmap.getPixel(i,0));
 			}
-		
+
 			tempmap.dispose();
 
 			return array;
 		}
-		
+
 		public static function getFlatMap(lightColor:uint, ambientColor:uint, specularLevel:uint):BitmapData
 		{
 			var tempmap:BitmapData = new BitmapData(255,1,false,0);
@@ -48,11 +48,11 @@ package org.papervision3d.materials.utils
 			tempmap.draw(s);
 			return tempmap;
 		}
-		
+
 		public static function getPhongMap(lightColor:uint, ambientColor:uint, specularLevel:uint, height:int = 255, width:int = 255):BitmapData
 		{
 			var lw:Number = height;
-			var lh:Number = width;	
+			var lh:Number = width;
 			var s:Sprite = new Sprite();
 			var mat:Matrix = new Matrix();
 			mat.createGradientBox(lw,lw,0,0,0);
@@ -63,7 +63,7 @@ package org.papervision3d.materials.utils
 			bmp.draw(s);
 			return bmp;
 		}
-		
+
 		public static function getGouraudMap( lightColor:uint, ambientColor:uint, specularLevel:uint ):BitmapData
 		{
 			var gouraudMap:BitmapData = new BitmapData(255,3,false,0xFFFFFF);
@@ -77,7 +77,7 @@ package org.papervision3d.materials.utils
 			gouraudMap.draw(s);
 			return gouraudMap;
 		}
-		
+
 		public static function getGouraudMaterialMap( lightColor:uint, ambientColor:uint, specularLevel:uint ):BitmapData
 		{
 			var gouraudMap:BitmapData = new BitmapData(256,3,false,0xFFFFFF);
@@ -91,7 +91,7 @@ package org.papervision3d.materials.utils
 			gouraudMap.draw(s);
 			return gouraudMap;
 		}
-		
+
 		public static function getCellMap(color_1:uint, color_2:uint, steps:int):BitmapData
 		{
 			/**

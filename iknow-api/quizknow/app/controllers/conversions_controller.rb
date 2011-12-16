@@ -1,7 +1,7 @@
 require 'oauth/consumer'
 
 class ConversionsController < ApplicationController
-  
+
   def create
     authtoken = Authtoken.find_by_username(params[:conversion][:iknow_username])
     puts "Hello"

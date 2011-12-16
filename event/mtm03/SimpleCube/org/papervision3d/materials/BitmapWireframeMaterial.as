@@ -4,7 +4,7 @@ package org.papervision3d.materials
 	import flash.display.Graphics;
 	import flash.display.Sprite;
 	import flash.geom.Matrix;
-	
+
 	import org.papervision3d.core.material.TriangleMaterial;
 	import org.papervision3d.core.render.command.RenderTriangle;
 	import org.papervision3d.core.render.data.RenderSessionData;
@@ -14,13 +14,13 @@ package org.papervision3d.materials
 	{
 		private static const BITMAP_WIDTH:int = 64;
 		private static const BITMAP_HEIGHT:int = 64;
-		
+
 		private var uvMatrix:Matrix;
-		
+
 		protected static var _triMatrix:Matrix = new Matrix();
 		protected static var _localMatrix:Matrix = new Matrix();
 
-		
+
 		public function BitmapWireframeMaterial(color:Number=0xFF00FF, alpha:Number=1, thickness:Number=3)
 		{
 			bitmap = new BitmapData(BITMAP_WIDTH,BITMAP_HEIGHT,true,0x00000000);
@@ -29,13 +29,13 @@ package org.papervision3d.materials
 			lineThickness = thickness;
 			init();
 		}
-		
+
 		private function init():void
 		{
 			createBitmapData();
 			createStaticUVMatrix();
 		}
-		
+
 		override public function drawTriangle(tri:RenderTriangle, graphics:Graphics, renderSessionData:RenderSessionData, altBitmap:BitmapData = null, altUV:Matrix=null):void
 		{
 			if(bitmap){
@@ -45,14 +45,14 @@ package org.papervision3d.materials
 				var y1:Number = tri.v1.y;
 				var x2:Number = tri.v2.x;
 				var y2:Number = tri.v2.y;
-				
+
 				_triMatrix.a = x1 - x0;
 				_triMatrix.b = y1 - y0;
 				_triMatrix.c = x2 - x0;
 				_triMatrix.d = y2 - y0;
 				_triMatrix.tx = x0;
 				_triMatrix.ty = y0;
-					
+
 				_localMatrix.a = uvMatrix.a;
 				_localMatrix.b = uvMatrix.b;
 				_localMatrix.c = uvMatrix.c;
@@ -60,7 +60,7 @@ package org.papervision3d.materials
 				_localMatrix.tx = uvMatrix.tx;
 				_localMatrix.ty = uvMatrix.ty;
 				_localMatrix.concat(_triMatrix);
-				
+
 				graphics.beginBitmapFill( bitmap, _localMatrix, tiled, smooth);
 				graphics.moveTo( x0, y0 );
 				graphics.lineTo( x1, y1 );
@@ -69,26 +69,26 @@ package org.papervision3d.materials
 				graphics.endFill();
 				renderSessionData.renderStatistics.triangles++;
 			}
-			
+
 		}
-		
+
 		private function createBitmapData():void
 		{
 			var sprite:Sprite = new Sprite();
 			var graphics:Graphics = sprite.graphics;
-			
-			
+
+
 			graphics.lineStyle(lineThickness,lineColor,lineAlpha);
 			graphics.moveTo( 1, 1 );
 			graphics.lineTo( BITMAP_WIDTH-1,1 );
 			graphics.lineTo( BITMAP_WIDTH-1,BITMAP_HEIGHT-1);
 			graphics.lineTo( 1, 1 );
 			graphics.endFill();
-			
+
 			bitmap.draw(sprite);
-			
+
 		}
-		
+
 		private function createStaticUVMatrix():void
 		{
 			var w  :Number = BITMAP_WIDTH;
@@ -100,7 +100,7 @@ package org.papervision3d.materials
 			var v1 :Number = 0;
 			var u2 :Number = w;
 			var v2 :Number = h;
-			
+
 			// Precalculate matrix & correct for mip mapping
 			var at :Number = ( u1 - u0 );
 			var bt :Number = ( v1 - v0 );
@@ -110,8 +110,8 @@ package org.papervision3d.materials
 			uvMatrix = new Matrix( at, bt, ct, dt, u0, v0 );
 			uvMatrix.invert();
 		}
-		
-		
-		
+
+
+
 	}
 }

@@ -139,10 +139,10 @@ function load(){
       icon.image = "./images/gaziro2000.jpg";
       icon.iconSize = new GSize(48, 48);
       icon.iconAhchor = new GPoint(48, 48);
-      icon.imageMap = [0,0, 48,0, 48,48, 0,48]; 
+      icon.imageMap = [0,0, 48,0, 48,48, 0,48];
       var mk = new GMarker(new GLatLng(lat, lng), icon);
       map.addOverlay(mk);
-      
+
 
       // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
       var latlng = new GLatLng(lat, lng);
@@ -241,7 +241,7 @@ function addHistory(ov, latlng, subject, end_flg){
   addMarker();
   function addMarker(){
     var icon = new GIcon(G_DEFAULT_ICON);
-    if(end_flg == "true" ){ 
+    if(end_flg == "true" ){
       icon.image = "./images/stargray48.png";
     }else{
       icon.image = "./images/star48.png";
@@ -250,7 +250,7 @@ function addHistory(ov, latlng, subject, end_flg){
     icon.shadow = "./images/starshadow48.png";
     icon.shadowSize = new GSize(96, 48);
     icon.iconAhchor = new GPoint(24, 24);
-    icon.imageMap = [12,12, 36,12, 36,36, 12,36]; 
+    icon.imageMap = [12,12, 36,12, 36,36, 12,36];
     var mk = new GMarker(latlng, icon);
     map.addOverlay(mk);
     GEvent.addListener(mk, "click", function(){
@@ -329,7 +329,7 @@ onunload = GUnload;
   <br style="clear:both;" />
   <div style="float:left;width:190px;height:740px;background:url(./images/left_bg.gif);">
     <div style="padding:8px 0 0 70px;" id="star_count"></div>
-    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;"> 
+    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;">
       <ol id="history" style="float:right;"></ol>
     </div>
   </div>
@@ -356,79 +356,79 @@ size="-1">
 
 	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>
   <ul>
-    
+
       <li style="float:left;">
       IMG_1853<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824424984/" title="IMG_1853"><img src="http://farm4.static.flickr.com/3220/2824424984_18001a51df_m.jpg" width="240" height="180" alt="IMG_1853" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1852<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824424852/" title="IMG_1852"><img src="http://farm4.static.flickr.com/3200/2824424852_5e81aaba3f_m.jpg" width="240" height="180" alt="IMG_1852" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1851<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824424660/" title="IMG_1851"><img src="http://farm4.static.flickr.com/3153/2824424660_57e1cde248_m.jpg" width="240" height="180" alt="IMG_1851" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1848<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2823589379/" title="IMG_1848"><img src="http://farm4.static.flickr.com/3239/2823589379_70c64ed56e_m.jpg" width="240" height="180" alt="IMG_1848" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1847<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824424356/" title="IMG_1847"><img src="http://farm4.static.flickr.com/3246/2824424356_f50a9fc0a3_m.jpg" width="240" height="180" alt="IMG_1847" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1846<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824424168/" title="IMG_1846"><img src="http://farm4.static.flickr.com/3245/2824424168_9281aa27a6_m.jpg" width="240" height="180" alt="IMG_1846" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1845<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824423958/" title="IMG_1845"><img src="http://farm4.static.flickr.com/3128/2824423958_0faa5a5392_m.jpg" width="240" height="180" alt="IMG_1845" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1844<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2824423758/" title="IMG_1844"><img src="http://farm4.static.flickr.com/3042/2824423758_6a8c04b732_m.jpg" width="240" height="180" alt="IMG_1844" /></a></p>
 
 
       </li>
-    
+
       <li style="float:left;">
       IMG_1843<BR>
-      
+
 <p><a href="http://www.flickr.com/photos/gotoi/2823588461/" title="IMG_1843"><img src="http://farm4.static.flickr.com/3106/2823588461_1e0a40a464_m.jpg" width="240" height="180" alt="IMG_1843" /></a></p>
 
 
       </li>
-    
+
   </ul>
 
 	<div style="clear:both;padding:20px 0 10px 0;"><img src="images/line.gif" alt="" /></div>

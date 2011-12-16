@@ -8,7 +8,7 @@
 //  Created by akio0911 on 08/04/19.
 
 #import "MenuView.h"
-#import <Quartz/Quartz.h>   
+#import <Quartz/Quartz.h>
 #import "Downloader.h"
 
 ////////////////////////////
@@ -97,19 +97,19 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
     // Drawing code here.
 }
 
-- (void)awakeFromNib 
-{ 
-	names=[[NSArray	arrayWithObjects:@"Item1",@"Item2", 
-		@"Item3",@"Item4",@"Item5", 
-		nil]retain]; 
-	[self	setupLayers]; 
-	
+- (void)awakeFromNib
+{
+	names=[[NSArray	arrayWithObjects:@"Item1",@"Item2",
+		@"Item3",@"Item4",@"Item5",
+		nil]retain];
+	[self	setupLayers];
+
 	// Detach the new thread.
-	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod:) 
+	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod:)
 		toTarget:self withObject:self];
-//	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod2:) 
+//	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod2:)
 //		toTarget:self withObject:self];
-	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod3:) 
+	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod3:)
 		toTarget:self withObject:self];
 
 	 [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0
@@ -133,7 +133,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 		ERR_PRINT(ret);
 		IWEAR_End();
 	}
-	
+
 	/* count the number of available devices */
 	ret = IWEAR_Count();
 	ERRCHK( ret );
@@ -156,12 +156,12 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 		IWEAR_SetSmoothing( hnd[c], 10 );
 	}
 
-	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod4:) 
+	[NSThread detachNewThreadSelector:@selector(MyInstanceThreadMethod4:)
 							 toTarget:self withObject:self];
-} 
+}
 
 -(void)setupLayers
-{ 
+{
 	CGFloat	fontSize=32.0;
 
 	[[self window]makeFirstResponder:self];
@@ -198,13 +198,13 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	if (!success) {
 		// Handle error
 	}
-		
+
 	rootLayer = [[[QTCaptureLayer alloc] initWithSession:mCaptureSession] retain];
 	// Start the capture session running
 	[mCaptureSession startRunning];
 
-	[self setLayer:rootLayer]; 
-	[self setWantsLayer:YES]; 
+	[self setLayer:rootLayer];
+	[self setWantsLayer:YES];
 
 	//////////////////////////////////////
 	CGRect rect = [rootLayer frame];
@@ -228,7 +228,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	currentKakudoLayer.backgroundColor=CGColorCreateGenericRGB(0.0,0.0,0.0,0.5);
 	[rootLayer addSublayer:currentKakudoLayer];
 	//////////////////////////////////////
-	
+
 	{
 	akio0911Layer = [CALayer layer];
 		CGDataProviderRef imageDataProvider = CGDataProviderCreateWithFilename("/Users/akio0911/git/hcrepos/lang/objective-c/ar-megane/akio0911.png");
@@ -240,7 +240,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	CGImageRelease(image);
 	CGDataProviderRelease(imageDataProvider);
 	}
-	
+
 	//////////////////////////////////////
 
 	{
@@ -254,9 +254,9 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	CGImageRelease(image);
 	CGDataProviderRelease(imageDataProvider);
 	}
-	
+
 	//////////////////////////////////////
-	
+
 	CGRect rectCurrentLocation = [rootLayer frame];
 	currentLocationLayer=[CATextLayer layer];
 	currentLocationLayer.string=@"現在地";
@@ -266,7 +266,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	currentLocationLayer.frame=CGRectMake(0.0, 0.0, rect.size.width, rect.size.height/4);
 	currentLocationLayer.backgroundColor=CGColorCreateGenericRGB(0.0,0.0,0.0,0.5);
 	[rootLayer addSublayer:currentLocationLayer];
-	
+
 	// selectionLayerの最初の位置を設定し、次に最初のselectedIndexを0に設定
 
 	int idx = 0;
@@ -292,13 +292,13 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/1212.jpg";
 	geoclips[idx].latitude = 35.672700;
 	geoclips[idx].longitude = 139.796881;
-	
+
 	idx++;
 	geoclips[idx].title = @"深川八幡";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/1210.jpg";
 	geoclips[idx].latitude = 35.671603;
 	geoclips[idx].longitude = 139.799633;
-	
+
 	idx++;
 	geoclips[idx].title = @"でかいし";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/869.jpg";
@@ -310,31 +310,31 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/868.jpg";
 	geoclips[idx].latitude = 35.696261;
 	geoclips[idx].longitude = 139.814256;
-	
+
 	idx++;
 	geoclips[idx].title = @"くじら丼";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/733.jpg";
 	geoclips[idx].latitude = 35.685403;
 	geoclips[idx].longitude = 139.780119;
-	
+
 	idx++;
 	geoclips[idx].title = @"相撲でもちゃんこでもない";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/720.jpg";
 	geoclips[idx].latitude = 35.696000;
 	geoclips[idx].longitude = 139.791508;
-	
+
 	idx++;
 	geoclips[idx].title = @"錦糸町不二家";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/621.jpg";
 	geoclips[idx].latitude = 35.695561;
 	geoclips[idx].longitude = 139.814869;
-	
+
 	idx++;
 	geoclips[idx].title = @"仕事場所その１";
 	geoclips[idx].filename = "/Users/user/Desktop/20080420MAKE/geoclip/552.jpg";
 	geoclips[idx].latitude = 35.698372;
 	geoclips[idx].longitude = 139.781203;
-	
+
 	int i;
 	for(i = 0; i < GEOCLIP_COUNT; i++){
 		CALayer *imageLayer = [CALayer layer];
@@ -350,15 +350,15 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	}
 }
 
--(void)dealloc 
-{ 
+-(void)dealloc
+{
 	[akio0911Layer release];
 	/* close all of the opened devices */
 	long c;					/* generic counting variable */
 	for( c=0 ; c<nDevices ; c++ ) {
 		IWEAR_Close( hnd[c] );
 	}
-	
+
 	/* then shut down the IWEAR interface completely */
 	IWEAR_End();
 
@@ -368,32 +368,32 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
     [mCaptureSession release];
     [mCaptureDeviceInput release];
 
-	[rootLayer autorelease]; 
-	[currentKakudoLayer autorelease]; 
-	[countLayer autorelease]; 
-	[currentLocationLayer autorelease]; 
-	[names autorelease]; 
-	[super dealloc]; 
-} 
+	[rootLayer autorelease];
+	[currentKakudoLayer autorelease];
+	[countLayer autorelease];
+	[currentLocationLayer autorelease];
+	[names autorelease];
+	[super dealloc];
+}
 
 - (void)MyInstanceThreadMethod:(id)param
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
+
 	int i;
 	for(i=0; i<60*60*24; i++){
 		[NSThread sleepForTimeInterval:1.0];
 		selectedIndex = i%5;
 	}
-	
-	
+
+
 	[pool release];
 }
 
 - (void)MyInstanceThreadMethod3:(id)param
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
+
 	while(1){
 		[[WifiGetter alloc] initWifiWithDelegate:self];
 		struct timespec treq, trem;
@@ -408,7 +408,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 - (void)MyInstanceThreadMethod4:(id)param
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
+
 	/* now read all of the devices in a loop */
 	long ret;				/* return value we use for most calls */
 	ret = IWEAR_SUCCESS;
@@ -421,27 +421,27 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 			ret = IWEAR_GetTracking( hnd[c], &y, &p, &r );					/* get the integer-based tracking */
 			double yd, pd, rd;		/* the normalized yaw, pitch, roll received */
 			ret = IWEAR_GetTrackingNormalized( hnd[c], &yd, &pd, &rd );		/* get the normalized tracking */
-			
+
 //			fprintf( stderr, "%ld  Y:%-6d %-5.4f   P:%-6d %-5.4f   R:%-6d %-5.4f \n",
-//					c, y, yd, p, pd, r, rd );		
+//					c, y, yd, p, pd, r, rd );
 			//			if(pd < -0.5) fprintf(stderr, "上\n"); else if(pd > 0.5) fprintf(stderr, "下\n");
 			//			if(rd < -0.5) fprintf(stderr, "右\n"); else if(rd > 0.5) fprintf(stderr, "左\n");
-			
+
 			g_kakudo_y = yd*180.0f+180.0f;
 			g_kakudo_p = pd*-90.0f+0.0f;
 			g_kakudo_r = rd*-90.0f+0.0f;
-//			fprintf(stderr, "yaw = %f\n", yd*180.0f+180.0f); 
-//			fprintf(stderr, "pitch = %f\n", pd*-90.0f+0.0f); 
-//			fprintf(stderr, "roll = %f\n", rd*-90.0f+0.0f); 
-//			fprintf(stderr, "yaw = %d\n", g_kakudo_y); 
-//			fprintf(stderr, "pitch = %d\n", g_kakudo_p); 
-//			fprintf(stderr, "roll = %d\n", g_kakudo_r); 
-			
+//			fprintf(stderr, "yaw = %f\n", yd*180.0f+180.0f);
+//			fprintf(stderr, "pitch = %f\n", pd*-90.0f+0.0f);
+//			fprintf(stderr, "roll = %f\n", rd*-90.0f+0.0f);
+//			fprintf(stderr, "yaw = %d\n", g_kakudo_y);
+//			fprintf(stderr, "pitch = %d\n", g_kakudo_p);
+//			fprintf(stderr, "roll = %d\n", g_kakudo_r);
+
 		}
 //		sleep( 1 ); /* update only once a second for fun */
 		[NSThread sleepForTimeInterval:1.0f/30.0f];
 	}
-	
+
 	[pool release];
 }
 
@@ -460,11 +460,11 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 		direction = @"北";
 
 	Landmark presentPlace;
-	
+
 	presentPlace.caption = @"東京都江東区白河1-5-15";
 	presentPlace.latitude = 35.682708 ; // 緯度
 	presentPlace.longitude = 139.800612; // 経度
-	
+
 	const int LANDMARK_COUNT = 9;
 	Landmark landmarks[LANDMARK_COUNT];
 	landmarks[0].caption = @"森下駅";
@@ -498,7 +498,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 	landmarks[7].caption = @"東日本橋駅";
 	landmarks[7].latitude = 35.692489; // 緯度
 	landmarks[7].longitude = 139.784825; // 経度
-	
+
 	landmarks[8].caption = @"錦糸町駅";
 	landmarks[8].latitude = 35.696811; // 緯度
 	landmarks[8].longitude = 139.813943; // 経度
@@ -522,7 +522,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 
 	countLayer.string=[NSString stringWithFormat:@"%.1f %@ %@", mDirDig, direction, to_land];
 	currentKakudoLayer.string=[NSString stringWithFormat:@"%03d %03d %03d", g_kakudo_y, g_kakudo_p, g_kakudo_r];
-	
+
 	for(i = 0; i < GEOCLIP_COUNT; i++){
 		geoclips[i].layer.opacity = 0.0f;
 	}
@@ -531,7 +531,7 @@ long g_kakudo_y, g_kakudo_p, g_kakudo_r;			/* the yaw, pitch, roll retrieved */
 			geoclips[i].latitude - presentPlace.latitude
 			,geoclips[i].longitude - presentPlace.longitude) * 180 / PI;
 		geoclips[i].layer.frame = CGRectMake(
-			10, rootLayer.bounds.size.height - rootLayer.bounds.size.height/4.0 - 10, 
+			10, rootLayer.bounds.size.height - rootLayer.bounds.size.height/4.0 - 10,
 			rootLayer.bounds.size.width/4.0, rootLayer.bounds.size.height/4.0);
 		k = -k + 90; // 角度を合わせる
 		if(k < 0.0)	k += 360.0;

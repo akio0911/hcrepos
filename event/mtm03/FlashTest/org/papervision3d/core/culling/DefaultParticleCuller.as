@@ -4,12 +4,12 @@ package org.papervision3d.core.culling
 
 	public class DefaultParticleCuller implements IParticleCuller
 	{
-		
+
 		public function DefaultParticleCuller()
 		{
-			
+
 		}
-		
+
 		public function testParticle(particle:Particle):Boolean
 		{
 			if(particle.material.invisible == false){
@@ -19,6 +19,6 @@ package org.papervision3d.core.culling
 			}
 			return false;
 		}
-		
+
 	}
 }

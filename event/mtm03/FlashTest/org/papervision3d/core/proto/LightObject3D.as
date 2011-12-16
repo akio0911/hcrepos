@@ -8,17 +8,17 @@ package org.papervision3d.core.proto
 	public class LightObject3D extends DisplayObject3D
 	{
 		public var lightMatrix:Matrix3D;
-		
-		/** 
-		 * A boolean value indicating whether to flip the light direction. Hack needed by DAE. 
-		 * NOTE:  
+
+		/**
+		 * A boolean value indicating whether to flip the light direction. Hack needed by DAE.
+		 * NOTE:
 		 */
 		public var flipped:Boolean;
-		
+
 		private var _showLight:Boolean;
-		
+
 		private var displaySphere:Sphere;
-		
+
 		public function LightObject3D(showLight:Boolean = false, flipped:Boolean = false)
 		{
 			super();
@@ -26,7 +26,7 @@ package org.papervision3d.core.proto
 			this.showLight = showLight;
 			this.flipped = flipped;
 		}
-		
+
 		public function set showLight(show:Boolean):void
 		{
 			if(_showLight){
@@ -38,7 +38,7 @@ package org.papervision3d.core.proto
 			}
 			_showLight = show;
 		}
-		
+
 		public function get showLight():Boolean
 		{
 			return _showLight;

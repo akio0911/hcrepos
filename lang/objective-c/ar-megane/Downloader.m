@@ -70,12 +70,12 @@
 	[content getBytes:p length:[content length]];
 	NSString *string = [NSString stringWithCString:p length:[content length]] ;
 	free(p);
-	
+
 	NSString *wifiString=nil;
 	NSCharacterSet* chSet;
 	NSString* scannedName;
 	NSScanner* scanner;
-	
+
 	chSet = [NSCharacterSet characterSetWithCharactersInString:@"\""];
 	scanner = [NSScanner scannerWithString:string];
 	int counter = 1;
@@ -83,7 +83,7 @@
 		if([scanner scanUpToCharactersFromSet:chSet intoString:&scannedName]) {
 			if( counter == 2 )
 				wifiString = scannedName;
-		}	
+		}
 		[	scanner scanCharactersFromSet:chSet intoString:nil];
 		counter++;
 	}
@@ -114,7 +114,7 @@
 	int i = 0;
 	NSMutableString *mutable;
 	char*p;
-	
+
 	// for longitude_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -122,7 +122,7 @@
 	sscanf( p, "%lf", &longitude_ );
 	free(p);
 	i++;
-	
+
 	// for latitude_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -130,7 +130,7 @@
 	sscanf( p, "%lf", &latitude_ );
 	free(p);
 	i++;
-	
+
 	// for code_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -138,7 +138,7 @@
 	sscanf( p, "%d", &code_ );
 	free(p);
 	i++;
-	
+
 	int j;
 	for( j = 3; j < [array count]; j++ ) {
 		// for message
@@ -150,7 +150,7 @@
 		// for floor
 		else if( [mutable replaceOccurrencesOfString:@"floor:" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])] ) {
 			floor_ = mutable;
-			
+
 			i++;
 		}
 		// for msg
@@ -166,18 +166,18 @@
 	[content getBytes:p length:[content length]];
 	p[[content length]] = '\0';
 	free(p);
-	
+
 	NSString *string = [NSString stringWithUTF8String:p];
 	NSMutableArray *array = [NSMutableArray array];
 	NSCharacterSet* chSet;
 	NSString* scannedName;
 	NSScanner* scanner;
 	NSMutableString *mutable;
-	
+
 	chSet = [NSCharacterSet characterSetWithCharactersInString:@","];
 	scanner = [NSScanner scannerWithString:string];
 	while(![scanner isAtEnd]) {
-		if([scanner scanUpToCharactersFromSet:chSet intoString:&scannedName]) {	
+		if([scanner scanUpToCharactersFromSet:chSet intoString:&scannedName]) {
 			mutable = [NSMutableString stringWithString:scannedName];
 			[mutable retain];
 			[mutable replaceOccurrencesOfString:@"[" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])];
@@ -186,14 +186,14 @@
 			[mutable replaceOccurrencesOfString:@"}" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])];
 			[mutable replaceOccurrencesOfString:@"'" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])];
 			[array addObject:mutable];
-		}	
+		}
 		[scanner scanCharactersFromSet:chSet intoString:nil];
 	}
-	
+
 	assert([array count] >= 3);
 
 	int i = 0;
-	
+
 	// for longitude_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -201,7 +201,7 @@
 	sscanf( p, "%f", &longitude_ );
 	free(p);
 	i++;
-	
+
 	// for latitude_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -209,7 +209,7 @@
 	sscanf( p, "%f", &latitude_ );
 	free(p);
 	i++;
-	
+
 	// for code_
 	p = (char*)malloc(sizeof(char)*([[array objectAtIndex:i] length]+1));
 	memcpy( p, [[array objectAtIndex:i] UTF8String], [[array objectAtIndex:i] length] );
@@ -217,7 +217,7 @@
 	sscanf( p, "%d", &code_ );
 	free(p);
 	i++;
-	
+
 	for( i = 0; i < [array count]; i++ ) {
 		mutable = [array objectAtIndex:i];
 		if( [mutable replaceOccurrencesOfString:@"addr:" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])] > 0 )
@@ -229,7 +229,7 @@
 		if( [mutable replaceOccurrencesOfString:@"msg:" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [mutable length])] > 0 )
 			msg_ = [NSString stringWithString:mutable];
 	}
-		
+
 	[delegate_ setText:addr_ aLongitude:[NSString stringWithFormat:@"%f",longitude_] aLatitude:[NSString stringWithFormat:@"%f",latitude_] aMessage:msg_];
 }
 @end

@@ -12,35 +12,35 @@
 #import <QTKit/QTKit.h>
 #import "Downloader.h"
 
-// MenuViewクラスは、ウインドウに挿入されるビューの 
-// サブクラスであり、rootLayerをホストしイベントに応答する 
+// MenuViewクラスは、ウインドウに挿入されるビューの
+// サブクラスであり、rootLayerをホストしイベントに応答する
 @interface MenuView : NSView <SetTextProtocol> {
 
-   // 選択されたメニュー項目インデックスを含む 
-	NSInteger	selectedIndex; 
+   // 選択されたメニュー項目インデックスを含む
+	NSInteger	selectedIndex;
 
-    // メニュー項目レイヤを含むレイヤ 
-	CALayer	*menusLayer; 
+    // メニュー項目レイヤを含むレイヤ
+	CALayer	*menusLayer;
 
    // メニュー項目名の配列
 	NSArray	*names;
-	
+
 	QTCaptureSession           *mCaptureSession;
 	QTCaptureDeviceInput       *mCaptureDeviceInput;
-	
+
 	CATextLayer *countLayer;
 	CATextLayer *currentLocationLayer;
 	CATextLayer *currentKakudoLayer;
 	CALayer *akio0911Layer;
 	CALayer *akio0911IconLayer;
-	
+
 	double mDirDig;
 
 	QTCaptureLayer *rootLayer;
 }
 
--(void)awakeFromNib; 
--(void)setupLayers; 
--(void)dealloc; 
+-(void)awakeFromNib;
+-(void)setupLayers;
+-(void)dealloc;
 
 @end

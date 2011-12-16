@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'rss'
-Net::HTTP.version_1_2 
+Net::HTTP.version_1_2
 
 class Twitter < ActiveRecord::Base
   def self.getrss_items(rss_items)
@@ -15,7 +15,7 @@ class Twitter < ActiveRecord::Base
   def self.import_twitter
     url = "http://twitter.com/statuses/user_timeline/4147701.rss"
 
-    open(url) do | http | 
+    open(url) do | http |
       getrss_items(http.read)
     end
 

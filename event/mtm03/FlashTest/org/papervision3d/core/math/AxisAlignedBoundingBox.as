@@ -1,7 +1,7 @@
 package org.papervision3d.core.math
 {
 	import org.papervision3d.core.geom.renderables.Vertex3D;
-	
+
 	public class AxisAlignedBoundingBox
 	{
 		public var minX:Number;
@@ -10,9 +10,9 @@ package org.papervision3d.core.math
 		public var maxX:Number;
 		public var maxY:Number;
 		public var maxZ:Number;
-		
+
 		protected var _vertices:Array;
-		
+
 		/**
 		 * @author Ralph Hauwert/Alex Clarke
 		 */
@@ -26,7 +26,7 @@ package org.papervision3d.core.math
 			this.maxZ = maxZ;
 			createBoxVertices();
 		}
-		
+
 		protected function createBoxVertices():void
 		{
 			_vertices = new Array();
@@ -39,12 +39,12 @@ package org.papervision3d.core.math
 			_vertices.push(new Vertex3D(maxX, maxY, minZ));
 			_vertices.push(new Vertex3D(maxX, maxY, maxZ));
 		}
-		
+
 		public function getBoxVertices():Array
 		{
 			return _vertices;
 		}
-		
+
 		public function merge(bbox:AxisAlignedBoundingBox):void
 		{
 			this.minX = Math.min(this.minX, bbox.minX);
@@ -52,10 +52,10 @@ package org.papervision3d.core.math
 			this.minZ = Math.min(this.minZ, bbox.minZ);
 			this.maxX = Math.max(this.maxX, bbox.maxX);
 			this.maxY = Math.max(this.maxY, bbox.maxY);
-			this.maxZ = Math.max(this.maxZ, bbox.maxZ);	
+			this.maxZ = Math.max(this.maxZ, bbox.maxZ);
 			createBoxVertices();
 		}
-		
+
 		public static function createFromVertices(vertices:Array):AxisAlignedBoundingBox
 		{
 			var minX :Number = Number.MAX_VALUE;
@@ -65,7 +65,7 @@ package org.papervision3d.core.math
 			var maxY :Number = -minY;
 			var maxZ :Number = -minZ;
 			var v	 :Vertex3D;
-			
+
 			for each( v in vertices )
 			{
 				minX = Math.min(minX, v.x);
@@ -75,7 +75,7 @@ package org.papervision3d.core.math
 				maxY = Math.max(maxY, v.y);
 				maxZ = Math.max(maxZ, v.z);
 			}
-			
+
 			return new AxisAlignedBoundingBox(minX, minY, minZ, maxX, maxY, maxZ);
 		}
 

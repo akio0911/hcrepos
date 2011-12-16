@@ -6,7 +6,7 @@
  *
  * Revision: 4.5
  * Date: 2002/01/01
- * 
+ *
  * 2004/11/17 Grasset  adding new parameters for better controls of
  * V4L driver
  * 2004/11/17 Grasset  adding patch done by XXX for supporting YUV 4:2:0
