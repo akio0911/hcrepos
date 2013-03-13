@@ -5,7 +5,7 @@
 	
 	import org.papervision3d.core.proto.CameraObject3D;
 	import org.papervision3d.core.render.data.RenderSessionData;
-	import org.papervision3d.objects.DisplayObject3D;		
+	import org.papervision3d.objects.DisplayObject3D;
 
 	public class Sound3D extends DisplayObject3D
 	{

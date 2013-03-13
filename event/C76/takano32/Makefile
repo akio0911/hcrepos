@@ -1,5 +1,5 @@
 all:	view
-tex:	
+tex:
 	platex main
 pdf:	tex
 	dvipdfmx main

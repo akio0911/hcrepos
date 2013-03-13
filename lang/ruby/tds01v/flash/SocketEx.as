@@ -18,7 +18,7 @@ package {
 	private var camera:Camera;
 	private var msg:String;
 	private var pe:PlaceEngineAPI;
-        
+
         //コンストラクタ
         public function SocketEx() {
 	    stage.scaleMode = StageScaleMode.NO_SCALE;
@@ -43,7 +43,7 @@ package {
             //テキストフィールドの生成
             tfView=addTextField(0,0,640,320);
             tfSend=addTextField(0,320,640,40);
-            
+
             //ソケットの生成
             socket=new Socket("localhost",12345);
 
@@ -108,7 +108,7 @@ package {
         private function connectHandler(evt:Event):void {
             trace("接続");
         }
-    
+
         //??切断イベントの処理
         private function closeHandler(evt:Event):void {
             trace("切断");
@@ -149,7 +149,7 @@ package {
 	    //            tfView.text=d4.toString()+"\n"+tfView.text;
             tfView.text=s + " : " + d.toString()+"\n"+tfView.text;
 	}
-    
+
         //読み込み中イベントの処理?f?
         private function socketDataHandler(evt:ProgressEvent):void {
 	    //	    updateDirection();
@@ -166,12 +166,12 @@ package {
 		socket.flush();
 	    }
         }
-    
+
         //セキュリティエラーイベントの処理?Z?L?????e?B?G???
         private function securityErrorHandler(evt:SecurityErrorEvent):void {
             trace("セキュリティエラー");
         }
-    
+
         //IOエラーイベントの処理
         private function ioErrorHandler(evt:IOErrorEvent):void {
             trace("IOエラー");
@@ -194,7 +194,7 @@ package {
 	    var format:TextFormat = new TextFormat();
 	    format.size = 20;
 	    format.color = 0xFFFFFF;
-	    
+
 	    textField.defaultTextFormat = format;
 
             return textField;

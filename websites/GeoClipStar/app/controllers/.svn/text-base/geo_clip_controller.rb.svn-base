@@ -25,7 +25,7 @@ class GeoClipController < ApplicationController
     params[:offset_page] # 検索開始ページ
 =end
     @stars = Star.find(:all, :order => "create_date desc" )
-    @stars.each do | star | 
+    @stars.each do | star |
       star.end_flg = star.end_flg.to_s
     end
   end

@@ -17,7 +17,7 @@ class Trace < ActiveRecord::Base
     open(url) do |http|
       response = http.read
       doc = REXML::Document.new response
-      doc.elements.each("response/rest") { |r| 
+      doc.elements.each("response/rest") { |r|
         location_id = ''
         latitude = ''
         longitude = ''
@@ -54,7 +54,7 @@ class Trace < ActiveRecord::Base
 
     @@stars ||= Star.find(:all, :conditions => ["end_flg is ? or end_flg = ?", nil, false])
     @@stars.each do |star|
-      next if star.end_flg 
+      next if star.end_flg
       star_longitude_rad = convert_rad(star.longitude)
       star_latitude_rad = convert_rad(star.latitude)
 
@@ -82,7 +82,7 @@ class Trace < ActiveRecord::Base
     deff_longitude_rad = trace_longitude_rad - star_longitude_rad
     deff_latitude_rad = trace_latitude_rad - star_latitude_rad
 
-    Math.sqrt((deff_longitude_rad * 6378137 * Math.cos(trace_latitude_rad) )** 2 + 
+    Math.sqrt((deff_longitude_rad * 6378137 * Math.cos(trace_latitude_rad) )** 2 +
               (deff_latitude_rad * 6378137 ) ** 2)
 
     #       temp = 1 - 0.006674*(Math.sin(deff_latitude_rad)*Math.sin(deff_latitude_rad))

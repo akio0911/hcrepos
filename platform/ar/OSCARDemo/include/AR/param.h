@@ -1,6 +1,6 @@
 /*  --------------------------------------------------------------------------
 *   Copyright (C) 2004 Hitlab NZ.
-*   The distribution policy is describe on the Copyright.txt furnish 
+*   The distribution policy is describe on the Copyright.txt furnish
 *    with this library.
 *   -------------------------------------------------------------------------*/
 /**
@@ -11,7 +11,7 @@
 *  camera parameters for of ARToolkit library. Different structures are used
 *  for modify in run-time this parameters in the library. A file structure
 *  is use for input/output.
-*   \remark 
+*   \remark
 *
 *   History :
 *
@@ -23,7 +23,7 @@
 *  \date 01/12/07
 **/
 /*  --------------------------------------------------------------------------
-*   History : 
+*   History :
 *   Rev		Date		Who		Changes
 *
 *----------------------------------------------------------------------------*/
@@ -46,13 +46,13 @@ extern "C" {
 
 /** \struct ARParam
 * \brief camera intrinsic parameters.
-* 
+*
 * This structure contains the main parameters for
 * the intrinsic parameters of the camera
 * representation. The camera used is a pinhole
 * camera with standard parameters. User should
 * consult a computer vision reference for more
-* information. (e.g. Three-Dimensional Computer Vision 
+* information. (e.g. Three-Dimensional Computer Vision
 * (Artificial Intelligence) by Olivier Faugeras).
 * \param xsize length of the image (in pixels).
 * \param ysize height of the image (in pixels).
@@ -125,9 +125,9 @@ int  arParamDecompMat( double source[3][4], double cpara[3][4], double trans[3][
 /** \fn int int arParamIdeal2Observ( const double dist_factor[4], const double ix, const double iy,
 						 double *ox, double *oy )
 
-* \brief  Convert ideal screen coordinates of a vertex to observed ones. 
+* \brief  Convert ideal screen coordinates of a vertex to observed ones.
 *
-* Ideal coordinates mean that the distortion of the camera is compensated (so a straight line looks straight). 
+* Ideal coordinates mean that the distortion of the camera is compensated (so a straight line looks straight).
 * In observed coordinates the camera-distortion is not compensated and thus a straight line is not shown really straight.
 * \param dist_factor distorsion factors of used camera
 * \param ix x in ideal screen coordinates
@@ -142,7 +142,7 @@ int arParamIdeal2Observ( const double dist_factor[4], const double ix, const dou
 /** \fn int arParamObserv2Ideal( const double dist_factor[4], const double ox, const double oy,
                          double *ix, double *iy )
 
-* \brief Convert observed screen coordinates of a vertex to ideal ones. 
+* \brief Convert observed screen coordinates of a vertex to ideal ones.
 
 * Ideal coordinates mean that the distortion of the camera is compensated (so a straight line looks straight).
 * In observed coordinates the camera-distortion is not compensated and thus a straight line is not shown really straight.
@@ -182,8 +182,8 @@ int    arParamSave( char *filename, int num, ARParam *param, ...);
 /** \fn int arParamLoad( const char *filename, int num, ARParam *param, ...)
 * \brief load the camera intrinsic parameters.
 *
-* Load camera intrinsic parameters in the ARToolkit Library from 
-* a file (itself, an output of the calibration step). 
+* Load camera intrinsic parameters in the ARToolkit Library from
+* a file (itself, an output of the calibration step).
 * \param filename name of the parameters file.
 * \param num number of variable arguments
 * \param param result of the loaded parameters

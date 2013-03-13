@@ -9,6 +9,6 @@ package org.papervision3d.materials
 		{
 			super(bitmapViewport.bitmapData, precise);
 		}
-		
+
 	}
 }

@@ -1,22 +1,22 @@
 package org.papervision3d.core.render.material
 {
 	import flash.utils.Dictionary;
-	
+
 	import org.papervision3d.core.proto.MaterialObject3D;
 	import org.papervision3d.core.render.data.RenderSessionData;
-	
+
 	/**
 	 * @Author Ralph Hauwert
-	 * 
-	 * <code>MaterialManager</code> (used internally) is a singleton that tracks 
-	 * all materials. Each time a material is created, the <code>MaterialManager</code> 
-	 * registers the material for access in the render engine. 
+	 *
+	 * <code>MaterialManager</code> (used internally) is a singleton that tracks
+	 * all materials. Each time a material is created, the <code>MaterialManager</code>
+	 * registers the material for access in the render engine.
 	 */
 	public class MaterialManager
 	{
 		private static var instance:MaterialManager;
 		private var materials:Dictionary;
-	
+
 		/**
 		 * MaterialManager singleton constructor
 		 */
@@ -27,36 +27,36 @@ package org.papervision3d.core.render.material
 			}
 			init();
 		}
-		
+
 		/** @private */
 		private function init():void
 		{
 			materials = new Dictionary(true);
 		}
-		
+
 		/** @private */
 		private function _registerMaterial(material:MaterialObject3D):void
 		{
 			materials[material] = true;
-		
+
 		}
-		
+
 		/** @private */
 		private function _unRegisterMaterial(material:MaterialObject3D):void
 		{
 			delete materials[material];
 		}
-		
+
 		/**
-		 * Allows for materials that animate or change (e.g., MovieMaterial) to 
+		 * Allows for materials that animate or change (e.g., MovieMaterial) to
 		 * be updated prior to the render
-		 * 
+		 *
 		 * @param renderSessionData		the data used in updating the material
 		 */
 		public function updateMaterialsBeforeRender(renderSessionData:RenderSessionData):void
 		{
 			var um:IUpdateBeforeMaterial;
-						
+
 			for (var m:* in materials){
 				if(m is IUpdateBeforeMaterial){
 					um = m as IUpdateBeforeMaterial;
@@ -65,17 +65,17 @@ package org.papervision3d.core.render.material
 				}
 			}
 		}
-		
+
 		/**
-		 * Allows for materials that animate or change (e.g., MovieMaterial) to 
+		 * Allows for materials that animate or change (e.g., MovieMaterial) to
 		 * be updated after the render
-		 * 
+		 *
 		 * @param renderSessionData		the data used in updating the material
 		 */
 		public function updateMaterialsAfterRender(renderSessionData:RenderSessionData):void
 		{
 			var um:IUpdateAfterMaterial;
-			
+
 			for (var m:* in materials){
 				if(m is IUpdateAfterMaterial){
 					um = m as IUpdateAfterMaterial;
@@ -83,7 +83,7 @@ package org.papervision3d.core.render.material
 				}
 			}
 		}
-		
+
 		/**
 		 * Registers a material
 		 */
@@ -91,7 +91,7 @@ package org.papervision3d.core.render.material
 		{
 			getInstance()._registerMaterial(material);
 		}
-		
+
 		/**
 		 * Unregisters a material
 		 */
@@ -99,7 +99,7 @@ package org.papervision3d.core.render.material
 		{
 			getInstance()._unRegisterMaterial(material);
 		}
-		
+
 		/**
 		 * Returns a singleton instance of the <code>MaterialManager</code>
 		 */
@@ -110,6 +110,6 @@ package org.papervision3d.core.render.material
 			}
 			return instance;
 		}
-		
+
 	}
 }

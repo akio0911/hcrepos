@@ -4,7 +4,7 @@ package org.papervision3d.materials.shaders
 	import flash.display.Graphics;
 	import flash.geom.Matrix;
 	import flash.utils.Dictionary;
-	
+
 	import org.papervision3d.core.log.PaperLogger;
 	import org.papervision3d.core.material.TriangleMaterial;
 	import org.papervision3d.core.render.command.RenderTriangle;
@@ -21,11 +21,11 @@ package org.papervision3d.materials.shaders
 	public class ShadedMaterial extends TriangleMaterial implements ITriangleDrawer,IUpdateBeforeMaterial,IUpdateAfterMaterial
 	{
 		private var _shaderCompositeMode:int;
-		
+
 		public var shader:Shader;
 		public var material:BitmapMaterial;
 		public var shaderObjectData:Dictionary;
-		
+
 		public function ShadedMaterial(material:BitmapMaterial, shader:Shader, compositeMode:int = 0)
 		{
 			super();
@@ -34,16 +34,16 @@ package org.papervision3d.materials.shaders
 			shaderCompositeMode = compositeMode;
 			init();
 		}
-		
+
 		private function init():void
 		{
 			shaderObjectData = new Dictionary();
 		}
-		
+
 		/**
 		 * Localized vars
 		 */
-		 	 
+
 		 private static var bmp:BitmapData;
 		override public function drawTriangle(tri:RenderTriangle, graphics:Graphics, renderSessionData:RenderSessionData, altBitmap:BitmapData = null, altUV:Matrix = null):void
 		{
@@ -59,7 +59,7 @@ package org.papervision3d.materials.shaders
 				shader.renderTri(tri.triangle,renderSessionData,sod,bmp);
 			}
 		}
-		
+
 		public function updateBeforeRender(renderSessionData:RenderSessionData):void
 		{
 			var sod:ShaderObjectData;
@@ -70,15 +70,15 @@ package org.papervision3d.materials.shaders
 						sod.shaderRenderer.resizedInput = false;
 						sod.uvMatrices = new Dictionary();
 					}
-					sod.shaderRenderer.clear();	
+					sod.shaderRenderer.clear();
 				}
 				if(shader is ILightShader){
 					var ls:ILightShader = shader as ILightShader;
 					ls.updateLightMatrix(sod,renderSessionData);
 				}
-			}	
+			}
 		}
-		
+
 		public function updateAfterRender(renderSessionData:RenderSessionData):void
 		{
 			var sod:ShaderObjectData;
@@ -89,7 +89,7 @@ package org.papervision3d.materials.shaders
 				}
 			}
 		}
-		
+
 		override public function registerObject(displayObject3D:DisplayObject3D):void
 		{
 			super.registerObject(displayObject3D);
@@ -97,7 +97,7 @@ package org.papervision3d.materials.shaders
 			sod.shaderRenderer.inputBitmap = material.bitmap;
 			shader.setContainerForObject(displayObject3D,sod.shaderRenderer.getLayerForShader(shader));
 		}
-		
+
 		override public function unregisterObject(displayObject3D:DisplayObject3D):void
 		{
 			super.unregisterObject(displayObject3D);
@@ -105,17 +105,17 @@ package org.papervision3d.materials.shaders
 			sod.destroy();
 			delete shaderObjectData[displayObject3D];
 		}
-		
+
 		public function set shaderCompositeMode(compositeMode:int):void
 		{
 			_shaderCompositeMode = compositeMode;
 		}
-		
+
 		public function get shaderCompositeMode():int
 		{
 			return _shaderCompositeMode;
 		}
-		
+
 		/**
 		 * Debug thingy.
 		 */
@@ -133,9 +133,9 @@ package org.papervision3d.materials.shaders
 			}
 			return null;
 		}
-		
-		
-		
+
+
+
 		override public function destroy():void
 		{
 			super.destroy();
@@ -146,7 +146,7 @@ package org.papervision3d.materials.shaders
 			material = null;
 			shader = null;
 		}
-		
+
 	}
-	
+
 }

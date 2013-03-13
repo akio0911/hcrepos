@@ -1,9 +1,9 @@
 package org.papervision3d.core.clipping.draw
 {
-    
+
     import flash.display.*;
     import flash.geom.*;
-    
+
     import org.papervision3d.core.render.command.RenderableListItem;
 
     /**
@@ -14,30 +14,30 @@ package org.papervision3d.core.clipping.draw
     	private var rectangleClipping:RectangleClipping;
     	private var zeroPoint:Point = new Point(0, 0);
 		private var globalPoint:Point;
-		
+
     	/**
     	 * Minimum allowed x value for primitives
     	 */
     	public var minX:Number = -1000000;
-    	
+
     	/**
     	 * Minimum allowed y value for primitives
     	 */
         public var minY:Number = -1000000;
-    	
+
     	/**
     	 * Maximum allowed x value for primitives
     	 */
         public var maxX:Number = 1000000;
-    	
+
     	/**
     	 * Maximum allowed y value for primitives
     	 */
         public var maxY:Number = 1000000;
-		
+
 		/**
 		 * Checks a drawing primitive for clipping.
-		 * 
+		 *
 		 * @param	pri	The drawing primitive being checked.
 		 * @return		The clipping result - false for clipped, true for non-clipped.
 		 */
@@ -45,10 +45,10 @@ package org.papervision3d.core.clipping.draw
         {
             return true;
         }
-		
+
 		/**
 		 * Checks a bounding rectangle for clipping.
-		 * 
+		 *
 		 * @param	minX	The x value for the left side of the rectangle.
 		 * @param	minY	The y value for the top side of the rectangle.
 		 * @param	maxX	The x value for the right side of the rectangle.
@@ -59,7 +59,7 @@ package org.papervision3d.core.clipping.draw
         {
             return true;
         }
-		
+
 		/**
 		 * Returns a rectangle clipping object representing the bounding box of the clipping object.
 		 */
@@ -67,12 +67,12 @@ package org.papervision3d.core.clipping.draw
         {
         	if (!rectangleClipping)
         		rectangleClipping = new RectangleClipping();
-        	
+
         	rectangleClipping.minX = -1000000;
         	rectangleClipping.minY = -1000000;
         	rectangleClipping.maxX = 1000000;
         	rectangleClipping.maxY = 1000000;
-        	
+
             return rectangleClipping;
         }
 
@@ -83,14 +83,14 @@ package org.papervision3d.core.clipping.draw
         {
         	if (!rectangleClipping)
     			rectangleClipping = new RectangleClipping();
-        	
+
         	switch(container.stage.align)
         	{
         		case StageAlign.TOP_LEFT:
 	            	zeroPoint.x = 0;
 	            	zeroPoint.y = 0;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.maxX = (rectangleClipping.minX = globalPoint.x) + container.stage.stageWidth;
 	                rectangleClipping.maxY = (rectangleClipping.minY = globalPoint.y) + container.stage.stageHeight;
 	                break;
@@ -98,7 +98,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth;
 	            	zeroPoint.y = 0;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.minX = (rectangleClipping.maxX = globalPoint.x) - container.stage.stageWidth;
 	                rectangleClipping.maxY = (rectangleClipping.minY = globalPoint.y) + container.stage.stageHeight;
 	                break;
@@ -106,7 +106,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = 0;
 	            	zeroPoint.y = container.stage.stageHeight;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.maxX = (rectangleClipping.minX = globalPoint.x) + container.stage.stageWidth;
 	                rectangleClipping.minY = (rectangleClipping.maxY = globalPoint.y) - container.stage.stageHeight;
 	                break;
@@ -114,7 +114,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth;
 	            	zeroPoint.y = container.stage.stageHeight;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.minX = (rectangleClipping.maxX = globalPoint.x) - container.stage.stageWidth;
 	                rectangleClipping.minY = (rectangleClipping.maxY = globalPoint.y) - container.stage.stageHeight;
 	                break;
@@ -122,7 +122,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth/2;
 	            	zeroPoint.y = 0;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.minX = globalPoint.x - container.stage.stageWidth/2;
 	                rectangleClipping.maxX = globalPoint.x + container.stage.stageWidth/2;
 	                rectangleClipping.maxY = (rectangleClipping.minY = globalPoint.y) + container.stage.stageHeight;
@@ -131,7 +131,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth/2;
 	            	zeroPoint.y = container.stage.stageHeight;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.minX = globalPoint.x - container.stage.stageWidth/2;
 	                rectangleClipping.maxX = globalPoint.x + container.stage.stageWidth/2;
 	                rectangleClipping.minY = (rectangleClipping.maxY = globalPoint.y) - container.stage.stageHeight;
@@ -140,7 +140,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = 0;
 	            	zeroPoint.y = container.stage.stageHeight/2;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.maxX = (rectangleClipping.minX = globalPoint.x) + container.stage.stageWidth;
 	                rectangleClipping.minY = globalPoint.y - container.stage.stageHeight/2;
 	                rectangleClipping.maxY = globalPoint.y + container.stage.stageHeight/2;
@@ -149,7 +149,7 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth;
 	            	zeroPoint.y = container.stage.stageHeight/2;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	                
+
 	                rectangleClipping.minX = (rectangleClipping.maxX = globalPoint.x) - container.stage.stageWidth;
 	                rectangleClipping.minY = globalPoint.y - container.stage.stageHeight/2;
 	                rectangleClipping.maxY = globalPoint.y + container.stage.stageHeight/2;
@@ -158,13 +158,13 @@ package org.papervision3d.core.clipping.draw
 	            	zeroPoint.x = container.stage.stageWidth/2;
 	            	zeroPoint.y = container.stage.stageHeight/2;
 	                globalPoint = container.globalToLocal(zeroPoint);
-	            	
+
 	                rectangleClipping.minX = globalPoint.x - container.stage.stageWidth/2;
 	                rectangleClipping.maxX = globalPoint.x + container.stage.stageWidth/2;
 	                rectangleClipping.minY = globalPoint.y - container.stage.stageHeight/2;
 	                rectangleClipping.maxY = globalPoint.y + container.stage.stageHeight/2;
         	}
-            
+
             return rectangleClipping;
         }
     }

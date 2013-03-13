@@ -58,7 +58,7 @@ NSString* const cMyApplicationName = @"My Skype API Tester";
 			[infoView insertText:@"Unknown response from Skype\n"];
 			break;
 	}
-	
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +115,7 @@ NSString* const cMyApplicationName = @"My Skype API Tester";
 {
 	[infoView insertText:[commandField stringValue]];
 	[infoView insertText:@"\n"];
-	
+
 	NSString* returnedString = [SkypeAPI sendSkypeCommand:[commandField stringValue]];
 	if (returnedString)
 	{

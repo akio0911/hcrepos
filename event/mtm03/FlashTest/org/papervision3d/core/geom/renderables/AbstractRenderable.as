@@ -6,11 +6,11 @@ package org.papervision3d.core.geom.renderables
 
 	public class AbstractRenderable implements IRenderable
 	{
-		
+
 		public var _userData:UserData;
 		public var instance:DisplayObject3D;
-		
-		
+
+
 		public function AbstractRenderable()
 		{
 			super();
@@ -20,21 +20,21 @@ package org.papervision3d.core.geom.renderables
 		{
 			return null;
 		}
-		
+
 		/**
 		 * userData UserData
-		 * 
+		 *
 		 * Optional extra data to be added to this object.
 		 */
 		public function set userData(userData:UserData):void
 		{
 			_userData = userData;
 		}
-		
+
 		public function get userData():UserData
 		{
-			return _userData;	
+			return _userData;
 		}
-		
+
 	}
 }

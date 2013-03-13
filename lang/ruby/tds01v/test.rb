@@ -70,7 +70,7 @@ end
 
 def get_direction(dev)
   # 計測開始
-  # 21<ENTER><ENTER> 
+  # 21<ENTER><ENTER>
 
   "21\x0d\x0a".each_byte {|c|
     c = c.chr
@@ -79,7 +79,7 @@ def get_direction(dev)
   }
 
   # ACK 計測開始応答
-  # DE 
+  # DE
 
   #p :echo_back
   (2).times do |i|
@@ -95,7 +95,7 @@ def get_direction(dev)
   #puts ''
 
   # センサ情報要求
-  # 29<ENTER><ENTER> 
+  # 29<ENTER><ENTER>
 
   "29\x0d\x0a".each_byte {|c|
     c = c.chr
@@ -104,9 +104,9 @@ def get_direction(dev)
   }
 
   # センサ情報 全センサ全データ(ベクトルデータ+計測データ)
-  # FE85 00A0 00A4 07B9 
-  # 0005 0006 FFB8 0024 
-  # FFE5 27AE FFEB 00D5 0B1B 
+  # FE85 00A0 00A4 07B9
+  # 0005 0006 FFB8 0024
+  # FFE5 27AE FFEB 00D5 0B1B
 
   #p :echo_back
 
@@ -372,10 +372,10 @@ while true
   # gs.accept は接続要求を待ち受ける
   # 接続要求がくると新しいソケットが作成され、
   # そのままスレッドの引数として渡される
-  Thread.start(gs.accept) do |s| 
+  Thread.start(gs.accept) do |s|
     print(s, "is accepted\n")
 #    puts(s.gets)
-    
+
     #########################
 dev = dev_open(device)
 
@@ -425,7 +425,7 @@ end
 puts ''
 
 # センサ情報項目設定 全センサ全データ(ベクトルデータ+計測データ)
-# 0DF7<ENTER><ENTER> 
+# 0DF7<ENTER><ENTER>
 
 "0DF7\x0d\x0a".each_byte {|c|
   c = c.chr
@@ -434,7 +434,7 @@ puts ''
 }
 
 # ACK センサ情報項目設定応答
-# F2 
+# F2
 
 p :echo_back
 (2).times do |i|
@@ -448,7 +448,7 @@ end
 puts ''
 
 # 地磁気センサ初期化要求
-# 27<ENTER><ENTER> 
+# 27<ENTER><ENTER>
 
 "27\x0d\x0a".each_byte {|c|
   c = c.chr
@@ -457,7 +457,7 @@ puts ''
 }
 
 # ACK 地磁気センサ初期化要求応答
-# D8 
+# D8
 
 p :echo_back
 (2).times do |i|
@@ -475,7 +475,7 @@ puts ''
       p 111111111111
       data = get_direction(dev)
       p 222222222222
-      
+
 #      p s.recv("AAAAAAAA")
 #      s.send data
 
@@ -497,45 +497,45 @@ end
 # Connected.
 
 # 計測条件設定
-# 050027950000<ENTER><ENTER> 
+# 050027950000<ENTER><ENTER>
 # ACK 計測条件設定応答
-# FA 
+# FA
 
 # センサ情報項目設定 全センサ全データ(ベクトルデータ+計測データ)
-# 0DF7<ENTER><ENTER> 
+# 0DF7<ENTER><ENTER>
 # ACK センサ情報項目設定応答
-# F2 
+# F2
 
 # 地磁気センサ初期化要求
-# 27<ENTER><ENTER> 
+# 27<ENTER><ENTER>
 # ACK 地磁気センサ初期化要求応答
-# D8 
+# D8
 
 # 計測開始
-# 21<ENTER><ENTER> 
+# 21<ENTER><ENTER>
 # ACK 計測開始応答
-# DE 
+# DE
 
 # センサ情報要求
-# 29<ENTER><ENTER> 
+# 29<ENTER><ENTER>
 # センサ情報 全センサ全データ(ベクトルデータ+計測データ)
-# FE8500A000A407B900050006FFB80024FFE527AEFFEB00D50B1B 
+# FE8500A000A407B900050006FFB80024FFE527AEFFEB00D50B1B
 
 # 計測開始
-# 21<ENTER><ENTER> 
+# 21<ENTER><ENTER>
 # ACK 計測開始応答
-# DE 
+# DE
 
 # センサ情報要求
-# 29<ENTER><ENTER> 
+# 29<ENTER><ENTER>
 # センサ情報 全センサ全データ(ベクトルデータ+計測データ)
-# FE81009400A807B400020002FFB7000BFFF527B2FFE800D50B1B 
+# FE81009400A807B400020002FFB7000BFFF527B2FFE800D50B1B
 
 # ~.
 
 # akio0911:~# ls /dev/tty.usb*
 # /dev/tty.usbserial-00001004
-# akio0911:~# cu -s 9600 -l /dev/tty.usbserial-00001004 
+# akio0911:~# cu -s 9600 -l /dev/tty.usbserial-00001004
 # Connected.
 
 # REQ 050027950000 # 計測条件設定

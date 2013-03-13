@@ -10,11 +10,11 @@ class OauthController < ApplicationController
 
     session[:username] = params[:username]
     session[:request_token] = @request_token
-    
+
     if @request_token
       redirect_to(@request_token.authorize_url)
     else
-      render(:text => "Failed to get a Request Token") 
+      render(:text => "Failed to get a Request Token")
     end
 
   end

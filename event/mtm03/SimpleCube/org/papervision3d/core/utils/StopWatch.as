@@ -12,12 +12,12 @@ package org.papervision3d.core.utils
 		private var stopTime:int;
 		private var elapsedTime:int;
 		private var isRunning:Boolean;
-		
+
 		public function StopWatch()
 		{
 			super();
 		}
-		
+
 		/**
 		 * Starts the timer
 		 */
@@ -28,7 +28,7 @@ package org.papervision3d.core.utils
 				isRunning = true;
 			}
 		}
-		
+
 		/**
 		 * Stops the timer
 		 */
@@ -43,7 +43,7 @@ package org.papervision3d.core.utils
 				return 0;
 			}
 		}
-		
+
 		/**
 		 * Resets the timer
 		 */
@@ -51,6 +51,6 @@ package org.papervision3d.core.utils
 		{
 			isRunning = false;
 		}
-	
+
 	}
 }

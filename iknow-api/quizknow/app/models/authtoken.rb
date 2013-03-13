@@ -7,7 +7,7 @@ class Authtoken < ActiveRecord::Base
     IKNOW_OAUTH_SECRET,
     :site => "http://#{IKNOW_API_HOST_WITH_PORT}",
     :authorize_url => "http://#{IKNOW_HOST_WITH_PORT}/oauth/authorize")
-    
+
   def self.new_request_token
     begin
       CONSUMER.get_request_token

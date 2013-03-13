@@ -1,8 +1,8 @@
 /*
  * Video capture module utilising the GStreamer pipeline for AR Toolkit
- * 
+ *
  * (c) Copyrights 2003-2006 Hartmut Seichter
- * 
+ *
  * Licensed under the terms of the GPL
  *
  */

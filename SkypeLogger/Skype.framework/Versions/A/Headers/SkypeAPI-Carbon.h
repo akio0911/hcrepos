@@ -20,7 +20,7 @@ struct SkypeDelegate
 {
 	// Required member
 	CFStringRef clientApplicationName;
-	
+
 	// Optional members, can be NULL
 	void (*SkypeNotificationReceived)(CFStringRef aNotificationString);
 	void (*SkypeAttachResponse)(unsigned int aAttachResponseCode);			// 0 - failed, 1 - success

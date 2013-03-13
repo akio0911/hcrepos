@@ -1,6 +1,6 @@
 package org.papervision3d.core.render.filter
 {
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
@@ -10,6 +10,6 @@ package org.papervision3d.core.render.filter
 		{
 			return 0;
 		}
-		
+
 	}
 }

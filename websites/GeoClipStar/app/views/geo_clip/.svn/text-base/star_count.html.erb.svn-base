@@ -1,3 +1,3 @@
 全 <%= @star_count_all %>個 <BR />
 回収済み <%= @star_count_kaisyu_sumi %>個 <BR/>
-残り <%= @star_count_kaisyu_mi %>個 
+残り <%= @star_count_kaisyu_mi %>個

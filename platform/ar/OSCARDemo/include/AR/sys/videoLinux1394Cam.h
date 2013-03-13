@@ -28,7 +28,7 @@ typedef struct {
     int      node;
     int      mode;
     int      rate;
-    int      debug;  
+    int      debug;
     int      card;
     int      channel;
     int      speed;

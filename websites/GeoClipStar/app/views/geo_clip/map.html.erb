@@ -139,10 +139,10 @@ function load(){
       icon.image = "./images/gaziro2000.jpg";
       icon.iconSize = new GSize(48, 48);
       icon.iconAhchor = new GPoint(48, 48);
-      icon.imageMap = [0,0, 48,0, 48,48, 0,48]; 
+      icon.imageMap = [0,0, 48,0, 48,48, 0,48];
       var mk = new GMarker(new GLatLng(lat, lng), icon);
       map.addOverlay(mk);
-      
+
 
       // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
       var latlng = new GLatLng(lat, lng);
@@ -241,7 +241,7 @@ function addHistory(ov, latlng, subject, end_flg){
   addMarker();
   function addMarker(){
     var icon = new GIcon(G_DEFAULT_ICON);
-    if(end_flg == "true" ){ 
+    if(end_flg == "true" ){
       icon.image = "./images/stargray48.png";
     }else{
       icon.image = "./images/star48.png";
@@ -250,7 +250,7 @@ function addHistory(ov, latlng, subject, end_flg){
     icon.shadow = "./images/starshadow48.png";
     icon.shadowSize = new GSize(96, 48);
     icon.iconAhchor = new GPoint(24, 24);
-    icon.imageMap = [12,12, 36,12, 36,36, 12,36]; 
+    icon.imageMap = [12,12, 36,12, 36,36, 12,36];
     var mk = new GMarker(latlng, icon);
     map.addOverlay(mk);
     GEvent.addListener(mk, "click", function(){
@@ -329,7 +329,7 @@ onunload = GUnload;
   <br style="clear:both;" />
   <div style="float:left;width:190px;height:740px;background:url(./images/left_bg.gif);">
     <div style="padding:8px 0 0 70px;" id="star_count"></div>
-    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;"> 
+    <div style="width:130px;height:630px;margin:10px 0 0 13px;padding:10px;overflow:auto;font-size:10px;">
       <ol id="history" style="float:right;"></ol>
     </div>
   </div>

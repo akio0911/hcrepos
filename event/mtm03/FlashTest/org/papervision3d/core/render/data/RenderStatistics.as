@@ -1,10 +1,10 @@
 package org.papervision3d.core.render.data
 {
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
-	 
+
 	public class RenderStatistics
 	{
 		public var projectionTime:int = 0;
@@ -18,12 +18,12 @@ package org.papervision3d.core.render.data
 		public var shadedTriangles:int = 0;
 		public var filteredObjects:int = 0;
 		public var culledObjects:int = 0;
-		
+
 		public function RenderStatistics()
 		{
-			
+
 		}
-		
+
 		public function clear():void
 		{
 			projectionTime = 0;
@@ -38,7 +38,7 @@ package org.papervision3d.core.render.data
 			filteredObjects = 0;
 			culledObjects = 0;
 		}
-		
+
 		public function clone():RenderStatistics
 		{
 			var rs:RenderStatistics = new RenderStatistics();
@@ -54,11 +54,11 @@ package org.papervision3d.core.render.data
 			rs.culledObjects = culledObjects;
 			return rs;
 		}
-		
+
 		public function toString():String
 		{
 			return new String("ProjectionTime:"+projectionTime+" RenderTime:"+renderTime+" Particles:"+particles+" CulledParticles :"+culledParticles+" Triangles:"+triangles+" ShadedTriangles :"+shadedTriangles+" CulledTriangles:"+culledTriangles+" FilteredObjects:"+filteredObjects+" CulledObjects:"+culledObjects+"");
 		}
-		
+
 	}
 }

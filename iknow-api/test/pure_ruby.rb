@@ -116,7 +116,7 @@ puts "# List API"
 
 ## Item API
 puts "# Item API"
-@item = Iknow::Item.create(iknow_auth, :cue => {:text => 'hello world! 2', :language => 'en', :part_of_speech => 'E'}, 
+@item = Iknow::Item.create(iknow_auth, :cue => {:text => 'hello world! 2', :language => 'en', :part_of_speech => 'E'},
                                        :response => {:text => 'ハローワールド！', :language => 'ja'})
 @item.add_image(iknow_auth, 'http://farm4.static.flickr.com/3276/3102381796_a33c1ffdf1.jpg')
 @item.add_sound(iknow_auth, 'http://matake.jp/download/hello_world.mp3')

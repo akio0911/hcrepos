@@ -2,7 +2,7 @@ package org.papervision3d.core.render
 {
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
-	
+
 	import org.papervision3d.core.proto.CameraObject3D;
 	import org.papervision3d.core.proto.SceneObject3D;
 	import org.papervision3d.core.render.command.IRenderListItem;
@@ -16,21 +16,21 @@ package org.papervision3d.core.render
 		{
 			super(target);
 		}
-		
+
 		public function renderScene(scene:SceneObject3D, camera:CameraObject3D, viewPort:Viewport3D):RenderStatistics
 		{
 			return null;
 		}
-		
+
 		public function addToRenderList(renderCommand:RenderableListItem):int
 		{
 			return 0;
 		}
-		
+
 		public function removeFromRenderList(renderCommand:IRenderListItem):int
 		{
 			return 0;
 		}
-		
+
 	}
 }

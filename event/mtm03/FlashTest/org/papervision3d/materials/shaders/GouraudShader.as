@@ -12,7 +12,7 @@ package org.papervision3d.materials.shaders {
 	import org.papervision3d.core.proto.LightObject3D;
 	import org.papervision3d.core.render.data.RenderSessionData;
 	import org.papervision3d.core.render.shader.ShaderObjectData;
-	import org.papervision3d.materials.utils.LightMaps;	
+	import org.papervision3d.materials.utils.LightMaps;
 
 	/**
 	 * @Author Ralph Hauwert
@@ -21,28 +21,28 @@ package org.papervision3d.materials.shaders {
 	{
 		private var _ambientColor:int;
 		private var gouraudMap:BitmapData;
-		
+
 		private static var triMatrix:Matrix = new Matrix();
 		private static var transformMatrix:Matrix = new Matrix();
 		private static var light:Number3D;
 		private static var p0:Number;
 		private static var q0:Number;
 		private static var p1:Number;
-		private static var q1:Number;		
+		private static var q1:Number;
 		private static var p2:Number;
 		private static var q2:Number;
 		private static var v0:Vertex3DInstance;
 		private static var v1:Vertex3DInstance;
 		private static var v2:Vertex3DInstance;
 		private static var currentGraphics:Graphics;
-		
+
 		public function GouraudShader( light:LightObject3D, lightColor:uint = 0xFFFFFF, ambientColor:uint=0x000000, specularLevel:uint=0 )
 		{
 			super();
 			this.light = light;
 			gouraudMap = LightMaps.getGouraudMap(lightColor, ambientColor, specularLevel);
 		}
-		
+
 		/**
 		 * Localized vars
 		 */
@@ -60,7 +60,7 @@ package org.papervision3d.materials.shaders {
 		    transformMatrix.invert();
 		    triMatrix = sod.uvMatrices[triangle] ? sod.uvMatrices[triangle] : sod.getUVMatrixForTriangle(triangle);
 		    transformMatrix.concat(triMatrix);
-			
+
 			currentGraphics = Sprite(layers[sod.object]).graphics;
 			currentGraphics.beginBitmapFill(gouraudMap, transformMatrix,false,false);
 			currentGraphics.moveTo(triMatrix.tx, triMatrix.ty);
@@ -69,7 +69,7 @@ package org.papervision3d.materials.shaders {
 			currentGraphics.lineTo(triMatrix.tx, triMatrix.ty);
 			currentGraphics.endFill();
 		}
-		
+
 		private static var ts:Sprite = new Sprite();
 		override public function renderTri(triangle:Triangle3D, renderSessionData:RenderSessionData, sod:ShaderObjectData,bmp:BitmapData):void
 		{
@@ -84,25 +84,25 @@ package org.papervision3d.materials.shaders {
 		    transformMatrix.invert();
 			triMatrix = sod.renderTriangleUVS[triangle] ? sod.renderTriangleUVS[triangle] : sod.getPerTriUVForShader(triangle);
 			transformMatrix.concat(triMatrix);
-			
+
 			/*WORK AROUND FOR FAILING DRAWS...TAKE THIS OUT ASAP*/
 			ts.graphics.clear();
 			ts.graphics.beginBitmapFill(gouraudMap, transformMatrix, false,false);
 			ts.graphics.drawRect(0, 0, bmp.rect.width, bmp.rect.height);
 			ts.graphics.endFill();
-			
+
 			bmp.draw(ts, null,null,layerBlendMode, bmp.rect, false);
 		}
-		
+
 		public function set ambientColor(ambient:int):void
 		{
 			_ambientColor = ambient;
 		}
-		
+
 		public function get ambientColor():int
 		{
 			return _ambientColor;
 		}
-		
+
 	}
 }

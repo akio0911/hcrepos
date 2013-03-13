@@ -2,7 +2,7 @@ package org.papervision3d.materials.shadematerials
 {
 	import org.papervision3d.core.proto.LightObject3D;
 	import org.papervision3d.materials.utils.LightMaps;
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
@@ -12,6 +12,6 @@ package org.papervision3d.materials.shadematerials
 		{
 			super(light, LightMaps.getCellMap(color_1, color_2, steps));
 		}
-		
+
 	}
 }

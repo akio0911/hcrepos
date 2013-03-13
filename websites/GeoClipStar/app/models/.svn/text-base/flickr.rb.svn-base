@@ -4,7 +4,7 @@ class Flickr < ActiveRecord::Base
   def self.import_flickr
     url = "http://api.flickr.com/services/feeds/photos_public.gne?id=84889587@N00&lang=en-us&format=rss_200"
 
-    open(url) do | http | 
+    open(url) do | http |
       response = http.read
       rss_items = RSS::Parser.parse(response, false)
       rss_items.items.each do  |rss_item|

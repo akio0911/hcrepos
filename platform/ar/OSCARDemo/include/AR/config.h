@@ -233,9 +233,9 @@
 
 #define   AR_SQUARE_MAX        30
 #define   AR_CHAIN_MAX      10000
-#define   AR_PATT_NUM_MAX      50 
-#define   AR_PATT_SIZE_X       16 
-#define   AR_PATT_SIZE_Y       16 
+#define   AR_PATT_NUM_MAX      50
+#define   AR_PATT_SIZE_X       16
+#define   AR_PATT_SIZE_Y       16
 #define   AR_PATT_SAMPLE_NUM   64
 
 #define   AR_GL_CLIP_NEAR      50.0

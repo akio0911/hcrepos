@@ -1,6 +1,6 @@
 /*  --------------------------------------------------------------------------
 *   Copyright (C) 2004 Hitlab NZ.
-*   The distribution policy is describe on the Copyright.txt furnish 
+*   The distribution policy is describe on the Copyright.txt furnish
 *    with this library.
 *   -------------------------------------------------------------------------*/
 /**
@@ -11,17 +11,17 @@
 *  to must classical routines (inversion, innerproduct), it includes a PCA (Principal)
 *  Component Analysis) routine.
 *  For the structure of the matrix see ARMat.
-*   \remark 
+*   \remark
 *
 *   History :
 *
 *  \author Hirokazu Kato kato@sys.im.hiroshima-cu.ac.jp
-*  \version 
-*  \date 
+*  \version
+*  \date
 *
 **/
 /*  --------------------------------------------------------------------------
-*   History : 
+*   History :
 *   Rev		Date		Who		Changes
 *
 *----------------------------------------------------------------------------*/
@@ -56,7 +56,7 @@ extern "C" {
 
 /** \struct ARMat
 * \brief matrix structure.
-* 
+*
 * Defined the structure of the matrix type based on a dynamic allocation.
 * The matrix format is :<br>
 *  <---- clm ---><br>
@@ -65,8 +65,8 @@ extern "C" {
 *  [ 12  23  13 ] row<br>
 *  [ 20  10  15 ] |<br>
 *  [ 13  14  15 ] v<br>
-* 
-* \param m content of matrix 
+*
+* \param m content of matrix
 * \param row number of lines in matrix
 * \param clm number of column in matrix
 */
@@ -94,7 +94,7 @@ typedef struct {
 /** \def ARELEM0(mat,r,c)
 * \brief macro function that give direct access to an element (0 origin)
 *
-* 
+*
 */
 /* 0 origin */
 #define ARELEM0(mat,r,c) ((mat)->m[(r)*((mat)->clm)+(c)])
@@ -102,7 +102,7 @@ typedef struct {
 /** \def ARELEM1(mat,row,clm)
 * \brief macro function that give direct access to an element (1 origin)
 *
-* 
+*
 */
 /* 1 origin */
 #define ARELEM1(mat,row,clm) ARELEM0(mat,row-1,clm-1)
@@ -149,7 +149,7 @@ int    arMatrixDup(ARMat *dest, ARMat *source);
 /** \fn ARMat *arMatrixAllocDup(ARMat *source)
 * \brief dumps a new matrix
 *
-* Allocates and recopy the original source matrix. 
+* Allocates and recopy the original source matrix.
 * \param source the source matrix to copy
 * \return the matrix if success, NULL if error
 */
@@ -169,7 +169,7 @@ int    arMatrixUnit(ARMat *unit);
 /** \fn int arMatrixAllocUnit(int dim)
 * \brief Creates a unit matrix.
 *
-* Allocates and initializes a matrix to a 
+* Allocates and initializes a matrix to a
 * an identity matrix.
 * \param dim dimensions of the unit matrix (square)
 * \return the matrix allocated if success, NULL if error
@@ -192,7 +192,7 @@ int    arMatrixMul(ARMat *dest, ARMat *a, ARMat *b);
 
 /** \fn ARMat *arMatrixAllocMul(ARMat *a, ARMat *b)
 * \brief Multiply two matrix with memory allocation.
-* 
+*
 * multiply two matrix and copy the result in a new
 * allocate matrix (the source matrix is unmodified).
 * the product is this one : dest = a * b
@@ -229,7 +229,7 @@ ARMat  *arMatrixAllocTrans(ARMat *source);
 *
 * inverse a matrix and copy the result in a new
 * one (the source matrix is unmodified). the destination
-* matrix must be allocated. the source matrix need to be a 
+* matrix must be allocated. the source matrix need to be a
 * square matrix.
 * \param dest result matrix of the inverse operation
 * \param source source matrix
@@ -241,7 +241,7 @@ int    arMatrixInv(ARMat *dest, ARMat *source);
 * \brief inverses a matrix.
 *
 * Inverses a matrix and copy the result in
-* the same structure. 
+* the same structure.
 * \param m the matrix to inverse
 * \return 0 if success, -1 if error
 */
@@ -341,7 +341,7 @@ double arVecHousehold( ARVec *x );
 * computes the inner product of the two argument vectors.
 * the operation done is  a=x.y (and a is return)
 * \param x first vector source
-* \param y second vector source 
+* \param y second vector source
 * \return the computed innerproduct
 */
 double arVecInnerproduct( ARVec *x, ARVec *y );

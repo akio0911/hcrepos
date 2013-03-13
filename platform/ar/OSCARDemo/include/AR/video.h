@@ -1,17 +1,17 @@
 /*  --------------------------------------------------------------------------
  *	Copyright (c) 2004-2007 Philip Lamb (PRL) phil@eden.net.nz. All rights reserved.
  * This file is part of ARToolKit.
- * 
+ *
  * ARToolKit is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
- * 
+ *
  * ARToolKit is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with ARToolKit; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
@@ -20,9 +20,9 @@
  *  \file video.h
  *  \brief ARToolkit video subroutines.
  *
- *  This library provides multi-platform video input support for ARToolKit. 
+ *  This library provides multi-platform video input support for ARToolKit.
  *  It abstracts access to hardware video input available on different machines and
- *  operating systems. 
+ *  operating systems.
  *
  *  The actual supported platforms (and the driver/library used) are:
  *  - Windows: with Microsoft DirectShow (VFW obsolete).
@@ -57,7 +57,7 @@
  *
  */
 /* --------------------------------------------------------------------------
- * History : 
+ * History :
  * Rev		Date		Who		Changes
  * 2.6.8	2004-07-20	PRL		Rewrite for ARToolKit 2.68.2
  *
@@ -131,7 +131,7 @@ extern "C" {
 /*
 	mono-camera
 */
-	
+
 /**
  * \brief display the video option.
  *
@@ -144,9 +144,9 @@ AR_DLL_API  int				arVideoDispOption(void);
 
 /**
  * \brief open a video source.
- * 
+ *
  * This function opens a video input path with the
- * driver (and device) present on your platform. 
+ * driver (and device) present on your platform.
  * According to your operating system and the
  * hardware the initialization will be different : a
  * generic string structure is used for this issue.
@@ -157,7 +157,7 @@ AR_DLL_API  int				arVideoDispOption(void);
  * See the <a href="video/">video configuration documentation</a>
  * for more information on this parameter.
  * \return 0 if successful, -1 if a video path couldn't be opened
- */	
+ */
 AR_DLL_API  int				arVideoOpen(char *config);
 
 /**
@@ -210,7 +210,7 @@ AR_DLL_API  int				arVideoCapStop(void);
  * The best place to call this function is immediately after
  * you have finished displaying the current video frame, i.e.
  * after calling arglDispImage() or argDispImage().
- * 
+ *
  * \remark On some operating systems, this function is a no-op.
  * \return 0 if successful, -1 if the video driver encountered an error.
  */

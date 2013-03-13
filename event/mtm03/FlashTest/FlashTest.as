@@ -27,12 +27,12 @@ package {
 	private function myLoopEvent(event:Event):void {
 	    valx += container.mouseX / 50;
 	    valy += container.mouseY / 50;
- 
+
 	    for(var i:int; i<obj.length; i++){
 		obj[i].rotationY = valx;
 		obj[i].rotationX = valy;
 	    }
-	    
+
 	    scene.renderCamera(camera);
 	}
 	private function onStageResize(event:Event):void {

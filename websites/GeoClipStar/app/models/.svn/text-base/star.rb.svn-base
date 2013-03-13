@@ -15,8 +15,8 @@ class Star < ActiveRecord::Base
 
     # 各自書き足して!!
 #     member_ids = [
-#       [936, 'ksasao'], 
-#       [955, 'akio0911'], 
+#       [936, 'ksasao'],
+#       [955, 'akio0911'],
 #       [956, 'yuiseki'],
 #     ]
 
@@ -28,7 +28,7 @@ class Star < ActiveRecord::Base
       open(url) do |http|
         response = http.read
         doc = REXML::Document.new response
-         doc.elements.each("response/rest") { |r| 
+         doc.elements.each("response/rest") { |r|
 =begin
             # メタプログラミングっぽくしたいが、
             # Rubyにおける変数スコープ仕様に苦戦して挫折…。
@@ -76,7 +76,7 @@ class Star < ActiveRecord::Base
             REXML::XPath.match(r, "good_count").each{|e| good_count=e.text }
             REXML::XPath.match(r, "access_count").each{|e| access_count=e.text }
             # hash使えばもっと簡単に書ける。ひとまず放置。
-            unless Star.find(:first, :conditions => ["contents_id = ?", contents_id] ) 
+            unless Star.find(:first, :conditions => ["contents_id = ?", contents_id] )
               Star.create(:contents_id=>contents_id,
                           :title=>title,
                           :subject=>subject,

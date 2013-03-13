@@ -8,21 +8,21 @@ package org.papervision3d.objects.special
 
 	/**
 	 * @author Tim Knip
-	 */ 
+	 */
 	public class Skin3D extends TriangleMesh3D
 	{
 		public function Skin3D(material:MaterialObject3D, vertices:Array, faces:Array, name:String=null)
 		{
 			super(material, vertices, faces, name);
 		}
-		
+
 		public override function project(parent:DisplayObject3D, renderSessionData:RenderSessionData):Number
 		{
 			// skins are already transformed into world-space by the skinning algorithm!
 			// so we need to set its #transform to the parent#transform and invert...
 			this.transform.copy(parent.world);
 			this.transform.invert();
-			
+
 			return super.project(parent, renderSessionData);
 		}
 	}

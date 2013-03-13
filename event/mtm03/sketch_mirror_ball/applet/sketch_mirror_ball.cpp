@@ -8,7 +8,7 @@ int inByte = 0;
 
 void setup() {
   DDRD = DDRD | B11111100;
-  
+
   Serial.begin(9600);
 }
 
@@ -18,7 +18,7 @@ void loop() {
     inByte = Serial.read();
     Serial.println(inByte, BIN);
   }
-  
+
   // clear direction bit from 2 to 7
   PORTD = PORTD & B00000011;
   PORTD = PORTD | inByte;
@@ -30,10 +30,10 @@ int main(void)
 	init();
 
 	setup();
-    
+
 	for (;;)
 		loop();
-        
+
 	return 0;
 }
 

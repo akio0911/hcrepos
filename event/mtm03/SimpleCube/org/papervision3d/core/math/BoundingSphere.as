@@ -1,15 +1,15 @@
 package org.papervision3d.core.math
 {
 	import org.papervision3d.core.geom.renderables.Vertex3D;
-	
+
 	public class BoundingSphere
 	{
 		//The non squared maximum vertex distance.
 		public var maxDistance:Number;
-		
+
 		//The squared maximum vertex distance.
 		public var radius:Number;
-		
+
 		/**
 		 * @Author Ralph Hauwert
 		 */
@@ -18,7 +18,7 @@ package org.papervision3d.core.math
 			this.maxDistance = maxDistance;
 			this.radius = Math.sqrt(maxDistance);
 		}
-		
+
 		public static function getFromVertices(vertices:Array):BoundingSphere
 		{
 			var max :Number = 0;

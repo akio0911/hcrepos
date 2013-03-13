@@ -52,7 +52,7 @@ class Tds01v
 #    puts ''
 
     # センサ情報項目設定 全センサ全データ(ベクトルデータ+計測データ)
-    # 0DF7<ENTER><ENTER> 
+    # 0DF7<ENTER><ENTER>
     "0DF7\x0d\x0a".each_byte {|c|
       c = c.chr
 #      p [:write_char, c]
@@ -60,7 +60,7 @@ class Tds01v
     }
 
     # ACK センサ情報項目設定応答
-    # F2 
+    # F2
 #    p :echo_back
     (2).times do |i|
       d = @dev.getc
@@ -73,8 +73,8 @@ class Tds01v
 #    puts ''
 
     # 地磁気センサ初期化要求
-    # 27<ENTER><ENTER> 
-    
+    # 27<ENTER><ENTER>
+
     "27\x0d\x0a".each_byte {|c|
       c = c.chr
 #      p [:write_char, c]
@@ -82,7 +82,7 @@ class Tds01v
     }
 
     # ACK 地磁気センサ初期化要求応答
-    # D8 
+    # D8
 #    p :echo_back
     (2).times do |i|
       d = @dev.getc
@@ -96,7 +96,7 @@ class Tds01v
   end
   def get_direction
     # 計測開始
-    # 21<ENTER><ENTER> 
+    # 21<ENTER><ENTER>
     "21\x0d\x0a".each_byte {|c|
       c = c.chr
 #      p [:write_char, c]
@@ -104,7 +104,7 @@ class Tds01v
     }
 
     # ACK 計測開始応答
-    # DE 
+    # DE
 #    p :echo_back
     (2).times do |i|
       d = @dev.getc
@@ -119,7 +119,7 @@ class Tds01v
 #    puts ''
 
     # センサ情報要求
-    # 29<ENTER><ENTER> 
+    # 29<ENTER><ENTER>
     "29\x0d\x0a".each_byte {|c|
       c = c.chr
 #      p [:write_char, c]
@@ -127,9 +127,9 @@ class Tds01v
     }
 
     # センサ情報 全センサ全データ(ベクトルデータ+計測データ)
-    # FE85 00A0 00A4 07B9 
-    # 0005 0006 FFB8 0024 
-    # FFE5 27AE FFEB 00D5 0B1B 
+    # FE85 00A0 00A4 07B9
+    # 0005 0006 FFB8 0024
+    # FFE5 27AE FFEB 00D5 0B1B
 
     #p :echo_back
 

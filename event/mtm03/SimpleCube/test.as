@@ -5,15 +5,15 @@ package {
     import org.papervision3d.materials.utils.MaterialsList;
     import org.papervision3d.materials.ColorMaterial;
     import flash.events.Event;
-    
+
     public class Pv3dSample02 extends BasicView {
         private var cube:Cube;
-        
+
         public function Pv3dSample02() {
             createCube();
             stage.addEventListener(Event.ENTER_FRAME, fHandle);
         }
-        
+
         private function createCube():void {
             var materialsList:MaterialsList = new MaterialsList({
                 front:    new ColorMaterial(0x0000FF, 1),
@@ -27,7 +27,7 @@ package {
             scene.addChild(cube);
             startRendering();
         }
-        
+
         private function fHandle(evt:Event):void {
             cube.rotationX += 1;
             cube.rotationY += 2;

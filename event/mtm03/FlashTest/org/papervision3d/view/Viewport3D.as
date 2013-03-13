@@ -1,4 +1,4 @@
-package org.papervision3d.view 
+package org.papervision3d.view
 {
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -7,7 +7,7 @@ package org.papervision3d.view
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.Dictionary;
-	
+
 	import org.papervision3d.core.culling.DefaultLineCuller;
 	import org.papervision3d.core.culling.DefaultParticleCuller;
 	import org.papervision3d.core.culling.DefaultTriangleCuller;
@@ -34,7 +34,7 @@ package org.papervision3d.view
 	/**
 	 * @Author Ralph Hauwert
 	 */
-	 
+
 	/* Changed to protected methods on 11/27/2007 by John */
 	/* Added LineCulling on 22 May 08 by Seb Lee-Delisle */
 	public class Viewport3D extends Sprite implements IViewport3D
@@ -103,8 +103,8 @@ package org.papervision3d.view
 		public var interactiveSceneManager:InteractiveSceneManager;
 		/** @private */
 		protected var renderHitData:RenderHitData;
-		private var stageScaleModeSet :Boolean = false; 
-		
+		private var stageScaleModeSet :Boolean = false;
+
 		/**
 		 * @param viewportWidth 	Width of the viewport
 		 * @param viewportHeight 	Height of the viewport
@@ -117,17 +117,17 @@ package org.papervision3d.view
 		{
 			super();
 			init();
-			
+
 			this.interactive = interactive;
-			
+
 			this.viewportWidth = viewportWidth;
 			this.viewportHeight = viewportHeight;
-			
+
 			this.autoClipping = autoClipping;
 			this.autoCulling = autoCulling;
-			
+
 			this.autoScaleToStage = autoScaleToStage;
-			
+
 			this._layerInstances = new Dictionary(true);
 		}
 
@@ -152,16 +152,16 @@ package org.papervision3d.view
 		protected function init():void
 		{
 			this.renderHitData = new RenderHitData();
-			
+
 			lastRenderList = new Array();
 			sizeRectangle = new Rectangle();
 			cullingRectangle = new Rectangle();
-			
+
 			_containerSprite = new ViewportBaseLayer(this);
 			_containerSprite.doubleClickEnabled = true;
-			
+
 			addChild(_containerSprite);
-		
+
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			addEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);
 		}
@@ -169,7 +169,7 @@ package org.papervision3d.view
 		/**
 		 * Checks the Mouse x and y against the <code>RenderHitData</code>
 		 * @return RenderHitData of the current mouse location
-		 */		
+		 */
 		public function hitTestMouse():RenderHitData
 		{
 			var p:Point = new Point(containerSprite.mouseX, containerSprite.mouseY);
@@ -197,7 +197,7 @@ package org.papervision3d.view
 						rli = rc as RenderableListItem;
 						rhd = rli.hitTestPoint2D(point, rhd);
 						if(rhd.hasHit)
-						{				
+						{
 							return rhd;
 						}
 					}
@@ -205,37 +205,37 @@ package org.papervision3d.view
 			}
 			return renderHitData;
 		}
-		
+
 		public function hitTestPointObject(point:Point, object:DisplayObject3D):RenderHitData
 		{
 			if(interactive){
 				var rli:RenderableListItem;
 				var rhd:RenderHitData = new RenderHitData();
 				var rc:IRenderListItem;
-				
+
 				for(var i:uint = lastRenderList.length; rc = lastRenderList[--i]; )
 				{
 					if(rc is RenderableListItem)
 					{
 						rli = rc as RenderableListItem;
-						
+
 						if(rli.renderableInstance is Triangle3D){
 							if(Triangle3D(rli.renderableInstance).instance != object)
 								continue;
 						}else{
 							continue;
 						}
-						
+
 						rhd = rli.hitTestPoint2D(point, rhd);
-						
+
 						if(rhd.hasHit)
-						{				
+						{
 							return rhd;
 						}
 					}
 				}
 			}
-			
+
 			return new RenderHitData();
 		}
 
@@ -260,13 +260,13 @@ package org.papervision3d.view
 		public function accessLayerFor(rc:RenderableListItem, setInstance:Boolean = false):ViewportLayer
 		{
 			var do3d:DisplayObject3D;
-			
+
 			if(rc.renderableInstance)
 			{
 				do3d = rc.renderableInstance.instance;
 
 				do3d = do3d.parentContainer ? do3d.parentContainer : do3d;
-				
+
 				if(containerSprite.layers[do3d])
 				{
 					if(setInstance)
@@ -276,10 +276,10 @@ package org.papervision3d.view
 					return containerSprite.layers[do3d];
 				}else if(do3d.useOwnContainer)
 				{
-					return containerSprite.getChildLayer(do3d, true, true);	
+					return containerSprite.getChildLayer(do3d, true, true);
 				}
 			}
-			
+
 			return containerSprite;
 		}
 
@@ -288,7 +288,7 @@ package org.papervision3d.view
 		 */
 		protected function onAddedToStage(event:Event):void
 		{
-			if(_autoScaleToStage) 
+			if(_autoScaleToStage)
 			{
 				setStageScaleMode();
 			}
@@ -303,7 +303,7 @@ package org.papervision3d.view
 		{
 			stage.removeEventListener(Event.RESIZE, onStageResize);
 		}
-		
+
 		/**
 		 * Resizes the viewport when the stage is resized (if autoScaleToStage == true)
 		 */
@@ -320,13 +320,13 @@ package org.papervision3d.view
 		{
 			if(!stageScaleModeSet)
 			{
-				PaperLogger.info("Viewport autoScaleToStage : Papervision has changed the Stage scale mode."); 
-			
+				PaperLogger.info("Viewport autoScaleToStage : Papervision has changed the Stage scale mode.");
+
             	stage.align = StageAlign.TOP_LEFT;
-            	stage.scaleMode = StageScaleMode.NO_SCALE;	
-            	stageScaleModeSet = true; 		
+            	stage.scaleMode = StageScaleMode.NO_SCALE;
+            	stageScaleModeSet = true;
 			}
-			
+
 		}
 
 		/**
@@ -338,10 +338,10 @@ package org.papervision3d.view
 			_width = width;
 			_hWidth = width / 2;
 			containerSprite.x = _hWidth;
-			
+
 			cullingRectangle.x = -_hWidth;
 			cullingRectangle.width = width;
-			
+
 			sizeRectangle.width = width;
 			if(_autoClipping)
 			{
@@ -366,10 +366,10 @@ package org.papervision3d.view
 			_height = height;
 			_hHeight = height / 2;
 			containerSprite.y = _hHeight;
-			
+
 			cullingRectangle.y = -_hHeight;
 			cullingRectangle.height = height;
-			
+
 			sizeRectangle.height = height;
 			if(_autoClipping)
 			{
@@ -390,9 +390,9 @@ package org.papervision3d.view
 		 */
 		public function get containerSprite():ViewportLayer
 		{
-			return _containerSprite;	
+			return _containerSprite;
 		}
-		
+
 		/**
 		 * Whether clipping is enabled (not rendering bitmap data outside the rectangle of the viewport by making use of the <code>Sprite.scrollRect</code>)
 		 * @see flash.display.Sprite#scrollRect
@@ -400,7 +400,7 @@ package org.papervision3d.view
 		 */
 		public function get autoClipping():Boolean
 		{
-			return _autoClipping;	
+			return _autoClipping;
 		}
 
 		public function set autoClipping(clip:Boolean):void
@@ -414,7 +414,7 @@ package org.papervision3d.view
 			}
 			_autoClipping = clip;
 		}
-		
+
 		/**
 		 * Whether culling is enabled (not rendering triangles hidden behind other triangles)
 		 * @see #lineCuller
@@ -425,7 +425,7 @@ package org.papervision3d.view
 		{
 			return _autoCulling;
 		}
-		
+
 		public function set autoCulling(culling:Boolean):void
 		{
 			if(culling)
@@ -439,7 +439,7 @@ package org.papervision3d.view
 				particleCuller = new DefaultParticleCuller();
 				lineCuller = new DefaultLineCuller();
 			}
-			_autoCulling = culling;	
+			_autoCulling = culling;
 		}
 
 		/**
@@ -453,9 +453,9 @@ package org.papervision3d.view
 				setStageScaleMode();
 				onStageResize();
 			}
-			
+
 		}
-		
+
 		/**
 		 * The auto scale to stage boolean flag
 		 */
@@ -463,7 +463,7 @@ package org.papervision3d.view
 		{
 			return _autoScaleToStage;
 		}
-		
+
 		/**
 		 * Whether the <code>Viewport3D</code> should listen for <code>Mouse</code> events and create an <code>InteractiveSceneManager</code>
 		 */
@@ -494,29 +494,29 @@ package org.papervision3d.view
 
 		/**
 		 * Updates a <code>ViewportLayer</code> prior to the 3d data being rendered into the 2d scene
-		 * @param renderSessionData		All the information regarding the current renderSession packed into one class	
+		 * @param renderSessionData		All the information regarding the current renderSession packed into one class
 		 */
 		public function updateBeforeRender(renderSessionData:RenderSessionData):void
 		{
 			lastRenderList.length = 0;
-			
+
 			if(renderSessionData.renderLayers)
 			{
 				for each(var vpl:ViewportLayer in renderSessionData.renderLayers)
-				{ 
+				{
 					vpl.updateBeforeRender();
 				}
 			}else
 			{
 				_containerSprite.updateBeforeRender();
 			}
-			
+
 			_layerInstances = new Dictionary(true);
 		}
 
 		/**
 		 * Updates a <code>ViewportLayer</code> after the 3d data is rendered into the 2d scene
-		 * @param renderSessionData		All the information regarding the current renderSession packed into one class	
+		 * @param renderSessionData		All the information regarding the current renderSession packed into one class
 		 */
 		public function updateAfterRender(renderSessionData:RenderSessionData):void
 		{
@@ -524,10 +524,10 @@ package org.papervision3d.view
 			{
 				interactiveSceneManager.updateAfterRender();
 			}
-			
+
 			if(renderSessionData.renderLayers)
 			{
-				for each(var vpl:ViewportLayer in renderSessionData.renderLayers) 
+				for each(var vpl:ViewportLayer in renderSessionData.renderLayers)
 				{
 					vpl.updateInfo();
 					vpl.sortChildLayers();
@@ -538,7 +538,7 @@ package org.papervision3d.view
 				containerSprite.updateInfo();
 				containerSprite.updateAfterRender();
 			}
-			
+
 			containerSprite.sortChildLayers();
 		}
 

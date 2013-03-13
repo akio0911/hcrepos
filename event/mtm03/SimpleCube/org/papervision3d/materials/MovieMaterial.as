@@ -6,13 +6,13 @@ package org.papervision3d.materials
 	import flash.display.Stage;
 	import flash.geom.Matrix;
 	import flash.geom.Rectangle;
-	
+
 	import org.papervision3d.core.log.PaperLogger;
 	import org.papervision3d.core.render.command.RenderTriangle;
 	import org.papervision3d.core.render.data.RenderSessionData;
 	import org.papervision3d.core.render.draw.ITriangleDrawer;
 	import org.papervision3d.core.render.material.IUpdateAfterMaterial;
-	import org.papervision3d.core.render.material.IUpdateBeforeMaterial;	
+	import org.papervision3d.core.render.material.IUpdateBeforeMaterial;
 
 	/**
 	 * The MovieMaterial class creates a texture from an existing MovieClip instance.
@@ -25,7 +25,7 @@ package org.papervision3d.materials
 	{
 		// ______________________________________________________________________ PUBLIC
 		protected var recreateBitmapInSuper:Boolean;
-		
+
 		private var materialIsUsed:Boolean = false;
 		/**
 		* The MovieClip that is used as a texture.
@@ -36,10 +36,10 @@ package org.papervision3d.materials
 		* A Boolean value that determines whether the MovieClip is transparent. The default value is false, which is much faster.
 		*/
 		public var movieTransparent :Boolean;
-		
+
 		/**
 		* When updateBitmap() is called on an animated material, it looks to handle a change in size on the texture.
-		* 
+		*
 		* This is true by default, but in certain situations, like drawing on an object, you wouldn't want the size to change
 		*/
 		public var allowAutoResize:Boolean = false;
@@ -63,7 +63,7 @@ package org.papervision3d.materials
 		
 		/**
 		* A texture object.
-		*/		
+		*/
 		override public function get texture():Object
 		{
 			return this._texture;
@@ -86,18 +86,18 @@ package org.papervision3d.materials
 
 		/**
 		*  Rectangle object that defines the area of the source object to draw.
-		*  
+		*
 		*  When present, this property defines bitmap size overriding allowAutoResize.
 		*
 		*  If you do not supply this value, no clipping occurs and the entire source object is drawn.
-		*  
+		*
 		*/
 		public function get rect():Rectangle
 		{
 			var clipRect:Rectangle = userClipRect || autoClipRect;
-			
+
 			if( ! clipRect && movie ) clipRect = movie.getBounds( movie );
-			
+
 			return clipRect;
 		}
 
@@ -133,11 +133,11 @@ package org.papervision3d.materials
 
 			if( movieAsset ) texture = movieAsset;
 		}
-		
+
 		// ______________________________________________________________________ CREATE BITMAP
 
 		/**
-		* 
+		*
 		* @param	asset
 		* @return
 		*/
@@ -145,10 +145,10 @@ package org.papervision3d.materials
 		{
 			// Set the new movie reference
 			movie = asset;
-			
+
 			// initialize the bitmap since it's new
 			initBitmap( movie );
-			
+
 			// Draw
 			drawBitmap();
 
@@ -158,13 +158,13 @@ package org.papervision3d.materials
 
 			return bitmap;
 		}
-		
+
 		protected function initBitmap( asset:DisplayObject ):void
 		{
 			// Cleanup previous bitmap if needed
 			if( bitmap )
 				bitmap.dispose();
-			
+
 			// Create new bitmap
 			if(userClipRect){
 				bitmap = new BitmapData( int(userClipRect.width+0.5), int(userClipRect.height+0.5), movieTransparent, fillColor );
@@ -174,14 +174,14 @@ package org.papervision3d.materials
 				bitmap = new BitmapData( int(asset.width+0.5), int(asset.height+0.5), movieTransparent, fillColor );
 			}
 		}
-		
+
 		override public function drawTriangle(tri:RenderTriangle, graphics:Graphics, renderSessionData:RenderSessionData, altBitmap:BitmapData=null, altUV:Matrix=null):void
 		{
 			materialIsUsed = true;
 			super.drawTriangle(tri, graphics, renderSessionData, altBitmap, altUV);
 		}
-	
-		
+
+
 		// ______________________________________________________________________ UPDATE
 		/**
 		* Updates animated MovieClip bitmap.
@@ -206,17 +206,17 @@ package org.papervision3d.materials
 					mWidth = int(movie.width+0.5);
 					mHeight = int(movie.height+0.5);
 				}
-				
-				
+
+
 				if( allowAutoResize && ( mWidth != bitmap.width || mHeight != bitmap.height ) )
 				{
 					initBitmap( movie );
 					recreateBitmapInSuper = true;
 				}
-				
-			}		
+
+			}
 		}
-		
+
 		public function updateAfterRender(renderSessionData:RenderSessionData):void
 		{
 			if(movieAnimated == true && materialIsUsed == true){
@@ -225,9 +225,9 @@ package org.papervision3d.materials
 					bitmap = super.createBitmap( bitmap );
 					recreateBitmapInSuper = false;
 				}
-			}	
+			}
 		}
-		
+
 		public function drawBitmap():void
 		{
 			// Clear bitmap
@@ -258,12 +258,12 @@ package org.papervision3d.materials
 
 		/**
 		* Specifies which rendering quality Flash Player uses when drawing the bitmap texture from the movie asset.
-		* 
+		*
 		* If not set, bitmaps are drawn using the current stage quality setting.
 		*/
 		public function setQuality( quality:String, stage:Stage, updateNow:Boolean=true ):void
 		{
-			this.quality = quality;  
+			this.quality = quality;
 			this.stage = stage;
 
 			if( updateNow )

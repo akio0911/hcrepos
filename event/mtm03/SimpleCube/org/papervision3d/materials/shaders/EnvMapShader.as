@@ -9,7 +9,7 @@ package org.papervision3d.materials.shaders
 	import flash.geom.Matrix;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
-	
+
 	import org.papervision3d.core.geom.renderables.Triangle3D;
 	import org.papervision3d.core.geom.renderables.Vertex3DInstance;
 	import org.papervision3d.core.math.Matrix3D;
@@ -18,7 +18,7 @@ package org.papervision3d.materials.shaders
 	import org.papervision3d.core.render.data.RenderSessionData;
 	import org.papervision3d.core.render.shader.ShaderObjectData;
 	import org.papervision3d.materials.utils.BumpmapGenerator;
-	
+
 	/**
 	 * @Author Ralph Hauwert
 	 */
@@ -26,14 +26,14 @@ package org.papervision3d.materials.shaders
 	{
 		protected var lightmapHalfwidth:Number;
 	    protected var lightmapHalfheight:Number;
-		
+
 		private var dFilter:DisplacementMapFilter;
 		private var _envMap:BitmapData;
 		private var _backEnvMap:BitmapData;
 		private var _specularMap:BitmapData;
 		private var _bumpMap:BitmapData;
 		private var _ambientColor:int;
-		
+
 		private static var mapOrigin:Point = new Point(0,0);
 		private static var origin:Point = new Point(0,0);
 		private static var triMatrix:Matrix = new Matrix();
@@ -64,7 +64,7 @@ package org.papervision3d.materials.shaders
 		private static var n2:Number3D;
 		private static var r:Rectangle;
 		private static var lm:Matrix3D;
-		
+
 		public function EnvMapShader(light:LightObject3D, envmap:BitmapData, backenvmap:BitmapData = null, ambientColor:int=0x000000, bumpMap:BitmapData = null, specularMap:BitmapData = null)
 		{
 			super();
@@ -78,9 +78,9 @@ package org.papervision3d.materials.shaders
 			}
 			this.specularMap = specularMap;
 			this.bumpmap = bumpMap;
-			this.ambientColor = ambientColor;	
+			this.ambientColor = ambientColor;
 		}
-		
+
 		/**
 		 * Localized stuff.
 		 */
@@ -88,7 +88,7 @@ package org.papervision3d.materials.shaders
 		override public function renderLayer(triangle:Triangle3D, renderSessionData:RenderSessionData, sod:ShaderObjectData):void
 		{
 			lm = Matrix3D(sod.lightMatrices[this]);
-			
+
 			/*
 			v0 = triangle.v0.vertex3DInstance;
 			v1 = triangle.v1.vertex3DInstance;
@@ -100,15 +100,15 @@ package org.papervision3d.materials.shaders
 			Matrix3D.multiplyVector3x3(lm, v1.normal);
 			Matrix3D.multiplyVector3x3(lm, v2.normal);
 			*/
-			
+
 			p0 = lightmapHalfwidth*(triangle.v0.normal.x * lm.n11 + triangle.v0.normal.y * lm.n12 + triangle.v0.normal.z * lm.n13)+lightmapHalfwidth;
 			q0 = lightmapHalfheight*(triangle.v0.normal.x * lm.n21 + triangle.v0.normal.y * lm.n22 + triangle.v0.normal.z * lm.n23)+lightmapHalfheight;
 			p1 = lightmapHalfwidth*(triangle.v1.normal.x * lm.n11 + triangle.v1.normal.y * lm.n12 + triangle.v1.normal.z * lm.n13)+lightmapHalfwidth;
 			q1 = lightmapHalfheight*(triangle.v1.normal.x * lm.n21 + triangle.v1.normal.y * lm.n22 + triangle.v1.normal.z * lm.n23)+lightmapHalfheight;
 			p2 = lightmapHalfwidth*(triangle.v2.normal.x * lm.n11 + triangle.v2.normal.y * lm.n12 + triangle.v2.normal.z * lm.n13)+lightmapHalfwidth;
 			q2 = lightmapHalfheight*(triangle.v2.normal.x * lm.n21 + triangle.v2.normal.y * lm.n22 + triangle.v2.normal.z * lm.n23)+lightmapHalfheight;
-			
-			triMatrix = sod.uvMatrices[triangle] ? sod.uvMatrices[triangle] : sod.getUVMatrixForTriangle(triangle);	
+
+			triMatrix = sod.uvMatrices[triangle] ? sod.uvMatrices[triangle] : sod.getUVMatrixForTriangle(triangle);
 			transformMatrix.tx = p0;
 		    transformMatrix.ty = q0;
 		    transformMatrix.a = p1 - p0;
@@ -131,12 +131,12 @@ package org.papervision3d.materials.shaders
 			currentGraphics.endFill();
 			currentGraphics.lineStyle();
 		}
-		
+
 		private static var ts:Sprite = new Sprite();
 		override public function renderTri(triangle:Triangle3D, renderSessionData:RenderSessionData, sod:ShaderObjectData,bmp:BitmapData):void
 		{
 			lm = Matrix3D(sod.lightMatrices[this]);
-			
+
 			/*
 			v0 = triangle.v0.vertex3DInstance;
 			v1 = triangle.v1.vertex3DInstance;
@@ -148,14 +148,14 @@ package org.papervision3d.materials.shaders
 			Matrix3D.multiplyVector3x3(lm, v1.normal);
 			Matrix3D.multiplyVector3x3(lm, v2.normal);
 			*/
-			
+
 			p0 = lightmapHalfwidth*(triangle.v0.normal.x * lm.n11 + triangle.v0.normal.y * lm.n12 + triangle.v0.normal.z * lm.n13)+lightmapHalfwidth;
 			q0 = lightmapHalfheight*(triangle.v0.normal.x * lm.n21 + triangle.v0.normal.y * lm.n22 + triangle.v0.normal.z * lm.n23)+lightmapHalfheight;
 			p1 = lightmapHalfwidth*(triangle.v1.normal.x * lm.n11 + triangle.v1.normal.y * lm.n12 + triangle.v1.normal.z * lm.n13)+lightmapHalfwidth;
 			q1 = lightmapHalfheight*(triangle.v1.normal.x * lm.n21 + triangle.v1.normal.y * lm.n22 + triangle.v1.normal.z * lm.n23)+lightmapHalfheight;
 			p2 = lightmapHalfwidth*(triangle.v2.normal.x * lm.n11 + triangle.v2.normal.y * lm.n12 + triangle.v2.normal.z * lm.n13)+lightmapHalfwidth;
 			q2 = lightmapHalfheight*(triangle.v2.normal.x * lm.n21 + triangle.v2.normal.y * lm.n22 + triangle.v2.normal.z * lm.n23)+lightmapHalfheight;
-			
+
 			triMatrix = sod.renderTriangleUVS[triangle] ? sod.renderTriangleUVS[triangle] : sod.getPerTriUVForShader(triangle);
 			transformMatrix.tx = p0;
 		    transformMatrix.ty = q0;
@@ -170,7 +170,7 @@ package org.papervision3d.materials.shaders
 			}else{
 				useMap = backenvmap;
 			}
-			
+
 			/*WORK AROUND FOR FAILING DRAWS...TAKE THIS OUT ASAP*/
 			ts.graphics.clear();
 			ts.graphics.beginBitmapFill(useMap, transformMatrix, false,false);
@@ -178,7 +178,7 @@ package org.papervision3d.materials.shaders
 			ts.graphics.endFill();
 			bmp.draw(ts, null,null,layerBlendMode, null,false);
 		}
-		
+
 		override public function updateAfterRender(renderSessionData:RenderSessionData, sod:ShaderObjectData):void
 		{
 			if(dFilter){
@@ -186,7 +186,7 @@ package org.papervision3d.materials.shaders
 				s.filters = [dFilter];
 			}
 		}
-		
+
 		public function set bumpmap(bumpmap:BitmapData):void
 		{
 			if(_bumpMap){
@@ -195,18 +195,18 @@ package org.papervision3d.materials.shaders
 			if(bumpmap){
 				var map:BitmapData = BumpmapGenerator.generateBumpmapFrom(bumpmap);
 				dFilter = new DisplacementMapFilter(map,mapOrigin,BitmapDataChannel.RED,BitmapDataChannel.GREEN,-127,-127,DisplacementMapFilterMode.WRAP,ambientColor,0);
-				
+
 			}else{
 				filter = null;
 			}
 			_bumpMap = bumpmap;
 		}
-		
+
 		public function get bumpmap():BitmapData
 		{
 			return _bumpMap;
 		}
-		
+
 		public function set envMap(lightMap:BitmapData):void
 	    {
 	    	if(lightMap){
@@ -220,36 +220,36 @@ package org.papervision3d.materials.shaders
 	    {
 	    	return _envMap;
 	    }
-	    
+
 	    public function set specularMap(specularMap:BitmapData):void
 	    {
 	    	_specularMap = specularMap;
 	    }
-	    
+
 	    public function get specularMap():BitmapData
 	    {
 	    	return _specularMap;
 	    }
-	    
+
 	    public function set ambientColor(ambient:int):void
 		{
 			_ambientColor = ambient;
 		}
-		
+
 		public function get ambientColor():int
 		{
 			return _ambientColor;
 		}
-		
+
 		public function set backenvmap(envmap:BitmapData):void
 		{
 			_backEnvMap = envmap;
 		}
-		
+
 		public function get backenvmap():BitmapData
 		{
-			return _backEnvMap;	
+			return _backEnvMap;
 		}
-		
+
 	}
 }

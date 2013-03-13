@@ -13,8 +13,8 @@ package org.ascollada.utils
 	 *  The StringUtil utility class is an all-static class with methods for
 	 *  working with String objects within Flex.
 	 *  You do not create instances of StringUtil;
-	 *  instead you call methods such as 
-	 *  the <code>StringUtil.substitute()</code> method.  
+	 *  instead you call methods such as
+	 *  the <code>StringUtil.substitute()</code> method.
 	 */
 	public class StringUtil
 	{
@@ -23,69 +23,69 @@ package org.ascollada.utils
 	    //  Class methods
 	    //
 	    //--------------------------------------------------------------------------
-	
+
 	    /**
 	     *  Removes all whitespace characters from the beginning and end
 	     *  of the specified string.
 	     *
-	     *  @param str The String whose whitespace should be trimmed. 
+	     *  @param str The String whose whitespace should be trimmed.
 	     *
-	     *  @return Updated String where whitespace was removed from the 
-	     *  beginning and end. 
+	     *  @return Updated String where whitespace was removed from the
+	     *  beginning and end.
 	     */
 	    public static function trim(str:String):String
 	    {
 	        var startIndex:int = 0;
 	        while (isWhitespace(str.charAt(startIndex)))
 	            ++startIndex;
-	
+
 	        var endIndex:int = str.length - 1;
 	        while (isWhitespace(str.charAt(endIndex)))
 	            --endIndex;
-	
+
 	        if (endIndex >= startIndex)
 	            return str.slice(startIndex, endIndex + 1);
 	        else
 	            return "";
 	    }
-	    
+
 	    /**
 	     *  Removes all whitespace characters from the beginning and end
-	     *  of each element in an Array, where the Array is stored as a String. 
+	     *  of each element in an Array, where the Array is stored as a String.
 	     *
-	     *  @param value The String whose whitespace should be trimmed. 
+	     *  @param value The String whose whitespace should be trimmed.
 	     *
 	     *  @param separator The String that delimits each Array element in the string.
 	     *
-	     *  @return Updated String where whitespace was removed from the 
-	     *  beginning and end of each element. 
+	     *  @return Updated String where whitespace was removed from the
+	     *  beginning and end of each element.
 	     */
 	    public static function trimArrayElements(value:String, delimiter:String):String
 	    {
 	        if (value != "" && value != null)
 	        {
 	            var items:Array = value.split(delimiter);
-	            
+
 	            var len:int = items.length;
 	            for (var i:int = 0; i < len; i++)
 	            {
 	                items[i] = StringUtil.trim(items[i]);
 	            }
-	            
+
 	            if (len > 0)
 	            {
 	                value = items.join(delimiter);
 	            }
 	        }
-	        
+
 	        return value;
 	    }
-	
+
 	    /**
 	     *  Returns <code>true</code> if the specified string is
 	     *  a single space, tab, carriage return, newline, or formfeed character.
 	     *
-	     *  @param str The String that is is being queried. 
+	     *  @param str The String that is is being queried.
 	     *
 	     *  @return <code>true</code> if the specified string is
 	     *  a single space, tab, carriage return, newline, or formfeed character.
@@ -100,12 +100,12 @@ package org.ascollada.utils
 	            case "\n":
 	            case "\f":
 	                return true;
-	
+
 	            default:
 	                return false;
 	        }
 	    }
-	
+
 	    /**
 	     *  Substitutes "{n}" tokens within the specified string
 	     *  with the respective arguments passed in.
@@ -126,7 +126,7 @@ package org.ascollada.utils
 	     *  use the ... rest signature.
 	     *  For example <pre>
 	     *     public function myTracer(str:String, ... rest):void
-	     *     { 
+	     *     {
 	     *         label.text += StringUtil.substitute(str, rest) + "\n";
 	     *     } </pre>
 	     *
@@ -155,12 +155,12 @@ package org.ascollada.utils
 	        {
 	            args = rest;
 	        }
-	        
+
 	        for (var i:int = 0; i < len; i++)
 	        {
 	            str = str.replace(new RegExp("\\{"+i+"\\}", "g"), args[i]);
 	        }
-	
+
 	        return str;
 	    }
 	}

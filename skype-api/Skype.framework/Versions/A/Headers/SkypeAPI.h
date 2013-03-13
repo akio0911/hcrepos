@@ -11,15 +11,15 @@
 
 @protocol SkypeAPIDelegate;
 
-@interface SkypeAPI : NSObject 
+@interface SkypeAPI : NSObject
 {
 
 }
 
-+ (BOOL)isSkypeRunning;				
++ (BOOL)isSkypeRunning;
 + (BOOL)isSkypeAvailable;		// You can only connect and send commands when this method returns YES.
 								// For example, when Skype is running, but user is logged out, then it returns NO.
-								
+
 + (void)setSkypeDelegate:(NSObject<SkypeAPIDelegate>*)aDelegate;
 + (NSObject<SkypeAPIDelegate>*)skypeDelegate;
 + (void)removeSkypeDelegate;

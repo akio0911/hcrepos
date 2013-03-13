@@ -13,7 +13,7 @@ package org.papervision3d.core.clipping.draw
             this.minY = minY;
             this.maxY = maxY;
         }
-        
+
 		/**
 		 * @inheritDoc
 		 */
@@ -21,7 +21,7 @@ package org.papervision3d.core.clipping.draw
         {
             return this;
         }
-        
+
 		/**
 		 * @inheritDoc
 		 */
@@ -38,7 +38,7 @@ package org.papervision3d.core.clipping.draw
 
             return true;
         }
-        
+
 		/**
 		 * @inheritDoc
 		 */
@@ -55,10 +55,10 @@ package org.papervision3d.core.clipping.draw
 
             return true;
         }
-		
+
 		/**
 		 * Used to trace the values of a rectangle clipping object.
-		 * 
+		 *
 		 * @return A string representation of the rectangle clipping object.
 		 */
         public function toString():String

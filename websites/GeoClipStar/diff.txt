@@ -5,7 +5,7 @@ Index: app/controllers/geo_clip_controller.rb
 @@ -1,6 +1,6 @@
  class GeoClipController < ApplicationController
    #caches_pages :feed, :feed_trace
--  
+-
 +
    # コンテンツ検索API [GET]
    # ksasaoさんが使用する、ジオクリ互換のAPI
@@ -33,7 +33,7 @@ Index: public/map.html
        icon.iconAhchor = new GPoint(48, 48);
        var mk = new GMarker(new GLatLng(lat, lng), icon);
        map.addOverlay(mk);
--      
+-
 +
        // 最も近いstreet view撮影ポイントを検索する処理を追加しないといけない
        var latlng = new GLatLng(lat, lng);
@@ -42,7 +42,7 @@ Index: public/map.html
      setTimeout(updateGoPosition, 60 * 1000);
    }
    setTimeout(updateGoPosition, 0);
--  
+-
 +
    addHistory(null, new GLatLng(35.704, 139.79));
    addHistory(null, new GLatLng(35.683,139.782));
@@ -73,7 +73,7 @@ Index: public/map.html
        var option = { latlng:latlng};
        var scontainer = document.getElementById("street");
        var panorama = new GStreetviewPanorama(scontainer, option);
--      
+-
 +
        mk.openInfoWindowHtml("ここは秋葉原駅です");
      });

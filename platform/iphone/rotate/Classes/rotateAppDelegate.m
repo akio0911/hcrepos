@@ -15,7 +15,7 @@
 @synthesize mainViewController;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
     // Override point for customization after application launch
 	self.window.backgroundColor = [UIColor redColor];
 

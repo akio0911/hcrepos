@@ -38,10 +38,10 @@
 package org.papervision3d.core.geom.renderables
 {
 	import flash.utils.Dictionary;
-	
+
 	import org.papervision3d.core.math.Number3D;
 	import org.papervision3d.core.render.command.IRenderListItem;
-	
+
 
 	/**
 	* The Vertex3D constructor lets you create 3D vertices.
@@ -52,40 +52,40 @@ package org.papervision3d.core.geom.renderables
 		* An Number that sets the X coordinate of a object relative to the scene coordinate system.
 		*/
 		public var x :Number;
-	
+
 		/**
 		* An Number that sets the Y coordinate of a object relative to the scene coordinates.
 		*/
 		public var y :Number;
-	
+
 		/**
 		* An Number that sets the Z coordinate of a object relative to the scene coordinates.
 		*/
 		public var z :Number;
-	
+
 		/**
 		* An object that contains user defined properties.
 		*/
 		public var extra :Object;
-		
+
 		/**
 		 * Used for removing duplicates in clipping procedures
 		 */
 		public var timestamp:Number;
-		
+
 		/**
-		 * Vertex2D instance 
+		 * Vertex2D instance
 		 */
 		public var vertex3DInstance:Vertex3DInstance;
-		
+
 		//To be docced
 		public var normal:Number3D;
 		public var connectedFaces:Dictionary;
-		
+
 		private var persp:Number=0;
-		
+
 		protected var position:Number3D = new Number3D();
-	
+
 		/**
 		* Creates a new Vertex3D object whose three-dimensional values are specified by the x, y and z parameters.
 		*
@@ -99,12 +99,12 @@ package org.papervision3d.core.geom.renderables
 			this.x = position.x = x;
 			this.y = position.y = y;
 			this.z = position.z = z;
-			
+
 			this.vertex3DInstance = new Vertex3DInstance();
 			this.normal = new Number3D();
 			this.connectedFaces = new Dictionary();
 		}
-		
+
 		public function getPosition():Number3D
 		{
 			position.x = x;
@@ -112,12 +112,12 @@ package org.papervision3d.core.geom.renderables
 			position.z = z;
 			return position;
 		}
-		
+
 		public function toNumber3D():Number3D
 		{
 			return new Number3D(x,y,z);
 		}
-		
+
 		public function clone():Vertex3D
 		{
 			var clone:Vertex3D = new Vertex3D(x,y,z);
@@ -126,15 +126,15 @@ package org.papervision3d.core.geom.renderables
 			clone.normal = normal.clone();
 			return clone;
 		}
-		
+
 		public function calculateNormal():void
 		{
 			var face:Triangle3D;
 			var count:Number = 0;
 			normal.reset();
 			for each(face in connectedFaces)
-			{	
-				
+			{
+
 				if(face.faceNormal){
 					count++;
 					normal.plusEq(face.faceNormal);
@@ -151,26 +151,26 @@ package org.papervision3d.core.geom.renderables
 			normal.plusEq(p);
 			normal.normalize();
 		}
-		
+
 		override public function getRenderListItem():IRenderListItem
 		{
 			return null;
 		}
-		
+
 		public static function weighted(a:Vertex3D, b:Vertex3D, aw:Number, bw:Number):Vertex3D
-        {                
+        {
             var d:Number = aw + bw;
             var ak:Number = aw / d;
             var bk:Number = bw / d;
             return new Vertex3D(a.x*ak+b.x*bk, a.y*ak + b.y*bk, a.z*ak + b.z*bk);
         }
-        
+
         public function perspective(focus:Number):Vertex3DInstance
         {
             persp = 1 / (1 + z / focus);
 
             return new Vertex3DInstance(x * persp, y * persp, z);
         }
-		
+
 	}
 }

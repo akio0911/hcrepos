@@ -11,13 +11,13 @@ package {
         private var socket:Socket;   //ソケット
         private var tfView:TextField;//表示テキストフィールド
         private var tfSend:TextField;//送信テキストフィールド
-        
+
         //コンストラクタ
         public function SocketEx() {
             //テキストフィールドの生成
             tfView=addTextField(10,10,220,160);
             tfSend=addTextField(10,180,220,20);
-            
+
             //ソケットの生成
             socket=new Socket("localhost",16000);
 
@@ -44,23 +44,23 @@ package {
         private function connectHandler(evt:Event):void {
             trace("接続");
         }
-    
+
         //??切断イベントの処理
         private function closeHandler(evt:Event):void {
             trace("切断");
         }
-    
+
         //読み込み中イベントの処理?f?
         private function socketDataHandler(evt:ProgressEvent):void {
             var text:String=socket.readUTFBytes(socket.bytesAvailable);
             tfView.text=text+"\n"+tfView.text;
         }
-    
+
         //セキュリティエラーイベントの処理?Z?L?????e?B?G???
         private function securityErrorHandler(evt:SecurityErrorEvent):void {
             trace("セキュリティエラー");
         }
-    
+
         //IOエラーイベントの処理
         private function ioErrorHandler(evt:IOErrorEvent):void {
             trace("IOエラー");

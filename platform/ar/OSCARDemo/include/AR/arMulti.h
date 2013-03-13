@@ -1,14 +1,14 @@
 /*  --------------------------------------------------------------------------
 *   Copyright (C) 2004 Hitlab NZ.
-*   The distribution policy is describe on the Copyright.txt furnish 
+*   The distribution policy is describe on the Copyright.txt furnish
 *    with this library.
 *   -------------------------------------------------------------------------*/
 /**
 *  \file arMulti.h
-*  \brief ARToolkit multi pattern subroutines. 
+*  \brief ARToolkit multi pattern subroutines.
 *
-*  This file extend ar core routines  for multi-pattern tracking. 
-*  You can obtain position of a local coordinate 
+*  This file extend ar core routines  for multi-pattern tracking.
+*  You can obtain position of a local coordinate
 *  system based on the estimation of multiple markers tracking (each in relative
 *  position)
 *
@@ -21,7 +21,7 @@
 *  \date 01/09/05
 **/
 /*  --------------------------------------------------------------------------
-*   History : 
+*   History :
 *   Rev		Date		Who		Changes
 *
 *----------------------------------------------------------------------------*/
@@ -75,7 +75,7 @@ typedef struct {
 * \brief global multi-marker structure
 *
 * Main structure for multi-marker tracking.
-* 
+*
 * \param marker list of markers of the multi-marker pattern
 * \param marker_num number of markers used
 * \param trans position of the multi-marker pattern (more precisely, the camera position in the multi-marker CS)
@@ -112,14 +112,14 @@ ARMultiMarkerInfoT *arMultiReadConfigFile( const char *filename );
 
 /**
 * \brief compute camera position in function of the multi-marker patterns (based on detected markers)
-* 
-* calculate the transformation between the multi-marker patterns and the real camera. Based on 
+*
+* calculate the transformation between the multi-marker patterns and the real camera. Based on
 * confident values of detected markers in the multi-markers patterns, a global position is return.
 *
 * \param marker_info list of detected markers (from arDetectMarker)
 * \param marker_num number of detected markers
-* \param config 
-* \return 
+* \param config
+* \return
 */
 double  arMultiGetTransMat(ARMarkerInfo *marker_info, int marker_num,
                            ARMultiMarkerInfoT *config);

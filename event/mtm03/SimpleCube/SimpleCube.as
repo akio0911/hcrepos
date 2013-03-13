@@ -3,7 +3,7 @@ package {
     import flash.events.*;
     import flash.geom.*;
     import flash.text.*;
- 
+
     import org.papervision3d.scenes.*;
     import org.papervision3d.objects.*;
     import org.papervision3d.objects.primitives.*;
@@ -13,21 +13,21 @@ package {
     import org.papervision3d.view.*;
     import org.papervision3d.render.*;
     import org.papervision3d.lights.*;
-	
+
     public class SimpleCube extends PV3DARApp {
 	private var container : Sprite;
 	private var scene     : Scene3D;
 	private var camera    : Camera3D;
 	private var rootNode  : DisplayObject3D;
- 
+
 	private var obj:Array = new Array();
- 
+
 	private var valx    : Number = 0;
 	private var valy    : Number = 0;
 	private var valz    : Number = 0;
- 
+
 	private var bitmapdata:BitmapData;
- 
+
 	private var text:TextField;
 	private var material:MovieMaterial
 	    private var viewport  :Viewport3D;
@@ -62,18 +62,18 @@ package {
 	private static const TEXT_WIDTH:int = 400;
 	private static const TEXT_HEIGHT:int = TEXT_WIDTH/2;
 	private function createTextPlane():DisplayObject3D {
- 
+
 	    var asset:MovieClip = createMovieClip();
 	    var transparent:Boolean = true;
 	    var initObject:Object = {animated:true, doubleSided:true};
- 
+
 	    var material:MovieMaterial = new MovieMaterial(asset, transparent, initObject);
 	    material.doubleSided = true;
- 
+
 	    var planeWidth:int = TEXT_WIDTH;
 	    var planeHeight:int = TEXT_HEIGHT;
 	    var segment:int = 2;
- 
+
 	    var plane:Plane = new Plane(
 					material, planeWidth, planeHeight, segment, segment);
 	    plane.x =  0;
@@ -85,17 +85,17 @@ package {
 	    return plane;
 	}
 	private function createYuisekiPlane():DisplayObject3D {
- 
+
 	    var asset:MovieClip = createMovieClip();
 	    var transparent:Boolean = true;
 	    var initObject:Object = {animated:true, doubleSided:true};
- 
+
 	    var material:BitmapFileMaterial = new BitmapFileMaterial("yuiseki.jpg");
 	    material.doubleSided = true;
- 
+
 	    var planeSize:int = 50;
 	    var segment:int = 2;
- 
+
 	    var plane:Plane = new Plane(
 					material, planeSize, planeSize, segment, segment);
 	    plane.x =  0;
@@ -107,17 +107,17 @@ package {
 	    return plane;
 	}
 	private function createYuiseki2Plane():DisplayObject3D {
- 
+
 	    var asset:MovieClip = createMovieClip();
 	    var transparent:Boolean = true;
 	    var initObject:Object = {animated:true, doubleSided:true};
- 
+
 	    var material:BitmapFileMaterial = new BitmapFileMaterial("yuiseki2.png");
 	    material.doubleSided = true;
- 
+
 	    var planeSize:int = 100;
 	    var segment:int = 2;
- 
+
 	    var plane:Plane = new Plane(
 					material, planeSize, planeSize, segment, segment);
 	    plane.x =  100;
@@ -146,7 +146,7 @@ package {
 	    format.size = 40;
 	    format.underline = false;
 	    format.font = "_等幅";
- 
+
 	    var text:TextField = new TextField();
 	    text.width = TEXT_WIDTH;
 	    text.height = TEXT_HEIGHT;
@@ -162,7 +162,7 @@ package {
 	    text.multiline = true;
 	    //	    text.numLines = 5;
 	    text.wordWrap = true;
- 
+
 	    return text;
 	}
 	/*
@@ -182,20 +182,20 @@ package {
 	    var y:int = (int)(Math.random() * 100);
 	    var rect:Rectangle = new Rectangle(x, y, 20, 20);
 	    bitmapdata.fillRect(rect, 0xFF0000);
- 
+
 	    text.border = !text.border;
 	    text.background = !text.background;
- 
+
 	    text.text = "マウスを\nクリックした位置:\nLocation(" + container.mouseX + "," + container.mouseY + ")";
 	    material.updateBitmap();
 	}
 
 	private function myLoopEvent(event:Event):void {
-	    /* 
+	    /*
 	    //	    valx += container.mouseX / 50;
 	    	    valy += container.mouseY / 50;
 	    //	    valz += container.mouseX / 50;
- 
+
 	    for(var i:int; i<obj.length; i++){
 		//		obj[i].rotationY = valx;
 				obj[i].rotationX = valy;
@@ -213,12 +213,12 @@ package {
 
 	protected override function onInit():void {
 	    super.onInit();
-			
+
 	    var light:PointLight3D = new PointLight3D();
 	    light.x = 0;
 	    light.y = 1000;
 	    light.z = -1000;
-			
+
 	    this._baseNode.addChild(this.rootNode);
 	}
     }
